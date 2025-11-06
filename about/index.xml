@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>关于我 on 笔墨拾光</title>
+    <link>https://jog-blog.github.io/about/</link>
+    <description>Recent content in 关于我 on 笔墨拾光</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <atom:link href="https://jog-blog.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的开源项目</title>
+      <link>https://jog-blog.github.io/about/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jog-blog.github.io/about/projects/</guid>
+      <description>&lt;h2 id=&#34;my-open-source-projects&#34;&gt;My Open Source Projects&lt;/h2&gt;&#xA;&lt;h3 id=&#34;petal-&#34;&gt;Petal 🌺&lt;/h3&gt;&#xA;&lt;p&gt;豆瓣 FM 桌面版&lt;/p&gt;&#xA;&lt;h3 id=&#34;hugo-theme-dream-&#34;&gt;hugo-theme-dream 🌱&lt;/h3&gt;&#xA;&lt;p&gt;一个 Hugo 主题，也是当前我的博客所使用的主题&lt;/p&gt;&#xA;&lt;h3 id=&#34;alfred-colors-workflow&#34;&gt;Alfred-Colors-workflow&lt;/h3&gt;&#xA;&lt;p&gt;Convert CSS colors between hex, rgb, hsl in Alfred.&lt;/p&gt;&#xA;&lt;h3 id=&#34;github-colorful-contributions-graph&#34;&gt;github-colorful-contributions-graph&lt;/h3&gt;&#xA;&lt;p&gt;改变 GitHub 贡献面板颜色的 Chrome 插件&lt;/p&gt;&#xA;&lt;p&gt;等等&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>赞助我</title>
+      <link>https://jog-blog.github.io/about/sponsor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jog-blog.github.io/about/sponsor/</guid>
+      <description>&lt;p&gt;如果你喜欢我的作品或者发现它们对你有所帮助，可以考虑给我买一杯咖啡 ☕️。这将激励我在未来创作和维护更多的项目。🦾&lt;/p&gt;&#xA;&lt;p&gt;👉 请我喝一杯咖啡&lt;/p&gt;&#xA;&lt;p&gt;If you like my works or find them helpful, please consider buying me a cup of coffee ☕️. It inspires me to create and maintain more projects in the future. 🦾&lt;/p&gt;&#xA;&lt;p&gt;👉 Buy me a coffee&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>知识共享</title>
+      <link>https://jog-blog.github.io/about/creative-commons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jog-blog.github.io/about/creative-commons/</guid>
+      <description>&lt;p&gt;此网站的所有内容都遵循 CC BY-NC-SA 4.0。&lt;/p&gt;&#xA;&lt;p&gt;All contents of this website are licensed under CC BY-NC-SA 4.0.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

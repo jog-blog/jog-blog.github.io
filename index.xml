@@ -2,87 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>笔墨拾光</title>
-    <link>https://www.catbank.cn/</link>
+    <link>https://bmsg.top/</link>
     <description>Recent content on 笔墨拾光</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Fri, 07 Nov 2025 08:10:34 +0800</lastBuildDate>
-    <atom:link href="https://www.catbank.cn/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://bmsg.top/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo（Stack主题）博客搭建过程中踩过的坑</title>
-      <link>https://www.catbank.cn/posts/studay-log/daily-tech-6/</link>
+      <link>https://bmsg.top/posts/studay-log/daily-tech-6/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://www.catbank.cn/posts/studay-log/daily-tech-6/</guid>
+      <guid>https://bmsg.top/posts/studay-log/daily-tech-6/</guid>
       <description>&lt;p&gt;记录了在搭建整个博客以及自定义时遇到的问题和解决方法&lt;/p&gt;</description>
     </item>
     <item>
       <title>电脑文件整理技巧：让你的工作空间更整洁</title>
-      <link>https://www.catbank.cn/posts/daily-tech/daily-tech-3/</link>
+      <link>https://bmsg.top/posts/daily-tech/daily-tech-3/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://www.catbank.cn/posts/daily-tech/daily-tech-3/</guid>
+      <guid>https://bmsg.top/posts/daily-tech/daily-tech-3/</guid>
       <description>&lt;p&gt;电脑文件杂乱无章？本文分享几个实用的文件整理技巧，帮助你创建一个更高效的数字工作环境。&lt;/p&gt;</description>
     </item>
     <item>
       <title>家庭网络优化指南：让你的WiFi更快更稳定</title>
-      <link>https://www.catbank.cn/posts/daily-tech/daily-tech-2/</link>
+      <link>https://bmsg.top/posts/daily-tech/daily-tech-2/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://www.catbank.cn/posts/daily-tech/daily-tech-2/</guid>
+      <guid>https://bmsg.top/posts/daily-tech/daily-tech-2/</guid>
       <description>&lt;p&gt;有没有遇到过看视频卡顿、游戏延迟高的情况？本文分享几个简单易行的家庭网络优化技巧，让你的WiFi更快更稳定。&lt;/p&gt;</description>
     </item>
     <item>
       <title>如何利用手机便签提高工作效率</title>
-      <link>https://www.catbank.cn/posts/daily-tech/daily-tech-1/</link>
+      <link>https://bmsg.top/posts/daily-tech/daily-tech-1/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://www.catbank.cn/posts/daily-tech/daily-tech-1/</guid>
+      <guid>https://bmsg.top/posts/daily-tech/daily-tech-1/</guid>
       <description>&lt;p&gt;你是否经常忘记重要的待办事项？本文将分享如何利用手机自带的便签应用来提高日常工作和生活的效率。&lt;/p&gt;</description>
     </item>
     <item>
       <title>实用密码管理技巧：保护你的数字资产安全</title>
-      <link>https://www.catbank.cn/posts/daily-tech/daily-tech-5/</link>
+      <link>https://bmsg.top/posts/daily-tech/daily-tech-5/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://www.catbank.cn/posts/daily-tech/daily-tech-5/</guid>
+      <guid>https://bmsg.top/posts/daily-tech/daily-tech-5/</guid>
       <description>&lt;p&gt;密码太多记不住？本文分享几个实用的密码管理技巧，帮助你在保证安全的同时，也能方便地管理各种账号密码。&lt;/p&gt;</description>
     </item>
     <item>
       <title>手机电池保养指南：延长你的电池使用寿命</title>
-      <link>https://www.catbank.cn/posts/daily-tech/daily-tech-4/</link>
+      <link>https://bmsg.top/posts/daily-tech/daily-tech-4/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://www.catbank.cn/posts/daily-tech/daily-tech-4/</guid>
+      <guid>https://bmsg.top/posts/daily-tech/daily-tech-4/</guid>
       <description>&lt;p&gt;手机电池不耐用？本文分享几个科学的电池保养技巧，帮助你延长手机电池的使用寿命。&lt;/p&gt;</description>
     </item>
     <item>
       <title>JetBrains 官宣全系列免费！开发者圈的史诗级福利来了</title>
-      <link>https://www.catbank.cn/posts/jetbrains/</link>
+      <link>https://bmsg.top/posts/jetbrains/</link>
       <pubDate>Thu, 06 Nov 2025 14:54:34 +0800</pubDate>
-      <guid>https://www.catbank.cn/posts/jetbrains/</guid>
+      <guid>https://bmsg.top/posts/jetbrains/</guid>
       <description>&lt;p&gt;JetBrains 突然官宣全系列 IDE 产品免费开放，这波操作直接引爆开发者圈！从 IntelliJ IDEA 到 PyCharm、WebStorm，曾经需要付费订阅的编程利器如今无需付费即可使用，这场“降维打击”将如何改变开发者的工具选择？&lt;/p&gt;</description>
     </item>
     <item>
       <title>提升 Hugo 网站 SEO 排名的 10 个实用技巧</title>
-      <link>https://www.catbank.cn/posts/hugo/hugo-seo-optimization/</link>
+      <link>https://bmsg.top/posts/hugo/hugo-seo-optimization/</link>
       <pubDate>Wed, 10 Jul 2024 10:00:00 +0800</pubDate>
-      <guid>https://www.catbank.cn/posts/hugo/hugo-seo-optimization/</guid>
+      <guid>https://bmsg.top/posts/hugo/hugo-seo-optimization/</guid>
       <description>&lt;p&gt;想要让你的 Hugo 网站在搜索引擎中获得更好的排名吗？本文将分享 10 个实用的 SEO 优化技巧，帮助你的网站获得更多自然流量。&lt;/p&gt;</description>
     </item>
     <item>
       <title>我的开源项目</title>
-      <link>https://www.catbank.cn/about/projects/</link>
+      <link>https://bmsg.top/about/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.catbank.cn/about/projects/</guid>
+      <guid>https://bmsg.top/about/projects/</guid>
       <description>&lt;h2 id=&#34;my-open-source-projects&#34;&gt;My Open Source Projects&lt;/h2&gt;&#xA;&lt;h3 id=&#34;petal-&#34;&gt;Petal 🌺&lt;/h3&gt;&#xA;&lt;p&gt;豆瓣 FM 桌面版&lt;/p&gt;&#xA;&lt;h3 id=&#34;hugo-theme-dream-&#34;&gt;hugo-theme-dream 🌱&lt;/h3&gt;&#xA;&lt;p&gt;一个 Hugo 主题，也是当前我的博客所使用的主题&lt;/p&gt;&#xA;&lt;h3 id=&#34;alfred-colors-workflow&#34;&gt;Alfred-Colors-workflow&lt;/h3&gt;&#xA;&lt;p&gt;Convert CSS colors between hex, rgb, hsl in Alfred.&lt;/p&gt;&#xA;&lt;h3 id=&#34;github-colorful-contributions-graph&#34;&gt;github-colorful-contributions-graph&lt;/h3&gt;&#xA;&lt;p&gt;改变 GitHub 贡献面板颜色的 Chrome 插件&lt;/p&gt;&#xA;&lt;p&gt;等等&lt;/p&gt;</description>
     </item>
     <item>
       <title>赞助我</title>
-      <link>https://www.catbank.cn/about/sponsor/</link>
+      <link>https://bmsg.top/about/sponsor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.catbank.cn/about/sponsor/</guid>
+      <guid>https://bmsg.top/about/sponsor/</guid>
       <description>&lt;p&gt;如果你喜欢我的作品或者发现它们对你有所帮助，可以考虑给我买一杯咖啡 ☕️。这将激励我在未来创作和维护更多的项目。🦾&lt;/p&gt;&#xA;&lt;p&gt;👉 请我喝一杯咖啡&lt;/p&gt;&#xA;&lt;p&gt;If you like my works or find them helpful, please consider buying me a cup of coffee ☕️. It inspires me to create and maintain more projects in the future. 🦾&lt;/p&gt;&#xA;&lt;p&gt;👉 Buy me a coffee&lt;/p&gt;</description>
     </item>
     <item>
       <title>知识共享</title>
-      <link>https://www.catbank.cn/about/creative-commons/</link>
+      <link>https://bmsg.top/about/creative-commons/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.catbank.cn/about/creative-commons/</guid>
+      <guid>https://bmsg.top/about/creative-commons/</guid>
       <description>&lt;p&gt;此网站的所有内容都遵循 CC BY-NC-SA 4.0。&lt;/p&gt;&#xA;&lt;p&gt;All contents of this website are licensed under CC BY-NC-SA 4.0.&lt;/p&gt;</description>
     </item>
   </channel>

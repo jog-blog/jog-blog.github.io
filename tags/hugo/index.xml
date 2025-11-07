@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on 笔墨拾光</title>
-    <link>https://www.catbank.cn/tags/hugo/</link>
+    <link>https://bmsg.top/tags/hugo/</link>
     <description>Recent content in Hugo on 笔墨拾光</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Fri, 07 Nov 2025 08:10:34 +0800</lastBuildDate>
-    <atom:link href="https://www.catbank.cn/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://bmsg.top/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo（Stack主题）博客搭建过程中踩过的坑</title>
-      <link>https://www.catbank.cn/posts/studay-log/daily-tech-6/</link>
+      <link>https://bmsg.top/posts/studay-log/daily-tech-6/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://www.catbank.cn/posts/studay-log/daily-tech-6/</guid>
+      <guid>https://bmsg.top/posts/studay-log/daily-tech-6/</guid>
       <description>&lt;p&gt;记录了在搭建整个博客以及自定义时遇到的问题和解决方法&lt;/p&gt;</description>
     </item>
     <item>
       <title>提升 Hugo 网站 SEO 排名的 10 个实用技巧</title>
-      <link>https://www.catbank.cn/posts/hugo/hugo-seo-optimization/</link>
+      <link>https://bmsg.top/posts/hugo/hugo-seo-optimization/</link>
       <pubDate>Wed, 10 Jul 2024 10:00:00 +0800</pubDate>
-      <guid>https://www.catbank.cn/posts/hugo/hugo-seo-optimization/</guid>
+      <guid>https://bmsg.top/posts/hugo/hugo-seo-optimization/</guid>
       <description>&lt;p&gt;想要让你的 Hugo 网站在搜索引擎中获得更好的排名吗？本文将分享 10 个实用的 SEO 优化技巧，帮助你的网站获得更多自然流量。&lt;/p&gt;</description>
     </item>
   </channel>

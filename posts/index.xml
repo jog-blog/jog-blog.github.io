@@ -58,6 +58,41 @@
       <description>&lt;p&gt;JetBrains 突然官宣全系列 IDE 产品免费开放，这波操作直接引爆开发者圈！从 IntelliJ IDEA 到 PyCharm、WebStorm，曾经需要付费订阅的编程利器如今无需付费即可使用，这场“降维打击”将如何改变开发者的工具选择？&lt;/p&gt;</description>
     </item>
     <item>
+      <title>构建你的第一个ChatGPT应用 | 使用Apps SDK的逐步教程</title>
+      <link>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</link>
+      <pubDate>Wed, 05 Nov 2025 10:00:00 +0800</pubDate>
+      <guid>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</guid>
+      <description>&lt;p&gt;当AI成为日常工作流程的核心，ChatGPT已成为数十亿用户的自然工具。然而直到现在，ChatGPT的重点主要是&amp;quot;对话&amp;quot;，而不是&amp;quot;交互&amp;quot;。&lt;/p&gt;&#xA;&lt;p&gt;如果你能在ChatGPT内直接与应用互动——比如预订酒店、设计演示文稿——全部在同一个界面中完成，会怎样？&lt;/p&gt;&#xA;&lt;p&gt;这正是ChatGPT Apps带来的能力。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://bmsg.top/images/tech/chatgpt-apps-sdk.png&#34; alt=&#34;ChatGPT Apps SDK示意图&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>掌握现代JavaScript新特性与最佳实践</title>
+      <link>https://bmsg.top/posts/tech-tutorials/mastering-modern-javascript/</link>
+      <pubDate>Sat, 16 Nov 2024 10:00:00 +0800</pubDate>
+      <guid>https://bmsg.top/posts/tech-tutorials/mastering-modern-javascript/</guid>
+      <description>&lt;p&gt;JavaScript作为Web开发的核心语言，一直在不断演进。从ES6开始，JavaScript引入了大量改变开发体验的新特性，使代码更简洁、更易维护。本文将深入探讨现代JavaScript的关键新特性和最佳实践，帮助你提升开发效率。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2024款MacBook Air M3深度评测</title>
+      <link>https://bmsg.top/posts/product-reviews/2024-macbook-air-m3-review/</link>
+      <pubDate>Fri, 15 Nov 2024 11:00:00 +0800</pubDate>
+      <guid>https://bmsg.top/posts/product-reviews/2024-macbook-air-m3-review/</guid>
+      <description>&lt;p&gt;苹果在2024年更新了MacBook Air系列，搭载全新的M3芯片。这款笔记本电脑以其轻薄的设计和强大的性能受到了广泛关注。本文将对2024款MacBook Air M3进行全面评测，包括外观设计、性能表现、电池续航等方面。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>如何在macOS上安装和配置Node.js环境</title>
+      <link>https://bmsg.top/posts/tech-tutorials/how-to-install-nodejs-on-macos/</link>
+      <pubDate>Fri, 15 Nov 2024 10:00:00 +0800</pubDate>
+      <guid>https://bmsg.top/posts/tech-tutorials/how-to-install-nodejs-on-macos/</guid>
+      <description>&lt;p&gt;Node.js是一个基于Chrome V8引擎的JavaScript运行时，让JavaScript可以在服务器端运行。本文将详细介绍如何在macOS系统上安装和配置Node.js环境，适合前端开发者和想要学习Node.js的初学者。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>10个实用的生活小技巧，让你的日常更高效</title>
+      <link>https://bmsg.top/posts/life-tips/10-effective-life-hacks/</link>
+      <pubDate>Fri, 15 Nov 2024 09:00:00 +0800</pubDate>
+      <guid>https://bmsg.top/posts/life-tips/10-effective-life-hacks/</guid>
+      <description>&lt;p&gt;在快节奏的现代生活中，掌握一些实用的生活小技巧可以帮助我们节省时间、提高效率，让日常生活更加轻松愉快。本文将分享10个经过实践验证的生活小技巧，涵盖家居、厨房、个人护理等多个方面。&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>提升 Hugo 网站 SEO 排名的 10 个实用技巧</title>
       <link>https://bmsg.top/posts/hugo/hugo-seo-optimization/</link>
       <pubDate>Wed, 10 Jul 2024 10:00:00 +0800</pubDate>

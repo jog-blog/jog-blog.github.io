@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>现代JavaScript on 笔墨拾光</title>
+    <link>https://bmsg.top/tags/%E7%8E%B0%E4%BB%A3javascript/</link>
+    <description>Recent content in 现代JavaScript on 笔墨拾光</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 16 Nov 2024 10:00:00 +0800</lastBuildDate>
+    <atom:link href="https://bmsg.top/tags/%E7%8E%B0%E4%BB%A3javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>掌握现代JavaScript新特性与最佳实践</title>
+      <link>https://bmsg.top/posts/tech-tutorials/mastering-modern-javascript/</link>
+      <pubDate>Sat, 16 Nov 2024 10:00:00 +0800</pubDate>
+      <guid>https://bmsg.top/posts/tech-tutorials/mastering-modern-javascript/</guid>
+      <description>&lt;p&gt;JavaScript作为Web开发的核心语言，一直在不断演进。从ES6开始，JavaScript引入了大量改变开发体验的新特性，使代码更简洁、更易维护。本文将深入探讨现代JavaScript的关键新特性和最佳实践，帮助你提升开发效率。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

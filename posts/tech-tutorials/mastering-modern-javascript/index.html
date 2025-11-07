@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="zh"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>掌握现代JavaScript新特性与最佳实践 | 笔墨拾光</title>
+
+    
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+  
+
+
+<link rel="canonical" href="https://bmsg.top/posts/tech-tutorials/mastering-modern-javascript/" />
+
+
+
+<meta name="author" content="技术生活家" />
+<meta name="description" content="JavaScript作为Web开发的核心语言，一直在不断演进。从ES6开始，JavaScript引入了大量改变开发体验的新特性，使代码更简洁、更易维护。本文将深入探讨现代JavaScript的关键新特性和最佳实践，帮助你提升开发效率。
+" />
+
+
+<meta name="keywords" content="JavaScript,ES6&#43;,前端开发,最佳实践,现代JavaScript">
+
+
+
+<meta name="generator" content="Hugo 0.152.2">
+
+
+<meta property="og:url" content="https://bmsg.top/posts/tech-tutorials/mastering-modern-javascript/">
+  <meta property="og:site_name" content="笔墨拾光">
+  <meta property="og:title" content="掌握现代JavaScript新特性与最佳实践">
+  <meta property="og:description" content="JavaScript作为Web开发的核心语言，一直在不断演进。从ES6开始，JavaScript引入了大量改变开发体验的新特性，使代码更简洁、更易维护。本文将深入探讨现代JavaScript的关键新特性和最佳实践，帮助你提升开发效率。">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-16T10:00:00+08:00">
+    <meta property="article:modified_time" content="2024-11-16T10:00:00+08:00">
+    <meta property="article:tag" content="JavaScript">
+    <meta property="article:tag" content="ES6&#43;">
+    <meta property="article:tag" content="前端开发">
+    <meta property="article:tag" content="最佳实践">
+    <meta property="article:tag" content="现代JavaScript">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="掌握现代JavaScript新特性与最佳实践">
+  <meta name="twitter:description" content="JavaScript作为Web开发的核心语言，一直在不断演进。从ES6开始，JavaScript引入了大量改变开发体验的新特性，使代码更简洁、更易维护。本文将深入探讨现代JavaScript的关键新特性和最佳实践，帮助你提升开发效率。">
+
+
+
+
+
+<meta name="google-adsense-account" content="ca-pub-8865303128098344">
+<style>
+   
+  .adsbygoogle,
+  ins.adsbygoogle,
+  .dream-adsense,
+  .dream-adsense-post-bottom {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+  }
+</style>
+
+
+
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/custom.css" />
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.1/dist/cdn.min.js" integrity="sha256-Rmqrc5SKeSLTSnQ9shSKWmJco1ks8c1hLI8UG2Np03M=" crossorigin="anonymous"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/img/avatar.png" alt="笔墨拾光" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://bmsg.top/" class="text-lg font-semibold cursor-pointer">
+          笔墨拾光
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">以文字为笔，捡拾生活里的细碎时光</div>
+        
+      </div>
+      
+    </section>
+
+    
+    
+      
+    
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-md">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="搜索">
+    <ion-icon name="search"></ion-icon>
+    搜索
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="搜索">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+          
+
+          
+        </ul>
+      </div>
+      
+
+      
+      <div
+        x-data="{ icons: [
+          { name: 'sunny', status: 'n' },
+          { name: 'moon', status: 'y' },
+          { name: 'desktop', status: 'auto' }
+        ] }"
+        class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+      >
+        <template x-for="icon in icons">
+          <div
+            role="button"
+            tabindex="0"
+            :aria-label="'Select ' + icon.name + ' mode'"
+            class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+            :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+            @click="$store.darkMode.toggle(icon.status)"
+          >
+            <ion-icon
+              :name="`${icon.name}-outline`"
+              class="group-hover:text-primary-content"
+              :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+            >
+            </ion-icon>
+          </div>
+        </template>
+      </div>
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+      <div class="dream-adsense w-2/3">
+        
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8865303128098344" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8865303128098344"
+     data-ad-slot="您的广告单元ID"
+     data-ad-format="rectangle"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+      </div>
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="掌握现代JavaScript新特性与最佳实践">
+  <meta itemprop="description" content="JavaScript作为Web开发的核心语言，一直在不断演进。从ES6开始，JavaScript引入了大量改变开发体验的新特性，使代码更简洁、更易维护。本文将深入探讨现代JavaScript的关键新特性和最佳实践，帮助你提升开发效率。">
+  <meta itemprop="datePublished" content="2024-11-16T10:00:00+08:00">
+  <meta itemprop="dateModified" content="2024-11-16T10:00:00+08:00">
+  <meta itemprop="wordCount" content="292">
+  <meta itemprop="keywords" content="JavaScript,ES6&#43;,前端开发,最佳实践,现代JavaScript">
+
+      <header>
+        <h1 itemprop="headline">掌握现代JavaScript新特性与最佳实践</h1>
+        <p class="text-sm">
+          
+            星期六, 11月 16, 2024
+          
+
+          | <span>2分钟阅读</span>
+
+          
+          | <span>更新于
+            
+              星期六, 11月 16, 2024
+            </span>
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    
+      <span itemprop="name">技术生活家</span>
+    
+  
+  </span>
+</div>
+
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+    
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=%e6%8e%8c%e6%8f%a1%e7%8e%b0%e4%bb%a3JavaScript%e6%96%b0%e7%89%b9%e6%80%a7%e4%b8%8e%e6%9c%80%e4%bd%b3%e5%ae%9e%e8%b7%b5&amp;url=https://bmsg.top/posts/tech-tutorials/mastering-modern-javascript/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=https://bmsg.top/posts/tech-tutorials/mastering-modern-javascript/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://wa.me/?text=%e6%8e%8c%e6%8f%a1%e7%8e%b0%e4%bb%a3JavaScript%e6%96%b0%e7%89%b9%e6%80%a7%e4%b8%8e%e6%9c%80%e4%bd%b3%e5%ae%9e%e8%b7%b5%20https://bmsg.top/posts/tech-tutorials/mastering-modern-javascript/" target="_blank" rel="noopener noreferrer"
+      title="Share on WhatsApp">
+      <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <figure>
+            <img class="z-30" src="/images/tech/javascript-modern-features.svg" alt="掌握现代JavaScript新特性与最佳实践" />
+            
+          </figure>
+        
+
+        <p>JavaScript作为Web开发的核心语言，一直在不断演进。从ES6开始，JavaScript引入了大量改变开发体验的新特性，使代码更简洁、更易维护。本文将深入探讨现代JavaScript的关键新特性和最佳实践，帮助你提升开发效率。</p>
+<h2 id="一现代javascript的演进历程">一、现代JavaScript的演进历程</h2>
+<p>JavaScript自1995年诞生以来，经历了多次重大更新。特别是从ES6(ECMAScript 2015)开始，每年都会发布新的标准版本，引入了大量实用功能。</p>
+<h3 id="主要版本及里程碑">主要版本及里程碑</h3>
+<ul>
+<li>ES5 (2009年)：标准化了JavaScript的核心功能</li>
+<li>ES6/ES2015：引入箭头函数、类、模块等革命性特性</li>
+<li>ES2016-ES2024：每年更新，逐步完善语言功能</li>
+</ul>
+<h2 id="二es6核心特性详解">二、ES6核心特性详解</h2>
+<h3 id="1-箭头函数">1. 箭头函数</h3>
+<p>箭头函数提供了更简洁的函数语法，并且不绑定自己的this值。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 传统函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 箭头函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+</span></span></code></pre></div><p>箭头函数特别适合用在回调函数中，可以避免this绑定问题。</p>
+<h3 id="2-类和面向对象编程">2. 类和面向对象编程</h3>
+<p>ES6引入了类语法，使JavaScript的面向对象编程更加清晰。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">age</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">greet</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`Hello, my name is </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">john</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#39;John&#39;</span>, <span style="color:#ae81ff">30</span>);
+</span></span></code></pre></div><h3 id="3-模块系统">3. 模块系统</h3>
+<p>ES6模块系统允许你将代码分割成独立的文件，提高代码的可维护性。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 导出模块
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PI</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.14159</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">calculateArea</span>(<span style="color:#a6e22e">radius</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">radius</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">radius</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 导入模块
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">PI</span>, <span style="color:#a6e22e">calculateArea</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./math.js&#39;</span>;
+</span></span></code></pre></div><h3 id="4-解构赋值">4. 解构赋值</h3>
+<p>解构赋值允许你从数组或对象中提取值并赋给变量。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 对象解构
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">25</span> };
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">person</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 数组解构
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">first</span>, <span style="color:#a6e22e">second</span>, ...<span style="color:#a6e22e">rest</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>;
+</span></span></code></pre></div><h3 id="5-扩展运算符和剩余参数">5. 扩展运算符和剩余参数</h3>
+<p>扩展运算符(&hellip;)可以展开数组或对象，而剩余参数则收集多个参数。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 扩展运算符
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr1</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr2</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">arr1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 剩余参数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sum</span>(...<span style="color:#a6e22e">numbers</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">total</span>, <span style="color:#a6e22e">num</span>) =&gt; <span style="color:#a6e22e">total</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">num</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="三es2016-es2024重要特性">三、ES2016-ES2024重要特性</h2>
+<h3 id="1-异步编程改进">1. 异步编程改进</h3>
+<p>ES2017引入了async/await，极大简化了异步代码的编写。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fetchData</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;https://api.example.com/data&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">data</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#39;Error fetching data:&#39;</span>, <span style="color:#a6e22e">error</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="2-可选链和空值合并运算符">2. 可选链和空值合并运算符</h3>
+<p>ES2020引入了可选链(?.)和空值合并运算符(??)，简化了处理可能为null或undefined的值。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 可选链
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">userName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">user</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">profile</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">name</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 空值合并运算符
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">defaultValue</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">settings</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">??</span> <span style="color:#e6db74">&#39;default&#39;</span>;
+</span></span></code></pre></div><h3 id="3-私有类字段">3. 私有类字段</h3>
+<p>ES2022引入了私有类字段，以#前缀标识。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Counter</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">increment</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">count</span><span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">getCount</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">count</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="四现代javascript最佳实践">四、现代JavaScript最佳实践</h2>
+<h3 id="1-使用const和let代替var">1. 使用const和let代替var</h3>
+<p>优先使用const声明不变的值，使用let声明可变的值，避免使用var以减少作用域问题。</p>
+<h3 id="2-采用函数式编程风格">2. 采用函数式编程风格</h3>
+<p>利用数组方法如map、filter、reduce等进行函数式编程，使代码更简洁易读。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">doubledEvenNumbers</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">n</span> =&gt; <span style="color:#a6e22e">n</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">n</span> =&gt; <span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>);
+</span></span></code></pre></div><h3 id="3-避免不必要的闭包">3. 避免不必要的闭包</h3>
+<p>合理使用闭包，但避免不必要的闭包导致内存泄漏。</p>
+<h3 id="4-优化异步代码">4. 优化异步代码</h3>
+<p>优先使用async/await处理异步操作，避免回调地狱。</p>
+<h3 id="5-合理使用模块化">5. 合理使用模块化</h3>
+<p>将代码拆分为小而专注的模块，提高可维护性和可测试性。</p>
+<h2 id="五工具与生态系统">五、工具与生态系统</h2>
+<h3 id="1-转译工具">1. 转译工具</h3>
+<p>使用Babel将现代JavaScript代码转换为向后兼容的版本。</p>
+<h3 id="2-包管理">2. 包管理</h3>
+<p>使用npm或yarn管理项目依赖。</p>
+<h3 id="3-构建工具">3. 构建工具</h3>
+<p>使用Webpack、Rollup或Vite等工具打包和优化代码。</p>
+<h3 id="4-代码质量工具">4. 代码质量工具</h3>
+<p>使用ESLint、Prettier和TypeScript等工具提高代码质量。</p>
+<h2 id="六总结">六、总结</h2>
+<p>现代JavaScript的发展为前端开发带来了巨大的进步。通过掌握ES6及以后的新特性，你可以编写更简洁、更易维护的代码。同时，遵循最佳实践和利用现代工具，可以进一步提升开发效率和代码质量。</p>
+<p>随着JavaScript的不断演进，作为开发者，我们需要保持学习的态度，及时了解和应用新的语言特性和工具，以适应不断变化的开发环境。</p>
+<p>掌握现代JavaScript，让你的前端开发之旅更加高效和愉快！</p>
+
+        
+          <div class="dream-adsense-post-bottom">
+            
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8865303128098344" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8865303128098344"
+     data-ad-slot="您的广告单元ID"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+          </div>
+        
+      </section>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a role="button" class="btn btn-outline h-12" href="/posts/tech-tutorials/build-your-first-chatgpt-app/" title="构建你的第一个ChatGPT应用 | 使用Apps SDK的逐步教程">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 text-xs font-normal">上一页</span>
+            <span class="max-w-48 truncate">构建你的第一个ChatGPT应用 | 使用Apps SDK的逐步教程</span>
+          </div>
+        </a>
+        
+
+        
+        <a role="button" class="btn btn-outline h-12" href="/posts/product-reviews/2024-macbook-air-m3-review/" title="2024款MacBook Air M3深度评测">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">2024款MacBook Air M3深度评测</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+
+      
+      <div class="divider"></div>
+
+      <section class="space-y-4">
+        
+<article>
+  <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+        this.page.identifier = '\/posts\/tech-tutorials\/mastering-modern-javascript\/';
+        this.page.title = '掌握现代JavaScript新特性与最佳实践';
+        this.page.url = 'https:\/\/bmsg.top\/posts\/tech-tutorials\/mastering-modern-javascript\/';
+
+        
+    };
+    function initDisqus() {
+        
+        
+        
+        
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//jog-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    };
+    setTimeout(() => {
+        initDisqus();
+    }, 3000);
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</article>
+
+
+
+
+
+
+
+
+
+
+      </section>
+      
+    </article>
+  </div>
+
+  <div
+    x-data="tocHighlighter()"
+    @scroll.window="debouncedScroll"
+    class="hidden lg:flex lg:flex-col lg:items-end"
+  >
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一现代javascript的演进历程">一、现代JavaScript的演进历程</a>
+      <ul>
+        <li><a href="#主要版本及里程碑">主要版本及里程碑</a></li>
+      </ul>
+    </li>
+    <li><a href="#二es6核心特性详解">二、ES6核心特性详解</a>
+      <ul>
+        <li><a href="#1-箭头函数">1. 箭头函数</a></li>
+        <li><a href="#2-类和面向对象编程">2. 类和面向对象编程</a></li>
+        <li><a href="#3-模块系统">3. 模块系统</a></li>
+        <li><a href="#4-解构赋值">4. 解构赋值</a></li>
+        <li><a href="#5-扩展运算符和剩余参数">5. 扩展运算符和剩余参数</a></li>
+      </ul>
+    </li>
+    <li><a href="#三es2016-es2024重要特性">三、ES2016-ES2024重要特性</a>
+      <ul>
+        <li><a href="#1-异步编程改进">1. 异步编程改进</a></li>
+        <li><a href="#2-可选链和空值合并运算符">2. 可选链和空值合并运算符</a></li>
+        <li><a href="#3-私有类字段">3. 私有类字段</a></li>
+      </ul>
+    </li>
+    <li><a href="#四现代javascript最佳实践">四、现代JavaScript最佳实践</a>
+      <ul>
+        <li><a href="#1-使用const和let代替var">1. 使用const和let代替var</a></li>
+        <li><a href="#2-采用函数式编程风格">2. 采用函数式编程风格</a></li>
+        <li><a href="#3-避免不必要的闭包">3. 避免不必要的闭包</a></li>
+        <li><a href="#4-优化异步代码">4. 优化异步代码</a></li>
+        <li><a href="#5-合理使用模块化">5. 合理使用模块化</a></li>
+      </ul>
+    </li>
+    <li><a href="#五工具与生态系统">五、工具与生态系统</a>
+      <ul>
+        <li><a href="#1-转译工具">1. 转译工具</a></li>
+        <li><a href="#2-包管理">2. 包管理</a></li>
+        <li><a href="#3-构建工具">3. 构建工具</a></li>
+        <li><a href="#4-代码质量工具">4. 代码质量工具</a></li>
+      </ul>
+    </li>
+    <li><a href="#六总结">六、总结</a></li>
+  </ul>
+</nav>
+    
+  </div>
+</div>
+
+
+            
+<div class="friend-links py-12 bg-gradient-to-r from-base-100 to-base-200 rounded-xl shadow-sm my-6 w-full">
+  <div class="mx-auto px-6">
+    <h3 class="text-2xl font-bold mb-5 text-center text-primary">友情链接</h3>
+    <div class="h-5 my-5"></div>
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://gohugo.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/hugo-logo-wide.svg" alt="Hugo 官网" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Hugo 官网
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/github-logo.png" alt="GitHub" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              GitHub
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://juejin.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/juejin-logo.svg" alt="掘金" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              掘金
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://www.zhihu.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/zhihu-logo.png" alt="知乎" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              知乎
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://sspai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/shaoshupai-logo.png" alt="少数派" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              少数派
+            </span>
+          </a>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2016 - 2025 笔墨拾光
+  </p>
+  
+
+  
+  <p>Powered by Inkchron.</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+
+<div
+  x-data="{
+    isVisible: false,
+    toggleVisibility() {
+      this.isVisible = window.scrollY > 300;
+    }
+  }"
+  x-init="
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility);
+  "
+  x-show="isVisible"
+  x-transition:enter="transition duration-300 ease-out"
+  x-transition:enter-start="opacity-0 scale-50"
+  x-transition:enter-end="opacity-100 scale-100"
+  x-transition:leave="transition duration-300 ease-in"
+  x-transition:leave-start="opacity-100 scale-100"
+  x-transition:leave-end="opacity-0 scale-50"
+  class="fixed bottom-8 right-8 z-50"
+>
+  <button
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    aria-label="回到顶部"
+    class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-content shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+  ></button>
+</div>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30 mb-4"
+    >
+      <div class="card-body">
+        <div class="card-title">关于我</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Hi，这里是笔墨拾光的博客。“笔墨拾光” 是我用来收纳日常经验的小角落标识～</p>
+          <p>我是职场搬砖人 + 生活折腾爱好者，在这里会记录工作里的避坑技巧、生活中的实用小招。欢迎你通过评论与我交流经验～。</p>
+        </div>
+      </div>
+    </article>
+
+    
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">社交链接</div>
+
+        
+        <ul class="menu menu-horizontal flex-wrap w-full px-0 [&_ion-icon]:text-lg">
+  
+  <li>
+    <a href="mailto:35924784@qq.com" title="Email">
+      <ion-icon name="mail"></ion-icon>
+    </a>
+  </li>
+  
+
+  
+  <li>
+    <a href="https://github.com/g1eny0ung" target="_blank" title="GitHub">
+      <ion-icon name="logo-github"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://twitter.com/g1eny0ung" target="_blank" title="Twitter">
+      <ion-icon name="logo-twitter"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://linkedin.com/in/g1eny0ung" target="_blank" title="LinkedIn">
+      <ion-icon name="logo-linkedin"></ion-icon>
+    </a>
+  </li>
+  
+</ul>
+
+        
+      </div>
+    </article>
+  </div>
+
+  
+
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">知识共享</div>
+
+        <div class="prose dark:prose-invert">
+          <p>此网站的所有内容都遵循 CC BY-NC-SA 4.0。</p>
+<p>All contents of this website are licensed under CC BY-NC-SA 4.0.</p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+
+  
+</div>
+
+            
+
+            
+<div class="friend-links py-12 bg-gradient-to-r from-base-100 to-base-200 rounded-xl shadow-sm my-6 w-full">
+  <div class="mx-auto px-6">
+    <h3 class="text-2xl font-bold mb-5 text-center text-primary">友情链接</h3>
+    <div class="h-5 my-5"></div>
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://gohugo.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/hugo-logo-wide.svg" alt="Hugo 官网" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Hugo 官网
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/github-logo.png" alt="GitHub" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              GitHub
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://juejin.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/juejin-logo.svg" alt="掘金" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              掘金
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://www.zhihu.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/zhihu-logo.png" alt="知乎" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              知乎
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://sspai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/shaoshupai-logo.png" alt="少数派" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              少数派
+            </span>
+          </a>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2016 - 2025 笔墨拾光
+  </p>
+  
+
+  
+  <p>Powered by Inkchron.</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+
+<div
+  x-data="{
+    isVisible: false,
+    toggleVisibility() {
+      this.isVisible = window.scrollY > 300;
+    }
+  }"
+  x-init="
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility);
+  "
+  x-show="isVisible"
+  x-transition:enter="transition duration-300 ease-out"
+  x-transition:enter-start="opacity-0 scale-50"
+  x-transition:enter-end="opacity-100 scale-100"
+  x-transition:leave="transition duration-300 ease-in"
+  x-transition:leave-start="opacity-100 scale-100"
+  x-transition:leave-end="opacity-0 scale-50"
+  class="fixed bottom-8 right-8 z-50"
+>
+  <button
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    aria-label="回到顶部"
+    class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-content shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+  ></button>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+    
+  
+  <script src="/js/grid.min.js"></script>
+
+
+
+
+  
+
+<script src="/js/main.min.js"></script>
+
+    
+
+
+
+
+
+
+
+  
+
+<script src="/js/toc.min.js"></script>
+
+
+
+  
+
+<script src="/js/code-copy.min.js"></script>
+
+
+  
+    <script type="module">
+      import mediumZoom from 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm';
+      mediumZoom('#dream-single-post-content img', {
+        background: 'oklch(var(--b1))',
+        margin: 24,
+      })
+    </script>
+  
+
+
+
+
+
+
+    
+
+    
+
+    
+    <script src="/js/back-to-top.js"></script>
+    
+
+    
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JB1BENEW8"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0JB1BENEW8');
+        }
+      </script>
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
+  </body>
+</html>

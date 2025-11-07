@@ -78,6 +78,8 @@ github-colorful-contributions-graph 改变 GitHub 贡献面板颜色的 Chrome �
 
 
     
+    <link rel="stylesheet" href="/css/custom.css" />
+    
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.1/dist/cdn.min.js" integrity="sha256-Rmqrc5SKeSLTSnQ9shSKWmJco1ks8c1hLI8UG2Np03M=" crossorigin="anonymous"></script>
   </head>
@@ -89,7 +91,10 @@ github-colorful-contributions-graph 改变 GitHub 贡献面板颜色的 Chrome �
     <div id="dream-global-bg"></div>
 
     
-<nav class="mt-4 lg:mt-8 py-4">
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
 
   
   <div class="container flex justify-between px-4">
@@ -195,6 +200,8 @@ github-colorful-contributions-graph 改变 GitHub 贡献面板颜色的 Chrome �
 
       
       
+      
+      
 
 
 
@@ -218,30 +225,47 @@ github-colorful-contributions-graph 改变 GitHub 贡献面板颜色的 Chrome �
 
 
       
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="归档">
-  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
-</a>
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
 
 
-      
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="所有分类">
-  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
-</a>
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
 
 
-      
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="所有标签">
-  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
-</a>
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
 
 
-      
+          
 
-      
-
+          
+        </ul>
+      </div>
       
     </section>
   </div>
@@ -311,6 +335,8 @@ github-colorful-contributions-graph 改变 GitHub 贡献面板颜色的 Chrome �
   
   
   
+    
+  
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
       href="https://x.com/intent/post?text=%e6%88%91%e7%9a%84%e5%bc%80%e6%ba%90%e9%a1%b9%e7%9b%ae&amp;url=https://www.catbank.cn/about/projects/" target="_blank" rel="noopener noreferrer"
@@ -357,6 +383,23 @@ github-colorful-contributions-graph 改变 GitHub 贡献面板颜色的 Chrome �
       </section>
 
       
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <div></div>
+        
+
+        
+        <a role="button" class="btn btn-outline h-12" href="/about/sponsor/" title="赞助我">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">赞助我</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
 
       
       <div class="divider"></div>
@@ -374,12 +417,12 @@ github-colorful-contributions-graph 改变 GitHub 贡献面板颜色的 Chrome �
         
     };
     function initDisqus() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
+        
+        
+        
+        
         var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "jog-blog" + '.disqus.com/embed.js';
+        s.src = '//jog-blog.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     };
@@ -409,6 +452,19 @@ github-colorful-contributions-graph 改变 GitHub 贡献面板颜色的 Chrome �
     @scroll.window="debouncedScroll"
     class="hidden lg:flex lg:flex-col lg:items-end"
   >
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#my-open-source-projects">My Open Source Projects</a>
+      <ul>
+        <li><a href="#petal-">Petal 🌺</a></li>
+        <li><a href="#hugo-theme-dream-">hugo-theme-dream 🌱</a></li>
+        <li><a href="#alfred-colors-workflow">Alfred-Colors-workflow</a></li>
+        <li><a href="#github-colorful-contributions-graph">github-colorful-contributions-graph</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     
   </div>
 </div>
@@ -740,6 +796,16 @@ github-colorful-contributions-graph 改变 GitHub 贡献面板颜色的 Chrome �
 
 <script src="/js/toc.min.js"></script>
 
+
+  
+    <script type="module">
+      import mediumZoom from 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm';
+      mediumZoom('#dream-single-post-content img', {
+        background: 'oklch(var(--b1))',
+        margin: 24,
+      })
+    </script>
+  
 
 
 

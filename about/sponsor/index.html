@@ -76,6 +76,8 @@ If you like my works or find them helpful, please consider buying me a cup of co
 
 
     
+    <link rel="stylesheet" href="/css/custom.css" />
+    
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.1/dist/cdn.min.js" integrity="sha256-Rmqrc5SKeSLTSnQ9shSKWmJco1ks8c1hLI8UG2Np03M=" crossorigin="anonymous"></script>
   </head>
@@ -87,7 +89,10 @@ If you like my works or find them helpful, please consider buying me a cup of co
     <div id="dream-global-bg"></div>
 
     
-<nav class="mt-4 lg:mt-8 py-4">
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
 
   
   <div class="container flex justify-between px-4">
@@ -193,6 +198,8 @@ If you like my works or find them helpful, please consider buying me a cup of co
 
       
       
+      
+      
 
 
 
@@ -216,30 +223,47 @@ If you like my works or find them helpful, please consider buying me a cup of co
 
 
       
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="归档">
-  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
-</a>
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
 
 
-      
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="所有分类">
-  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
-</a>
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
 
 
-      
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="所有标签">
-  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
-</a>
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
 
 
-      
+          
 
-      
-
+          
+        </ul>
+      </div>
       
     </section>
   </div>
@@ -308,6 +332,8 @@ If you like my works or find them helpful, please consider buying me a cup of co
   
   
   
+    
+  
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
       href="https://x.com/intent/post?text=%e8%b5%9e%e5%8a%a9%e6%88%91&amp;url=https://www.catbank.cn/about/sponsor/" target="_blank" rel="noopener noreferrer"
@@ -348,6 +374,29 @@ If you like my works or find them helpful, please consider buying me a cup of co
       </section>
 
       
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a role="button" class="btn btn-outline h-12" href="/about/projects/" title="我的开源项目">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 text-xs font-normal">上一页</span>
+            <span class="max-w-48 truncate">我的开源项目</span>
+          </div>
+        </a>
+        
+
+        
+        <a role="button" class="btn btn-outline h-12" href="/about/creative-commons/" title="知识共享">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">知识共享</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
 
       
       <div class="divider"></div>
@@ -365,12 +414,12 @@ If you like my works or find them helpful, please consider buying me a cup of co
         
     };
     function initDisqus() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
+        
+        
+        
+        
         var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "jog-blog" + '.disqus.com/embed.js';
+        s.src = '//jog-blog.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     };
@@ -400,6 +449,8 @@ If you like my works or find them helpful, please consider buying me a cup of co
     @scroll.window="debouncedScroll"
     class="hidden lg:flex lg:flex-col lg:items-end"
   >
+    
+      <nav id="TableOfContents"></nav>
     
   </div>
 </div>
@@ -731,6 +782,16 @@ If you like my works or find them helpful, please consider buying me a cup of co
 
 <script src="/js/toc.min.js"></script>
 
+
+  
+    <script type="module">
+      import mediumZoom from 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm';
+      mediumZoom('#dream-single-post-content img', {
+        background: 'oklch(var(--b1))',
+        margin: 24,
+      })
+    </script>
+  
 
 
 

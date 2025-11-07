@@ -1,0 +1,56 @@
+<svg width="800" height="1200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 标题区域 -->
+  <rect x="50" y="30" width="700" height="150" rx="15" fill="#f8f9fa" stroke="#e9ecef" stroke-width="2"/>
+  <text x="400" y="80" font-family="Arial" font-size="28" font-weight="bold" fill="#2c3e50" text-anchor="middle">Hugo（Stack主题）博客搭建过程中踩过的坑</text>
+  <text x="400" y="130" font-family="Arial" font-size="16" fill="#6c757d" text-anchor="middle">记录了在搭建整个博客以及自定义时遇到的问题和解决方法</text>
+
+  <!-- 问题一：Github仓库双分支 -->
+  <rect x="50" y="220" width="700" height="250" rx="15" fill="#ffffff" stroke="#007bff" stroke-width="3"/>
+  <circle cx="120" cy="280" r="40" fill="#007bff"/>
+  <text x="120" y="290" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">01</text>
+  <text x="400" y="280" font-family="Arial" font-size="22" font-weight="bold" fill="#007bff" text-anchor="middle">Github仓库双分支分别存放源代码和部署后的代码</text>
+
+  <rect x="100" y="320" width="600" height="150" rx="8" fill="#f8f9fa"/>
+  <text x="130" y="360" font-family="Arial" font-size="16" fill="#495057" text-anchor="start">• 主分支(master)存放源代码文件</text>
+  <text x="130" y="400" font-family="Arial" font-size="16" fill="#495057" text-anchor="start">• 部署分支(deploy)存放生成的网页代码</text>
+  <text x="130" y="440" font-family="Arial" font-size="16" fill="#495057" text-anchor="start">• 修改Action配置中的PUBLISH_BRANCH为deploy</text>
+  <text x="130" y="480" font-family="Arial" font-size="16" fill="#495057" text-anchor="start">• 在Github Pages设置中选择deploy分支</text>
+
+  <!-- 问题二：域名绑定丢失 -->
+  <rect x="50" y="510" width="700" height="200" rx="15" fill="#ffffff" stroke="#28a745" stroke-width="3"/>
+  <circle cx="120" cy="570" r="40" fill="#28a745"/>
+  <text x="120" y="580" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">02</text>
+  <text x="400" y="570" font-family="Arial" font-size="22" font-weight="bold" fill="#28a745" text-anchor="middle">Github Action实现自动化部署后域名绑定丢失</text>
+
+  <rect x="100" y="610" width="600" height="100" rx="8" fill="#f8f9fa"/>
+  <text x="130" y="650" font-family="Arial" font-size="16" fill="#495057" text-anchor="start">• 每次自动部署后，域名设置会被清空</text>
+  <text x="130" y="690" font-family="Arial" font-size="16" fill="#495057" text-anchor="start">• 解决方法：在deploy.yml中添加cname配置</text>
+
+  <!-- 代码示例 -->
+  <rect x="150" y="700" width="500" height="50" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <text x="170" y="730" font-family="Courier" font-size="12" fill="#dc3545" text-anchor="start">cname: catbank.cn # 你的域名</text>
+
+  <!-- 问题三：启用Local Search -->
+  <rect x="50" y="790" width="700" height="180" rx="15" fill="#ffffff" stroke="#ffc107" stroke-width="3"/>
+  <circle cx="120" y="850" r="40" fill="#ffc107"/>
+  <text x="120" y="860" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">03</text>
+  <text x="400" y="850" font-family="Arial" font-size="22" font-weight="bold" fill="#ffc107" text-anchor="middle">Stack主题启用Local Search</text>
+
+  <rect x="100" y="890" width="600" height="80" rx="8" fill="#f8f9fa"/>
+  <text x="130" y="930" font-family="Arial" font-size="16" fill="#495057" text-anchor="start">• 需要创建content/search/index.md文件</text>
+
+  <!-- 问题四：图片加载问题 -->
+  <rect x="50" y="1010" width="700" height="160" rx="15" fill="#ffffff" stroke="#dc3545" stroke-width="3"/>
+  <circle cx="120" y="1070" r="40" fill="#dc3545"/>
+  <text x="120" y="1080" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">04</text>
+  <text x="400" y="1070" font-family="Arial" font-size="22" font-weight="bold" fill="#dc3545" text-anchor="middle">文章本地能够加载图片，Github部署后图片无法加载</text>
+
+  <rect x="100" y="1110" width="600" height="50" rx="8" fill="#f8f9fa"/>
+  <text x="130" y="1140" font-family="Arial" font-size="16" fill="#495057" text-anchor="start">• 需要严格按照Stack文档要求的目录结构组织图片文件</text>
+
+  <!-- 装饰元素 -->
+  <circle cx="750" cy="280" r="15" fill="#007bff" opacity="0.2"/>
+  <circle cx="750" cy="570" r="15" fill="#28a745" opacity="0.2"/>
+  <circle cx="750" cy="850" r="15" fill="#ffc107" opacity="0.2"/>
+  <circle cx="750" cy="1070" r="15" fill="#dc3545" opacity="0.2"/>
+</svg>

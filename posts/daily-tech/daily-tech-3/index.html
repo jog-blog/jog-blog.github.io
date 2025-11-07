@@ -78,6 +78,8 @@
 
 
     
+    <link rel="stylesheet" href="/css/custom.css" />
+    
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.1/dist/cdn.min.js" integrity="sha256-Rmqrc5SKeSLTSnQ9shSKWmJco1ks8c1hLI8UG2Np03M=" crossorigin="anonymous"></script>
   </head>
@@ -89,7 +91,10 @@
     <div id="dream-global-bg"></div>
 
     
-<nav class="mt-4 lg:mt-8 py-4">
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
 
   
   <div class="container flex justify-between px-4">
@@ -195,6 +200,8 @@
 
       
       
+      
+      
 
 
 
@@ -218,30 +225,47 @@
 
 
       
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="归档">
-  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
-</a>
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
 
 
-      
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="所有分类">
-  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
-</a>
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
 
 
-      
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="所有标签">
-  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
-</a>
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
 
 
-      
+          
 
-      
-
+          
+        </ul>
+      </div>
       
     </section>
   </div>
@@ -312,6 +336,8 @@
   
   
   
+    
+  
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
       href="https://x.com/intent/post?text=%e7%94%b5%e8%84%91%e6%96%87%e4%bb%b6%e6%95%b4%e7%90%86%e6%8a%80%e5%b7%a7%ef%bc%9a%e8%ae%a9%e4%bd%a0%e7%9a%84%e5%b7%a5%e4%bd%9c%e7%a9%ba%e9%97%b4%e6%9b%b4%e6%95%b4%e6%b4%81&amp;url=https://www.catbank.cn/posts/daily-tech/daily-tech-3/" target="_blank" rel="noopener noreferrer"
@@ -340,6 +366,11 @@
       </header>
 
       <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <figure>
+            <img class="z-30" src="/images/daily-tech/daily-tech-3.svg" alt="电脑文件整理技巧：让你的工作空间更整洁" />
+            
+          </figure>
         
 
         <p>电脑文件杂乱无章？本文分享几个实用的文件整理技巧，帮助你创建一个更高效的数字工作环境。</p>
@@ -378,6 +409,29 @@
       </section>
 
       
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a role="button" class="btn btn-outline h-12" href="/posts/studay-log/daily-tech-6/" title="Hugo（Stack主题）博客搭建过程中踩过的坑">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 text-xs font-normal">上一页</span>
+            <span class="max-w-48 truncate">Hugo（Stack主题）博客搭建过程中踩过的坑</span>
+          </div>
+        </a>
+        
+
+        
+        <a role="button" class="btn btn-outline h-12" href="/posts/daily-tech/daily-tech-2/" title="家庭网络优化指南：让你的WiFi更快更稳定">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">家庭网络优化指南：让你的WiFi更快更稳定</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
 
       
       <div class="divider"></div>
@@ -395,12 +449,12 @@
         
     };
     function initDisqus() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
+        
+        
+        
+        
         var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "jog-blog" + '.disqus.com/embed.js';
+        s.src = '//jog-blog.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     };
@@ -430,6 +484,15 @@
     @scroll.window="debouncedScroll"
     class="hidden lg:flex lg:flex-col lg:items-end"
   >
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-建立合理的文件夹结构">1. 建立合理的文件夹结构</a></li>
+    <li><a href="#2-使用统一的命名规则">2. 使用统一的命名规则</a></li>
+    <li><a href="#3-定期清理无用文件">3. 定期清理无用文件</a></li>
+    <li><a href="#4-利用搜索功能和标签">4. 利用搜索功能和标签</a></li>
+  </ul>
+</nav>
     
   </div>
 </div>
@@ -761,6 +824,16 @@
 
 <script src="/js/toc.min.js"></script>
 
+
+  
+    <script type="module">
+      import mediumZoom from 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm';
+      mediumZoom('#dream-single-post-content img', {
+        background: 'oklch(var(--b1))',
+        margin: 24,
+      })
+    </script>
+  
 
 
 

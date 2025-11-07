@@ -78,6 +78,8 @@
 
 
     
+    <link rel="stylesheet" href="/css/custom.css" />
+    
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.1/dist/cdn.min.js" integrity="sha256-Rmqrc5SKeSLTSnQ9shSKWmJco1ks8c1hLI8UG2Np03M=" crossorigin="anonymous"></script>
   </head>
@@ -89,7 +91,10 @@
     <div id="dream-global-bg"></div>
 
     
-<nav class="mt-4 lg:mt-8 py-4">
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
 
   
   <div class="container flex justify-between px-4">
@@ -195,6 +200,8 @@
 
       
       
+      
+      
 
 
 
@@ -218,30 +225,47 @@
 
 
       
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="归档">
-  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
-</a>
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
 
 
-      
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="所有分类">
-  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
-</a>
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
 
 
-      
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="所有标签">
-  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
-</a>
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
 
 
-      
+          
 
-      
-
+          
+        </ul>
+      </div>
       
     </section>
   </div>
@@ -312,6 +336,8 @@
   
   
   
+    
+  
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
       href="https://x.com/intent/post?text=%e5%ae%9e%e7%94%a8%e5%af%86%e7%a0%81%e7%ae%a1%e7%90%86%e6%8a%80%e5%b7%a7%ef%bc%9a%e4%bf%9d%e6%8a%a4%e4%bd%a0%e7%9a%84%e6%95%b0%e5%ad%97%e8%b5%84%e4%ba%a7%e5%ae%89%e5%85%a8&amp;url=https://www.catbank.cn/posts/daily-tech/daily-tech-5/" target="_blank" rel="noopener noreferrer"
@@ -340,6 +366,11 @@
       </header>
 
       <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <figure>
+            <img class="z-30" src="/images/daily-tech/daily-tech-5.svg" alt="实用密码管理技巧：保护你的数字资产安全" />
+            
+          </figure>
         
 
         <p>密码太多记不住？本文分享几个实用的密码管理技巧，帮助你在保证安全的同时，也能方便地管理各种账号密码。</p>
@@ -380,6 +411,29 @@
       </section>
 
       
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a role="button" class="btn btn-outline h-12" href="/posts/daily-tech/daily-tech-1/" title="如何利用手机便签提高工作效率">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 text-xs font-normal">上一页</span>
+            <span class="max-w-48 truncate">如何利用手机便签提高工作效率</span>
+          </div>
+        </a>
+        
+
+        
+        <a role="button" class="btn btn-outline h-12" href="/posts/daily-tech/daily-tech-4/" title="手机电池保养指南：延长你的电池使用寿命">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">手机电池保养指南：延长你的电池使用寿命</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
 
       
       <div class="divider"></div>
@@ -397,12 +451,12 @@
         
     };
     function initDisqus() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
+        
+        
+        
+        
         var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "jog-blog" + '.disqus.com/embed.js';
+        s.src = '//jog-blog.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     };
@@ -432,6 +486,15 @@
     @scroll.window="debouncedScroll"
     class="hidden lg:flex lg:flex-col lg:items-end"
   >
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-使用密码管理器">1. 使用密码管理器</a></li>
+    <li><a href="#2-创建强密码的技巧">2. 创建强密码的技巧</a></li>
+    <li><a href="#3-启用双因素认证">3. 启用双因素认证</a></li>
+    <li><a href="#4-定期检查和更新密码">4. 定期检查和更新密码</a></li>
+  </ul>
+</nav>
     
   </div>
 </div>
@@ -763,6 +826,16 @@
 
 <script src="/js/toc.min.js"></script>
 
+
+  
+    <script type="module">
+      import mediumZoom from 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm';
+      mediumZoom('#dream-single-post-content img', {
+        background: 'oklch(var(--b1))',
+        margin: 24,
+      })
+    </script>
+  
 
 
 

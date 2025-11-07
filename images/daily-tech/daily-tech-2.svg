@@ -1,0 +1,14 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#f8f9fa"/>
+  <rect x="150" y="80" width="500" height="240" fill="#ffffff" stroke="#dee2e6" stroke-width="2" rx="8"/>
+  <rect x="200" y="100" width="400" height="50" fill="#6c757d" rx="4"/>
+  <text x="400" y="135" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">家庭网络优化指南</text>
+  <circle cx="250" cy="190" r="30" fill="#007bff"/>
+  <path d="M250 170 L265 200 L235 200 Z" fill="#ffffff"/>
+  <rect x="300" y="170" width="300" height="30" fill="#e9ecef" rx="3"/>
+  <text x="450" y="192" font-family="Arial" font-size="14" fill="#495057" text-anchor="middle">WiFi信号增强方法</text>
+  <rect x="300" y="210" width="300" height="30" fill="#e9ecef" rx="3"/>
+  <text x="450" y="232" font-family="Arial" font-size="14" fill="#495057" text-anchor="middle">网络速度测试技巧</text>
+  <rect x="300" y="250" width="300" height="30" fill="#e9ecef" rx="3"/>
+  <text x="450" y="272" font-family="Arial" font-size="14" fill="#495057" text-anchor="middle">路由器安全设置</text>
+</svg>

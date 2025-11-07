@@ -1,0 +1,32 @@
+<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="500" height="300" fill="#f9f9f9" rx="10" ry="10"/>
+
+  <!-- 锁图标 -->
+  <g transform="translate(250, 150)">
+    <!-- 锁身 -->
+    <rect x="-40" y="10" width="80" height="70" fill="#3498db" rx="5" ry="5"/>
+    <!-- 锁孔 -->
+    <rect x="-20" y="50" width="40" height="30" fill="#2980b9" rx="3" ry="3"/>
+    <!-- 锁舌 -->
+    <rect x="-30" y="-10" width="60" height="20" fill="#3498db"/>
+    <!-- 锁环 -->
+    <circle cx="0" cy="-25" r="15" fill="#3498db"/>
+  </g>
+
+  <!-- 密码符号 -->
+  <g transform="translate(150, 150)">
+    <text x="0" y="0" font-family="Arial" font-size="40" fill="#34495e" text-anchor="middle">🔒</text>
+  </g>
+
+  <g transform="translate(350, 150)">
+    <text x="0" y="0" font-family="Arial" font-size="40" fill="#34495e" text-anchor="middle">🔑</text>
+  </g>
+
+  <!-- 安全线 -->
+  <path d="M50,50 Q250,200 450,50" stroke="#9b59b6" stroke-width="4" fill="none" stroke-dasharray="10,5"/>
+  <path d="M50,100 Q250,250 450,100" stroke="#e74c3c" stroke-width="4" fill="none" stroke-dasharray="10,5"/>
+
+  <!-- 标题 -->
+  <text x="250" y="30" font-family="Arial" font-size="24" font-weight="bold" fill="#2c3e50" text-anchor="middle">密码管理</text>
+</svg>

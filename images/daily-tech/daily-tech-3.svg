@@ -1,0 +1,15 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#f0f2f5"/>
+  <rect x="100" y="50" width="600" height="300" fill="#ffffff" stroke="#dcdfe6" stroke-width="2" rx="10"/>
+  <rect x="200" y="80" width="400" height="60" fill="#e6a23c" rx="5"/>
+  <text x="400" y="120" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">电脑文件整理技巧</text>
+  <rect x="200" y="160" width="400" height="160" fill="#f5f5f5" rx="5"/>
+  <rect x="220" y="180" width="360" height="30" fill="#ffffff" stroke="#e4e7ed" stroke-width="1"/>
+  <text x="240" y="200" font-family="Arial" font-size="14" fill="#303133" text-anchor="start">📁 文档文件夹</text>
+  <rect x="220" y="220" width="360" height="30" fill="#ffffff" stroke="#e4e7ed" stroke-width="1"/>
+  <text x="240" y="240" font-family="Arial" font-size="14" fill="#303133" text-anchor="start">📷 图片文件夹</text>
+  <rect x="220" y="260" width="360" height="30" fill="#ffffff" stroke="#e4e7ed" stroke-width="1"/>
+  <text x="240" y="280" font-family="Arial" font-size="14" fill="#303133" text-anchor="start">🎵 音乐文件夹</text>
+  <rect x="220" y="300" width="360" height="30" fill="#ffffff" stroke="#e4e7ed" stroke-width="1"/>
+  <text x="240" y="320" font-family="Arial" font-size="14" fill="#303133" text-anchor="start">💾 备份文件夹</text>
+</svg>

@@ -9,12 +9,16 @@
     <title>搜索 | 笔墨拾光</title>
 
     
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+  
+
 
 <link rel="canonical" href="https://www.catbank.cn/search/" />
 
 
 
-<meta name="author" content="Jog" />
+<meta name="author" content="Inkchron" />
 <meta name="description" content="Pen & Petals of Time" />
 
 
@@ -262,7 +266,7 @@ x-data="{
             <span x-text="post.item.author"></span>
             </template>
             <template x-if="!post.item.author">
-            <span>Jog</span>
+            <span>Inkchron</span>
             </template>
             </span>
           </div>
@@ -291,7 +295,7 @@ x-data="{
   
 
   
-  <p>Powered by Pen & Petals of Time.</p>
+  <p>Powered by Inkchron.</p>
   
 </div>
 
@@ -323,6 +327,36 @@ x-data="{
 </div>
 
 </footer>
+
+
+<div
+  x-data="{
+    isVisible: false,
+    toggleVisibility() {
+      this.isVisible = window.scrollY > 300;
+    }
+  }"
+  x-init="
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility);
+  "
+  x-show="isVisible"
+  x-transition:enter="transition duration-300 ease-out"
+  x-transition:enter-start="opacity-0 scale-50"
+  x-transition:enter-end="opacity-100 scale-100"
+  x-transition:leave="transition duration-300 ease-in"
+  x-transition:leave-start="opacity-100 scale-100"
+  x-transition:leave-end="opacity-0 scale-50"
+  class="fixed bottom-8 right-8 z-50"
+>
+  <button
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    aria-label="回到顶部"
+    class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-content shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+  >
+    <ion-icon name="arrow-up-circle-outline" size="24"></ion-icon>
+  </button>
+</div>
 
           </div>
         </div>
@@ -474,7 +508,7 @@ x-data="{
   
 
   
-  <p>Powered by Pen & Petals of Time.</p>
+  <p>Powered by Inkchron.</p>
   
 </div>
 
@@ -506,6 +540,36 @@ x-data="{
 </div>
 
 </footer>
+
+
+<div
+  x-data="{
+    isVisible: false,
+    toggleVisibility() {
+      this.isVisible = window.scrollY > 300;
+    }
+  }"
+  x-init="
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility);
+  "
+  x-show="isVisible"
+  x-transition:enter="transition duration-300 ease-out"
+  x-transition:enter-start="opacity-0 scale-50"
+  x-transition:enter-end="opacity-100 scale-100"
+  x-transition:leave="transition duration-300 ease-in"
+  x-transition:leave-start="opacity-100 scale-100"
+  x-transition:leave-end="opacity-0 scale-50"
+  class="fixed bottom-8 right-8 z-50"
+>
+  <button
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    aria-label="回到顶部"
+    class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-content shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+  >
+    <ion-icon name="arrow-up-circle-outline" size="24"></ion-icon>
+  </button>
+</div>
 
           </div>
         </div>
@@ -551,9 +615,11 @@ x-data="{
 
 
 
+
+
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" integrity="sha256-42IbU8t3tOwwbexB7ZVRHm3YDRf65aBPPjRtIUufj5I=" crossorigin="anonymous"></script>
 <script>
-  var fuseData = [{"author":"技术生活家","avatar":null,"categories":["电脑技巧","效率提升"],"description":"\u003cp\u003e电脑文件杂乱无章？本文分享几个实用的文件整理技巧，帮助你创建一个更高效的数字工作环境。\u003c/p\u003e","readingTime":1,"tags":["文件管理","工作习惯"],"title":"电脑文件整理技巧：让你的工作空间更整洁","url":"/posts/daily-tech/daily-tech-3/"},{"author":"技术生活家","avatar":null,"categories":["网络技术","生活技巧"],"description":"\u003cp\u003e有没有遇到过看视频卡顿、游戏延迟高的情况？本文分享几个简单易行的家庭网络优化技巧，让你的WiFi更快更稳定。\u003c/p\u003e","readingTime":1,"tags":["WiFi优化","家庭网络"],"title":"家庭网络优化指南：让你的WiFi更快更稳定","url":"/posts/daily-tech/daily-tech-2/"},{"author":"技术生活家","avatar":null,"categories":["生活技巧","效率工具"],"description":"\u003cp\u003e你是否经常忘记重要的待办事项？本文将分享如何利用手机自带的便签应用来提高日常工作和生活的效率。\u003c/p\u003e","readingTime":1,"tags":["手机使用","效率提升"],"title":"如何利用手机便签提高工作效率","url":"/posts/daily-tech/daily-tech-1/"},{"author":"技术生活家","avatar":null,"categories":["网络安全","数字生活"],"description":"\u003cp\u003e密码太多记不住？本文分享几个实用的密码管理技巧，帮助你在保证安全的同时，也能方便地管理各种账号密码。\u003c/p\u003e","readingTime":1,"tags":["密码管理","网络安全"],"title":"实用密码管理技巧：保护你的数字资产安全","url":"/posts/daily-tech/daily-tech-5/"},{"author":"技术生活家","avatar":null,"categories":["手机技巧","数码保养"],"description":"\u003cp\u003e手机电池不耐用？本文分享几个科学的电池保养技巧，帮助你延长手机电池的使用寿命。\u003c/p\u003e","readingTime":1,"tags":["电池保养","手机使用"],"title":"手机电池保养指南：延长你的电池使用寿命","url":"/posts/daily-tech/daily-tech-4/"},{"author":"开发者日记","avatar":null,"categories":["开发者工具"],"description":"\u003cp\u003eJetBrains 突然官宣全系列 IDE 产品免费开放，这波操作直接引爆开发者圈！从 IntelliJ IDEA 到 PyCharm、WebStorm，曾经需要付费订阅的编程利器如今无需付费即可使用，这场“降维打击”将如何改变开发者的工具选择？\u003c/p\u003e","readingTime":1,"tags":["JetBrains","免费编程工具","开发者福利","IDE","编程神器"],"title":"JetBrains 官宣全系列免费！开发者圈的史诗级福利来了","url":"/posts/jetbrains/"}];
+  var fuseData = [{"author":"Inkchron","avatar":null,"categories":["学习记录"],"description":"\u003cp\u003e记录了在搭建整个博客以及自定义时遇到的问题和解决方法\u003c/p\u003e","readingTime":1,"tags":["Hugo"],"title":"Hugo（Stack主题）博客搭建过程中踩过的坑","url":"/posts/studay-log/daily-tech-6/"},{"author":"技术生活家","avatar":null,"categories":["电脑技巧","效率提升"],"description":"\u003cp\u003e电脑文件杂乱无章？本文分享几个实用的文件整理技巧，帮助你创建一个更高效的数字工作环境。\u003c/p\u003e","readingTime":1,"tags":["文件管理","工作习惯"],"title":"电脑文件整理技巧：让你的工作空间更整洁","url":"/posts/daily-tech/daily-tech-3/"},{"author":"技术生活家","avatar":null,"categories":["网络技术","生活技巧"],"description":"\u003cp\u003e有没有遇到过看视频卡顿、游戏延迟高的情况？本文分享几个简单易行的家庭网络优化技巧，让你的WiFi更快更稳定。\u003c/p\u003e","readingTime":1,"tags":["WiFi优化","家庭网络"],"title":"家庭网络优化指南：让你的WiFi更快更稳定","url":"/posts/daily-tech/daily-tech-2/"},{"author":"技术生活家","avatar":null,"categories":["生活技巧","效率工具"],"description":"\u003cp\u003e你是否经常忘记重要的待办事项？本文将分享如何利用手机自带的便签应用来提高日常工作和生活的效率。\u003c/p\u003e","readingTime":1,"tags":["手机使用","效率提升"],"title":"如何利用手机便签提高工作效率","url":"/posts/daily-tech/daily-tech-1/"},{"author":"技术生活家","avatar":null,"categories":["网络安全","数字生活"],"description":"\u003cp\u003e密码太多记不住？本文分享几个实用的密码管理技巧，帮助你在保证安全的同时，也能方便地管理各种账号密码。\u003c/p\u003e","readingTime":1,"tags":["密码管理","网络安全"],"title":"实用密码管理技巧：保护你的数字资产安全","url":"/posts/daily-tech/daily-tech-5/"},{"author":"技术生活家","avatar":null,"categories":["手机技巧","数码保养"],"description":"\u003cp\u003e手机电池不耐用？本文分享几个科学的电池保养技巧，帮助你延长手机电池的使用寿命。\u003c/p\u003e","readingTime":1,"tags":["电池保养","手机使用"],"title":"手机电池保养指南：延长你的电池使用寿命","url":"/posts/daily-tech/daily-tech-4/"},{"author":"开发者日记","avatar":null,"categories":["开发者工具"],"description":"\u003cp\u003eJetBrains 突然官宣全系列 IDE 产品免费开放，这波操作直接引爆开发者圈！从 IntelliJ IDEA 到 PyCharm、WebStorm，曾经需要付费订阅的编程利器如今无需付费即可使用，这场“降维打击”将如何改变开发者的工具选择？\u003c/p\u003e","readingTime":1,"tags":["JetBrains","免费编程工具","开发者福利","IDE","编程神器"],"title":"JetBrains 官宣全系列免费！开发者圈的史诗级福利来了","url":"/posts/jetbrains/"}];
   var fuseOptions = {
     keys: [
       "title",
@@ -569,6 +635,8 @@ x-data="{
 
     
 
+    
+    <script src="/js/back-to-top.js"></script>
     
 
     

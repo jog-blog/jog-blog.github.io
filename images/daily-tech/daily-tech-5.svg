@@ -1,6 +1,5 @@
 <svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
-  <!-- 背景 -->
-  <rect width="500" height="300" fill="#f9f9f9" rx="10" ry="10"/>
+
 
   <!-- 锁图标 -->
   <g transform="translate(250, 150)">

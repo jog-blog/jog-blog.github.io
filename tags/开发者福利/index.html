@@ -9,12 +9,16 @@
     <title>开发者福利 | 笔墨拾光</title>
 
     
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+  
+
 
 <link rel="canonical" href="https://www.catbank.cn/tags/%E5%BC%80%E5%8F%91%E8%80%85%E7%A6%8F%E5%88%A9/" />
 
 
 
-<meta name="author" content="Jog" />
+<meta name="author" content="Inkchron" />
 <meta name="description" content="Pen & Petals of Time" />
 
 
@@ -236,6 +240,12 @@
 
       
       
+      <a href="/tags/hugo/" class="badge h-6 no-underline hover:badge-primary">
+        Hugo
+      </a>
+      
+      
+      
       <a href="/tags/ide/" class="badge h-6 no-underline hover:badge-primary">
         IDE
       </a>
@@ -400,7 +410,7 @@
   
 
   
-  <p>Powered by Pen & Petals of Time.</p>
+  <p>Powered by Inkchron.</p>
   
 </div>
 
@@ -432,6 +442,36 @@
 </div>
 
 </footer>
+
+
+<div
+  x-data="{
+    isVisible: false,
+    toggleVisibility() {
+      this.isVisible = window.scrollY > 300;
+    }
+  }"
+  x-init="
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility);
+  "
+  x-show="isVisible"
+  x-transition:enter="transition duration-300 ease-out"
+  x-transition:enter-start="opacity-0 scale-50"
+  x-transition:enter-end="opacity-100 scale-100"
+  x-transition:leave="transition duration-300 ease-in"
+  x-transition:leave-start="opacity-100 scale-100"
+  x-transition:leave-end="opacity-0 scale-50"
+  class="fixed bottom-8 right-8 z-50"
+>
+  <button
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    aria-label="回到顶部"
+    class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-content shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+  >
+    <ion-icon name="arrow-up-circle-outline" size="24"></ion-icon>
+  </button>
+</div>
 
           </div>
         </div>
@@ -583,7 +623,7 @@
   
 
   
-  <p>Powered by Pen & Petals of Time.</p>
+  <p>Powered by Inkchron.</p>
   
 </div>
 
@@ -615,6 +655,36 @@
 </div>
 
 </footer>
+
+
+<div
+  x-data="{
+    isVisible: false,
+    toggleVisibility() {
+      this.isVisible = window.scrollY > 300;
+    }
+  }"
+  x-init="
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility);
+  "
+  x-show="isVisible"
+  x-transition:enter="transition duration-300 ease-out"
+  x-transition:enter-start="opacity-0 scale-50"
+  x-transition:enter-end="opacity-100 scale-100"
+  x-transition:leave="transition duration-300 ease-in"
+  x-transition:leave-start="opacity-100 scale-100"
+  x-transition:leave-end="opacity-0 scale-50"
+  class="fixed bottom-8 right-8 z-50"
+>
+  <button
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    aria-label="回到顶部"
+    class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-content shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+  >
+    <ion-icon name="arrow-up-circle-outline" size="24"></ion-icon>
+  </button>
+</div>
 
           </div>
         </div>
@@ -653,6 +723,8 @@
 
     
 
+    
+    <script src="/js/back-to-top.js"></script>
     
 
     

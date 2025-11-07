@@ -15,5 +15,12 @@
       <guid>https://www.catbank.cn/posts/studay-log/daily-tech-6/</guid>
       <description>&lt;p&gt;记录了在搭建整个博客以及自定义时遇到的问题和解决方法&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>提升 Hugo 网站 SEO 排名的 10 个实用技巧</title>
+      <link>https://www.catbank.cn/posts/hugo/hugo-seo-optimization/</link>
+      <pubDate>Wed, 10 Jul 2024 10:00:00 +0800</pubDate>
+      <guid>https://www.catbank.cn/posts/hugo/hugo-seo-optimization/</guid>
+      <description>&lt;p&gt;想要让你的 Hugo 网站在搜索引擎中获得更好的排名吗？本文将分享 10 个实用的 SEO 优化技巧，帮助你的网站获得更多自然流量。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

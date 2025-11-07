@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- 背景 -->
+  <rect width="800" height="400" fill="#f8f9fa"/>
+
+  <!-- 装饰元素 -->
+  <circle cx="700" cy="100" r="70" fill="#e3f2fd" opacity="0.7"/>
+  <circle cx="100" cy="300" r="50" fill="#e8f5e9" opacity="0.7"/>
+  <rect x="600" y="250" width="150" height="100" fill="#fff3e0" opacity="0.7" rx="10"/>
+
+  <!-- Hugo Logo -->
+  <rect x="100" y="80" width="80" height="80" fill="#ff4088" rx="5"/>
+  <text x="140" y="130" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="white">H</text>
+
+  <!-- SEO 文字 -->
+  <text x="400" y="120" font-family="Arial, sans-serif" font-size="60" font-weight="bold" text-anchor="middle" fill="#212121">SEO</text>
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#555">搜索引擎优化</text>
+
+  <!-- 图表元素 - 上升趋势 -->
+  <path d="M200,300 L250,280 L300,290 L350,260 L400,240 L450,220 L500,200 L550,180" fill="none" stroke="#4caf50" stroke-width="4"/>
+  <circle cx="200" cy="300" r="5" fill="#4caf50"/>
+  <circle cx="250" cy="280" r="5" fill="#4caf50"/>
+  <circle cx="300" cy="290" r="5" fill="#4caf50"/>
+  <circle cx="350" cy="260" r="5" fill="#4caf50"/>
+  <circle cx="400" cy="240" r="5" fill="#4caf50"/>
+  <circle cx="450" cy="220" r="5" fill="#4caf50"/>
+  <circle cx="500" cy="200" r="5" fill="#4caf50"/>
+  <circle cx="550" cy="180" r="5" fill="#4caf50"/>
+
+  <!-- 关键词标签 -->
+  <rect x="300" y="260" width="100" height="30" fill="#2196f3" rx="15"/>
+  <text x="350" y="280" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">关键词优化</text>
+
+  <rect x="420" y="280" width="90" height="30" fill="#ff9800" rx="15"/>
+  <text x="465" y="300" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">内容质量</text>
+
+  <rect x="280" y="300" width="90" height="30" fill="#9c27b0" rx="15"/>
+  <text x="325" y="320" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">网站速度</text>
+
+  <!-- 搜索框 -->
+  <rect x="600" y="80" width="180" height="40" fill="white" rx="20" stroke="#ddd" stroke-width="2"/>
+  <circle cx="760" cy="100" r="15" fill="#2196f3"/>
+  <path d="M754,94 L766,106 M766,94 L754,106" stroke="white" stroke-width="2"/>
+  <rect x="620" y="90" width="120" height="20" fill="transparent"/>
+  <text x="630" y="105" font-family="Arial, sans-serif" font-size="12" fill="#bbb">输入搜索关键词...</text>
+</svg>

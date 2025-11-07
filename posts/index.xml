@@ -57,5 +57,12 @@
       <guid>https://www.catbank.cn/posts/jetbrains/</guid>
       <description>&lt;p&gt;JetBrains 突然官宣全系列 IDE 产品免费开放，这波操作直接引爆开发者圈！从 IntelliJ IDEA 到 PyCharm、WebStorm，曾经需要付费订阅的编程利器如今无需付费即可使用，这场“降维打击”将如何改变开发者的工具选择？&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>提升 Hugo 网站 SEO 排名的 10 个实用技巧</title>
+      <link>https://www.catbank.cn/posts/hugo/hugo-seo-optimization/</link>
+      <pubDate>Wed, 10 Jul 2024 10:00:00 +0800</pubDate>
+      <guid>https://www.catbank.cn/posts/hugo/hugo-seo-optimization/</guid>
+      <description>&lt;p&gt;想要让你的 Hugo 网站在搜索引擎中获得更好的排名吗？本文将分享 10 个实用的 SEO 优化技巧，帮助你的网站获得更多自然流量。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

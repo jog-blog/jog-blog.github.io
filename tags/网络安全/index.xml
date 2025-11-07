@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>网络安全 on 笔墨拾光</title>
-    <link>https://jog-blog.github.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
+    <link>https://www.catbank.cn/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
     <description>Recent content in 网络安全 on 笔墨拾光</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Fri, 07 Nov 2025 08:10:34 +0800</lastBuildDate>
-    <atom:link href="https://jog-blog.github.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.catbank.cn/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>实用密码管理技巧：保护你的数字资产安全</title>
-      <link>https://jog-blog.github.io/posts/daily-tech/daily-tech-5/</link>
+      <link>https://www.catbank.cn/posts/daily-tech/daily-tech-5/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://jog-blog.github.io/posts/daily-tech/daily-tech-5/</guid>
+      <guid>https://www.catbank.cn/posts/daily-tech/daily-tech-5/</guid>
       <description>&lt;p&gt;密码太多记不住？本文分享几个实用的密码管理技巧，帮助你在保证安全的同时，也能方便地管理各种账号密码。&lt;/p&gt;</description>
     </item>
   </channel>

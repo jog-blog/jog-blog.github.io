@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <!-- 背景 -->
+  <rect width="800" height="400" fill="#87CEEB"/>
+
+  <!-- 草地 -->
+  <rect width="800" height="100" y="300" fill="#228B22"/>
+
+  <!-- 太阳 -->
+  <circle cx="700" cy="80" r="40" fill="#FFD700">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <path d="M700,20 L700,0 M700,140 L700,160 M640,80 L620,80 M760,80 L780,80 M660,40 L645,25 M740,120 L755,135 M660,120 L645,135 M740,40 L755,25" stroke="#FFD700" stroke-width="4"/>
+
+  <!-- 云朵 -->
+  <g transform="translate(100, 60)">
+    <circle cx="0" cy="0" r="20" fill="white"/>
+    <circle cx="25" cy="0" r="25" fill="white"/>
+    <circle cx="50" cy="0" r="20" fill="white"/>
+    <circle cx="15" cy="-20" r="15" fill="white"/>
+    <circle cx="40" cy="-20" r="15" fill="white"/>
+  </g>
+
+  <!-- 学生1：跑步 -->
+  <g transform="translate(200, 340) scale(0.8)">
+    <!-- 身体 -->
+    <path d="M0,-60 L0,-10" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- 头部 -->
+    <circle cx="0" cy="-70" r="10" fill="#FFCC99"/>
+    <!-- 眼睛 -->
+    <circle cx="-2" cy="-72" r="1" fill="#333"/>
+    <circle cx="2" cy="-72" r="1" fill="#333"/>
+    <!-- 嘴 -->
+    <path d="M-3,-67 Q0,-69 3,-67" stroke="#333" stroke-width="1" fill="none"/>
+    <!-- 手臂 -->
+    <path d="M0,-50 L-20,-40 L-15,-35" stroke="#333" stroke-width="2" fill="none"/>
+    <path d="M0,-50 L15,-55 L10,-50" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- 腿 -->
+    <path d="M0,-10 L-15,20" stroke="#333" stroke-width="2" fill="none"/>
+    <path d="M0,-10 L10,10" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- 衣服 -->
+    <rect x="-10" y="-60" width="20" height="30" rx="5" fill="#FF6B6B"/>
+    <rect x="-8" y="-30" width="16" height="20" rx="3" fill="#4ECDC4"/>
+    <!-- 头发 -->
+    <path d="M-10,-70 L-15,-75 L-10,-80 L-5,-75 Z" fill="#333"/>
+    <path d="M10,-70 L15,-75 L10,-80 L5,-75 Z" fill="#333"/>
+    <!-- 跑步动画 -->
+    <animateTransform attributeName="transform" type="translate" values="0,0; 5,-5; 0,0" dur="1s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- 学生2：跳绳 -->
+  <g transform="translate(350, 340) scale(0.8)">
+    <!-- 身体 -->
+    <path d="M0,-60 L0,-10" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- 头部 -->
+    <circle cx="0" cy="-70" r="10" fill="#FFCC99"/>
+    <!-- 眼睛 -->
+    <circle cx="-2" cy="-72" r="1" fill="#333"/>
+    <circle cx="2" cy="-72" r="1" fill="#333"/>
+    <!-- 嘴 -->
+    <path d="M-3,-67 Q0,-69 3,-67" stroke="#333" stroke-width="1" fill="none"/>
+    <!-- 手臂 -->
+    <path d="M0,-50 L20,-40" stroke="#333" stroke-width="2" fill="none"/>
+    <path d="M0,-50 L-20,-40" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- 腿 -->
+    <path d="M0,-10 L-5,20" stroke="#333" stroke-width="2" fill="none"/>
+    <path d="M0,-10 L5,20" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- 衣服 -->
+    <rect x="-10" y="-60" width="20" height="30" rx="5" fill="#45B7D1"/>
+    <rect x="-8" y="-30" width="16" height="20" rx="3" fill="#F9C80E"/>
+    <!-- 头发 -->
+    <path d="M-10,-70 L-10,-85 L10,-85 L10,-70" fill="#333"/>
+    <!-- 跳绳 -->
+    <circle cx="0" cy="0" r="50" stroke="#95A5A6" stroke-width="2" fill="none">
+      <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <!-- 跳绳动画 -->
+    <animateTransform attributeName="transform" type="rotate" values="0; 10; -10; 0" dur="1s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- 学生3：打球 -->
+  <g transform="translate(500, 340) scale(0.8)">
+    <!-- 身体 -->
+    <path d="M0,-60 L0,-10" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- 头部 -->
+    <circle cx="0" cy="-70" r="10" fill="#FFCC99"/>
+    <!-- 眼睛 -->
+    <circle cx="-2" cy="-72" r="1" fill="#333"/>
+    <circle cx="2" cy="-72" r="1" fill="#333"/>
+    <!-- 嘴 -->
+    <path d="M-3,-67 Q0,-69 3,-67" stroke="#333" stroke-width="1" fill="none"/>
+    <!-- 手臂 -->
+    <path d="M0,-50 L25,-60" stroke="#333" stroke-width="2" fill="none"/>
+    <path d="M0,-50 L-15,-55" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- 腿 -->
+    <path d="M0,-10 L-15,20" stroke="#333" stroke-width="2" fill="none"/>
+    <path d="M0,-10 L15,20" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- 衣服 -->
+    <rect x="-10" y="-60" width="20" height="30" rx="5" fill="#F86624"/>
+    <rect x="-8" y="-30" width="16" height="20" rx="3" fill="#8AC926"/>
+    <!-- 头发 -->
+    <path d="M-10,-70 L-15,-75 L-12,-80 L-8,-78 L-5,-85 L0,-80 L5,-85 L10,-80 L12,-78 L15,-75 L10,-70" fill="#333"/>
+    <!-- 球 -->
+    <circle cx="40" cy="-70" r="6" fill="#F25F5C" stroke="#333" stroke-width="1">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 5,-5; 10,-15; 15,-10; 20,0" dur="2s" repeatCount="indefinite" additive="sum"/>
+    </circle>
+    <!-- 打球动画 -->
+    <animateTransform attributeName="transform" type="rotate" values="0; -5; 5; 0" dur="2s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- 学生4：做体操 -->
+  <g transform="translate(650, 340) scale(0.8)">
+    <!-- 身体 -->
+    <path d="M0,-60 L0,-10" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- 头部 -->
+    <circle cx="0" cy="-70" r="10" fill="#FFCC99"/>
+    <!-- 眼睛 -->
+    <circle cx="-2" cy="-72" r="1" fill="#333"/>
+    <circle cx="2" cy="-72" r="1" fill="#333"/>
+    <!-- 嘴 -->
+    <path d="M-3,-67 Q0,-69 3,-67" stroke="#333" stroke-width="1" fill="none"/>
+    <!-- 手臂 -->
+    <path d="M0,-50 L-30,-40" stroke="#333" stroke-width="2" fill="none"/>
+    <path d="M0,-50 L30,-40" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- 腿 -->
+    <path d="M0,-10 L-20,20" stroke="#333" stroke-width="2" fill="none"/>
+    <path d="M0,-10 L20,20" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- 衣服 -->
+    <rect x="-10" y="-60" width="20" height="30" rx="5" fill="#A8E6CE"/>
+    <rect x="-8" y="-30" width="16" height="20" rx="3" fill="#DCEDC2"/>
+    <!-- 头发 -->
+    <path d="M-10,-70 Q0,-90 10,-70" fill="#333"/>
+    <!-- 做体操动画 -->
+    <animateTransform attributeName="transform" type="rotate" values="0; 5; -5; 0" dur="3s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- 标题 -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">全国学生体质健康整体水平稳步提升</text>
+  <text x="400" y="80" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333">达标优良率达62.3%，近视率连续三年下降</text>
+
+  <!-- 数据指标 -->
+  <g transform="translate(150, 150)">
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#228B22" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="95.4">
+      <animate attributeName="stroke-dashoffset" from="251.2" to="95.4" dur="2s" fill="freeze"/>
+    </circle>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#228B22">62.3%</text>
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">达标优良率</text>
+  </g>
+
+  <g transform="translate(650, 150)">
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#45B7D1" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="105.5">
+      <animate attributeName="stroke-dashoffset" from="251.2" to="105.5" dur="2s" fill="freeze"/>
+    </circle>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#45B7D1">-2.1%</text>
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">近视率下降</text>
+  </g>
+</svg>

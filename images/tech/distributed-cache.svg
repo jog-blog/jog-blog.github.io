@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <!-- 背景 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f1f2f6"/>
+      <stop offset="100%" stop-color="#dfe4ea"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.15)"/>
+    </filter>
+  </defs>
+
+  <!-- 主背景 -->
+  <rect width="800" height="400" fill="url(#bgGradient)"/>
+
+  <!-- 标题 -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2f3542" text-anchor="middle">分布式缓存 (Distributed Cache) 架构示意图</text>
+
+  <!-- 应用集群 -->
+  <g transform="translate(100, 100)" filter="url(#shadow)">
+    <rect x="0" y="0" width="150" height="80" rx="10" fill="#3498db"/>
+    <text x="75" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">应用实例1</text>
+    <text x="75" y="45" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Application 1</text>
+  </g>
+
+  <g transform="translate(280, 100)" filter="url(#shadow)">
+    <rect x="0" y="0" width="150" height="80" rx="10" fill="#3498db"/>
+    <text x="75" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">应用实例2</text>
+    <text x="75" y="45" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Application 2</text>
+  </g>
+
+  <!-- 分布式缓存集群 -->
+  <g transform="translate(100, 220)" filter="url(#shadow)">
+    <rect x="0" y="0" width="150" height="80" rx="10" fill="#9b59b6"/>
+    <text x="75" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">缓存节点1</text>
+    <text x="75" y="45" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Cache Node 1</text>
+
+    <!-- 缓存数据示意图 -->
+    <g transform="translate(30, 65)">
+      <rect x="0" y="0" width="25" height="12" rx="2" fill="#f1c40f"/>
+      <text x="12.5" y="8" font-family="Arial, sans-serif" font-size="6" fill="#2f3542" text-anchor="middle">数据</text>
+    </g>
+    <g transform="translate(60, 65)">
+      <rect x="0" y="0" width="25" height="12" rx="2" fill="#f1c40f"/>
+      <text x="12.5" y="8" font-family="Arial, sans-serif" font-size="6" fill="#2f3542" text-anchor="middle">数据</text>
+    </g>
+    <g transform="translate(90, 65)">
+      <rect x="0" y="0" width="25" height="12" rx="2" fill="#f1c40f"/>
+      <text x="12.5" y="8" font-family="Arial, sans-serif" font-size="6" fill="#2f3542" text-anchor="middle">数据</text>
+    </g>
+  </g>
+
+  <g transform="translate(280, 220)" filter="url(#shadow)">
+    <rect x="0" y="0" width="150" height="80" rx="10" fill="#9b59b6"/>
+    <text x="75" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">缓存节点2</text>
+    <text x="75" y="45" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Cache Node 2</text>
+
+    <!-- 缓存数据示意图 -->
+    <g transform="translate(30, 65)">
+      <rect x="0" y="0" width="25" height="12" rx="2" fill="#f1c40f"/>
+      <text x="12.5" y="8" font-family="Arial, sans-serif" font-size="6" fill="#2f3542" text-anchor="middle">数据</text>
+    </g>
+    <g transform="translate(60, 65)">
+      <rect x="0" y="0" width="25" height="12" rx="2" fill="#f1c40f"/>
+      <text x="12.5" y="8" font-family="Arial, sans-serif" font-size="6" fill="#2f3542" text-anchor="middle">数据</text>
+    </g>
+    <g transform="translate(90, 65)">
+      <rect x="0" y="0" width="25" height="12" rx="2" fill="#f1c40f"/>
+      <text x="12.5" y="8" font-family="Arial, sans-serif" font-size="6" fill="#2f3542" text-anchor="middle">数据</text>
+    </g>
+  </g>
+
+  <!-- 数据库 -->
+  <g transform="translate(500, 160)" filter="url(#shadow)">
+    <rect x="0" y="0" width="200" height="100" rx="10" fill="#e74c3c"/>
+    <text x="100" y="35" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">数据库</text>
+    <text x="100" y="60" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Database</text>
+  </g>
+
+  <!-- 箭头 -->
+  <!-- 应用到缓存 -->
+  <path d="M175 180 L175 220" stroke="#2f3542" stroke-width="2" fill="none"/>
+  <polygon points="175,220 170,210 180,210" fill="#2f3542"/>
+
+  <path d="M355 180 L355 220" stroke="#2f3542" stroke-width="2" fill="none"/>
+  <polygon points="355,220 350,210 360,210" fill="#2f3542"/>
+
+  <!-- 缓存到应用 -->
+  <path d="M175 220 L175 180" stroke="#2f3542" stroke-width="2" fill="none"/>
+  <polygon points="175,180 170,190 180,190" fill="#2f3542"/>
+
+  <path d="M355 220 L355 180" stroke="#2f3542" stroke-width="2" fill="none"/>
+  <polygon points="355,180 350,190 360,190" fill="#2f3542"/>
+
+  <!-- 缓存到数据库 -->
+  <path d="M355 260 L500 210" stroke="#2f3542" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  <polygon points="500,210 490,205 495,195" fill="#2f3542"/>
+
+  <!-- 数据库到缓存 -->
+  <path d="M500 210 L355 260" stroke="#2f3542" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  <polygon points="355,260 365,255 360,245" fill="#2f3542"/>
+
+  <!-- 说明文本 -->
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="12" fill="#2f3542" text-anchor="middle">分布式缓存特点：可扩展性强、数据共享、有网络开销、独立部署</text>
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="12" fill="#2f3542" text-anchor="middle">实现方案：Redis, Memcached, KeyDB, Dragonfly</text>
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="12" fill="#2f3542" text-anchor="middle">适用场景：高频读写、数据量大、需要数据一致性的分布式环境</text>
+</svg>

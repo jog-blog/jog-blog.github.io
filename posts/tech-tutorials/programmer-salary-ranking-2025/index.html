@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="zh"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025程序员时薪排行榜：大厂薪资对比与技术面试解析 | 笔墨拾光</title>
+
+    
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+  
+
+
+<link rel="canonical" href="https://bmsg.top/posts/tech-tutorials/programmer-salary-ranking-2025/" />
+
+
+
+<meta name="author" content="程序员小王" />
+<meta name="description" content="通常，在选择公司的过程中，我们往往会关注总收入（package）。总收入不仅包括基本的月薪，还包括奖金、股票或股份的分红等所有收入。然而，仅仅关注总收入可能会导致我们忽视一个关键因素：时薪。
+时薪是指你在单位时间内所获得的报酬，它是衡量工作性价比的重要标准。总收入高并不一定意味着时薪高。比如，一家公司提供的总收入非常诱人，但如果工作时长超长，实际时薪可能并不理想。相反，一些时薪高的公司不仅可以提供不错的收入，还能保证员工的生活质量。
+职级对标这个网站对各大公司的不同级别工程师的薪资进行了详细统计，这些数据不仅包含了年薪，还考虑了工作时长，从而计算出更为准确的时薪。我觉得这是一个非常不错的参考，值得分享一下！
+" />
+
+
+<meta name="keywords" content="程序员薪资,面试技巧,分布式缓存,ThreadLocal,死锁排查">
+
+
+
+<meta name="generator" content="Hugo 0.152.2">
+
+
+<meta property="og:url" content="https://bmsg.top/posts/tech-tutorials/programmer-salary-ranking-2025/">
+  <meta property="og:site_name" content="笔墨拾光">
+  <meta property="og:title" content="2025程序员时薪排行榜：大厂薪资对比与技术面试解析">
+  <meta property="og:description" content="通常，在选择公司的过程中，我们往往会关注总收入（package）。总收入不仅包括基本的月薪，还包括奖金、股票或股份的分红等所有收入。然而，仅仅关注总收入可能会导致我们忽视一个关键因素：时薪。
+时薪是指你在单位时间内所获得的报酬，它是衡量工作性价比的重要标准。总收入高并不一定意味着时薪高。比如，一家公司提供的总收入非常诱人，但如果工作时长超长，实际时薪可能并不理想。相反，一些时薪高的公司不仅可以提供不错的收入，还能保证员工的生活质量。
+职级对标这个网站对各大公司的不同级别工程师的薪资进行了详细统计，这些数据不仅包含了年薪，还考虑了工作时长，从而计算出更为准确的时薪。我觉得这是一个非常不错的参考，值得分享一下！">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-11-08T14:49:26+08:00">
+    <meta property="article:modified_time" content="2025-11-08T14:49:26+08:00">
+    <meta property="article:tag" content="程序员薪资">
+    <meta property="article:tag" content="面试技巧">
+    <meta property="article:tag" content="分布式缓存">
+    <meta property="article:tag" content="ThreadLocal">
+    <meta property="article:tag" content="死锁排查">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="2025程序员时薪排行榜：大厂薪资对比与技术面试解析">
+  <meta name="twitter:description" content="通常，在选择公司的过程中，我们往往会关注总收入（package）。总收入不仅包括基本的月薪，还包括奖金、股票或股份的分红等所有收入。然而，仅仅关注总收入可能会导致我们忽视一个关键因素：时薪。
+时薪是指你在单位时间内所获得的报酬，它是衡量工作性价比的重要标准。总收入高并不一定意味着时薪高。比如，一家公司提供的总收入非常诱人，但如果工作时长超长，实际时薪可能并不理想。相反，一些时薪高的公司不仅可以提供不错的收入，还能保证员工的生活质量。
+职级对标这个网站对各大公司的不同级别工程师的薪资进行了详细统计，这些数据不仅包含了年薪，还考虑了工作时长，从而计算出更为准确的时薪。我觉得这是一个非常不错的参考，值得分享一下！">
+
+
+
+
+
+<meta name="google-adsense-account" content="ca-pub-8865303128098344">
+<style>
+   
+  .adsbygoogle,
+  ins.adsbygoogle,
+  .dream-adsense,
+  .dream-adsense-post-bottom {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+  }
+</style>
+
+
+
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/custom.css" />
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.1/dist/cdn.min.js" integrity="sha256-Rmqrc5SKeSLTSnQ9shSKWmJco1ks8c1hLI8UG2Np03M=" crossorigin="anonymous"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/img/avatar.png" alt="笔墨拾光" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://bmsg.top/" class="text-lg font-semibold cursor-pointer">
+          笔墨拾光
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">以文字为笔，捡拾生活里的细碎时光</div>
+        
+      </div>
+      
+    </section>
+
+    
+    
+      
+    
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-md">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="搜索">
+    <ion-icon name="search"></ion-icon>
+    搜索
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="搜索">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+          
+
+          
+        </ul>
+      </div>
+      
+
+      
+      <div
+        x-data="{ icons: [
+          { name: 'sunny', status: 'n' },
+          { name: 'moon', status: 'y' },
+          { name: 'desktop', status: 'auto' }
+        ] }"
+        class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+      >
+        <template x-for="icon in icons">
+          <div
+            role="button"
+            tabindex="0"
+            :aria-label="'Select ' + icon.name + ' mode'"
+            class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+            :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+            @click="$store.darkMode.toggle(icon.status)"
+          >
+            <ion-icon
+              :name="`${icon.name}-outline`"
+              class="group-hover:text-primary-content"
+              :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+            >
+            </ion-icon>
+          </div>
+        </template>
+      </div>
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+      <div class="dream-adsense w-2/3">
+        
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8865303128098344" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8865303128098344"
+     data-ad-slot="您的广告单元ID"
+     data-ad-format="rectangle"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+      </div>
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="2025程序员时薪排行榜：大厂薪资对比与技术面试解析">
+  <meta itemprop="description" content="通常，在选择公司的过程中，我们往往会关注总收入（package）。总收入不仅包括基本的月薪，还包括奖金、股票或股份的分红等所有收入。然而，仅仅关注总收入可能会导致我们忽视一个关键因素：时薪。
+时薪是指你在单位时间内所获得的报酬，它是衡量工作性价比的重要标准。总收入高并不一定意味着时薪高。比如，一家公司提供的总收入非常诱人，但如果工作时长超长，实际时薪可能并不理想。相反，一些时薪高的公司不仅可以提供不错的收入，还能保证员工的生活质量。
+职级对标这个网站对各大公司的不同级别工程师的薪资进行了详细统计，这些数据不仅包含了年薪，还考虑了工作时长，从而计算出更为准确的时薪。我觉得这是一个非常不错的参考，值得分享一下！">
+  <meta itemprop="datePublished" content="2025-11-08T14:49:26+08:00">
+  <meta itemprop="dateModified" content="2025-11-08T14:49:26+08:00">
+  <meta itemprop="wordCount" content="668">
+  <meta itemprop="keywords" content="程序员薪资,面试技巧,分布式缓存,ThreadLocal,死锁排查">
+
+      <header>
+        <h1 itemprop="headline">2025程序员时薪排行榜：大厂薪资对比与技术面试解析</h1>
+        <p class="text-sm">
+          
+            星期六, 11月 8, 2025
+          
+
+          | <span>4分钟阅读</span>
+
+          
+          | <span>更新于
+            
+              星期六, 11月 8, 2025
+            </span>
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    
+      <span itemprop="name">程序员小王</span>
+    
+  
+  </span>
+</div>
+
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+    
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=2025%e7%a8%8b%e5%ba%8f%e5%91%98%e6%97%b6%e8%96%aa%e6%8e%92%e8%a1%8c%e6%a6%9c%ef%bc%9a%e5%a4%a7%e5%8e%82%e8%96%aa%e8%b5%84%e5%af%b9%e6%af%94%e4%b8%8e%e6%8a%80%e6%9c%af%e9%9d%a2%e8%af%95%e8%a7%a3%e6%9e%90&amp;url=https://bmsg.top/posts/tech-tutorials/programmer-salary-ranking-2025/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=https://bmsg.top/posts/tech-tutorials/programmer-salary-ranking-2025/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://wa.me/?text=2025%e7%a8%8b%e5%ba%8f%e5%91%98%e6%97%b6%e8%96%aa%e6%8e%92%e8%a1%8c%e6%a6%9c%ef%bc%9a%e5%a4%a7%e5%8e%82%e8%96%aa%e8%b5%84%e5%af%b9%e6%af%94%e4%b8%8e%e6%8a%80%e6%9c%af%e9%9d%a2%e8%af%95%e8%a7%a3%e6%9e%90%20https://bmsg.top/posts/tech-tutorials/programmer-salary-ranking-2025/" target="_blank" rel="noopener noreferrer"
+      title="Share on WhatsApp">
+      <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <figure>
+            <img class="z-30" src="/images/tech/salary-ranking-cover.png" alt="2025程序员时薪排行榜：大厂薪资对比与技术面试解析" />
+            
+              <figcaption class="text-sm italic text-center mt-2">2025程序员时薪排行榜</figcaption>
+            
+          </figure>
+        
+
+        <p>通常，在选择公司的过程中，我们往往会关注总收入（package）。总收入不仅包括基本的月薪，还包括奖金、股票或股份的分红等所有收入。然而，仅仅关注总收入可能会导致我们忽视一个关键因素：<strong>时薪</strong>。</p>
+<p>时薪是指你在单位时间内所获得的报酬，它是衡量工作性价比的重要标准。总收入高并不一定意味着时薪高。比如，一家公司提供的总收入非常诱人，但如果工作时长超长，实际时薪可能并不理想。相反，一些时薪高的公司不仅可以提供不错的收入，还能保证员工的生活质量。</p>
+<p>职级对标这个网站对各大公司的不同级别工程师的薪资进行了详细统计，这些数据不仅包含了年薪，还考虑了工作时长，从而计算出更为准确的时薪。我觉得这是一个非常不错的参考，值得分享一下！</p>
+<h3 id="2025年初级工程师时薪排行榜">2025年初级工程师时薪排行榜</h3>
+<p>先来看看 2025 年初级工程师时薪排行榜（工作年限：1-3年）：</p>
+<p><img src="/images/tech/salary-ranking-2025-01.svg" alt="2025年初级工程师时薪排行榜"></p>
+<h3 id="2024年初级工程师时薪排行榜">2024年初级工程师时薪排行榜</h3>
+<p>再对比一下 2024 年初级工程师时薪排行榜：</p>
+<p><img src="/images/tech/salary-ranking-2024-01.svg" alt="2024年初级工程师时薪排行榜"></p>
+<p>可以看到，PDD、小红书和微软仍然是稳定的，依然是前三，腾讯上了一名，蚂蚁金服掉了一名，哔哩哔哩从十四名上升到第五名了。</p>
+<p>下面，给大家分享一篇 PDD 的社招三年经验面经，大家感受一下难度如何，题目来源于之前分享的这篇面经的一面。</p>
+<h3 id="自我介绍">自我介绍</h3>
+<p>面试时的自我介绍，其实是你给面试官的&quot;第一印象浓缩版&quot;。它不需要面面俱到，但要精准、自信地展现你的核心价值和与岗位的匹配度。通常控制在 1-2 分钟内比较合适。一个好的自我介绍应该包含这几点要素：</p>
+<ol>
+<li>用简单的话说清楚自己主要的技术栈于擅长的领域，例如 Java 后端开发、分布式系统开发；</li>
+<li>把重点放在自己的优势上，重点突出自己的能力，最好能用一个简短的例子支撑，例如：我比较擅长定位和解决复杂问题。在[某项目/实习]中，我曾通过[简述方法，如日志分析、源码追踪、压力测试]成功解决了[某个具体问题，如一个棘手的性能瓶颈/一个偶现的 Bug]，将[某个指标]提升了[百分比/具体数值]。</li>
+<li>简要提及 1-2 个最能体现你能力和与岗位要求匹配的项目经历、实习经历或竞赛成绩。不需要展开细节，目的是引出面试官后续的提问。</li>
+<li>如果时间允许，可以非常简短地表达对所申请岗位的兴趣和对公司的向往，表明你是有备而来。</li>
+</ol>
+<h3 id="分布式缓存和本地缓存各自适用于哪些场景">分布式缓存和本地缓存各自适用于哪些场景</h3>
+<p><strong>本地缓存 (Local Cache):</strong> 缓存数据直接存储在应用进程的内存中。</p>
+<p><img src="/images/tech/local-cache.svg" alt="本地缓存架构示意图"></p>
+<ul>
+<li><strong>实现方案：</strong> <code>ConcurrentHashMap</code>, Guava Cache, Caffeine（推荐）、Ehcache 等。</li>
+<li><strong>优缺点：</strong>
+<ul>
+<li><strong>优点：</strong> 访问速度极快，无网络开销，实现简单。</li>
+<li><strong>缺点：</strong> 缓存容量受限于单机内存；数据在多个应用实例间不共享，存在数据不一致的风险；应用重启后缓存数据丢失。</li>
+</ul>
+</li>
+<li><strong>适用场景：</strong>
+<ul>
+<li><strong>变化频率低、数据量小的热点数据：</strong> 如系统配置、数据字典、权限列表等。这些数据不常变动，但访问频繁，放在本地缓存可以极大提升性能。</li>
+<li><strong>单机环境：</strong> 不存在多个服务实例需要协同工作，共享状态。</li>
+</ul>
+</li>
+</ul>
+<p><strong>分布式缓存 (Distributed Cache):</strong> 缓存数据存储在独立的、外部的缓存服务集群中，应用通过网络访问。</p>
+<p><img src="/images/tech/distributed-cache.svg" alt="分布式缓存架构示意图"></p>
+<ul>
+<li><strong>实现方案：</strong> Redis（推荐）, Memcached，KeyDB、Dragonfly。</li>
+<li><strong>优缺点：</strong>
+<ul>
+<li><strong>优点：</strong> 缓存容量可水平扩展，不受单机限制；所有应用实例共享同一份缓存数据，保证了数据的一致性；服务独立，不随应用重启而丢失数据。</li>
+<li><strong>缺点：</strong> 存在网络开销，访问速度低于本地缓存；需要维护独立的缓存集群，增加了系统复杂度和运维成本。</li>
+</ul>
+</li>
+<li><strong>适用场景：</strong>
+<ul>
+<li><strong>高频读写、数据量大的场景：</strong> 如用户信息、商品详情、会话（Session）等。</li>
+<li><strong>需要保证数据一致性的分布式环境：</strong> 多个服务实例需要协同工作，共享状态。</li>
+</ul>
+</li>
+</ul>
+<h3 id="threadlocal-的应用场景有哪些使用时注意什么">ThreadLocal 的应用场景有哪些？使用时注意什么？</h3>
+<p><code>ThreadLocal</code> 的核心思想是<strong>用空间换时间，通过为每个线程创建独立的变量副本，来彻底避免多线程间的竞争和同步</strong>。它并不解决共享变量的并发问题，而是让变量不再共享。</p>
+<p><code>ThreadLocal</code>的典型应用场景如下：</p>
+<ol>
+<li><strong>在一次请求处理的调用链中传递上下文信息</strong>：在一个 Web 请求中，用户的身份信息、请求的 TraceID 等需要在 Service 层、DAO 层等多个方法间传递。如果通过方法参数层层传递，会让代码变得非常冗长和耦合。使用 <code>ThreadLocal</code> 可以将这些信息存入，在线程的任何一个执行点都能轻松获取，而无需修改方法签名。例如 Spring Security 使用 <code>SecurityContextHolder</code> 存储用户认证信息，其底层默认就是 <code>ThreadLocal</code>。</li>
+<li><strong>管理线程独占的资源，避免频繁创建和销毁</strong>：比如管理数据库连接。在服务层开启事务后，后续所有数据库操作都必须使用同一个连接。通过 ThreadLocal 为当前线程保存这个连接，可以确保事务的完整性，并避免了连接被其他线程误用或关闭的问题。</li>
+</ol>
+<p>在使用 <code>ThreadLocal</code> 时需要避免内存泄露问题的发生：</p>
+<ol>
+<li>在使用完 <code>ThreadLocal</code> 后，务必调用 <code>remove()</code> 方法。 这是最安全和最推荐的做法。 <code>remove()</code> 方法会从 <code>ThreadLocalMap</code> 中显式地移除对应的 entry，彻底解决内存泄漏的风险。 即使将 <code>ThreadLocal</code> 定义为 <code>static final</code>，也强烈建议在每次使用后调用 <code>remove()</code>。</li>
+<li>在线程池等线程复用的场景下，使用 <code>try-finally</code> 块可以确保即使发生异常，<code>remove()</code> 方法也一定会被执行。</li>
+</ol>
+<p>另外，由于 <code>ThreadLocal</code> 的变量值存放在 <code>Thread</code> 里，而父子线程属于不同的 <code>Thread</code> 的。因此在异步场景下，父子线程的 <code>ThreadLocal</code> 值无法进行传递。如果想要在异步场景下传递 <code>ThreadLocal</code> 值，有两种解决方案：</p>
+<ul>
+<li><code>InheritableThreadLocal</code>：<code>InheritableThreadLocal</code> 是 JDK1.2 提供的工具，继承自 <code>ThreadLocal</code>。使用 <code>InheritableThreadLocal</code> 时，会在创建子线程时，令子线程继承父线程中的 <code>ThreadLocal</code> 值，但是无法支持线程池场景下的 <code>ThreadLocal</code> 值传递。</li>
+<li><code>TransmittableThreadLocal</code>： <code>TransmittableThreadLocal</code> （简称 TTL） 是阿里巴巴开源的工具类，继承并加强了<code>InheritableThreadLocal</code>类，可以在线程池的场景下支持 <code>ThreadLocal</code> 值传递。</li>
+</ul>
+<h3 id="请描述一下你如何排查线上内存泄漏问题">请描述一下你如何排查线上内存泄漏问题</h3>
+<p>我们可以通过 MAT、JVisualVM 等工具分析 Heap Dump 找到导致<code>OutOfMemoryError</code> 的原因。Heap Dump 可以通过 jmap、jcmd、Arthas、JVisualVM 等方式生成。</p>
+<p>以 MAT 为例，其提供的泄漏嫌疑（Leak Suspects）报告是 MAT 最强大的功能之一。它会基于启发式算法自动分析整个堆，直接指出最可疑的内存泄漏点，并给出详细的报告，包括问题组件、累积点（Accumulation Point）和引用链的图示。</p>
+<p>如果&quot;泄漏嫌疑&quot;报告不够明确，或者想要分析的是内存占用过高（而非泄漏）问题，可以切换到**支配树（Dominator Tree）**视图。这个视图将内存对象关系组织成一棵树，父节点&quot;支配&quot;子节点（即父节点被回收，子节点也必被回收）。</p>
+<p>下面是一段模拟出现 <code>OutOfMemoryError</code>的代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.ArrayList;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.List;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SimpleLeak</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 静态集合，生命周期与应用程序一样长</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]&gt;</span> staticList <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">leakMethod</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 每次调用都向静态集合中添加一个 1MB 的字节数组</span>
+</span></span><span style="display:flex;"><span>        staticList.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>1024 <span style="color:#f92672">*</span> 1024<span style="color:#f92672">]</span>); <span style="color:#75715e">// 1MB</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> InterruptedException {
+</span></span><span style="display:flex;"><span>        SimpleLeak leak <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SimpleLeak();
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Starting leak simulation...&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 循环添加对象，模拟内存泄漏过程</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> 200; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>            leak.<span style="color:#a6e22e">leakMethod</span>();
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Added &#34;</span> <span style="color:#f92672">+</span> (i <span style="color:#f92672">+</span> 1) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; MB to the list.&#34;</span>);
+</span></span><span style="display:flex;"><span>            Thread.<span style="color:#a6e22e">sleep</span>(200); <span style="color:#75715e">// 稍微延时，方便观察</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Leak simulation finished. Keeping process alive for Heap Dump.&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 保持进程存活，以便我们有时间生成 Heap Dump</span>
+</span></span><span style="display:flex;"><span>        Thread.<span style="color:#a6e22e">sleep</span>(Long.<span style="color:#a6e22e">MAX_VALUE</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>为了更快让程序出现 <code>OutOfMemoryError</code> 问题，我们可以故意设置一个较小的堆 <code>-Xmx256m</code>。</p>
+<p>具体设置的 VM 参数可以是：<code>-Xmx128m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=simple_leak.hprof</code>，其中：</p>
+<ul>
+<li><code>-Xmx128m</code>：设置 JVM 最大堆内存为 128MB。</li>
+<li><code>-XX:+HeapDumpOnOutOfMemoryError</code>：当 JVM 发生 <code>OutOfMemoryError</code> 时，自动生成堆转储文件（<code>.hprof</code>）。</li>
+<li><code>-XX:HeapDumpPath=simple_leak.hprof</code>：指定 OOM 时生成的堆转储文件路径及文件名。</li>
+</ul>
+<h3 id="死锁问题怎么排查">死锁问题怎么排查？</h3>
+<ul>
+<li>使用<code>jmap</code>、<code>jstack</code>等命令查看 JVM 线程栈和堆内存的情况。如果有死锁，<code>jstack</code> 的输出中通常会有 <code>Found one Java-level deadlock:</code>的字样，后面会跟着死锁相关的线程信息。另外，实际项目中还可以搭配使用<code>top</code>、<code>df</code>、<code>free</code>等命令查看操作系统的基本情况，出现死锁可能会导致 CPU、内存等资源消耗过高。</li>
+<li>采用 VisualVM、JConsole 等工具进行排查。</li>
+</ul>
+<p>JConsole 工具使用方法：找到 JDK 的 bin 目录，找到 jconsole 并双击打开，连接对应的程序，然后进入线程界面选择检测死锁即可！</p>
+<h3 id="请描述一下-spring-bean-的完整生命周期">请描述一下 Spring Bean 的完整生命周期</h3>
+<ol>
+<li><strong>创建 Bean 的实例</strong>：Bean 容器首先会找到配置文件中的 Bean 定义，然后使用 Java 反射 API 来创建 Bean 的实例。</li>
+<li><strong>Bean 属性赋值/填充</strong>：为 Bean 设置相关属性和依赖，例如<code>@Autowired</code> 等注解注入的对象、<code>@Value</code> 注入的值、<code>setter</code>方法或构造函数注入依赖和值、<code>@Resource</code>注入的各种资源。</li>
+<li><strong>Bean 初始化</strong>：</li>
+</ol>
+<ul>
+<li>如果 Bean 实现了 <code>BeanNameAware</code> 接口，调用 <code>setBeanName()</code>方法，传入 Bean 的名字。</li>
+<li>如果 Bean 实现了 <code>BeanClassLoaderAware</code> 接口，调用 <code>setBeanClassLoader()</code>方法，传入 <code>ClassLoader</code>对象的实例。</li>
+<li>如果 Bean 实现了 <code>BeanFactoryAware</code> 接口，调用 <code>setBeanFactory()</code>方法，传入 <code>BeanFactory</code>对象的实例。</li>
+<li>与上面的类似，如果实现了其他 <code>*.Aware</code>接口，就调用相应的方法。</li>
+<li>如果有和加载这个 Bean 的 Spring 容器相关的 <code>BeanPostProcessor</code> 对象，执行<code>postProcessBeforeInitialization()</code> 方法</li>
+<li>如果 Bean 实现了<code>InitializingBean</code>接口，执行<code>afterPropertiesSet()</code>方法。</li>
+<li>如果 Bean 在配置文件中的定义包含 <code>init-method</code> 属性，执行指定的方法。</li>
+<li>如果有和加载这个 Bean 的 Spring 容器相关的 <code>BeanPostProcessor</code> 对象，执行<code>postProcessAfterInitialization()</code> 方法。</li>
+</ul>
+<ol start="4">
+<li><strong>销毁 Bean</strong>：销毁并不是说要立马把 Bean 给销毁掉，而是把 Bean 的销毁方法先记录下来，将来需要销毁 Bean 或者销毁容器的时候，就调用这些方法去释放 Bean 所持有的资源。</li>
+</ol>
+<ul>
+<li>如果 Bean 实现了 <code>DisposableBean</code> 接口，执行 <code>destroy()</code> 方法。</li>
+<li>如果 Bean 在配置文件中的定义包含 <code>destroy-method</code> 属性，执行指定的 Bean 销毁方法。或者，也可以直接通过<code>@PreDestroy</code> 注解标记 Bean 销毁之前执行的方法。</li>
+</ul>
+<p><code>AbstractAutowireCapableBeanFactory</code> 的 <code>doCreateBean()</code> 方法中能看到依次执行了这 4 个阶段：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">protected</span> Object <span style="color:#a6e22e">doCreateBean</span>(<span style="color:#66d9ef">final</span> String beanName, <span style="color:#66d9ef">final</span> RootBeanDefinition mbd, <span style="color:#66d9ef">final</span> <span style="color:#a6e22e">@Nullable</span> Object<span style="color:#f92672">[]</span> args)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">throws</span> BeanCreationException {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 1. 创建 Bean 的实例</span>
+</span></span><span style="display:flex;"><span>    BeanWrapper instanceWrapper <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (instanceWrapper <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>        instanceWrapper <span style="color:#f92672">=</span> createBeanInstance(beanName, mbd, args);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    Object exposedObject <span style="color:#f92672">=</span> bean;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 2. Bean 属性赋值/填充</span>
+</span></span><span style="display:flex;"><span>        populateBean(beanName, mbd, instanceWrapper);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 3. Bean 初始化</span>
+</span></span><span style="display:flex;"><span>        exposedObject <span style="color:#f92672">=</span> initializeBean(beanName, exposedObject, mbd);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 4. 销毁 Bean-注册回调接口</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        registerDisposableBeanIfNecessary(beanName, bean, mbd);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> exposedObject;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>Aware</code> 接口能让 Bean 能拿到 Spring 容器资源。</p>
+<p>Spring 中提供的 <code>Aware</code> 接口主要有：</p>
+<ol>
+<li><code>BeanNameAware</code>：注入当前 bean 对应 beanName；</li>
+<li><code>BeanClassLoaderAware</code>：注入加载当前 bean 的 ClassLoader；</li>
+<li><code>BeanFactoryAware</code>：注入当前 <code>BeanFactory</code> 容器的引用。</li>
+</ol>
+<p><code>BeanPostProcessor</code> 接口是 Spring 为修改 Bean 提供的强大扩展点。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">BeanPostProcessor</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 初始化前置处理</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span> Object <span style="color:#a6e22e">postProcessBeforeInitialization</span>(Object bean, String beanName) <span style="color:#66d9ef">throws</span> BeansException {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> bean;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 初始化后置处理</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span> Object <span style="color:#a6e22e">postProcessAfterInitialization</span>(Object bean, String beanName) <span style="color:#66d9ef">throws</span> BeansException {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> bean;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li><code>postProcessBeforeInitialization</code>：Bean 实例化、属性注入完成后，<code>InitializingBean#afterPropertiesSet</code>方法以及自定义的 <code>init-method</code> 方法之前执行；</li>
+<li><code>postProcessAfterInitialization</code>：类似于上面，不过是在 <code>InitializingBean#afterPropertiesSet</code>方法以及自定义的 <code>init-method</code> 方法之后执行。</li>
+</ul>
+<p><code>InitializingBean</code> 和 <code>init-method</code> 是 Spring 为 Bean 初始化提供的扩展点。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">InitializingBean</span> {
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// 初始化逻辑</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">afterPropertiesSet</span>() <span style="color:#66d9ef">throws</span> Exception;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>指定 <code>init-method</code> 方法，指定初始化方法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;beans</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/beans&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/beans/spring-beans.xsd&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;demo&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.chaycao.Demo&#34;</span> <span style="color:#a6e22e">init-method=</span><span style="color:#e6db74">&#34;init()&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/beans&gt;</span>
+</span></span></code></pre></div><p><strong>如何记忆呢？</strong></p>
+<ol>
+<li>整体上可以简单分为四步：实例化 —&gt; 属性赋值 —&gt; 初始化 —&gt; 销毁。</li>
+<li>初始化这一步涉及到的步骤比较多，包含 <code>Aware</code> 接口的依赖注入、<code>BeanPostProcessor</code> 在初始化前后的处理以及 <code>InitializingBean</code> 和 <code>init-method</code> 的初始化操作。</li>
+<li>销毁这一步会注册相关销毁回调接口，最后通过<code>DisposableBean</code> 和 <code>destory-method</code> 进行销毁。</li>
+</ol>
+<h3 id="spring-aop-的底层实现原理你在项目中是如何应用-aop-的">Spring AOP 的底层实现原理？你在项目中是如何应用 AOP 的？</h3>
+<p>Spring AOP 就是基于动态代理的，如果要代理的对象，实现了某个接口，那么 Spring AOP 会使用 <strong>JDK Proxy</strong>，去创建代理对象，而对于没有实现接口的对象，就无法使用 JDK Proxy 去进行代理了，这时候 Spring AOP 会使用 <strong>Cglib</strong> 生成一个被代理对象的子类来作为代理。</p>
+<p><strong>AOP 的应用场景如下</strong>：</p>
+<ul>
+<li>日志记录：自定义日志记录注解，利用 AOP，一行代码即可实现日志记录。</li>
+<li>性能统计：利用 AOP 在目标方法的执行前后统计方法的执行时间，方便优化和分析。</li>
+<li>事务管理：<code>@Transactional</code> 注解可以让 Spring 为我们进行事务管理比如回滚异常操作，免去了重复的事务管理逻辑。<code>@Transactional</code>注解就是基于 AOP 实现的。</li>
+<li>权限控制：利用 AOP 在目标方法执行前判断用户是否具备所需要的权限，如果具备，就执行目标方法，否则就不执行。例如，SpringSecurity 利用<code>@PreAuthorize</code> 注解一行代码即可自定义权限校验。</li>
+<li>接口限流：利用 AOP 在目标方法执行前通过具体的限流算法和实现对请求进行限流处理。</li>
+<li>缓存管理：利用 AOP 在目标方法执行前后进行缓存的读取和更新。</li>
+</ul>
+<h3 id="如何实现分布式锁">如何实现分布式锁？</h3>
+<p>通过 Redis 来做分布式锁是一种比较常见的方式。</p>
+<p>建议使用 Reedisson 内置的分布式锁。Redisson 是一个开源的 Java 语言 Redis 客户端，提供了很多开箱即用的功能，不仅仅包括多种分布式锁的实现。并且，Redisson 还支持 Redis 单机、Redis Sentinel、Redis Cluster 等多种部署架构。</p>
+<p>Redisson 中的分布式锁自带自动续期机制，使用起来非常简单，原理也很简单，其提供了一个专门用来监控和续期锁的 <strong>Watch Dog（看门狗）</strong>，如果操作共享资源的线程还未执行完成的话，Watch Dog 会不断地延长锁的过期时间，进而保证锁不会因为超时而被释放。</p>
+
+        
+          <div class="dream-adsense-post-bottom">
+            
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8865303128098344" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8865303128098344"
+     data-ad-slot="您的广告单元ID"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+          </div>
+        
+      </section>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <div></div>
+        
+
+        
+        <a role="button" class="btn btn-outline h-12" href="/posts/news/daily-news-20251108/" title="2025年11月8日国内新闻综述">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">2025年11月8日国内新闻综述</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+
+      
+      <div class="divider"></div>
+
+      <section class="space-y-4">
+        
+<article>
+  <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+        this.page.identifier = '\/posts\/tech-tutorials\/programmer-salary-ranking-2025\/';
+        this.page.title = '2025程序员时薪排行榜：大厂薪资对比与技术面试解析';
+        this.page.url = 'https:\/\/bmsg.top\/posts\/tech-tutorials\/programmer-salary-ranking-2025\/';
+
+        
+    };
+    function initDisqus() {
+        
+        
+        
+        
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//bi-mo-shi-guang.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    };
+    setTimeout(() => {
+        initDisqus();
+    }, 3000);
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</article>
+
+
+
+
+
+
+
+
+
+
+      </section>
+      
+    </article>
+  </div>
+
+  <div
+    x-data="tocHighlighter()"
+    @scroll.window="debouncedScroll"
+    class="hidden lg:flex lg:flex-col lg:items-end"
+  >
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#2025年初级工程师时薪排行榜">2025年初级工程师时薪排行榜</a></li>
+        <li><a href="#2024年初级工程师时薪排行榜">2024年初级工程师时薪排行榜</a></li>
+        <li><a href="#自我介绍">自我介绍</a></li>
+        <li><a href="#分布式缓存和本地缓存各自适用于哪些场景">分布式缓存和本地缓存各自适用于哪些场景</a></li>
+        <li><a href="#threadlocal-的应用场景有哪些使用时注意什么">ThreadLocal 的应用场景有哪些？使用时注意什么？</a></li>
+        <li><a href="#请描述一下你如何排查线上内存泄漏问题">请描述一下你如何排查线上内存泄漏问题</a></li>
+        <li><a href="#死锁问题怎么排查">死锁问题怎么排查？</a></li>
+        <li><a href="#请描述一下-spring-bean-的完整生命周期">请描述一下 Spring Bean 的完整生命周期</a></li>
+        <li><a href="#spring-aop-的底层实现原理你在项目中是如何应用-aop-的">Spring AOP 的底层实现原理？你在项目中是如何应用 AOP 的？</a></li>
+        <li><a href="#如何实现分布式锁">如何实现分布式锁？</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    
+  </div>
+</div>
+
+
+            
+<div class="friend-links py-12 bg-gradient-to-r from-base-100 to-base-200 rounded-xl shadow-sm my-6 w-full">
+  <div class="mx-auto px-6">
+    <h3 class="text-2xl font-bold mb-5 text-center text-primary">友情链接</h3>
+    <div class="h-5 my-5"></div>
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://gohugo.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/hugo-logo-wide.svg" alt="Hugo 官网" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Hugo 官网
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/github-logo.png" alt="GitHub" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              GitHub
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://juejin.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/juejin-logo.svg" alt="掘金" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              掘金
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://www.zhihu.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/zhihu-logo.png" alt="知乎" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              知乎
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://sspai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/shaoshupai-logo.png" alt="少数派" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              少数派
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://tools.catbank.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/catbank-logo.png" alt="江水流年" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              江水流年
+            </span>
+          </a>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2016 - 2025 笔墨拾光
+  </p>
+  
+
+  
+  <p>Powered by Inkchron.</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+
+<div
+  x-data="{
+    isVisible: false,
+    toggleVisibility() {
+      this.isVisible = window.scrollY > 300;
+    }
+  }"
+  x-init="
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility);
+  "
+  x-show="isVisible"
+  x-transition:enter="transition duration-300 ease-out"
+  x-transition:enter-start="opacity-0 scale-50"
+  x-transition:enter-end="opacity-100 scale-100"
+  x-transition:leave="transition duration-300 ease-in"
+  x-transition:leave-start="opacity-100 scale-100"
+  x-transition:leave-end="opacity-0 scale-50"
+  class="fixed bottom-8 right-8 z-50"
+>
+  <button
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    aria-label="回到顶部"
+    class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-content shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+  ></button>
+</div>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30 mb-4"
+    >
+      <div class="card-body">
+        <div class="card-title">关于我</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Hi，这里是笔墨拾光的博客。“笔墨拾光” 是我用来收纳日常经验的小角落标识～</p>
+          <p>我是职场搬砖人 + 生活折腾爱好者，在这里会记录工作里的避坑技巧、生活中的实用小招。欢迎你通过评论与我交流经验～。</p>
+        </div>
+      </div>
+    </article>
+
+    
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">社交链接</div>
+
+        
+        <ul class="menu menu-horizontal flex-wrap w-full px-0 [&_ion-icon]:text-lg">
+  
+  <li>
+    <a href="mailto:35924784@qq.com" title="Email">
+      <ion-icon name="mail"></ion-icon>
+    </a>
+  </li>
+  
+
+  
+  <li>
+    <a href="https://github.com/g1eny0ung" target="_blank" title="GitHub">
+      <ion-icon name="logo-github"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://twitter.com/g1eny0ung" target="_blank" title="Twitter">
+      <ion-icon name="logo-twitter"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://linkedin.com/in/g1eny0ung" target="_blank" title="LinkedIn">
+      <ion-icon name="logo-linkedin"></ion-icon>
+    </a>
+  </li>
+  
+</ul>
+
+        
+      </div>
+    </article>
+  </div>
+
+  
+
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">知识共享</div>
+
+        <div class="prose dark:prose-invert">
+          <p>此网站的所有内容都遵循 CC BY-NC-SA 4.0。</p>
+<p>All contents of this website are licensed under CC BY-NC-SA 4.0.</p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+
+  
+</div>
+
+            
+
+            
+<div class="friend-links py-12 bg-gradient-to-r from-base-100 to-base-200 rounded-xl shadow-sm my-6 w-full">
+  <div class="mx-auto px-6">
+    <h3 class="text-2xl font-bold mb-5 text-center text-primary">友情链接</h3>
+    <div class="h-5 my-5"></div>
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://gohugo.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/hugo-logo-wide.svg" alt="Hugo 官网" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Hugo 官网
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/github-logo.png" alt="GitHub" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              GitHub
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://juejin.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/juejin-logo.svg" alt="掘金" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              掘金
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://www.zhihu.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/zhihu-logo.png" alt="知乎" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              知乎
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://sspai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/shaoshupai-logo.png" alt="少数派" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              少数派
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://tools.catbank.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/catbank-logo.png" alt="江水流年" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              江水流年
+            </span>
+          </a>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2016 - 2025 笔墨拾光
+  </p>
+  
+
+  
+  <p>Powered by Inkchron.</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+
+<div
+  x-data="{
+    isVisible: false,
+    toggleVisibility() {
+      this.isVisible = window.scrollY > 300;
+    }
+  }"
+  x-init="
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility);
+  "
+  x-show="isVisible"
+  x-transition:enter="transition duration-300 ease-out"
+  x-transition:enter-start="opacity-0 scale-50"
+  x-transition:enter-end="opacity-100 scale-100"
+  x-transition:leave="transition duration-300 ease-in"
+  x-transition:leave-start="opacity-100 scale-100"
+  x-transition:leave-end="opacity-0 scale-50"
+  class="fixed bottom-8 right-8 z-50"
+>
+  <button
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    aria-label="回到顶部"
+    class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-content shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+  ></button>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+    
+  
+  <script src="/js/grid.min.js"></script>
+
+
+
+
+  
+
+<script src="/js/main.min.js"></script>
+
+    
+
+
+
+
+
+
+
+  
+
+<script src="/js/toc.min.js"></script>
+
+
+
+  
+
+<script src="/js/code-copy.min.js"></script>
+
+
+  
+    <script type="module">
+      import mediumZoom from 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm';
+      mediumZoom('#dream-single-post-content img', {
+        background: 'oklch(var(--b1))',
+        margin: 24,
+      })
+    </script>
+  
+
+
+
+
+
+
+    
+
+    
+
+    
+    <script src="/js/back-to-top.js"></script>
+    
+
+    
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JB1BENEW8"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0JB1BENEW8');
+        }
+      </script>
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
+  </body>
+</html>

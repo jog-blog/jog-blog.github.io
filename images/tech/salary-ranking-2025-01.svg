@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <!-- 背景 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f6fa"/>
+      <stop offset="100%" stop-color="#dcdde1"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.15)"/>
+    </filter>
+  </defs>
+
+  <!-- 主背景 -->
+  <rect width="800" height="500" fill="url(#bgGradient)"/>
+
+  <!-- 标题 -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2f3542" text-anchor="middle">2025年初级工程师时薪排行榜</text>
+  <text x="400" y="70" font-family="Arial, sans-serif" font-size="16" fill="#747d8c" text-anchor="middle">按时薪从高到低排序</text>
+
+  <!-- 图表区域 -->
+  <g transform="translate(100, 100)" filter="url(#shadow)">
+    <!-- 坐标轴和网格线 -->
+    <!-- X轴 -->
+    <line x1="0" y1="350" x2="600" y2="350" stroke="#57606f" stroke-width="2"/>
+    <!-- Y轴 -->
+    <line x1="0" y1="0" x2="0" y2="350" stroke="#57606f" stroke-width="2"/>
+
+    <!-- 水平网格线 -->
+    <line x1="0" y1="300" x2="600" y2="300" stroke="#dfe4ea" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="0" y1="250" x2="600" y2="250" stroke="#dfe4ea" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="0" y1="200" x2="600" y2="200" stroke="#dfe4ea" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="0" y1="150" x2="600" y2="150" stroke="#dfe4ea" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="0" y1="100" x2="600" y2="100" stroke="#dfe4ea" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="0" y1="50" x2="600" y2="50" stroke="#dfe4ea" stroke-width="1" stroke-dasharray="2,2"/>
+
+    <!-- Y轴标签 -->
+    <text x="-20" y="355" font-family="Arial, sans-serif" font-size="12" fill="#57606f" text-anchor="end">0</text>
+    <text x="-20" y="305" font-family="Arial, sans-serif" font-size="12" fill="#57606f" text-anchor="end">50</text>
+    <text x="-20" y="255" font-family="Arial, sans-serif" font-size="12" fill="#57606f" text-anchor="end">100</text>
+    <text x="-20" y="205" font-family="Arial, sans-serif" font-size="12" fill="#57606f" text-anchor="end">150</text>
+    <text x="-20" y="155" font-family="Arial, sans-serif" font-size="12" fill="#57606f" text-anchor="end">200</text>
+    <text x="-20" y="105" font-family="Arial, sans-serif" font-size="12" fill="#57606f" text-anchor="end">250</text>
+    <text x="-20" y="55" font-family="Arial, sans-serif" font-size="12" fill="#57606f" text-anchor="end">300</text>
+
+    <!-- Y轴标题 -->
+    <text x="-60" y="175" font-family="Arial, sans-serif" font-size="14" fill="#57606f" text-anchor="middle" transform="rotate(-90, -60, 175)">时薪 (元/小时)</text>
+
+    <!-- 柱状图数据 -->
+    <!-- 1. PDD -->
+    <rect x="30" y="350-235" width="60" height="235" rx="5" fill="#ff6b6b"/>
+    <text x="60" y="370" font-family="Arial, sans-serif" font-size="12" fill="#2f3542" text-anchor="middle">PDD</text>
+    <text x="60" y="350-235-5" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2f3542" text-anchor="middle">¥235</text>
+
+    <!-- 2. 小红书 -->
+    <rect x="120" y="350-220" width="60" height="220" rx="5" fill="#48dbfb"/>
+    <text x="150" y="370" font-family="Arial, sans-serif" font-size="12" fill="#2f3542" text-anchor="middle">小红书</text>
+    <text x="150" y="350-220-5" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2f3542" text-anchor="middle">¥220</text>
+
+    <!-- 3. 微软 -->
+    <rect x="210" y="350-210" width="60" height="210" rx="5" fill="#10ac84"/>
+    <text x="240" y="370" font-family="Arial, sans-serif" font-size="12" fill="#2f3542" text-anchor="middle">微软</text>
+    <text x="240" y="350-210-5" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2f3542" text-anchor="middle">¥210</text>
+
+    <!-- 4. 腾讯 -->
+    <rect x="300" y="350-200" width="60" height="200" rx="5" fill="#6c5ce7"/>
+    <text x="330" y="370" font-family="Arial, sans-serif" font-size="12" fill="#2f3542" text-anchor="middle">腾讯</text>
+    <text x="330" y="350-200-5" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2f3542" text-anchor="middle">¥200</text>
+
+    <!-- 5. Bilibili -->
+    <rect x="390" y="350-190" width="60" height="190" rx="5" fill="#fd79a8"/>
+    <text x="420" y="370" font-family="Arial, sans-serif" font-size="12" fill="#2f3542" text-anchor="middle">Bilibili</text>
+    <text x="420" y="350-190-5" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2f3542" text-anchor="middle">¥190</text>
+
+    <!-- 6. 蚂蚁金服 -->
+    <rect x="480" y="350-185" width="60" height="185" rx="5" fill="#00d2d3"/>
+    <text x="510" y="370" font-family="Arial, sans-serif" font-size="12" fill="#2f3542" text-anchor="middle">蚂蚁金服</text>
+    <text x="510" y="350-185-5" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2f3542" text-anchor="middle">¥185</text>
+  </g>
+
+  <!-- 说明信息 -->
+  <text x="400" y="450" font-family="Arial, sans-serif" font-size="14" fill="#747d8c" text-anchor="middle">数据来源：职级对标网站统计（2025年）</text>
+  <text x="400" y="480" font-family="Arial, sans-serif" font-size="12" fill="#a4b0be" text-anchor="middle">初级工程师指1-3年工作经验</text>
+</svg>

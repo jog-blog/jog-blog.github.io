@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <!-- 背景 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f1f2f6"/>
+      <stop offset="100%" stop-color="#dfe4ea"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.15)"/>
+    </filter>
+  </defs>
+
+  <!-- 主背景 -->
+  <rect width="800" height="400" fill="url(#bgGradient)"/>
+
+  <!-- 标题 -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2f3542" text-anchor="middle">本地缓存 (Local Cache) 架构示意图</text>
+
+  <!-- 客户端应用 -->
+  <g transform="translate(200, 100)" filter="url(#shadow)">
+    <rect x="0" y="0" width="200" height="100" rx="10" fill="#3498db"/>
+    <text x="100" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">应用进程</text>
+    <text x="100" y="60" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Application Process</text>
+  </g>
+
+  <!-- 本地缓存 -->
+  <g transform="translate(200, 230)" filter="url(#shadow)">
+    <rect x="0" y="0" width="200" height="100" rx="10" fill="#2ecc71"/>
+    <text x="100" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">本地缓存</text>
+    <text x="100" y="60" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Local Cache</text>
+
+    <!-- 缓存数据示意图 -->
+    <g transform="translate(50, 80)">
+      <rect x="0" y="0" width="30" height="15" rx="2" fill="#f1c40f"/>
+      <text x="15" y="10" font-family="Arial, sans-serif" font-size="8" fill="#2f3542" text-anchor="middle">数据</text>
+    </g>
+    <g transform="translate(90, 80)">
+      <rect x="0" y="0" width="30" height="15" rx="2" fill="#f1c40f"/>
+      <text x="15" y="10" font-family="Arial, sans-serif" font-size="8" fill="#2f3542" text-anchor="middle">数据</text>
+    </g>
+    <g transform="translate(130, 80)">
+      <rect x="0" y="0" width="30" height="15" rx="2" fill="#f1c40f"/>
+      <text x="15" y="10" font-family="Arial, sans-serif" font-size="8" fill="#2f3542" text-anchor="middle">数据</text>
+    </g>
+  </g>
+
+  <!-- 数据库 -->
+  <g transform="translate(500, 230)" filter="url(#shadow)">
+    <rect x="0" y="0" width="200" height="100" rx="10" fill="#e74c3c"/>
+    <text x="100" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">数据库</text>
+    <text x="100" y="60" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Database</text>
+  </g>
+
+  <!-- 箭头 -->
+  <!-- 应用到本地缓存 -->
+  <path d="M300 200 L300 230" stroke="#2f3542" stroke-width="2" fill="none"/>
+  <polygon points="300,230 295,220 305,220" fill="#2f3542"/>
+
+  <!-- 本地缓存到应用 -->
+  <path d="M300 230 L300 200" stroke="#2f3542" stroke-width="2" fill="none"/>
+  <polygon points="300,200 295,210 305,210" fill="#2f3542"/>
+
+  <!-- 应用到数据库 -->
+  <path d="M400 150 L500 280" stroke="#2f3542" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  <polygon points="500,280 490,275 495,265" fill="#2f3542"/>
+
+  <!-- 数据库到应用 -->
+  <path d="M500 280 L400 150" stroke="#2f3542" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  <polygon points="400,150 410,155 405,165" fill="#2f3542"/>
+
+  <!-- 说明文本 -->
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="12" fill="#2f3542" text-anchor="middle">本地缓存特点：速度快、无网络开销、数据不共享、受内存限制</text>
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="12" fill="#2f3542" text-anchor="middle">实现方案：ConcurrentHashMap, Guava Cache, Caffeine, Ehcache</text>
+</svg>

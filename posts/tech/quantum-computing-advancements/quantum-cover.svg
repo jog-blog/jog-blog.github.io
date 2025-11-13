@@ -1,0 +1,91 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景渐变 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a148c" />
+      <stop offset="100%" stop-color="#283593" />
+    </linearGradient>
+    <radialGradient id="orbGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#e040fb" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#e040fb" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="400" fill="url(#bgGradient)" />
+
+  <!-- 装饰性网格 -->
+  <g opacity="0.1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1" />
+    </pattern>
+    <rect width="800" height="400" fill="url(#grid)" />
+  </g>
+
+  <!-- 量子比特图形 -->
+  <g>
+    <!-- 中心量子比特 -->
+    <circle cx="400" cy="200" r="60" fill="none" stroke="#e040fb" stroke-width="2" opacity="0.8" />
+    <circle cx="400" cy="200" r="40" fill="none" stroke="#e040fb" stroke-width="2" opacity="0.8" />
+    <circle cx="400" cy="200" r="20" fill="none" stroke="#e040fb" stroke-width="2" opacity="0.8" />
+    <circle cx="400" cy="200" r="10" fill="#e040fb" opacity="0.8" />
+
+    <!-- 纠缠的量子比特 -->
+    <circle cx="250" cy="150" r="30" fill="none" stroke="#90caf9" stroke-width="2" opacity="0.8" />
+    <circle cx="250" cy="150" r="15" fill="none" stroke="#90caf9" stroke-width="2" opacity="0.8" />
+    <circle cx="250" cy="150" r="5" fill="#90caf9" opacity="0.8" />
+
+    <circle cx="550" cy="150" r="30" fill="none" stroke="#90caf9" stroke-width="2" opacity="0.8" />
+    <circle cx="550" cy="150" r="15" fill="none" stroke="#90caf9" stroke-width="2" opacity="0.8" />
+    <circle cx="550" cy="150" r="5" fill="#90caf9" opacity="0.8" />
+
+    <circle cx="250" cy="250" r="25" fill="none" stroke="#81c784" stroke-width="2" opacity="0.8" />
+    <circle cx="250" cy="250" r="12" fill="none" stroke="#81c784" stroke-width="2" opacity="0.8" />
+    <circle cx="250" cy="250" r="4" fill="#81c784" opacity="0.8" />
+
+    <circle cx="550" cy="250" r="25" fill="none" stroke="#81c784" stroke-width="2" opacity="0.8" />
+    <circle cx="550" cy="250" r="12" fill="none" stroke="#81c784" stroke-width="2" opacity="0.8" />
+    <circle cx="550" cy="250" r="4" fill="#81c784" opacity="0.8" />
+  </g>
+
+  <!-- 量子纠缠线 -->
+  <g>
+    <path d="M 250 150 C 325 180, 325 180, 400 200" fill="none" stroke="#90caf9" stroke-width="2" opacity="0.7" />
+    <path d="M 550 150 C 475 180, 475 180, 400 200" fill="none" stroke="#90caf9" stroke-width="2" opacity="0.7" />
+    <path d="M 250 250 C 325 220, 325 220, 400 200" fill="none" stroke="#81c784" stroke-width="2" opacity="0.7" />
+    <path d="M 550 250 C 475 220, 475 220, 400 200" fill="none" stroke="#81c784" stroke-width="2" opacity="0.7" />
+
+    <!-- 干涉图案 -->
+    <path d="M 150 200 L 650 200" fill="none" stroke="#e040fb" stroke-width="1" opacity="0.5" />
+    <path d="M 150 180 L 650 220" fill="none" stroke="#e040fb" stroke-width="1" opacity="0.3" />
+    <path d="M 150 220 L 650 180" fill="none" stroke="#e040fb" stroke-width="1" opacity="0.3" />
+  </g>
+
+  <!-- 量子符号 -->
+  <g>
+    <text x="400" y="205" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">ψ</text>
+
+    <!-- 量子态符号 -->
+    <text x="250" y="155" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">|0⟩</text>
+    <text x="550" y="155" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">|1⟩</text>
+    <text x="250" y="255" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">|+⟩</text>
+    <text x="550" y="255" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">|-⟩</text>
+  </g>
+
+  <!-- 量子计算设备图形 -->
+  <g>
+    <!-- 简化的量子计算机图形 -->
+    <rect x="320" y="300" width="160" height="60" rx="10" ry="10" fill="#3949ab" opacity="0.8" />
+    <rect x="330" y="310" width="140" height="40" rx="5" ry="5" fill="#303f9f" opacity="0.8" />
+    <rect x="340" y="320" width="30" height="20" rx="2" ry="2" fill="#5c6bc0" opacity="0.8" />
+    <rect x="380" y="320" width="30" height="20" rx="2" ry="2" fill="#5c6bc0" opacity="0.8" />
+    <rect x="420" y="320" width="30" height="20" rx="2" ry="2" fill="#5c6bc0" opacity="0.8" />
+  </g>
+
+  <!-- 标题 -->
+  <text x="400" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">量子计算</text>
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">突破经典计算极限的前沿技术</text>
+
+  <!-- 副标题 -->
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="16" fill="white" opacity="0.8" text-anchor="middle">量子比特 | 量子纠缠 | 量子算法 | 量子优势</text>
+</svg>

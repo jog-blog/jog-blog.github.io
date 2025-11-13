@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gemini on 笔墨拾光</title>
+    <link>https://bmsg.top/tags/gemini/</link>
+    <description>Recent content in Gemini on 笔墨拾光</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 13 Nov 2024 10:00:00 +0800</lastBuildDate>
+    <atom:link href="https://bmsg.top/tags/gemini/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>谷歌AI技术进展：从Gemini到DeepMind的前沿突破</title>
+      <link>https://bmsg.top/posts/tech/google-ai-advancements/</link>
+      <pubDate>Wed, 13 Nov 2024 10:00:00 +0800</pubDate>
+      <guid>https://bmsg.top/posts/tech/google-ai-advancements/</guid>
+      <description>&lt;p&gt;本文深入探讨谷歌AI技术的最新进展，包括Gemini模型家族的迭代、DeepMind的突破性研究以及这些技术在实际应用中的影响。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

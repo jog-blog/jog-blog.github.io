@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>深度学习 on 笔墨拾光</title>
+    <link>https://bmsg.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 深度学习 on 笔墨拾光</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 13 Nov 2025 10:00:00 +0800</lastBuildDate>
+    <atom:link href="https://bmsg.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI大模型训练与优化技术深度剖析</title>
+      <link>https://bmsg.top/posts/tech/ai-model-training-optimization/</link>
+      <pubDate>Thu, 13 Nov 2025 10:00:00 +0800</pubDate>
+      <guid>https://bmsg.top/posts/tech/ai-model-training-optimization/</guid>
+      <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;人工智能大模型的崛起正在重塑整个科技行业，从GPT系列到Claude，再到国内的文心一言、讯飞星火等，大模型在各个领域展现出惊人的能力。然而，这些强大模型的背后是极其复杂的训练和优化过程。本文将深入剖析AI大模型的训练技术、优化策略以及最新研究进展，带您了解这些智能系统背后的技术奥秘。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

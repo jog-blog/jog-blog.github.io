@@ -1,0 +1,127 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景渐变 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a148c" />
+      <stop offset="100%" stop-color="#6200ea" />
+    </linearGradient>
+    <linearGradient id="realityGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1976d2" />
+    </linearGradient>
+    <linearGradient id="virtualGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#7b1fa2" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="400" fill="url(#bgGradient)" />
+
+  <!-- 装饰性网格 -->
+  <g opacity="0.1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1" />
+    </pattern>
+    <rect width="800" height="400" fill="url(#grid)" />
+  </g>
+
+  <!-- 虚实分割线 -->
+  <path d="M 0 200 L 800 200" stroke="white" stroke-width="1" opacity="0.3" />
+
+  <!-- 现实世界部分 -->
+  <g>
+    <!-- 简化城市剪影 -->
+    <rect x="100" y="150" width="40" height="50" fill="url(#realityGradient)" opacity="0.8" />
+    <rect x="150" y="130" width="50" height="70" fill="url(#realityGradient)" opacity="0.8" />
+    <rect x="210" y="140" width="40" height="60" fill="url(#realityGradient)" opacity="0.8" />
+    <rect x="260" y="160" width="30" height="40" fill="url(#realityGradient)" opacity="0.8" />
+    <rect x="300" y="140" width="40" height="60" fill="url(#realityGradient)" opacity="0.8" />
+
+    <!-- 人物图标 -->
+    <circle cx="380" cy="180" r="15" fill="#2196f3" opacity="0.8" />
+    <rect x="370" y="195" width="20" height="30" fill="#2196f3" opacity="0.8" />
+    <line x1="370" y1="205" x2="350" y2="220" stroke="#2196f3" stroke-width="3" opacity="0.8" />
+    <line x1="390" y1="205" x2="410" y2="220" stroke="#2196f3" stroke-width="3" opacity="0.8" />
+
+    <!-- 传感器图标 -->
+    <circle cx="450" cy="180" r="10" fill="#2196f3" opacity="0.8" />
+    <circle cx="450" cy="180" r="5" fill="white" opacity="0.8" />
+
+    <!-- 数据流 -->
+    <path d="M 460 180 C 500 180, 500 200, 500 220" fill="none" stroke="#2196f3" stroke-width="2" opacity="0.8" marker-end="url(#arrowhead)" />
+
+    <!-- 标签 -->
+    <text x="180" y="120" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">物理世界</text>
+  </g>
+
+  <!-- 虚拟世界部分 -->
+  <g>
+    <!-- 虚拟城市 -->
+    <rect x="100" y="210" width="40" height="50" fill="url(#virtualGradient)" opacity="0.8" stroke="#e040fb" stroke-width="1" />
+    <rect x="150" y="200" width="50" height="60" fill="url(#virtualGradient)" opacity="0.8" stroke="#e040fb" stroke-width="1" />
+    <rect x="210" y="210" width="40" height="50" fill="url(#virtualGradient)" opacity="0.8" stroke="#e040fb" stroke-width="1" />
+    <rect x="260" y="220" width="30" height="40" fill="url(#virtualGradient)" opacity="0.8" stroke="#e040fb" stroke-width="1" />
+    <rect x="300" y="210" width="40" height="50" fill="url(#virtualGradient)" opacity="0.8" stroke="#e040fb" stroke-width="1" />
+
+    <!-- 虚拟人物/头像 -->
+    <circle cx="380" cy="230" r="20" fill="none" stroke="#e040fb" stroke-width="2" opacity="0.8" />
+    <circle cx="375" cy="225" r="3" fill="#e040fb" opacity="0.8" />
+    <circle cx="385" cy="225" r="3" fill="#e040fb" opacity="0.8" />
+    <path d="M 375 235 Q 380 240, 385 235" fill="none" stroke="#e040fb" stroke-width="2" opacity="0.8" />
+
+    <!-- 虚拟现实头盔 -->
+    <rect x="450" y="220" width="40" height="20" rx="10" ry="10" fill="#9c27b0" opacity="0.8" />
+    <line x1="455" y1="220" x2="455" y2="210" stroke="#9c27b0" stroke-width="2" opacity="0.8" />
+    <line x1="485" y1="220" x2="485" y2="210" stroke="#9c27b0" stroke-width="2" opacity="0.8" />
+
+    <!-- 数字孪生连接线 -->
+    <path d="M 120 200 L 120 210" fill="none" stroke="#e040fb" stroke-width="1" opacity="0.8" />
+    <path d="M 175 200 L 175 200" fill="none" stroke="#e040fb" stroke-width="1" opacity="0.8" />
+    <path d="M 230 200 L 230 210" fill="none" stroke="#e040fb" stroke-width="1" opacity="0.8" />
+    <path d="M 275 200 L 275 220" fill="none" stroke="#e040fb" stroke-width="1" opacity="0.8" />
+    <path d="M 320 200 L 320 210" fill="none" stroke="#e040fb" stroke-width="1" opacity="0.8" />
+
+    <!-- 标签 -->
+    <text x="180" y="280" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">数字孪生/元宇宙</text>
+  </g>
+
+  <!-- 3D虚拟元素 -->
+  <g>
+    <!-- 3D立方体 -->
+    <path d="M 550 230 L 600 210 L 600 260 L 550 280 Z" fill="#9c27b0" opacity="0.8" stroke="#e040fb" stroke-width="1" />
+    <path d="M 600 210 L 630 220 L 630 270 L 600 260 Z" fill="#9c27b0" opacity="0.5" stroke="#e040fb" stroke-width="1" />
+    <path d="M 550 230 L 580 240 L 630 220 L 600 210 Z" fill="#9c27b0" opacity="0.3" stroke="#e040fb" stroke-width="1" />
+
+    <!-- 元宇宙符号 -->
+    <circle cx="650" cy="250" r="30" fill="none" stroke="#e040fb" stroke-width="2" opacity="0.8" />
+    <circle cx="650" cy="250" r="20" fill="none" stroke="#e040fb" stroke-width="2" opacity="0.8" />
+    <circle cx="650" cy="250" r="10" fill="#e040fb" opacity="0.8" />
+
+    <!-- 连接线 -->
+    <path d="M 600 260 C 620 260, 620 250, 630 250" fill="none" stroke="#e040fb" stroke-width="2" opacity="0.8" marker-end="url(#arrowhead)" />
+  </g>
+
+  <!-- AR元素 -->
+  <g>
+    <rect x="550" y="130" width="120" height="100" rx="5" ry="5" fill="none" stroke="#2196f3" stroke-width="2" opacity="0.8" stroke-dasharray="5,3" />
+    <text x="610" y="190" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2196f3" text-anchor="middle">AR叠加层</text>
+
+    <!-- 数据流 -->
+    <path d="M 610 230 C 610 240, 610 240, 610 250" fill="none" stroke="#2196f3" stroke-width="2" opacity="0.8" marker-end="url(#arrowhead)" />
+  </g>
+
+  <!-- 箭头标记 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
+    </marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="400" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">元宇宙与数字孪生</text>
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">构建虚实融合的下一代数字世界</text>
+
+  <!-- 副标题 -->
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="16" fill="white" opacity="0.8" text-anchor="middle">虚拟现实 | 增强现实 | Web3 | 数字资产</text>
+</svg>

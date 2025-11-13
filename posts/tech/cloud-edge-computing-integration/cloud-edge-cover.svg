@@ -1,0 +1,95 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景渐变 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d47a1" />
+      <stop offset="100%" stop-color="#1b5e20" />
+    </linearGradient>
+    <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4fc3f7" />
+      <stop offset="100%" stop-color="#29b6f6" />
+    </linearGradient>
+    <linearGradient id="edgeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#66bb6a" />
+      <stop offset="100%" stop-color="#43a047" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="400" fill="url(#bgGradient)" />
+
+  <!-- 装饰性网格 -->
+  <g opacity="0.1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1" />
+    </pattern>
+    <rect width="800" height="400" fill="url(#grid)" />
+  </g>
+
+  <!-- 云数据中心图形 -->
+  <g>
+    <!-- 云计算图标 -->
+    <rect x="150" y="100" width="120" height="80" rx="10" ry="10" fill="url(#cloudGradient)" opacity="0.9" />
+    <rect x="160" y="110" width="30" height="20" rx="2" ry="2" fill="white" opacity="0.8" />
+    <rect x="200" y="110" width="30" height="20" rx="2" ry="2" fill="white" opacity="0.8" />
+    <rect x="160" y="140" width="30" height="20" rx="2" ry="2" fill="white" opacity="0.8" />
+    <rect x="200" y="140" width="30" height="20" rx="2" ry="2" fill="white" opacity="0.8" />
+    <text x="210" y="130" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="end">云计算</text>
+  </g>
+
+  <!-- 边缘计算图形 -->
+  <g>
+    <!-- 边缘设备图标 -->
+    <rect x="530" y="220" width="100" height="120" rx="5" ry="5" fill="url(#edgeGradient)" opacity="0.9" />
+    <rect x="540" y="230" width="80" height="10" rx="2" ry="2" fill="white" opacity="0.8" />
+    <rect x="560" y="250" width="40" height="40" rx="2" ry="2" fill="white" opacity="0.8" />
+    <rect x="540" y="300" width="80" height="15" rx="2" ry="2" fill="white" opacity="0.8" />
+    <text x="580" y="275" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">边缘</text>
+
+    <!-- 小设备图标 -->
+    <rect x="650" y="180" width="40" height="60" rx="3" ry="3" fill="url(#edgeGradient)" opacity="0.8" />
+    <rect x="655" y="185" width="30" height="5" rx="1" ry="1" fill="white" opacity="0.8" />
+    <text x="670" y="215" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">IoT</text>
+
+    <rect x="690" y="280" width="40" height="60" rx="3" ry="3" fill="url(#edgeGradient)" opacity="0.8" />
+    <rect x="695" y="285" width="30" height="5" rx="1" ry="1" fill="white" opacity="0.8" />
+    <text x="710" y="315" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">设备</text>
+  </g>
+
+  <!-- 连接元素 -->
+  <g>
+    <!-- 连接线 -->
+    <path d="M 270 140 C 350 120, 450 120, 530 160" fill="none" stroke="#81c784" stroke-width="3" opacity="0.8" marker-end="url(#arrowhead)" />
+    <path d="M 580 220 C 580 180, 630 160, 650 180" fill="none" stroke="#81c784" stroke-width="2" opacity="0.8" marker-end="url(#arrowhead)" />
+    <path d="M 580 340 C 600 360, 670 360, 690 340" fill="none" stroke="#81c784" stroke-width="2" opacity="0.8" marker-end="url(#arrowhead)" />
+
+    <!-- 数据流动图形 -->
+    <circle cx="350" cy="120" r="8" fill="#81c784" opacity="0.7" />
+    <circle cx="400" cy="120" r="6" fill="#81c784" opacity="0.6" />
+    <circle cx="450" cy="120" r="8" fill="#81c784" opacity="0.7" />
+    <circle cx="400" cy="160" r="6" fill="#81c784" opacity="0.6" />
+    <circle cx="450" cy="160" r="8" fill="#81c784" opacity="0.7" />
+
+    <!-- 箭头标记 -->
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#81c784" />
+      </marker>
+    </defs>
+  </g>
+
+  <!-- 5G图标 -->
+  <g>
+    <circle cx="400" cy="220" r="40" fill="#66bb6a" opacity="0.2" />
+    <circle cx="400" cy="220" r="30" fill="#66bb6a" opacity="0.3" />
+    <circle cx="400" cy="220" r="20" fill="#66bb6a" opacity="0.4" />
+    <text x="400" y="225" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">5G</text>
+  </g>
+
+  <!-- 标题 -->
+  <text x="400" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">云计算与边缘计算融合</text>
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">下一代计算架构革命</text>
+
+  <!-- 副标题 -->
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="16" fill="white" opacity="0.8" text-anchor="middle">物联网 | 5G | 分布式系统 | 低延迟计算</text>
+</svg>

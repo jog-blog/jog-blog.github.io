@@ -1,0 +1,103 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景渐变 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#112240"/>
+    </linearGradient>
+
+    <!-- 编程语言图标样式 -->
+    <style>
+      .icon-go { fill: #00ADD8; }
+      .icon-rust { fill: #DEA584; }
+      .icon-python { fill: #3776AB; }
+      .icon-kotlin { fill: #7F52FF; }
+      .icon-typescript { fill: #3178C6; }
+      .icon-scala { fill: #DC322F; }
+      .icon-swift { fill: #FA7343; }
+      .icon-dart { fill: #0175C2; }
+      .icon-julia { fill: #9558B2; }
+      .icon-clojure { fill: #DB5855; }
+      .bar { opacity: 0.8; }
+      .bar:hover { opacity: 1; }
+      .text-white { fill: #e6f1ff; }
+      .text-gray { fill: #8892B0; }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="400" fill="url(#bgGradient)"/>
+
+  <!-- 装饰性网格 -->
+  <g stroke="#233554" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="400"/>
+    <line x1="400" y1="0" x2="400" y2="400"/>
+    <line x1="600" y1="0" x2="600" y2="400"/>
+  </g>
+
+  <!-- 标题 -->
+  <text x="400" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" class="text-white">2025年最赚钱的编程语言排名</text>
+  <text x="400" y="95" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" class="text-gray">开发者薪资与就业前景分析</text>
+
+  <!-- 薪资柱状图 -->
+  <g transform="translate(100, 120)">
+    <!-- Go -->
+    <rect x="0" y="30" width="40" height="200" class="bar icon-go"/>
+    <text x="20" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" class="text-white">Go</text>
+
+    <!-- Rust -->
+    <rect x="60" y="40" width="40" height="190" class="bar icon-rust"/>
+    <text x="80" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" class="text-white">Rust</text>
+
+    <!-- Python -->
+    <rect x="120" y="55" width="40" height="175" class="bar icon-python"/>
+    <text x="140" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" class="text-white">Python</text>
+
+    <!-- Kotlin -->
+    <rect x="180" y="65" width="40" height="165" class="bar icon-kotlin"/>
+    <text x="200" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" class="text-white">Kotlin</text>
+
+    <!-- TypeScript -->
+    <rect x="240" y="75" width="40" height="155" class="bar icon-typescript"/>
+    <text x="260" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" class="text-white">TypeScript</text>
+
+    <!-- Scala -->
+    <rect x="300" y="80" width="40" height="150" class="bar icon-scala"/>
+    <text x="320" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" class="text-white">Scala</text>
+
+    <!-- Swift -->
+    <rect x="360" y="85" width="40" height="145" class="bar icon-swift"/>
+    <text x="380" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" class="text-white">Swift</text>
+
+    <!-- Dart -->
+    <rect x="420" y="95" width="40" height="135" class="bar icon-dart"/>
+    <text x="440" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" class="text-white">Dart</text>
+
+    <!-- Julia -->
+    <rect x="480" y="100" width="40" height="130" class="bar icon-julia"/>
+    <text x="500" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" class="text-white">Julia</text>
+
+    <!-- Clojure -->
+    <rect x="540" y="105" width="40" height="125" class="bar icon-clojure"/>
+    <text x="560" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" class="text-white">Clojure</text>
+
+    <!-- Y轴标签 -->
+    <text x="-20" y="230" font-family="Arial, sans-serif" font-size="12" text-anchor="end" class="text-gray">¥400k</text>
+    <text x="-20" y="150" font-family="Arial, sans-serif" font-size="12" text-anchor="end" class="text-gray">¥500k</text>
+    <text x="-20" y="70" font-family="Arial, sans-serif" font-size="12" text-anchor="end" class="text-gray">¥600k</text>
+  </g>
+
+  <!-- 装饰性代码符号 -->
+  <g transform="translate(680, 320)">
+    <text font-family="Courier, monospace" font-size="14" fill="#41B883" opacity="0.7">{</text>
+    <text x="15" font-family="Courier, monospace" font-size="14" fill="#61DAFB" opacity="0.7">"salary":</text>
+    <text x="70" font-family="Courier, monospace" font-size="14" fill="#F7DF1E" opacity="0.7">"high"</text>
+    <text x="110" font-family="Courier, monospace" font-size="14" fill="#41B883" opacity="0.7">}</text>
+  </g>
+
+  <!-- 底部日期 -->
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" class="text-gray">2025年11月数据</text>
+</svg>

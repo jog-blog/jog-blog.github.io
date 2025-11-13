@@ -1,0 +1,100 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景渐变 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003366" />
+      <stop offset="100%" stop-color="#006064" />
+    </linearGradient>
+    <linearGradient id="blockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00bcd4" />
+      <stop offset="100%" stop-color="#00acc1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="400" fill="url(#bgGradient)" />
+
+  <!-- 装饰性网格 -->
+  <g opacity="0.1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1" />
+    </pattern>
+    <rect width="800" height="400" fill="url(#grid)" />
+  </g>
+
+  <!-- 区块链图形 -->
+  <g>
+    <!-- 第一行区块 -->
+    <rect x="200" y="120" width="120" height="80" rx="5" ry="5" fill="url(#blockGradient)" opacity="0.9" />
+    <rect x="340" y="120" width="120" height="80" rx="5" ry="5" fill="url(#blockGradient)" opacity="0.8" />
+    <rect x="480" y="120" width="120" height="80" rx="5" ry="5" fill="url(#blockGradient)" opacity="0.7" />
+
+    <!-- 第二行区块 -->
+    <rect x="150" y="220" width="120" height="80" rx="5" ry="5" fill="url(#blockGradient)" opacity="0.8" />
+    <rect x="290" y="220" width="120" height="80" rx="5" ry="5" fill="url(#blockGradient)" opacity="0.9" />
+    <rect x="430" y="220" width="120" height="80" rx="5" ry="5" fill="url(#blockGradient)" opacity="0.8" />
+    <rect x="570" y="220" width="120" height="80" rx="5" ry="5" fill="url(#blockGradient)" opacity="0.7" />
+
+    <!-- 区块连接线 -->
+    <path d="M 260 200 L 260 220" fill="none" stroke="#00bcd4" stroke-width="2" opacity="0.8" />
+    <path d="M 400 200 L 400 220" fill="none" stroke="#00bcd4" stroke-width="2" opacity="0.8" />
+    <path d="M 540 200 L 540 220" fill="none" stroke="#00bcd4" stroke-width="2" opacity="0.8" />
+
+    <!-- 区块间连接 -->
+    <path d="M 320 160 C 340 160, 340 160, 340 160" fill="none" stroke="#00bcd4" stroke-width="2" opacity="0.8" marker-end="url(#arrowhead)" />
+    <path d="M 460 160 C 480 160, 480 160, 480 160" fill="none" stroke="#00bcd4" stroke-width="2" opacity="0.8" marker-end="url(#arrowhead)" />
+    <path d="M 270 260 C 290 260, 290 260, 290 260" fill="none" stroke="#00bcd4" stroke-width="2" opacity="0.8" marker-end="url(#arrowhead)" />
+    <path d="M 410 260 C 430 260, 430 260, 430 260" fill="none" stroke="#00bcd4" stroke-width="2" opacity="0.8" marker-end="url(#arrowhead)" />
+    <path d="M 550 260 C 570 260, 570 260, 570 260" fill="none" stroke="#00bcd4" stroke-width="2" opacity="0.8" marker-end="url(#arrowhead)" />
+
+    <!-- 区块内容简化表示 -->
+    <rect x="210" y="130" width="40" height="10" rx="2" ry="2" fill="white" opacity="0.8" />
+    <rect x="260" y="130" width="40" height="10" rx="2" ry="2" fill="white" opacity="0.8" />
+    <rect x="210" y="150" width="90" height="10" rx="2" ry="2" fill="white" opacity="0.8" />
+    <rect x="210" y="170" width="70" height="10" rx="2" ry="2" fill="white" opacity="0.8" />
+
+    <rect x="300" y="230" width="40" height="10" rx="2" ry="2" fill="white" opacity="0.8" />
+    <rect x="350" y="230" width="40" height="10" rx="2" ry="2" fill="white" opacity="0.8" />
+    <rect x="300" y="250" width="90" height="10" rx="2" ry="2" fill="white" opacity="0.8" />
+    <rect x="300" y="270" width="70" height="10" rx="2" ry="2" fill="white" opacity="0.8" />
+
+    <!-- 箭头标记 -->
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#00bcd4" />
+      </marker>
+    </defs>
+  </g>
+
+  <!-- 数字货币符号 -->
+  <g>
+    <circle cx="650" cy="100" r="30" fill="none" stroke="#00bcd4" stroke-width="2" opacity="0.8" />
+    <text x="650" y="105" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">$</text>
+
+    <!-- 智能合约符号 -->
+    <rect x="100" y="100" width="60" height="60" rx="5" ry="5" fill="none" stroke="#00bcd4" stroke-width="2" opacity="0.8" />
+    <path d="M 110 120 L 150 120" fill="none" stroke="white" stroke-width="2" opacity="0.8" />
+    <path d="M 110 140 L 130 140" fill="none" stroke="white" stroke-width="2" opacity="0.8" />
+    <path d="M 110 150 L 140 150" fill="none" stroke="white" stroke-width="2" opacity="0.8" />
+  </g>
+
+  <!-- 去中心化节点 -->
+  <g>
+    <circle cx="100" cy="300" r="20" fill="none" stroke="#00bcd4" stroke-width="2" opacity="0.8" />
+    <circle cx="100" cy="300" r="10" fill="#00bcd4" opacity="0.6" />
+
+    <circle cx="650" cy="300" r="20" fill="none" stroke="#00bcd4" stroke-width="2" opacity="0.8" />
+    <circle cx="650" cy="300" r="10" fill="#00bcd4" opacity="0.6" />
+
+    <!-- 连接线 -->
+    <path d="M 120 300 C 200 280, 200 280, 260 280" fill="none" stroke="#00bcd4" stroke-width="1" opacity="0.6" />
+    <path d="M 630 300 C 550 280, 550 280, 540 280" fill="none" stroke="#00bcd4" stroke-width="1" opacity="0.6" />
+  </g>
+
+  <!-- 标题 -->
+  <text x="400" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">区块链技术2.0</text>
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">从加密货币到分布式信任网络</text>
+
+  <!-- 副标题 -->
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="16" fill="white" opacity="0.8" text-anchor="middle">智能合约 | DeFi | NFT | Web3</text>
+</svg>

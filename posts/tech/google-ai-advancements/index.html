@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="zh"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>谷歌AI技术进展：从Gemini到DeepMind的前沿突破 | 笔墨拾光</title>
+
+    
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+  
+
+
+<link rel="canonical" href="https://bmsg.top/posts/tech/google-ai-advancements/" />
+
+
+
+<meta name="author" content="Inkchron" />
+<meta name="description" content="本文深入探讨谷歌AI技术的最新进展，包括Gemini模型家族的迭代、DeepMind的突破性研究以及这些技术在实际应用中的影响。
+" />
+
+
+<meta name="keywords" content="人工智能,谷歌AI,Gemini,DeepMind,技术前沿">
+
+
+
+<meta name="generator" content="Hugo 0.152.2">
+
+
+<meta property="og:url" content="https://bmsg.top/posts/tech/google-ai-advancements/">
+  <meta property="og:site_name" content="笔墨拾光">
+  <meta property="og:title" content="谷歌AI技术进展：从Gemini到DeepMind的前沿突破">
+  <meta property="og:description" content="本文深入探讨谷歌AI技术的最新进展，包括Gemini模型家族的迭代、DeepMind的突破性研究以及这些技术在实际应用中的影响。">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-13T10:00:00+08:00">
+    <meta property="article:modified_time" content="2024-11-13T10:00:00+08:00">
+    <meta property="article:tag" content="人工智能">
+    <meta property="article:tag" content="谷歌AI">
+    <meta property="article:tag" content="Gemini">
+    <meta property="article:tag" content="DeepMind">
+    <meta property="article:tag" content="技术前沿">
+    <meta property="og:image" content="https://bmsg.top/posts/tech/google-ai-advancements/google-ai-cover.svg">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bmsg.top/posts/tech/google-ai-advancements/google-ai-cover.svg">
+  <meta name="twitter:title" content="谷歌AI技术进展：从Gemini到DeepMind的前沿突破">
+  <meta name="twitter:description" content="本文深入探讨谷歌AI技术的最新进展，包括Gemini模型家族的迭代、DeepMind的突破性研究以及这些技术在实际应用中的影响。">
+
+
+
+
+
+<meta name="google-adsense-account" content="ca-pub-8865303128098344">
+<style>
+   
+  .adsbygoogle,
+  ins.adsbygoogle,
+  .dream-adsense,
+  .dream-adsense-post-bottom {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+  }
+</style>
+
+
+
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/custom.css" />
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.1/dist/cdn.min.js" integrity="sha256-Rmqrc5SKeSLTSnQ9shSKWmJco1ks8c1hLI8UG2Np03M=" crossorigin="anonymous"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/img/avatar.png" alt="笔墨拾光" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://bmsg.top/" class="text-lg font-semibold cursor-pointer">
+          笔墨拾光
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">以文字为笔，捡拾生活里的细碎时光</div>
+        
+      </div>
+      
+    </section>
+
+    
+    
+      
+    
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-md">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="搜索">
+    <ion-icon name="search"></ion-icon>
+    搜索
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="搜索">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+          
+
+          
+        </ul>
+      </div>
+      
+
+      
+      <div
+        x-data="{ icons: [
+          { name: 'sunny', status: 'n' },
+          { name: 'moon', status: 'y' },
+          { name: 'desktop', status: 'auto' }
+        ] }"
+        class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+      >
+        <template x-for="icon in icons">
+          <div
+            role="button"
+            tabindex="0"
+            :aria-label="'Select ' + icon.name + ' mode'"
+            class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+            :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+            @click="$store.darkMode.toggle(icon.status)"
+          >
+            <ion-icon
+              :name="`${icon.name}-outline`"
+              class="group-hover:text-primary-content"
+              :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+            >
+            </ion-icon>
+          </div>
+        </template>
+      </div>
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+      <div class="dream-adsense w-2/3">
+        
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8865303128098344" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8865303128098344"
+     data-ad-slot="您的广告单元ID"
+     data-ad-format="rectangle"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+      </div>
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="谷歌AI技术进展：从Gemini到DeepMind的前沿突破">
+  <meta itemprop="description" content="本文深入探讨谷歌AI技术的最新进展，包括Gemini模型家族的迭代、DeepMind的突破性研究以及这些技术在实际应用中的影响。">
+  <meta itemprop="datePublished" content="2024-11-13T10:00:00+08:00">
+  <meta itemprop="dateModified" content="2024-11-13T10:00:00+08:00">
+  <meta itemprop="wordCount" content="138">
+  <meta itemprop="image" content="https://bmsg.top/posts/tech/google-ai-advancements/google-ai-cover.svg">
+  <meta itemprop="keywords" content="人工智能,谷歌AI,Gemini,DeepMind,技术前沿">
+
+      <header>
+        <h1 itemprop="headline">谷歌AI技术进展：从Gemini到DeepMind的前沿突破</h1>
+        <p class="text-sm">
+          
+            星期三, 11月 13, 2024
+          
+
+          | <span>1分钟阅读</span>
+
+          
+          | <span>更新于
+            
+              星期三, 11月 13, 2024
+            </span>
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    
+      <span itemprop="name">Inkchron</span>
+    
+  
+  </span>
+</div>
+
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+    
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=%e8%b0%b7%e6%ad%8cAI%e6%8a%80%e6%9c%af%e8%bf%9b%e5%b1%95%ef%bc%9a%e4%bb%8eGemini%e5%88%b0DeepMind%e7%9a%84%e5%89%8d%e6%b2%bf%e7%aa%81%e7%a0%b4&amp;url=https://bmsg.top/posts/tech/google-ai-advancements/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=https://bmsg.top/posts/tech/google-ai-advancements/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://wa.me/?text=%e8%b0%b7%e6%ad%8cAI%e6%8a%80%e6%9c%af%e8%bf%9b%e5%b1%95%ef%bc%9a%e4%bb%8eGemini%e5%88%b0DeepMind%e7%9a%84%e5%89%8d%e6%b2%bf%e7%aa%81%e7%a0%b4%20https://bmsg.top/posts/tech/google-ai-advancements/" target="_blank" rel="noopener noreferrer"
+      title="Share on WhatsApp">
+      <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <figure>
+            <img class="z-30" src="google-ai-cover.svg" alt="谷歌AI技术进展：从Gemini到DeepMind的前沿突破" />
+            
+          </figure>
+        
+
+        <p>本文深入探讨谷歌AI技术的最新进展，包括Gemini模型家族的迭代、DeepMind的突破性研究以及这些技术在实际应用中的影响。</p>
+<h2 id="引言">引言</h2>
+<p>谷歌作为全球AI领域的领导者，近年来在人工智能技术上取得了一系列令人瞩目的突破。从Gemini多模态模型的迭代升级到DeepMind在AI安全和基础研究上的创新，谷歌正在塑造人工智能的未来发展方向。本文将带您了解谷歌AI技术的最新进展，以及这些技术如何影响我们的生活和工作。</p>
+<h2 id="1-gemini模型家族的进化">1. Gemini模型家族的进化</h2>
+<h3 id="11-gemini-ultra-2突破性能极限">1.1 Gemini Ultra 2：突破性能极限</h3>
+<p>Gemini Ultra 2作为谷歌最新的旗舰模型，在多项基准测试中超越了前代产品和竞争对手。该模型具有以下特点：</p>
+<ul>
+<li><strong>增强的多模态理解能力</strong>：能够同时处理文本、图像、音频和视频输入，并生成连贯的多模态输出</li>
+<li><strong>改进的推理能力</strong>：在复杂逻辑推理和数学问题解决方面表现出色</li>
+<li><strong>更长的上下文窗口</strong>：支持处理超过100万token的长文本输入，适用于分析完整的书籍或代码库</li>
+</ul>
+<h3 id="12-gemini-pro企业级ai解决方案">1.2 Gemini Pro：企业级AI解决方案</h3>
+<p>针对企业和开发者需求，谷歌推出了Gemini Pro版本，提供了平衡的性能和成本：</p>
+<ul>
+<li><strong>优化的API接口</strong>：简化了开发者的集成流程</li>
+<li><strong>多语言支持增强</strong>：覆盖全球100多种语言，包括低资源语言</li>
+<li><strong>企业级安全保障</strong>：符合GDPR等全球数据隐私法规要求</li>
+</ul>
+<h3 id="13-gemini-nano设备端ai的突破">1.3 Gemini Nano：设备端AI的突破</h3>
+<p>Gemini Nano将强大的AI能力带到移动设备和边缘计算设备：</p>
+<ul>
+<li><strong>超低延迟处理</strong>：在设备本地运行，无需等待云端响应</li>
+<li><strong>保护隐私</strong>：敏感数据不离开用户设备</li>
+<li><strong>电池效率优化</strong>：针对移动设备的能耗特点进行了特别优化</li>
+</ul>
+<h2 id="2-deepmind的前沿研究突破">2. DeepMind的前沿研究突破</h2>
+<h3 id="21-alphafold-4蛋白质结构预测的新高度">2.1 AlphaFold 4：蛋白质结构预测的新高度</h3>
+<p>DeepMind的AlphaFold系列取得了重大进展，AlphaFold 4现在能够：</p>
+<ul>
+<li>预测蛋白质复合物的动态结构变化</li>
+<li>准确模拟蛋白质与小分子药物的结合</li>
+<li>为药物研发提供前所未有的工具支持</li>
+</ul>
+<h3 id="22-ai安全与对齐研究">2.2 AI安全与对齐研究</h3>
+<p>DeepMind在AI安全领域的研究成果包括：</p>
+<ul>
+<li><strong>AI对齐基准测试</strong>：建立了评估AI系统与人类价值观一致性的标准化方法</li>
+<li><strong>可解释性工具</strong>：开发了让大型语言模型的决策过程更加透明的技术</li>
+<li><strong>鲁棒性提升</strong>：增强AI系统对对抗性攻击的防御能力</li>
+</ul>
+<h3 id="23-多智能体系统研究">2.3 多智能体系统研究</h3>
+<p>DeepMind在多智能体协作方面的创新：</p>
+<ul>
+<li><strong>自组织协作机制</strong>：让多个AI智能体能够自发形成高效的协作团队</li>
+<li><strong>跨智能体知识迁移</strong>：实现不同领域AI系统间的知识共享</li>
+<li><strong>人机协作框架</strong>：设计了人类与AI智能体有效协作的新范式</li>
+</ul>
+<h2 id="3-谷歌ai在实际应用中的落地">3. 谷歌AI在实际应用中的落地</h2>
+<h3 id="31-医疗健康领域的应用">3.1 医疗健康领域的应用</h3>
+<p>谷歌AI技术正在医疗领域带来革命性变化：</p>
+<ul>
+<li><strong>医学影像分析</strong>：AI辅助诊断系统准确率超过95%，帮助医生更早发现疾病</li>
+<li><strong>个性化治疗方案</strong>：基于患者基因组和病史数据生成定制化治疗建议</li>
+<li><strong>药物研发加速</strong>：将新药研发周期从传统的10-15年缩短至5-7年</li>
+</ul>
+<h3 id="32-可持续发展与气候科学">3.2 可持续发展与气候科学</h3>
+<p>AI技术在应对气候变化方面发挥着越来越重要的作用：</p>
+<ul>
+<li><strong>气候建模</strong>：提高气候预测的准确性，帮助制定更有效的应对策略</li>
+<li><strong>能源优化</strong>：智能电网管理系统可减少15-20%的能源消耗</li>
+<li><strong>碳捕获技术</strong>：AI辅助设计更高效的碳捕获和储存系统</li>
+</ul>
+<h3 id="33-教育与知识传播">3.3 教育与知识传播</h3>
+<p>谷歌AI正在改变教育的未来：</p>
+<ul>
+<li><strong>个性化学习路径</strong>：根据学生的学习风格和进度定制课程内容</li>
+<li><strong>智能辅导系统</strong>：提供24/7的学习支持，回答复杂问题并提供解释</li>
+<li><strong>全球知识平等获取</strong>：通过多语言翻译和本地化，让优质教育资源惠及全球</li>
+</ul>
+<h2 id="4-谷歌ai生态系统的构建">4. 谷歌AI生态系统的构建</h2>
+<h3 id="41-开发者工具与平台">4.1 开发者工具与平台</h3>
+<p>谷歌为AI开发者提供了全面的工具链：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 使用Google AI Studio构建和测试Gemini模型的示例</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> google.generativeai <span style="color:#f92672">import</span> configure, GenerativeModel
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 配置API密钥</span>
+</span></span><span style="display:flex;"><span>configure(api_key<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;your-api-key&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 初始化Gemini Pro模型</span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> GenerativeModel(<span style="color:#e6db74">&#34;gemini-pro&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生成内容</span>
+</span></span><span style="display:flex;"><span>response <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>generate_content(<span style="color:#e6db74">&#34;解释量子计算的基本原理&#34;</span>)
+</span></span><span style="display:flex;"><span>print(response<span style="color:#f92672">.</span>text)
+</span></span></code></pre></div><h3 id="42-行业解决方案合作伙伴计划">4.2 行业解决方案合作伙伴计划</h3>
+<p>谷歌通过与各行业领先企业合作，共同开发AI解决方案：</p>
+<ul>
+<li><strong>金融服务</strong>：欺诈检测、风险评估和个性化金融建议</li>
+<li><strong>制造业</strong>：预测性维护、质量控制和供应链优化</li>
+<li><strong>零售与电商</strong>：智能推荐、库存管理和客户服务自动化</li>
+</ul>
+<h3 id="43-开放科学与研究合作">4.3 开放科学与研究合作</h3>
+<p>谷歌积极推动AI领域的开放研究：</p>
+<ul>
+<li><strong>开源模型发布</strong>：提供预训练模型供研究社区使用和改进</li>
+<li><strong>学术合作项目</strong>：与全球顶尖大学建立联合研究实验室</li>
+<li><strong>研究论文开放获取</strong>：确保重要AI研究成果能够被广泛获取和讨论</li>
+</ul>
+<h2 id="5-伦理与负责任的ai发展">5. 伦理与负责任的AI发展</h2>
+<h3 id="51-ai伦理原则的实践">5.1 AI伦理原则的实践</h3>
+<p>谷歌严格遵循其AI伦理原则：</p>
+<ul>
+<li><strong>公平性</strong>：确保AI系统不产生偏见或歧视</li>
+<li><strong>安全性</strong>：在部署前进行全面的安全评估</li>
+<li><strong>隐私保护</strong>：设计时即考虑隐私保护，采用隐私增强技术</li>
+<li><strong>透明度</strong>：提供关于AI系统能力和局限性的清晰信息</li>
+</ul>
+<h3 id="52-全球ai治理参与">5.2 全球AI治理参与</h3>
+<p>谷歌积极参与全球AI治理框架的制定：</p>
+<ul>
+<li><strong>国际标准组织</strong>：参与ISO等国际组织的AI标准制定</li>
+<li><strong>公私合作</strong>：与政府和行业伙伴合作制定自律准则</li>
+<li><strong>多方利益相关者对话</strong>：促进技术专家、政策制定者和公众之间的对话</li>
+</ul>
+<h3 id="53-教育与公众参与">5.3 教育与公众参与</h3>
+<p>提高公众对AI的理解和参与度：</p>
+<ul>
+<li><strong>AI素养教育项目</strong>：帮助公众理解AI技术及其影响</li>
+<li><strong>负责任创新挑战赛</strong>：鼓励开发解决社会问题的AI应用</li>
+<li><strong>公开对话活动</strong>：就AI的社会影响进行广泛讨论</li>
+</ul>
+<h2 id="结论">结论</h2>
+<p>谷歌AI技术的持续创新正在多个领域推动突破，从基础研究到实际应用，从技术开发到伦理治理。随着Gemini模型家族的不断进化和DeepMind研究的深入，我们可以期待更多改变生活的AI应用出现。同时，谷歌在负责任AI发展方面的努力，也为行业树立了重要标杆。</p>
+<p>在这个AI技术快速发展的时代，保持对创新的关注，同时思考如何确保AI技术造福全人类，是我们共同的责任。谷歌的AI技术进展不仅展示了技术的潜力，也提醒我们在拥抱新技术的同时，要始终将人类福祉放在首位。</p>
+
+        
+          <div class="dream-adsense-post-bottom">
+            
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8865303128098344" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8865303128098344"
+     data-ad-slot="您的广告单元ID"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+          </div>
+        
+      </section>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a role="button" class="btn btn-outline h-12" href="/posts/life-tips/10-effective-life-hacks/" title="10个实用的生活小技巧，让你的日常更高效">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 text-xs font-normal">上一页</span>
+            <span class="max-w-48 truncate">10个实用的生活小技巧，让你的日常更高效</span>
+          </div>
+        </a>
+        
+
+        
+        <a role="button" class="btn btn-outline h-12" href="/posts/news/daily-news-20241108/" title="2024年11月8日国内外新闻综述">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">2024年11月8日国内外新闻综述</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+
+      
+      <div class="divider"></div>
+
+      <section class="space-y-4">
+        
+<article>
+  <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+        this.page.identifier = '\/posts\/tech\/google-ai-advancements\/';
+        this.page.title = '谷歌AI技术进展：从Gemini到DeepMind的前沿突破';
+        this.page.url = 'https:\/\/bmsg.top\/posts\/tech\/google-ai-advancements\/';
+
+        
+    };
+    function initDisqus() {
+        
+        
+        
+        
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//bi-mo-shi-guang.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    };
+    setTimeout(() => {
+        initDisqus();
+    }, 3000);
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</article>
+
+
+
+
+
+
+
+
+
+
+      </section>
+      
+    </article>
+  </div>
+
+  <div
+    x-data="tocHighlighter()"
+    @scroll.window="debouncedScroll"
+    class="hidden lg:flex lg:flex-col lg:items-end"
+  >
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#引言">引言</a></li>
+    <li><a href="#1-gemini模型家族的进化">1. Gemini模型家族的进化</a>
+      <ul>
+        <li><a href="#11-gemini-ultra-2突破性能极限">1.1 Gemini Ultra 2：突破性能极限</a></li>
+        <li><a href="#12-gemini-pro企业级ai解决方案">1.2 Gemini Pro：企业级AI解决方案</a></li>
+        <li><a href="#13-gemini-nano设备端ai的突破">1.3 Gemini Nano：设备端AI的突破</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-deepmind的前沿研究突破">2. DeepMind的前沿研究突破</a>
+      <ul>
+        <li><a href="#21-alphafold-4蛋白质结构预测的新高度">2.1 AlphaFold 4：蛋白质结构预测的新高度</a></li>
+        <li><a href="#22-ai安全与对齐研究">2.2 AI安全与对齐研究</a></li>
+        <li><a href="#23-多智能体系统研究">2.3 多智能体系统研究</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-谷歌ai在实际应用中的落地">3. 谷歌AI在实际应用中的落地</a>
+      <ul>
+        <li><a href="#31-医疗健康领域的应用">3.1 医疗健康领域的应用</a></li>
+        <li><a href="#32-可持续发展与气候科学">3.2 可持续发展与气候科学</a></li>
+        <li><a href="#33-教育与知识传播">3.3 教育与知识传播</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-谷歌ai生态系统的构建">4. 谷歌AI生态系统的构建</a>
+      <ul>
+        <li><a href="#41-开发者工具与平台">4.1 开发者工具与平台</a></li>
+        <li><a href="#42-行业解决方案合作伙伴计划">4.2 行业解决方案合作伙伴计划</a></li>
+        <li><a href="#43-开放科学与研究合作">4.3 开放科学与研究合作</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-伦理与负责任的ai发展">5. 伦理与负责任的AI发展</a>
+      <ul>
+        <li><a href="#51-ai伦理原则的实践">5.1 AI伦理原则的实践</a></li>
+        <li><a href="#52-全球ai治理参与">5.2 全球AI治理参与</a></li>
+        <li><a href="#53-教育与公众参与">5.3 教育与公众参与</a></li>
+      </ul>
+    </li>
+    <li><a href="#结论">结论</a></li>
+  </ul>
+</nav>
+    
+  </div>
+</div>
+
+
+            
+<div class="friend-links py-12 bg-gradient-to-r from-base-100 to-base-200 rounded-xl shadow-sm my-6 w-full">
+  <div class="mx-auto px-6">
+    <h3 class="text-2xl font-bold mb-5 text-center text-primary">友情链接</h3>
+    <div class="h-5 my-5"></div>
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://gohugo.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/hugo-logo-wide.svg" alt="Hugo 官网" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Hugo 官网
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/github-logo.png" alt="GitHub" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              GitHub
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://juejin.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/juejin-logo.svg" alt="掘金" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              掘金
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://www.zhihu.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/zhihu-logo.png" alt="知乎" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              知乎
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://sspai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/shaoshupai-logo.png" alt="少数派" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              少数派
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://tools.catbank.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/catbank-logo.png" alt="江水流年" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              江水流年
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://bmsg.top/sm4/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/sm4-logo.png" alt="SM4加解密工具" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              SM4加解密工具
+            </span>
+          </a>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2016 - 2025 笔墨拾光
+  </p>
+  
+
+  
+  <p>Powered by Inkchron.</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+
+<div
+  x-data="{
+    isVisible: false,
+    toggleVisibility() {
+      this.isVisible = window.scrollY > 300;
+    }
+  }"
+  x-init="
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility);
+  "
+  x-show="isVisible"
+  x-transition:enter="transition duration-300 ease-out"
+  x-transition:enter-start="opacity-0 scale-50"
+  x-transition:enter-end="opacity-100 scale-100"
+  x-transition:leave="transition duration-300 ease-in"
+  x-transition:leave-start="opacity-100 scale-100"
+  x-transition:leave-end="opacity-0 scale-50"
+  class="fixed bottom-8 right-8 z-50"
+>
+  <button
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    aria-label="回到顶部"
+    class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-content shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+  ></button>
+</div>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30 mb-4"
+    >
+      <div class="card-body">
+        <div class="card-title">关于我</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Hi，这里是笔墨拾光的博客。“笔墨拾光” 是我用来收纳日常经验的小角落标识～</p>
+          <p>我是职场搬砖人 + 生活折腾爱好者，在这里会记录工作里的避坑技巧、生活中的实用小招。欢迎你通过评论与我交流经验～。</p>
+        </div>
+      </div>
+    </article>
+
+    
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">社交链接</div>
+
+        
+        <ul class="menu menu-horizontal flex-wrap w-full px-0 [&_ion-icon]:text-lg">
+  
+  <li>
+    <a href="mailto:35924784@qq.com" title="Email">
+      <ion-icon name="mail"></ion-icon>
+    </a>
+  </li>
+  
+
+  
+  <li>
+    <a href="https://github.com/g1eny0ung" target="_blank" title="GitHub">
+      <ion-icon name="logo-github"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://twitter.com/g1eny0ung" target="_blank" title="Twitter">
+      <ion-icon name="logo-twitter"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://linkedin.com/in/g1eny0ung" target="_blank" title="LinkedIn">
+      <ion-icon name="logo-linkedin"></ion-icon>
+    </a>
+  </li>
+  
+</ul>
+
+        
+      </div>
+    </article>
+  </div>
+
+  
+
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">知识共享</div>
+
+        <div class="prose dark:prose-invert">
+          <p>此网站的所有内容都遵循 CC BY-NC-SA 4.0。</p>
+<p>All contents of this website are licensed under CC BY-NC-SA 4.0.</p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+
+  
+</div>
+
+            
+
+            
+<div class="friend-links py-12 bg-gradient-to-r from-base-100 to-base-200 rounded-xl shadow-sm my-6 w-full">
+  <div class="mx-auto px-6">
+    <h3 class="text-2xl font-bold mb-5 text-center text-primary">友情链接</h3>
+    <div class="h-5 my-5"></div>
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://gohugo.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/hugo-logo-wide.svg" alt="Hugo 官网" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Hugo 官网
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/github-logo.png" alt="GitHub" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              GitHub
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://juejin.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/juejin-logo.svg" alt="掘金" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              掘金
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://www.zhihu.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/zhihu-logo.png" alt="知乎" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              知乎
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://sspai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/shaoshupai-logo.png" alt="少数派" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              少数派
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://tools.catbank.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/catbank-logo.png" alt="江水流年" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              江水流年
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://bmsg.top/sm4/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/sm4-logo.png" alt="SM4加解密工具" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              SM4加解密工具
+            </span>
+          </a>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2016 - 2025 笔墨拾光
+  </p>
+  
+
+  
+  <p>Powered by Inkchron.</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+
+<div
+  x-data="{
+    isVisible: false,
+    toggleVisibility() {
+      this.isVisible = window.scrollY > 300;
+    }
+  }"
+  x-init="
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility);
+  "
+  x-show="isVisible"
+  x-transition:enter="transition duration-300 ease-out"
+  x-transition:enter-start="opacity-0 scale-50"
+  x-transition:enter-end="opacity-100 scale-100"
+  x-transition:leave="transition duration-300 ease-in"
+  x-transition:leave-start="opacity-100 scale-100"
+  x-transition:leave-end="opacity-0 scale-50"
+  class="fixed bottom-8 right-8 z-50"
+>
+  <button
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    aria-label="回到顶部"
+    class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-content shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+  ></button>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+    
+  
+  <script src="/js/grid.min.js"></script>
+
+
+
+
+  
+
+<script src="/js/main.min.js"></script>
+
+    
+
+
+
+
+
+
+
+  
+
+<script src="/js/toc.min.js"></script>
+
+
+
+  
+
+<script src="/js/code-copy.min.js"></script>
+
+
+  
+    <script type="module">
+      import mediumZoom from 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm';
+      mediumZoom('#dream-single-post-content img', {
+        background: 'oklch(var(--b1))',
+        margin: 24,
+      })
+    </script>
+  
+
+
+
+
+
+
+    
+
+    
+
+    
+    <script src="/js/back-to-top.js"></script>
+    
+
+    
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JB1BENEW8"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0JB1BENEW8');
+        }
+      </script>
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
+  </body>
+</html>

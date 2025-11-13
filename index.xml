@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>笔墨拾光</title>
+    <title>Inkchron</title>
     <link>https://bmsg.top/</link>
-    <description>Recent content on 笔墨拾光</description>
+    <description>Recent content on Inkchron</description>
     <generator>Hugo</generator>
-    <language>zh</language>
+    <language>en</language>
     <lastBuildDate>Thu, 13 Nov 2025 15:00:00 +0800</lastBuildDate>
     <atom:link href="https://bmsg.top/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -16,18 +16,18 @@
       <description>&lt;p&gt;传统武术作为中国文化的重要组成部分，近年来不断面临着实战性的质疑。最近，通背拳传人赵鸿刚在一场所谓的&amp;quot;耳光大赛&amp;quot;中被KO的事件，再次将传统武术推向了舆论的风口浪尖。这一事件究竟反映了什么问题？传统武术是否真的迎来了&amp;quot;至暗时刻&amp;quot;？本文将深入探讨这一话题。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>深入解析YouTube热门视频：现代编程技术趋势分析</title>
-      <link>https://bmsg.top/posts/tech/youtube-video-analysis-qmoweljqvw0/</link>
-      <pubDate>Thu, 13 Nov 2025 14:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech/youtube-video-analysis-qmoweljqvw0/</guid>
-      <description>&lt;p&gt;在当今快速发展的技术领域，YouTube已经成为开发者获取最新技术信息和学习资源的重要平台。本文将深入分析一个备受关注的技术视频，揭示其中蕴含的编程趋势和最佳实践，帮助开发者更好地把握行业动态。&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>元宇宙与数字孪生：构建虚实融合的下一代数字世界</title>
       <link>https://bmsg.top/posts/tech/metaverse-digital-twin-technology/</link>
       <pubDate>Thu, 13 Nov 2025 14:00:00 +0800</pubDate>
       <guid>https://bmsg.top/posts/tech/metaverse-digital-twin-technology/</guid>
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;元宇宙和数字孪生作为当前最热门的前沿技术概念，正在重塑我们与数字世界的交互方式。元宇宙代表了一个持久的、去中心化的虚拟环境，而数字孪生则是物理世界的数字化映射。这两种技术的融合发展，正在创造一个前所未有的虚实融合的数字生态系统。本文将深入探讨元宇宙和数字孪生的技术基础、核心应用场景、发展现状以及未来趋势，带您了解这一正在改变人类生活和工作方式的技术革命。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>深入解析YouTube热门视频：现代编程技术趋势分析</title>
+      <link>https://bmsg.top/posts/tech/youtube-video-analysis-qmoweljqvw0/</link>
+      <pubDate>Thu, 13 Nov 2025 14:00:00 +0800</pubDate>
+      <guid>https://bmsg.top/posts/tech/youtube-video-analysis-qmoweljqvw0/</guid>
+      <description>&lt;p&gt;在当今快速发展的技术领域，YouTube已经成为开发者获取最新技术信息和学习资源的重要平台。本文将深入分析一个备受关注的技术视频，揭示其中蕴含的编程趋势和最佳实践，帮助开发者更好地把握行业动态。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025年企业数字化转型全景指南：从战略到落地的成功路径</title>
@@ -121,20 +121,6 @@
       <description>&lt;p&gt;记录了在搭建整个博客以及自定义时遇到的问题和解决方法&lt;/p&gt;</description>
     </item>
     <item>
-      <title>电脑文件整理技巧：让你的工作空间更整洁</title>
-      <link>https://bmsg.top/posts/daily-tech/daily-tech-3/</link>
-      <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://bmsg.top/posts/daily-tech/daily-tech-3/</guid>
-      <description>&lt;p&gt;电脑文件杂乱无章？本文分享几个实用的文件整理技巧，帮助你创建一个更高效的数字工作环境。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>家庭网络优化指南：让你的WiFi更快更稳定</title>
-      <link>https://bmsg.top/posts/daily-tech/daily-tech-2/</link>
-      <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://bmsg.top/posts/daily-tech/daily-tech-2/</guid>
-      <description>&lt;p&gt;有没有遇到过看视频卡顿、游戏延迟高的情况？本文分享几个简单易行的家庭网络优化技巧，让你的WiFi更快更稳定。&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>如何利用手机便签提高工作效率</title>
       <link>https://bmsg.top/posts/daily-tech/daily-tech-1/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
@@ -149,11 +135,25 @@
       <description>&lt;p&gt;密码太多记不住？本文分享几个实用的密码管理技巧，帮助你在保证安全的同时，也能方便地管理各种账号密码。&lt;/p&gt;</description>
     </item>
     <item>
+      <title>家庭网络优化指南：让你的WiFi更快更稳定</title>
+      <link>https://bmsg.top/posts/daily-tech/daily-tech-2/</link>
+      <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
+      <guid>https://bmsg.top/posts/daily-tech/daily-tech-2/</guid>
+      <description>&lt;p&gt;有没有遇到过看视频卡顿、游戏延迟高的情况？本文分享几个简单易行的家庭网络优化技巧，让你的WiFi更快更稳定。&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>手机电池保养指南：延长你的电池使用寿命</title>
       <link>https://bmsg.top/posts/daily-tech/daily-tech-4/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
       <guid>https://bmsg.top/posts/daily-tech/daily-tech-4/</guid>
       <description>&lt;p&gt;手机电池不耐用？本文分享几个科学的电池保养技巧，帮助你延长手机电池的使用寿命。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>电脑文件整理技巧：让你的工作空间更整洁</title>
+      <link>https://bmsg.top/posts/daily-tech/daily-tech-3/</link>
+      <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
+      <guid>https://bmsg.top/posts/daily-tech/daily-tech-3/</guid>
+      <description>&lt;p&gt;电脑文件杂乱无章？本文分享几个实用的文件整理技巧，帮助你创建一个更高效的数字工作环境。&lt;/p&gt;</description>
     </item>
     <item>
       <title>JetBrains 官宣全系列免费！开发者圈的史诗级福利来了</title>
@@ -226,18 +226,18 @@
       <description>&lt;h2 id=&#34;my-open-source-projects&#34;&gt;My Open Source Projects&lt;/h2&gt;&#xA;&lt;h3 id=&#34;petal-&#34;&gt;Petal 🌺&lt;/h3&gt;&#xA;&lt;p&gt;豆瓣 FM 桌面版&lt;/p&gt;&#xA;&lt;h3 id=&#34;hugo-theme-dream-&#34;&gt;hugo-theme-dream 🌱&lt;/h3&gt;&#xA;&lt;p&gt;一个 Hugo 主题，也是当前我的博客所使用的主题&lt;/p&gt;&#xA;&lt;h3 id=&#34;alfred-colors-workflow&#34;&gt;Alfred-Colors-workflow&lt;/h3&gt;&#xA;&lt;p&gt;Convert CSS colors between hex, rgb, hsl in Alfred.&lt;/p&gt;&#xA;&lt;h3 id=&#34;github-colorful-contributions-graph&#34;&gt;github-colorful-contributions-graph&lt;/h3&gt;&#xA;&lt;p&gt;改变 GitHub 贡献面板颜色的 Chrome 插件&lt;/p&gt;&#xA;&lt;p&gt;等等&lt;/p&gt;</description>
     </item>
     <item>
-      <title>赞助我</title>
-      <link>https://bmsg.top/about/sponsor/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://bmsg.top/about/sponsor/</guid>
-      <description>&lt;p&gt;如果你喜欢我的作品或者发现它们对你有所帮助，可以考虑给我买一杯咖啡 ☕️。这将激励我在未来创作和维护更多的项目。🦾&lt;/p&gt;&#xA;&lt;p&gt;👉 请我喝一杯咖啡&lt;/p&gt;&#xA;&lt;p&gt;If you like my works or find them helpful, please consider buying me a cup of coffee ☕️. It inspires me to create and maintain more projects in the future. 🦾&lt;/p&gt;&#xA;&lt;p&gt;👉 Buy me a coffee&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>知识共享</title>
       <link>https://bmsg.top/about/creative-commons/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://bmsg.top/about/creative-commons/</guid>
       <description>&lt;p&gt;此网站的所有内容都遵循 CC BY-NC-SA 4.0。&lt;/p&gt;&#xA;&lt;p&gt;All contents of this website are licensed under CC BY-NC-SA 4.0.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>赞助我</title>
+      <link>https://bmsg.top/about/sponsor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://bmsg.top/about/sponsor/</guid>
+      <description>&lt;p&gt;如果你喜欢我的作品或者发现它们对你有所帮助，可以考虑给我买一杯咖啡 ☕️。这将激励我在未来创作和维护更多的项目。🦾&lt;/p&gt;&#xA;&lt;p&gt;👉 请我喝一杯咖啡&lt;/p&gt;&#xA;&lt;p&gt;If you like my works or find them helpful, please consider buying me a cup of coffee ☕️. It inspires me to create and maintain more projects in the future. 🦾&lt;/p&gt;&#xA;&lt;p&gt;👉 Buy me a coffee&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

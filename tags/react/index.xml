@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>React on 笔墨拾光</title>
+    <title>React on Inkchron</title>
     <link>https://bmsg.top/tags/react/</link>
-    <description>Recent content in React on 笔墨拾光</description>
+    <description>Recent content in React on Inkchron</description>
     <generator>Hugo</generator>
-    <language>zh</language>
+    <language>en</language>
     <lastBuildDate>Wed, 05 Nov 2025 10:00:00 +0800</lastBuildDate>
     <atom:link href="https://bmsg.top/tags/react/index.xml" rel="self" type="application/rss+xml" />
     <item>

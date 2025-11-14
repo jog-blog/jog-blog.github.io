@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)"/>
+
+  <!-- 标题 -->
+  <text x="300" y="40" text-anchor="middle" fill="#e94560" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Binlog监听触发机制</text>
+
+  <!-- 组件布局 -->
+  <rect x="50" y="80" width="100" height="60" rx="10" ry="10" fill="#f72585" stroke="#ffffff" stroke-width="2"/>
+  <text x="100" y="115" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">商品服务</text>
+
+  <rect x="200" y="80" width="100" height="60" rx="10" ry="10" fill="#4cc9f0" stroke="#ffffff" stroke-width="2"/>
+  <text x="250" y="115" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">数据库</text>
+
+  <rect x="350" y="80" width="100" height="60" rx="10" ry="10" fill="#7209b7" stroke="#ffffff" stroke-width="2"/>
+  <text x="400" y="115" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">Binlog</text>
+
+  <rect x="450" y="160" width="100" height="60" rx="10" ry="10" fill="#3a86ff" stroke="#ffffff" stroke-width="2"/>
+  <text x="500" y="195" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">MQ</text>
+
+  <rect x="350" y="240" width="100" height="60" rx="10" ry="10" fill="#4361ee" stroke="#ffffff" stroke-width="2"/>
+  <text x="400" y="275" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">延时双删</text>
+
+  <!-- 数据流向 -->
+  <path d="M150,110 L200,110" stroke="#f72585" stroke-width="3" fill="none"/>
+  <polygon points="200,110 195,105 195,115" fill="#f72585"/>
+
+  <path d="M300,110 L350,110" stroke="#4cc9f0" stroke-width="3" fill="none"/>
+  <polygon points="350,110 345,105 345,115" fill="#4cc9f0"/>
+
+  <path d="M400,140 L400,160 L450,160" stroke="#7209b7" stroke-width="3" fill="none"/>
+  <polygon points="450,160 445,155 445,165" fill="#7209b7"/>
+
+  <path d="M500,220 L400,240" stroke="#3a86ff" stroke-width="3" fill="none"/>
+  <polygon points="400,240 405,235 405,245" fill="#3a86ff"/>
+
+  <!-- 说明文字 -->
+  <text x="125" y="140" text-anchor="middle" fill="#f72585" font-family="Arial, sans-serif" font-size="10">更新操作</text>
+  <text x="275" y="140" text-anchor="middle" fill="#4cc9f0" font-family="Arial, sans-serif" font-size="10">生成Binlog</text>
+  <text x="425" y="150" text-anchor="middle" fill="#7209b7" font-family="Arial, sans-serif" font-size="10">监听变化</text>
+  <text x="450" y="230" text-anchor="middle" fill="#3a86ff" font-family="Arial, sans-serif" font-size="10">触发删除</text>
+
+  <!-- 机制说明 -->
+  <rect x="50" y="320" width="500" height="60" rx="10" ry="10" fill="rgba(255,255,255,0.1)" stroke="#4cc9f0" stroke-width="1"/>
+
+  <text x="300" y="340" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">解耦设计：通过监听Binlog实现业务逻辑与一致性保障的分离</text>
+  <text x="300" y="360" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">保证核心业务稳定性，避免强耦合带来的性能影响</text>
+
+  <!-- 装饰元素 -->
+  <circle cx="80" y="180" r="8" fill="#f72585" opacity="0.3"/>
+  <circle cx="520" y="100" r="12" fill="#4cc9f0" opacity="0.3"/>
+  <circle cx="150" y="280" r="10" fill="#7209b7" opacity="0.3"/>
+</svg>

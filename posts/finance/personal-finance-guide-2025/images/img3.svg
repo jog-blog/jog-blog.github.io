@@ -1,0 +1,60 @@
+<svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradPriority" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F44336;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FF9800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4CAF50;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="250" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">个人保险配置优先级示意图</text>
+
+  <!-- 优先级金字塔 -->
+  <polygon points="150,300 350,300 250,150" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+
+  <!-- 第一优先级：健康保险 -->
+  <rect x="200" y="250" width="100" height="40" fill="#F44336" rx="5"/>
+  <text x="250" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">健康保险</text>
+  <text x="250" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">(第一优先级)</text>
+
+  <!-- 第二优先级：人寿保险 -->
+  <rect x="175" y="200" width="150" height="40" fill="#FF9800" rx="5"/>
+  <text x="250" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">人寿保险</text>
+  <text x="250" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">(第二优先级)</text>
+
+  <!-- 第三优先级：财产保险 -->
+  <rect x="150" y="150" width="200" height="40" fill="#4CAF50" rx="5"/>
+  <text x="250" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">财产保险</text>
+  <text x="250" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">(第三优先级)</text>
+
+  <!-- 健康保险详情 -->
+  <rect x="50" y="320" width="120" height="60" fill="#FFEBEE" rx="5" stroke="#F44336" stroke-width="1"/>
+  <text x="110" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#D32F2F">健康保险</text>
+  <text x="110" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">• 百万医疗险</text>
+  <text x="110" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">• 重疾险</text>
+  <text x="110" y="374" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">• 意外险</text>
+
+  <!-- 人寿保险详情 -->
+  <rect x="190" y="320" width="120" height="60" fill="#FFF3E0" rx="5" stroke="#FF9800" stroke-width="1"/>
+  <text x="250" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#EF6C00">人寿保险</text>
+  <text x="250" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">• 定期寿险</text>
+  <text x="250" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">• 终身寿险</text>
+  <text x="250" y="374" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">• 保额计算</text>
+
+  <!-- 财产保险详情 -->
+  <rect x="330" y="320" width="120" height="60" fill="#E8F5E8" rx="5" stroke="#4CAF50" stroke-width="1"/>
+  <text x="390" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#388E3C">财产保险</text>
+  <text x="390" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">• 房屋保险</text>
+  <text x="390" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">• 车险</text>
+  <text x="390" y="374" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">• 责任险</text>
+
+  <!-- 优先级说明 -->
+  <text x="250" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">配置顺序：从基础到高级</text>
+
+  <!-- 箭头指示 -->
+  <polygon points="250,130 245,140 255,140" fill="#666"/>
+
+  <!-- 配置原则 -->
+  <text x="250" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">配置原则：先保障人身安全，再考虑财产保护</text>
+</svg>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)"/>
+
+  <!-- 标题 -->
+  <text x="300" y="40" text-anchor="middle" fill="#e94560" font-family="Arial, sans-serif" font-size="20" font-weight="bold">数据对比优化效果</text>
+
+  <!-- 统计图表 -->
+  <rect x="100" y="80" width="400" height="200" fill="rgba(255,255,255,0.05)" stroke="#4cc9f0" stroke-width="1"/>
+
+  <!-- 总更新次数 -->
+  <rect x="120" y="100" width="360" height="30" fill="#f72585" opacity="0.8"/>
+  <text x="140" y="120" text-anchor="start" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">总更新次数：450,266</text>
+
+  <!-- 不一致次数 -->
+  <rect x="120" y="150" width="36" height="30" fill="#7209b7" opacity="0.8"/>
+  <text x="140" y="170" text-anchor="start" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">不一致次数：79</text>
+
+  <!-- 比例标注 -->
+  <text x="300" y="200" text-anchor="middle" fill="#4cc9f0" font-family="Arial, sans-serif" font-size="14" font-weight="bold">不一致比例：0.0175%</text>
+
+  <!-- 优化效果说明 -->
+  <rect x="100" y="220" width="400" height="80" rx="10" ry="10" fill="rgba(255,255,255,0.1)" stroke="#4cc9f0" stroke-width="1"/>
+
+  <text x="300" y="240" text-anchor="middle" fill="#f72585" font-family="Arial, sans-serif" font-size="14" font-weight="bold">数据对比的价值</text>
+
+  <text x="300" y="260" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">• 避免不必要的缓存删除操作</text>
+  <text x="300" y="280" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">• 减少缓存击穿对数据库的压力</text>
+  <text x="300" y="300" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">• 提升系统整体性能</text>
+
+  <!-- 对比流程 -->
+  <rect x="50" y="320" width="500" height="60" rx="10" ry="10" fill="rgba(255,255,255,0.1)" stroke="#7209b7" stroke-width="1"/>
+
+  <text x="300" y="340" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">对比流程：查询最新数据 → 与缓存对比 → 仅在不一致时删除</text>
+  <text x="300" y="360" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">智能策略：只对关键字段（价格、状态）进行一致性处理</text>
+
+  <!-- 装饰元素 -->
+  <circle cx="80" y="120" r="8" fill="#f72585" opacity="0.3"/>
+  <circle cx="520" y="180" r="12" fill="#4cc9f0" opacity="0.3"/>
+  <circle cx="150" y="280" r="10" fill="#7209b7" opacity="0.3"/>
+</svg>

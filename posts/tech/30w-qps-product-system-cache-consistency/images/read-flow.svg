@@ -1,0 +1,82 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 18px sans-serif; text-anchor: middle; }
+    .component { font: 14px sans-serif; text-anchor: middle; }
+    .arrow { stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
+    .step { font: 12px sans-serif; text-anchor: middle; }
+    .cache-hit { fill: #27ae60; }
+    .cache-miss { fill: #e74c3c; }
+    .db-query { fill: #3498db; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <rect width="600" height="400" fill="#f8f9fa"/>
+
+  <!-- 标题 -->
+  <text x="300" y="30" class="title">商品读操作流程图</text>
+
+  <!-- 组件 -->
+  <rect x="50" y="80" width="120" height="60" rx="10" fill="#ecf0f1" stroke="#333"/>
+  <text x="110" y="115" class="component">客户端</text>
+
+  <rect x="220" y="80" width="120" height="60" rx="10" fill="#ecf0f1" stroke="#333"/>
+  <text x="280" y="115" class="component">商品服务</text>
+
+  <rect x="390" y="80" width="120" height="60" rx="10" fill="#ecf0f1" stroke="#333"/>
+  <text x="450" y="115" class="component">Redis缓存</text>
+
+  <rect x="390" y="200" width="120" height="60" rx="10" fill="#ecf0f1" stroke="#333"/>
+  <text x="450" y="235" class="component">数据库</text>
+
+  <!-- 流程步骤 -->
+
+  <!-- 步骤1: 客户端请求 -->
+  <line x1="170" y1="110" x2="220" y2="110" class="arrow"/>
+  <text x="195" y="100" class="step">1. 查询请求</text>
+
+  <!-- 步骤2: 查询缓存 -->
+  <line x1="340" y1="110" x2="390" y2="110" class="arrow"/>
+  <text x="365" y="100" class="step">2. 查询缓存</text>
+
+  <!-- 步骤3: 缓存命中 -->
+  <rect x="450" y="150" width="80" height="30" rx="5" class="cache-hit"/>
+  <text x="490" y="170" class="step" fill="white">缓存命中</text>
+
+  <!-- 步骤4: 返回数据 -->
+  <line x1="390" y1="110" x2="340" y2="110" class="arrow"/>
+  <text x="365" y="130" class="step">4. 返回数据</text>
+
+  <line x1="220" y1="110" x2="170" y2="110" class="arrow"/>
+  <text x="195" y="130" class="step">5. 返回结果</text>
+
+  <!-- 缓存未命中分支 -->
+  <rect x="450" y="150" width="80" height="30" rx="5" class="cache-miss"/>
+  <text x="490" y="170" class="step" fill="white">缓存未命中</text>
+
+  <!-- 步骤3a: 查询数据库 -->
+  <line x1="450" y1="200" x2="450" y2="200" class="arrow"/>
+  <text x="470" y="190" class="step">3a. 查询数据库</text>
+
+  <!-- 步骤3b: 写入缓存 -->
+  <line x1="450" y1="260" x2="450" y2="200" class="arrow"/>
+  <text x="470" y="240" class="step">3b. 写入缓存</text>
+
+  <!-- 数据库查询 -->
+  <rect x="450" y="270" width="80" height="30" rx="5" class="db-query"/>
+  <text x="490" y="290" class="step" fill="white">数据库查询</text>
+
+  <!-- 图例说明 -->
+  <rect x="50" y="320" width="15" height="15" fill="#27ae60"/>
+  <text x="70" y="332" class="step">缓存命中流程</text>
+
+  <rect x="200" y="320" width="15" height="15" fill="#e74c3c"/>
+  <text x="220" y="332" class="step">缓存未命中流程</text>
+
+  <rect x="350" y="320" width="15" height="15" fill="#3498db"/>
+  <text x="370" y="332" class="step">数据库操作</text>
+</svg>

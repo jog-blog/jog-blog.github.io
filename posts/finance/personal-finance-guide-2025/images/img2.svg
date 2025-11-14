@@ -1,0 +1,70 @@
+<svg width="500" height="350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradRisk" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F44336;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="250" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">投资产品风险收益对比图</text>
+
+  <!-- 坐标轴 -->
+  <line x1="50" y1="300" x2="450" y2="300" stroke="#666" stroke-width="2"/>
+  <line x1="50" y1="300" x2="50" y2="50" stroke="#666" stroke-width="2"/>
+
+  <!-- Y轴标签 -->
+  <text x="20" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666" transform="rotate(-90,20,175)">收益水平</text>
+
+  <!-- X轴标签 -->
+  <text x="250" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">风险等级</text>
+
+  <!-- 风险等级刻度 -->
+  <text x="100" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">低风险</text>
+  <text x="250" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">中风险</text>
+  <text x="400" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">高风险</text>
+
+  <!-- 收益水平刻度 -->
+  <text x="35" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">低收益</text>
+  <text x="35" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">高收益</text>
+
+  <!-- 投资产品点 -->
+  <!-- 货币基金 -->
+  <circle cx="80" cy="270" r="8" fill="#4CAF50"/>
+  <text x="80" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">货币基金</text>
+
+  <!-- 国债 -->
+  <circle cx="120" cy="250" r="8" fill="#2196F3"/>
+  <text x="120" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">国债</text>
+
+  <!-- 指数基金 -->
+  <circle cx="250" cy="200" r="8" fill="#FF9800"/>
+  <text x="250" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">指数基金</text>
+
+  <!-- 股票 -->
+  <circle cx="380" cy="150" r="8" fill="#F44336"/>
+  <text x="380" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">股票</text>
+
+  <!-- 加密货币 -->
+  <circle cx="420" cy="100" r="8" fill="#9C27B0"/>
+  <text x="420" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">加密货币</text>
+
+  <!-- 风险收益趋势线 -->
+  <path d="M80,270 Q200,220 420,100" stroke="#999" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+
+  <!-- 图例 -->
+  <rect x="300" y="40" width="15" height="15" fill="#4CAF50"/>
+  <text x="320" y="52" font-family="Arial, sans-serif" font-size="10" fill="#333">货币基金 (低风险/低收益)</text>
+
+  <rect x="300" y="60" width="15" height="15" fill="#2196F3"/>
+  <text x="320" y="72" font-family="Arial, sans-serif" font-size="10" fill="#333">国债 (低风险/中收益)</text>
+
+  <rect x="300" y="80" width="15" height="15" fill="#FF9800"/>
+  <text x="320" y="92" font-family="Arial, sans-serif" font-size="10" fill="#333">指数基金 (中风险/中高收益)</text>
+
+  <rect x="300" y="100" width="15" height="15" fill="#F44336"/>
+  <text x="320" y="112" font-family="Arial, sans-serif" font-size="10" fill="#333">股票 (高风险/高收益)</text>
+
+  <rect x="300" y="120" width="15" height="15" fill="#9C27B0"/>
+  <text x="320" y="132" font-family="Arial, sans-serif" font-size="10" fill="#333">加密货币 (极高风险/极高收益)</text>
+</svg>

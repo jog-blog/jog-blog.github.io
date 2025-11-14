@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)"/>
+
+  <!-- 标题 -->
+  <text x="300" y="40" text-anchor="middle" fill="#e94560" font-family="Arial, sans-serif" font-size="20" font-weight="bold">延时双删触发机制</text>
+
+  <!-- 时间轴 -->
+  <line x1="50" y1="100" x2="550" y2="100" stroke="#4cc9f0" stroke-width="2"/>
+  <text x="300" y="90" text-anchor="middle" fill="#f72585" font-family="Arial, sans-serif" font-size="14">时间轴</text>
+
+  <!-- 事件点 -->
+  <circle cx="100" cy="100" r="8" fill="#f72585"/>
+  <text x="100" y="130" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">第一次删除</text>
+
+  <circle cx="250" cy="100" r="8" fill="#4cc9f0"/>
+  <text x="250" y="130" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">延时等待</text>
+
+  <circle cx="400" cy="100" r="8" fill="#7209b7"/>
+  <text x="400" y="130" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">第二次删除</text>
+
+  <circle cx="550" cy="100" r="8" fill="#3a86ff"/>
+  <text x="550" y="130" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">完成</text>
+
+  <!-- 连接线 -->
+  <line x1="108" y1="100" x2="242" y2="100" stroke="#f72585" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="258" y1="100" x2="392" y2="100" stroke="#4cc9f0" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="408" y1="100" x2="542" y2="100" stroke="#7209b7" stroke-width="2"/>
+
+  <!-- 说明区域 -->
+  <rect x="50" y="180" width="500" height="150" rx="10" ry="10" fill="rgba(255,255,255,0.1)" stroke="#4cc9f0" stroke-width="1"/>
+
+  <text x="300" y="200" text-anchor="middle" fill="#f72585" font-family="Arial, sans-serif" font-size="16" font-weight="bold">机制说明</text>
+
+  <text x="300" y="230" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">• 第一次删除：立即执行，处理网络抖动</text>
+  <text x="300" y="250" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">• 延时等待：大于读周期，避免并发覆盖</text>
+  <text x="300" y="270" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">• 第二次删除：确保最终一致性</text>
+  <text x="300" y="290" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">• 智能重试：失败时重新加入时间轮</text>
+
+  <!-- 装饰元素 -->
+  <circle cx="80" cy="320" r="15" fill="#f72585" opacity="0.3"/>
+  <circle cx="520" cy="350" r="20" fill="#4cc9f0" opacity="0.3"/>
+  <circle cx="200" cy="360" r="12" fill="#7209b7" opacity="0.3"/>
+</svg>

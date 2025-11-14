@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)"/>
+
+  <!-- 标题 -->
+  <text x="300" y="40" text-anchor="middle" fill="#e94560" font-family="Arial, sans-serif" font-size="20" font-weight="bold">延时时间选择策略</text>
+
+  <!-- 时间轴 -->
+  <line x1="50" y1="100" x2="550" y2="100" stroke="#4cc9f0" stroke-width="2"/>
+
+  <!-- 读周期标记 -->
+  <rect x="150" y="80" width="200" height="40" rx="5" ry="5" fill="#f72585" opacity="0.7"/>
+  <text x="250" y="105" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">读周期 (TP999)</text>
+
+  <!-- 延时时间标记 -->
+  <rect x="200" y="120" width="250" height="40" rx="5" ry="5" fill="#7209b7" opacity="0.7"/>
+  <text x="325" y="145" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">延时时间 > 读周期</text>
+
+  <!-- 关键时间点 -->
+  <circle cx="150" cy="100" r="6" fill="#f72585"/>
+  <text x="150" y="70" text-anchor="middle" fill="#f72585" font-family="Arial, sans-serif" font-size="10">查询开始</text>
+
+  <circle cx="350" cy="100" r="6" fill="#4cc9f0"/>
+  <text x="350" y="70" text-anchor="middle" fill="#4cc9f0" font-family="Arial, sans-serif" font-size="10">查询结束</text>
+
+  <circle cx="450" cy="100" r="6" fill="#7209b7"/>
+  <text x="450" y="70" text-anchor="middle" fill="#7209b7" font-family="Arial, sans-serif" font-size="10">延时删除</text>
+
+  <!-- 说明区域 -->
+  <rect x="50" y="180" width="500" height="150" rx="10" ry="10" fill="rgba(255,255,255,0.1)" stroke="#4cc9f0" stroke-width="1"/>
+
+  <text x="300" y="200" text-anchor="middle" fill="#f72585" font-family="Arial, sans-serif" font-size="16" font-weight="bold">延时时间选择原则</text>
+
+  <text x="300" y="230" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">• 网络抖动场景：延时时间越短越好，减少不一致窗口</text>
+  <text x="300" y="250" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">• 并发覆盖场景：延时时间必须大于读周期</text>
+  <text x="300" y="270" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">• 读周期基准：取TP999耗时作为参考标准</text>
+  <text x="300" y="290" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">• 动态调整：根据系统负载自动优化延时时间</text>
+
+  <!-- 性能指标 -->
+  <rect x="50" y="350" width="500" height="30" rx="5" ry="5" fill="rgba(76, 201, 240, 0.2)" stroke="#4cc9f0" stroke-width="1"/>
+  <text x="300" y="370" text-anchor="middle" fill="#4cc9f0" font-family="Arial, sans-serif" font-size="12">典型值：读周期TP999 = 5ms，延时时间 = 10ms</text>
+
+  <!-- 装饰元素 -->
+  <circle cx="80" y="200" r="8" fill="#f72585" opacity="0.3"/>
+  <circle cx="520" y="220" r="12" fill="#4cc9f0" opacity="0.3"/>
+  <circle cx="200" y="320" r="10" fill="#7209b7" opacity="0.3"/>
+</svg>

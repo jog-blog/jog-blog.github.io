@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="700" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)"/>
+
+  <!-- 标题 -->
+  <text x="350" y="40" text-anchor="middle" fill="#e94560" font-family="Arial, sans-serif" font-size="20" font-weight="bold">最终方案架构图</text>
+
+  <!-- 核心组件 -->
+
+  <!-- 第一层：客户端 -->
+  <rect x="50" y="80" width="120" height="60" rx="10" ry="10" fill="#f72585" stroke="#ffffff" stroke-width="2"/>
+  <text x="110" y="115" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">客户端</text>
+
+  <!-- 第二层：商品服务 -->
+  <rect x="200" y="80" width="120" height="60" rx="10" ry="10" fill="#4cc9f0" stroke="#ffffff" stroke-width="2"/>
+  <text x="260" y="115" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">商品服务</text>
+
+  <!-- 第三层：存储层 -->
+  <rect x="350" y="80" width="120" height="60" rx="10" ry="10" fill="#7209b7" stroke="#ffffff" stroke-width="2"/>
+  <text x="410" y="115" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">Redis集群</text>
+
+  <rect x="500" y="80" width="120" height="60" rx="10" ry="10" fill="#3a86ff" stroke="#ffffff" stroke-width="2"/>
+  <text x="560" y="115" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">数据库</text>
+
+  <!-- 第四层：一致性保障 -->
+  <rect x="200" y="180" width="120" height="60" rx="10" ry="10" fill="#4361ee" stroke="#ffffff" stroke-width="2"/>
+  <text x="260" y="215" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">Binlog监听</text>
+
+  <rect x="350" y="180" width="120" height="60" rx="10" ry="10" fill="#4cc9f0" stroke="#ffffff" stroke-width="2"/>
+  <text x="410" y="215" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">MQ</text>
+
+  <rect x="500" y="180" width="120" height="60" rx="10" ry="10" fill="#7209b7" stroke="#ffffff" stroke-width="2"/>
+  <text x="560" y="215" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">延时双删</text>
+
+  <!-- 第五层：调度组件 -->
+  <rect x="350" y="280" width="120" height="60" rx="10" ry="10" fill="#f72585" stroke="#ffffff" stroke-width="2"/>
+  <text x="410" y="315" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">时间轮调度</text>
+
+  <!-- 数据流向 -->
+
+  <!-- 写请求 -->
+  <path d="M170,110 L200,110" stroke="#f72585" stroke-width="3" fill="none"/>
+  <polygon points="200,110 195,105 195,115" fill="#f72585"/>
+
+  <path d="M320,110 L350,110" stroke="#f72585" stroke-width="3" fill="none"/>
+  <polygon points="350,110 345,105 345,115" fill="#f72585"/>
+
+  <path d="M470,110 L500,110" stroke="#f72585" stroke-width="3" fill="none"/>
+  <polygon points="500,110 495,105 495,115" fill="#f72585"/>
+
+  <!-- Binlog监听 -->
+  <path d="M500,140 L500,180" stroke="#7209b7" stroke-width="3" fill="none"/>
+  <polygon points="500,180 495,175 495,185" fill="#7209b7"/>
+
+  <!-- MQ传递 -->
+  <path d="M320,180 L350,180" stroke="#4cc9f0" stroke-width="3" fill="none"/>
+  <polygon points="350,180 345,175 345,185" fill="#4cc9f0"/>
+
+  <!-- 延时双删 -->
+  <path d="M470,180 L500,180" stroke="#7209b7" stroke-width="3" fill="none"/>
+  <polygon points="500,180 495,175 495,185" fill="#7209b7"/>
+
+  <!-- 时间轮调度 -->
+  <path d="M410,240 L410,280" stroke="#f72585" stroke-width="3" fill="none"/>
+  <polygon points="410,280 405,275 405,285" fill="#f72585"/>
+
+  <!-- 读请求 -->
+  <path d="M170,110 L200,110" stroke="#4cc9f0" stroke-width="3" fill="none" stroke-dasharray="5,5"/>
+  <polygon points="200,110 195,105 195,115" fill="#4cc9f0"/>
+
+  <path d="M320,110 L350,110" stroke="#4cc9f0" stroke-width="3" fill="none" stroke-dasharray="5,5"/>
+  <polygon points="350,110 345,105 345,115" fill="#4cc9f0"/>
+
+  <!-- 缓存删除 -->
+  <path d="M410,340 L410,380 L350,380 L350,140" stroke="#7209b7" stroke-width="3" fill="none"/>
+  <polygon points="350,140 345,135 345,145" fill="#7209b7"/>
+
+  <!-- 说明文字 -->
+  <text x="185" y="130" text-anchor="middle" fill="#f72585" font-family="Arial, sans-serif" font-size="10">写请求</text>
+  <text x="335" y="130" text-anchor="middle" fill="#f72585" font-family="Arial, sans-serif" font-size="10">更新数据库</text>
+  <text x="485" y="130" text-anchor="middle" fill="#f72585" font-family="Arial, sans-serif" font-size="10">生成Binlog</text>
+
+  <text x="185" y="130" text-anchor="middle" fill="#4cc9f0" font-family="Arial, sans-serif" font-size="10">读请求</text>
+  <text x="335" y="130" text-anchor="middle" fill="#4cc9f0" font-family="Arial, sans-serif" font-size="10">查询缓存</text>
+
+  <text x="485" y="160" text-anchor="middle" fill="#7209b7" font-family="Arial, sans-serif" font-size="10">监听变化</text>
+  <text x="335" y="200" text-anchor="middle" fill="#4cc9f0" font-family="Arial, sans-serif" font-size="10">消息传递</text>
+  <text x="485" y="200" text-anchor="middle" fill="#7209b7" font-family="Arial, sans-serif" font-size="10">触发删除</text>
+
+  <text x="410" y="260" text-anchor="middle" fill="#f72585" font-family="Arial, sans-serif" font-size="10">延时调度</text>
+  <text x="410" y="360" text-anchor="middle" fill="#7209b7" font-family="Arial, sans-serif" font-size="10">删除缓存</text>
+
+  <!-- 架构说明 -->
+  <rect x="50" y="400" width="600" height="80" rx="10" ry="10" fill="rgba(255,255,255,0.1)" stroke="#4cc9f0" stroke-width="1"/>
+
+  <text x="350" y="420" text-anchor="middle" fill="#f72585" font-family="Arial, sans-serif" font-size="14" font-weight="bold">架构特点</text>
+
+  <text x="350" y="440" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">• 高性能：智能删除策略减少不必要的缓存操作</text>
+  <text x="350" y="460" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">• 高可用：解耦设计保证核心业务稳定性</text>
+  <text x="350" y="480" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">• 强一致：延时双删机制确保数据最终一致性</text>
+
+  <!-- 装饰元素 -->
+  <circle cx="80" y="120" r="8" fill="#f72585" opacity="0.3"/>
+  <circle cx="620" y="150" r="12" fill="#4cc9f0" opacity="0.3"/>
+  <circle cx="200" y="320" r="10" fill="#7209b7" opacity="0.3"/>
+</svg>

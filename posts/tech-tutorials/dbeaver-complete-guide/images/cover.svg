@@ -1,0 +1,47 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 渐变背景 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景矩形 -->
+  <rect width="800" height="400" fill="url(#bgGradient)"/>
+
+  <!-- 标题 -->
+  <text x="400" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white">
+    DBeaver完全使用指南
+  </text>
+
+  <!-- 副标题 -->
+  <text x="400" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="white" opacity="0.9">
+    从安装到精通：数据库管理工具完整教程
+  </text>
+
+  <!-- 数据库图标 -->
+  <rect x="300" y="180" width="60" height="60" rx="10" fill="#4CAF50" opacity="0.9"/>
+  <text x="330" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="white" font-weight="bold">DB</text>
+
+  <!-- SQL标识 -->
+  <rect x="380" y="180" width="60" height="60" rx="10" fill="#2196F3" opacity="0.9"/>
+  <text x="410" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="white" font-weight="bold">SQL</text>
+
+  <!-- 连接线 -->
+  <line x1="360" y1="210" x2="380" y2="210" stroke="white" stroke-width="2" opacity="0.7"/>
+
+  <!-- 功能标签 -->
+  <g font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.8">
+    <text x="400" y="270" text-anchor="middle">✓ 多数据库支持</text>
+    <text x="400" y="290" text-anchor="middle">✓ 中文界面设置</text>
+    <text x="400" y="310" text-anchor="middle">✓ 数据导入导出</text>
+    <text x="400" y="330" text-anchor="middle">✓ 高级功能详解</text>
+  </g>
+
+  <!-- 底部装饰 -->
+  <rect x="0" y="360" width="800" height="40" fill="rgba(0,0,0,0.2)"/>
+  <text x="400" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" opacity="0.7">
+    技术教程 | 数据库管理 | 2025年11月
+  </text>
+</svg>

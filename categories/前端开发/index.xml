@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>前端开发 on Inkchron</title>
-    <link>https://bmsg.top/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
+    <link>https://www.bmsg.top/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in 前端开发 on Inkchron</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 16 Nov 2024 10:00:00 +0800</lastBuildDate>
-    <atom:link href="https://bmsg.top/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.bmsg.top/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>掌握现代JavaScript新特性与最佳实践</title>
-      <link>https://bmsg.top/posts/tech-tutorials/mastering-modern-javascript/</link>
+      <link>https://www.bmsg.top/posts/tech-tutorials/mastering-modern-javascript/</link>
       <pubDate>Sat, 16 Nov 2024 10:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech-tutorials/mastering-modern-javascript/</guid>
+      <guid>https://www.bmsg.top/posts/tech-tutorials/mastering-modern-javascript/</guid>
       <description>&lt;p&gt;JavaScript作为Web开发的核心语言，一直在不断演进。从ES6开始，JavaScript引入了大量改变开发体验的新特性，使代码更简洁、更易维护。本文将深入探讨现代JavaScript的关键新特性和最佳实践，帮助你提升开发效率。&lt;/p&gt;</description>
     </item>
     <item>
       <title>如何在macOS上安装和配置Node.js环境</title>
-      <link>https://bmsg.top/posts/tech-tutorials/how-to-install-nodejs-on-macos/</link>
+      <link>https://www.bmsg.top/posts/tech-tutorials/how-to-install-nodejs-on-macos/</link>
       <pubDate>Fri, 15 Nov 2024 10:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech-tutorials/how-to-install-nodejs-on-macos/</guid>
+      <guid>https://www.bmsg.top/posts/tech-tutorials/how-to-install-nodejs-on-macos/</guid>
       <description>&lt;p&gt;Node.js是一个基于Chrome V8引擎的JavaScript运行时，让JavaScript可以在服务器端运行。本文将详细介绍如何在macOS系统上安装和配置Node.js环境，适合前端开发者和想要学习Node.js的初学者。&lt;/p&gt;</description>
     </item>
   </channel>

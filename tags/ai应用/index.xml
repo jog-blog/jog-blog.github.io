@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI应用 on Inkchron</title>
-    <link>https://bmsg.top/tags/ai%E5%BA%94%E7%94%A8/</link>
+    <link>https://www.bmsg.top/tags/ai%E5%BA%94%E7%94%A8/</link>
     <description>Recent content in AI应用 on Inkchron</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 05 Nov 2025 10:00:00 +0800</lastBuildDate>
-    <atom:link href="https://bmsg.top/tags/ai%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.bmsg.top/tags/ai%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>构建你的第一个ChatGPT应用 | 使用Apps SDK的逐步教程</title>
-      <link>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</link>
+      <link>https://www.bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</link>
       <pubDate>Wed, 05 Nov 2025 10:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</guid>
-      <description>&lt;p&gt;当AI成为日常工作流程的核心，ChatGPT已成为数十亿用户的自然工具。然而直到现在，ChatGPT的重点主要是&amp;quot;对话&amp;quot;，而不是&amp;quot;交互&amp;quot;。&lt;/p&gt;&#xA;&lt;p&gt;如果你能在ChatGPT内直接与应用互动——比如预订酒店、设计演示文稿——全部在同一个界面中完成，会怎样？&lt;/p&gt;&#xA;&lt;p&gt;这正是ChatGPT Apps带来的能力。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://bmsg.top/images/tech/chatgpt-apps-sdk.png&#34; alt=&#34;ChatGPT Apps SDK示意图&#34;&gt;&lt;/p&gt;</description>
+      <guid>https://www.bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</guid>
+      <description>&lt;p&gt;当AI成为日常工作流程的核心，ChatGPT已成为数十亿用户的自然工具。然而直到现在，ChatGPT的重点主要是&amp;quot;对话&amp;quot;，而不是&amp;quot;交互&amp;quot;。&lt;/p&gt;&#xA;&lt;p&gt;如果你能在ChatGPT内直接与应用互动——比如预订酒店、设计演示文稿——全部在同一个界面中完成，会怎样？&lt;/p&gt;&#xA;&lt;p&gt;这正是ChatGPT Apps带来的能力。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.bmsg.top/images/tech/chatgpt-apps-sdk.png&#34; alt=&#34;ChatGPT Apps SDK示意图&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

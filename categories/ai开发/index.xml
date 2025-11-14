@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI开发 on Inkchron</title>
-    <link>https://bmsg.top/categories/ai%E5%BC%80%E5%8F%91/</link>
+    <link>https://www.bmsg.top/categories/ai%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in AI开发 on Inkchron</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 13 Nov 2025 10:00:00 +0800</lastBuildDate>
-    <atom:link href="https://bmsg.top/categories/ai%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.bmsg.top/categories/ai%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI大模型训练与优化技术深度剖析</title>
-      <link>https://bmsg.top/posts/tech/ai-model-training-optimization/</link>
+      <link>https://www.bmsg.top/posts/tech/ai-model-training-optimization/</link>
       <pubDate>Thu, 13 Nov 2025 10:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech/ai-model-training-optimization/</guid>
+      <guid>https://www.bmsg.top/posts/tech/ai-model-training-optimization/</guid>
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;人工智能大模型的崛起正在重塑整个科技行业，从GPT系列到Claude，再到国内的文心一言、讯飞星火等，大模型在各个领域展现出惊人的能力。然而，这些强大模型的背后是极其复杂的训练和优化过程。本文将深入剖析AI大模型的训练技术、优化策略以及最新研究进展，带您了解这些智能系统背后的技术奥秘。&lt;/p&gt;</description>
     </item>
     <item>
       <title>构建你的第一个ChatGPT应用 | 使用Apps SDK的逐步教程</title>
-      <link>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</link>
+      <link>https://www.bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</link>
       <pubDate>Wed, 05 Nov 2025 10:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</guid>
-      <description>&lt;p&gt;当AI成为日常工作流程的核心，ChatGPT已成为数十亿用户的自然工具。然而直到现在，ChatGPT的重点主要是&amp;quot;对话&amp;quot;，而不是&amp;quot;交互&amp;quot;。&lt;/p&gt;&#xA;&lt;p&gt;如果你能在ChatGPT内直接与应用互动——比如预订酒店、设计演示文稿——全部在同一个界面中完成，会怎样？&lt;/p&gt;&#xA;&lt;p&gt;这正是ChatGPT Apps带来的能力。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://bmsg.top/images/tech/chatgpt-apps-sdk.png&#34; alt=&#34;ChatGPT Apps SDK示意图&#34;&gt;&lt;/p&gt;</description>
+      <guid>https://www.bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</guid>
+      <description>&lt;p&gt;当AI成为日常工作流程的核心，ChatGPT已成为数十亿用户的自然工具。然而直到现在，ChatGPT的重点主要是&amp;quot;对话&amp;quot;，而不是&amp;quot;交互&amp;quot;。&lt;/p&gt;&#xA;&lt;p&gt;如果你能在ChatGPT内直接与应用互动——比如预订酒店、设计演示文稿——全部在同一个界面中完成，会怎样？&lt;/p&gt;&#xA;&lt;p&gt;这正是ChatGPT Apps带来的能力。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.bmsg.top/images/tech/chatgpt-apps-sdk.png&#34; alt=&#34;ChatGPT Apps SDK示意图&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

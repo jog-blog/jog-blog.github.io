@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>前沿科技 on Inkchron</title>
-    <link>https://bmsg.top/categories/%E5%89%8D%E6%B2%BF%E7%A7%91%E6%8A%80/</link>
+    <link>https://www.bmsg.top/categories/%E5%89%8D%E6%B2%BF%E7%A7%91%E6%8A%80/</link>
     <description>Recent content in 前沿科技 on Inkchron</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 13 Nov 2025 14:00:00 +0800</lastBuildDate>
-    <atom:link href="https://bmsg.top/categories/%E5%89%8D%E6%B2%BF%E7%A7%91%E6%8A%80/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.bmsg.top/categories/%E5%89%8D%E6%B2%BF%E7%A7%91%E6%8A%80/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>元宇宙与数字孪生：构建虚实融合的下一代数字世界</title>
-      <link>https://bmsg.top/posts/tech/metaverse-digital-twin-technology/</link>
+      <link>https://www.bmsg.top/posts/tech/metaverse-digital-twin-technology/</link>
       <pubDate>Thu, 13 Nov 2025 14:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech/metaverse-digital-twin-technology/</guid>
+      <guid>https://www.bmsg.top/posts/tech/metaverse-digital-twin-technology/</guid>
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;元宇宙和数字孪生作为当前最热门的前沿技术概念，正在重塑我们与数字世界的交互方式。元宇宙代表了一个持久的、去中心化的虚拟环境，而数字孪生则是物理世界的数字化映射。这两种技术的融合发展，正在创造一个前所未有的虚实融合的数字生态系统。本文将深入探讨元宇宙和数字孪生的技术基础、核心应用场景、发展现状以及未来趋势，带您了解这一正在改变人类生活和工作方式的技术革命。&lt;/p&gt;</description>
     </item>
     <item>
       <title>量子计算：突破经典计算极限的前沿技术</title>
-      <link>https://bmsg.top/posts/tech/quantum-computing-advancements/</link>
+      <link>https://www.bmsg.top/posts/tech/quantum-computing-advancements/</link>
       <pubDate>Thu, 13 Nov 2025 12:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech/quantum-computing-advancements/</guid>
+      <guid>https://www.bmsg.top/posts/tech/quantum-computing-advancements/</guid>
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;量子计算作为一种基于量子力学原理的计算方式，正在逐渐从理论走向实践，有望在解决某些特定问题上彻底改变计算科学的面貌。随着谷歌、IBM、微软等科技巨头以及众多初创公司在量子计算领域的持续投入，量子技术正以前所未有的速度发展。本文将带您深入了解量子计算的基本原理、最新技术突破、实际应用场景以及未来发展前景。&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>安装指南 on Inkchron</title>
-    <link>https://bmsg.top/tags/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/</link>
+    <link>https://www.bmsg.top/tags/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/</link>
     <description>Recent content in 安装指南 on Inkchron</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 15 Nov 2024 10:00:00 +0800</lastBuildDate>
-    <atom:link href="https://bmsg.top/tags/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.bmsg.top/tags/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何在macOS上安装和配置Node.js环境</title>
-      <link>https://bmsg.top/posts/tech-tutorials/how-to-install-nodejs-on-macos/</link>
+      <link>https://www.bmsg.top/posts/tech-tutorials/how-to-install-nodejs-on-macos/</link>
       <pubDate>Fri, 15 Nov 2024 10:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech-tutorials/how-to-install-nodejs-on-macos/</guid>
+      <guid>https://www.bmsg.top/posts/tech-tutorials/how-to-install-nodejs-on-macos/</guid>
       <description>&lt;p&gt;Node.js是一个基于Chrome V8引擎的JavaScript运行时，让JavaScript可以在服务器端运行。本文将详细介绍如何在macOS系统上安装和配置Node.js环境，适合前端开发者和想要学习Node.js的初学者。&lt;/p&gt;</description>
     </item>
   </channel>

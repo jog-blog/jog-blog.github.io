@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <!-- 背景 -->
+  <rect width="800" height="400" fill="#f5f7fa"/>
+
+  <!-- 装饰性元素 -->
+  <rect x="0" y="0" width="800" height="60" fill="#2c3e50" rx="5" ry="5"/>
+  <rect x="0" y="340" width="800" height="60" fill="#2c3e50" rx="5" ry="5"/>
+
+  <!-- 标题 -->
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">2025程序员时薪排行榜</text>
+  <text x="400" y="65" font-family="Arial, sans-serif" font-size="14" fill="#ecf0f1" text-anchor="middle">各科技公司薪资对比分析</text>
+
+  <!-- 数据区域 -->
+  <g transform="translate(100, 100)">
+    <!-- 坐标轴 -->
+    <line x1="0" y1="200" x2="600" y2="200" stroke="#95a5a6" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="200" stroke="#95a5a6" stroke-width="2"/>
+
+    <!-- Y轴标签 -->
+    <text x="-30" y="10" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" text-anchor="middle">300</text>
+    <text x="-30" y="60" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" text-anchor="middle">250</text>
+    <text x="-30" y="110" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" text-anchor="middle">200</text>
+    <text x="-30" y="160" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" text-anchor="middle">150</text>
+    <text x="-30" y="210" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" text-anchor="middle">100</text>
+
+    <!-- 条形图 -->
+    <!-- PDD -->
+    <rect x="30" y="100" width="80" height="100" fill="#e74c3c" rx="5" ry="5"/>
+    <text x="70" y="220" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" text-anchor="middle">PDD</text>
+    <text x="70" y="90" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50" text-anchor="middle">200</text>
+
+    <!-- 小红书 -->
+    <rect x="150" y="115" width="80" height="85" fill="#e67e22" rx="5" ry="5"/>
+    <text x="190" y="220" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" text-anchor="middle">小红书</text>
+    <text x="190" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50" text-anchor="middle">185</text>
+
+    <!-- 微软 -->
+    <rect x="270" y="120" width="80" height="80" fill="#3498db" rx="5" ry="5"/>
+    <text x="310" y="220" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" text-anchor="middle">微软</text>
+    <text x="310" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50" text-anchor="middle">180</text>
+
+    <!-- 字节跳动 -->
+    <rect x="390" y="125" width="80" height="75" fill="#9b59b6" rx="5" ry="5"/>
+    <text x="430" y="220" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" text-anchor="middle">字节</text>
+    <text x="430" y="115" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50" text-anchor="middle">175</text>
+
+    <!-- 阿里 -->
+    <rect x="510" y="130" width="80" height="70" fill="#1abc9c" rx="5" ry="5"/>
+    <text x="550" y="220" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" text-anchor="middle">阿里</text>
+    <text x="550" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50" text-anchor="middle">170</text>
+  </g>
+
+  <!-- 底部信息 -->
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">数据来源：2025年科技行业薪资调查报告</text>
+
+  <!-- 装饰图标 -->
+  <circle cx="100" cy="370" r="8" fill="#e74c3c"/>
+  <circle cx="700" cy="370" r="8" fill="#e74c3c"/>
+</svg>

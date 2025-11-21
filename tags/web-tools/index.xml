@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Tools on Inkchron</title>
+    <link>https://www.bmsg.top/tags/web-tools/</link>
+    <description>Recent content in Web Tools on Inkchron</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 20 Nov 2025 17:30:00 +0800</lastBuildDate>
+    <atom:link href="https://www.bmsg.top/tags/web-tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>多功能在线工具集：一站式解决日常开发需求</title>
+      <link>https://www.bmsg.top/posts/tech/tools-website-2025/</link>
+      <pubDate>Thu, 20 Nov 2025 17:30:00 +0800</pubDate>
+      <guid>https://www.bmsg.top/posts/tech/tools-website-2025/</guid>
+      <description>&lt;p&gt;在现代Web开发中，拥有一个功能齐全的工具集对于提高工作效率至关重要。今天我要介绍一个精心设计的在线工具网站，它集成了多种实用功能，全部封装在单个HTML文件中，既方便使用又易于扩展。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,54 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1724;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#071726;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bgGradient)"/>
+
+  <!-- Main Title -->
+  <text x="400" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#5eead4">
+    多功能在线工具集
+  </text>
+  <text x="400" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8">
+    一站式解决日常开发需求
+  </text>
+
+  <!-- Tool Icons -->
+  <!-- Password Icon -->
+  <rect x="200" y="200" width="60" height="60" rx="10" fill="rgba(94,234,212,0.1)" stroke="#5eead4" stroke-width="2"/>
+  <text x="230" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#5eead4">🔐</text>
+  <text x="230" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">密码生成</text>
+
+  <!-- Color Icon -->
+  <rect x="280" y="200" width="60" height="60" rx="10" fill="rgba(96,165,250,0.1)" stroke="#60a5fa" stroke-width="2"/>
+  <text x="310" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#60a5fa">🎨</text>
+  <text x="310" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">颜色取值</text>
+
+  <!-- Timer Icon -->
+  <rect x="360" y="200" width="60" height="60" rx="10" fill="rgba(255,107,107,0.1)" stroke="#ff6b6b" stroke-width="2"/>
+  <text x="390" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ff6b6b">⏱</text>
+  <text x="390" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">倒计时</text>
+
+  <!-- Lorem Icon -->
+  <rect x="440" y="200" width="60" height="60" rx="10" fill="rgba(78,205,196,0.1)" stroke="#4ecdc4" stroke-width="2"/>
+  <text x="470" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#4ecdc4">✍️</text>
+  <text x="470" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">文本生成</text>
+
+  <!-- Convert Icon -->
+  <rect x="520" y="200" width="60" height="60" rx="10" fill="rgba(150,206,180,0.1)" stroke="#96ceb4" stroke-width="2"/>
+  <text x="550" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#96ceb4">🔁</text>
+  <text x="550" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">单位转换</text>
+
+  <!-- Bottom Info -->
+  <text x="400" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+    单文件设计 · 响应式布局 · 无障碍访问
+  </text>
+
+  <!-- Decorative Elements -->
+  <circle cx="100" cy="100" r="40" fill="rgba(94,234,212,0.05)" stroke="rgba(94,234,212,0.2)" stroke-width="1"/>
+  <circle cx="700" cy="300" r="30" fill="rgba(96,165,250,0.05)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+  <rect x="50" y="320" width="80" height="40" rx="8" fill="rgba(255,107,107,0.05)" stroke="rgba(255,107,107,0.2)" stroke-width="1"/>
+</svg>

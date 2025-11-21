@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git仓库清理与文件管理：彻底删除已提交文件的最佳实践 | Inkchron</title>
+
+    
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+  
+
+
+<link rel="canonical" href="https://www.bmsg.top/posts/tech/git-cleanup-file-management-2025/" />
+
+
+
+<meta name="author" content="Inkchron" />
+<meta name="description" content="详细指南：如何从Git仓库中删除已提交的文件，配置.gitignore避免重复提交，以及团队协作中的注意事项" />
+
+
+<meta name="keywords" content="Git,版本控制,Gitignore,仓库管理,开发工具">
+
+
+
+<meta name="generator" content="Hugo 0.152.2">
+
+
+<meta property="og:url" content="https://www.bmsg.top/posts/tech/git-cleanup-file-management-2025/">
+  <meta property="og:site_name" content="Inkchron">
+  <meta property="og:title" content="Git仓库清理与文件管理：彻底删除已提交文件的最佳实践">
+  <meta property="og:description" content="详细指南：如何从Git仓库中删除已提交的文件，配置.gitignore避免重复提交，以及团队协作中的注意事项">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-11-21T10:00:00+08:00">
+    <meta property="article:modified_time" content="2025-11-21T10:00:00+08:00">
+    <meta property="article:tag" content="Git">
+    <meta property="article:tag" content="版本控制">
+    <meta property="article:tag" content="Gitignore">
+    <meta property="article:tag" content="仓库管理">
+    <meta property="article:tag" content="开发工具">
+    <meta property="og:image" content="https://www.bmsg.top/posts/tech/git-cleanup-file-management-2025/cover.svg">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.bmsg.top/posts/tech/git-cleanup-file-management-2025/cover.svg">
+  <meta name="twitter:title" content="Git仓库清理与文件管理：彻底删除已提交文件的最佳实践">
+  <meta name="twitter:description" content="详细指南：如何从Git仓库中删除已提交的文件，配置.gitignore避免重复提交，以及团队协作中的注意事项">
+
+
+
+
+
+<meta name="google-adsense-account" content="ca-pub-8865303128098344">
+<style>
+   
+  .adsbygoogle,
+  ins.adsbygoogle,
+  .dream-adsense,
+  .dream-adsense-post-bottom {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+  }
+</style>
+
+
+
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/custom.css" />
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.1/dist/cdn.min.js" integrity="sha256-Rmqrc5SKeSLTSnQ9shSKWmJco1ks8c1hLI8UG2Np03M=" crossorigin="anonymous"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="Flip it!">
+        <div class="h-10 rounded-full">
+          <img src="/img/avatar.png" alt="Inkchron" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://www.bmsg.top/" class="text-lg font-semibold cursor-pointer">
+          Inkchron
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">Using words as a pen, picking up the small moments in life</div>
+        
+      </div>
+      
+    </section>
+
+    
+    
+      
+    
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-md">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="Search">
+    <ion-icon name="search"></ion-icon>
+    Search
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="https://www.bmsg.top/tools/index.html" target="_blank" title="Tools">
+    
+    <ion-icon name="hammer"></ion-icon>
+    
+    Tools
+  </a>
+</li>
+
+
+
+  
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="Search">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+          
+
+          
+          
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="https://www.bmsg.top/tools/index.html" target="_blank" title="Tools">
+    
+    <ion-icon name="hammer"></ion-icon>
+    
+    Tools
+  </a>
+</li>
+
+
+
+  
+
+
+          
+        </ul>
+      </div>
+      
+
+      
+      <div
+        x-data="{ icons: [
+          { name: 'sunny', status: 'n' },
+          { name: 'moon', status: 'y' },
+          { name: 'desktop', status: 'auto' }
+        ] }"
+        class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+      >
+        <template x-for="icon in icons">
+          <div
+            role="button"
+            tabindex="0"
+            :aria-label="'Select ' + icon.name + ' mode'"
+            class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+            :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+            @click="$store.darkMode.toggle(icon.status)"
+          >
+            <ion-icon
+              :name="`${icon.name}-outline`"
+              class="group-hover:text-primary-content"
+              :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+            >
+            </ion-icon>
+          </div>
+        </template>
+      </div>
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+      <div class="dream-adsense w-2/3">
+        
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8865303128098344" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8865303128098344"
+     data-ad-slot="您的广告单元ID"
+     data-ad-format="rectangle"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+      </div>
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="Git仓库清理与文件管理：彻底删除已提交文件的最佳实践">
+  <meta itemprop="description" content="详细指南：如何从Git仓库中删除已提交的文件，配置.gitignore避免重复提交，以及团队协作中的注意事项">
+  <meta itemprop="datePublished" content="2025-11-21T10:00:00+08:00">
+  <meta itemprop="dateModified" content="2025-11-21T10:00:00+08:00">
+  <meta itemprop="wordCount" content="207">
+  <meta itemprop="image" content="https://www.bmsg.top/posts/tech/git-cleanup-file-management-2025/cover.svg">
+  <meta itemprop="keywords" content="Git,版本控制,Gitignore,仓库管理,开发工具">
+
+      <header>
+        <h1 itemprop="headline">Git仓库清理与文件管理：彻底删除已提交文件的最佳实践</h1>
+        <p class="text-sm">
+          
+            Friday, Nov 21, 2025
+          
+
+          | <span>1 minute read</span>
+
+          
+          | <span>Updated at
+            
+              Friday, Nov 21, 2025
+            </span>
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    
+      <span itemprop="name">Inkchron</span>
+    
+  
+  </span>
+</div>
+
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+    
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=Git%e4%bb%93%e5%ba%93%e6%b8%85%e7%90%86%e4%b8%8e%e6%96%87%e4%bb%b6%e7%ae%a1%e7%90%86%ef%bc%9a%e5%bd%bb%e5%ba%95%e5%88%a0%e9%99%a4%e5%b7%b2%e6%8f%90%e4%ba%a4%e6%96%87%e4%bb%b6%e7%9a%84%e6%9c%80%e4%bd%b3%e5%ae%9e%e8%b7%b5&amp;url=https://www.bmsg.top/posts/tech/git-cleanup-file-management-2025/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=https://www.bmsg.top/posts/tech/git-cleanup-file-management-2025/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://wa.me/?text=Git%e4%bb%93%e5%ba%93%e6%b8%85%e7%90%86%e4%b8%8e%e6%96%87%e4%bb%b6%e7%ae%a1%e7%90%86%ef%bc%9a%e5%bd%bb%e5%ba%95%e5%88%a0%e9%99%a4%e5%b7%b2%e6%8f%90%e4%ba%a4%e6%96%87%e4%bb%b6%e7%9a%84%e6%9c%80%e4%bd%b3%e5%ae%9e%e8%b7%b5%20https://www.bmsg.top/posts/tech/git-cleanup-file-management-2025/" target="_blank" rel="noopener noreferrer"
+      title="Share on WhatsApp">
+      <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <figure>
+            <img class="z-30" src="cover.svg" alt="Git仓库清理与文件管理：彻底删除已提交文件的最佳实践" />
+            
+          </figure>
+        
+
+        <figure><img src="/posts/tech/git-cleanup-file-management-2025/img1.svg"><figcaption>
+      <h4>Git文件管理流程图</h4>
+    </figcaption>
+</figure>
+
+<h2 id="引言">引言</h2>
+<p>在日常开发中，我们经常会遇到需要从Git仓库中删除某些已提交文件的情况，比如编译产物、IDE配置文件、日志文件等。这些文件不应该被纳入版本控制，但有时会不小心被提交。本文将详细介绍如何安全、彻底地管理Git仓库中的文件。</p>
+<h2 id="一删除已提交文件的两种方式">一、删除已提交文件的两种方式</h2>
+<h3 id="1-保留本地文件仅从git仓库中移除">1. 保留本地文件，仅从Git仓库中移除</h3>
+<p>如果只是想让Git不再追踪这些文件（本地仍需保留，比如<code>target</code>是编译产物，本地需要用），使用<code>git rm --cached</code>命令：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 单个文件</span>
+</span></span><span style="display:flex;"><span>git rm --cached 文件名
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 整个目录（比如target）</span>
+</span></span><span style="display:flex;"><span>git rm --cached -r target
+</span></span></code></pre></div><p><strong>参数说明：</strong></p>
+<ul>
+<li><code>--cached</code>：仅删除Git暂存区/仓库中的记录，不删除本地文件</li>
+<li><code>-r</code>：递归删除目录（用于删除文件夹时必须加）</li>
+</ul>
+<h3 id="2-彻底删除本地和git仓库都删除">2. 彻底删除（本地和Git仓库都删除）</h3>
+<p>如果本地也不再需要这些文件，直接用<code>git rm</code>（不加<code>--cached</code>）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 单个文件</span>
+</span></span><span style="display:flex;"><span>git rm 文件名
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 整个目录</span>
+</span></span><span style="display:flex;"><span>git rm -r target
+</span></span></code></pre></div><h2 id="二提交删除操作">二、提交删除操作</h2>
+<p>删除后，需要提交这个&quot;删除变更&quot;到Git仓库：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;feat: 删除已提交的target目录和冗余文件&#34;</span>
+</span></span></code></pre></div><h2 id="三关键步骤配置gitignore避免未来重复提交">三、关键步骤：配置.gitignore避免未来重复提交</h2>
+<p>删除后，必须配置<code>.gitignore</code>文件，让Git永久忽略这些文件：</p>
+<h3 id="1-创建编辑gitignore文件">1. 创建/编辑.gitignore文件</h3>
+<p>如果仓库根目录没有<code>.gitignore</code>，先创建：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch .gitignore
+</span></span></code></pre></div><p>然后编辑<code>.gitignore</code>，添加需要忽略的文件/目录：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 忽略target目录（所有层级的target都忽略）</span>
+</span></span><span style="display:flex;"><span>target/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 忽略编译产物</span>
+</span></span><span style="display:flex;"><span>*.class
+</span></span><span style="display:flex;"><span>*.jar
+</span></span><span style="display:flex;"><span>*.war
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 忽略日志文件</span>
+</span></span><span style="display:flex;"><span>*.log
+</span></span><span style="display:flex;"><span>logs/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 忽略IDE配置文件</span>
+</span></span><span style="display:flex;"><span>.idea/
+</span></span><span style="display:flex;"><span>*.iml
+</span></span><span style="display:flex;"><span>.vscode/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 忽略操作系统生成的文件</span>
+</span></span><span style="display:flex;"><span>.DS_Store
+</span></span><span style="display:flex;"><span>Thumbs.db
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 忽略依赖目录</span>
+</span></span><span style="display:flex;"><span>node_modules/
+</span></span><span style="display:flex;"><span>venv/
+</span></span><span style="display:flex;"><span>.env
+</span></span></code></pre></div><p><strong>注意事项：</strong></p>
+<ul>
+<li>目录末尾要加<code>/</code>（比如<code>target/</code>），否则会被当作&quot;文件&quot;忽略</li>
+<li>支持通配符（<code>*</code>表示任意字符，<code>?</code>表示单个字符）</li>
+</ul>
+<h3 id="2-提交gitignore文件">2. 提交.gitignore文件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .gitignore
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;docs: 添加.gitignore忽略编译产物和IDE文件&#34;</span>
+</span></span></code></pre></div><h2 id="四如果已推送到远程仓库">四、如果已推送到远程仓库</h2>
+<p>如果之前已经把不需要的文件推送到了远程仓库，需要同步删除：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push origin 你的分支名  <span style="color:#75715e"># 比如main或master</span>
+</span></span></code></pre></div><h2 id="五快速操作指南">五、快速操作指南</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 1. 移除Git对target的追踪（保留本地）</span>
+</span></span><span style="display:flex;"><span>git rm --cached -r target
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 提交删除操作</span>
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Remove tracked target directory&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 添加target到.gitignore</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;target/&#34;</span> &gt;&gt; .gitignore
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. 提交.gitignore</span>
+</span></span><span style="display:flex;"><span>git add .gitignore
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Add target to .gitignore&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 5. 推送到远程（如果需要）</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span></code></pre></div><h2 id="六高级场景处理">六、高级场景处理</h2>
+<h3 id="1-从git历史记录中彻底删除文件">1. 从Git历史记录中彻底删除文件</h3>
+<p>如果要从整个Git历史记录中删除文件（比如敏感信息），可以使用<code>git filter-repo</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 安装git-filter-repo</span>
+</span></span><span style="display:flex;"><span>pip install git-filter-repo
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 从历史记录中删除特定文件</span>
+</span></span><span style="display:flex;"><span>git filter-repo --path 敏感文件.txt --invert-paths
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 强制推送到远程（会重写历史）</span>
+</span></span><span style="display:flex;"><span>git push origin main --force
+</span></span></code></pre></div><p><strong>⚠️ 警告：</strong> 这会重写仓库历史，影响协作中的其他人，请谨慎使用！</p>
+<h3 id="2-恢复误删的文件">2. 恢复误删的文件</h3>
+<p>如果不小心删除了本地文件：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 恢复单个文件</span>
+</span></span><span style="display:flex;"><span>git checkout 文件名
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 恢复整个目录</span>
+</span></span><span style="display:flex;"><span>git checkout 目录名/
+</span></span></code></pre></div><p>如果已经提交了删除，可以回滚到上一次提交：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 回滚到上一次提交（仅本地未推送时使用）</span>
+</span></span><span style="display:flex;"><span>git reset --hard HEAD~1
+</span></span></code></pre></div><h2 id="七团队协作注意事项">七、团队协作注意事项</h2>
+<ol>
+<li><strong>同步.gitignore</strong>：确保团队所有成员的<code>.gitignore</code>文件同步更新</li>
+<li><strong>沟通协调</strong>：在执行重写历史等危险操作前，与团队成员充分沟通</li>
+<li><strong>分支管理</strong>：在功能分支上进行文件清理，避免影响主分支</li>
+</ol>
+<h2 id="八最佳实践总结">八、最佳实践总结</h2>
+<ol>
+<li><strong>预防为主</strong>：项目初期就配置好完整的<code>.gitignore</code></li>
+<li><strong>定期清理</strong>：定期检查仓库中是否有不应该被追踪的文件</li>
+<li><strong>使用Git钩子</strong>：配置pre-commit钩子自动检查文件类型</li>
+<li><strong>团队规范</strong>：建立统一的Git使用规范</li>
+</ol>
+<h2 id="结语">结语</h2>
+<p>Git文件管理是每个开发者都应该掌握的基本技能。通过合理的<code>.gitignore</code>配置和正确的删除操作，可以保持仓库的整洁，提高团队协作效率。记住，好的版本控制习惯会让你的开发工作更加顺畅！</p>
+<hr>
+<p><em>本文基于实际开发经验总结，希望对您的Git管理工作有所帮助。如有疑问，欢迎在评论区交流讨论。</em></p>
+
+
+        
+          <div class="dream-adsense-post-bottom">
+            
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8865303128098344" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8865303128098344"
+     data-ad-slot="您的广告单元ID"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+          </div>
+        
+      </section>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <div></div>
+        
+
+        
+        <a role="button" class="btn btn-outline h-12" href="/posts/news/uk-general-election-2025/" title="UK General Election 2025: Labour Party Secures Historic Majority">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 text-xs font-normal">Next page</span>
+            <span class="max-w-48 truncate">UK General Election 2025: Labour Party Secures Historic Majority</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+
+      
+      <div class="divider"></div>
+
+      <section class="space-y-4">
+        
+<article>
+  <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+        this.page.identifier = '\/posts\/tech\/git-cleanup-file-management-2025\/';
+        this.page.title = 'Git仓库清理与文件管理：彻底删除已提交文件的最佳实践';
+        this.page.url = 'https:\/\/www.bmsg.top\/posts\/tech\/git-cleanup-file-management-2025\/';
+
+        
+    };
+    function initDisqus() {
+        
+        
+        
+        
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//bi-mo-shi-guang.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    };
+    setTimeout(() => {
+        initDisqus();
+    }, 3000);
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</article>
+
+
+
+
+
+
+
+
+
+
+      </section>
+      
+    </article>
+  </div>
+
+  <div
+    x-data="tocHighlighter()"
+    @scroll.window="debouncedScroll"
+    class="hidden lg:flex lg:flex-col lg:items-end"
+  >
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#引言">引言</a></li>
+    <li><a href="#一删除已提交文件的两种方式">一、删除已提交文件的两种方式</a>
+      <ul>
+        <li><a href="#1-保留本地文件仅从git仓库中移除">1. 保留本地文件，仅从Git仓库中移除</a></li>
+        <li><a href="#2-彻底删除本地和git仓库都删除">2. 彻底删除（本地和Git仓库都删除）</a></li>
+      </ul>
+    </li>
+    <li><a href="#二提交删除操作">二、提交删除操作</a></li>
+    <li><a href="#三关键步骤配置gitignore避免未来重复提交">三、关键步骤：配置.gitignore避免未来重复提交</a>
+      <ul>
+        <li><a href="#1-创建编辑gitignore文件">1. 创建/编辑.gitignore文件</a></li>
+        <li><a href="#2-提交gitignore文件">2. 提交.gitignore文件</a></li>
+      </ul>
+    </li>
+    <li><a href="#四如果已推送到远程仓库">四、如果已推送到远程仓库</a></li>
+    <li><a href="#五快速操作指南">五、快速操作指南</a></li>
+    <li><a href="#六高级场景处理">六、高级场景处理</a>
+      <ul>
+        <li><a href="#1-从git历史记录中彻底删除文件">1. 从Git历史记录中彻底删除文件</a></li>
+        <li><a href="#2-恢复误删的文件">2. 恢复误删的文件</a></li>
+      </ul>
+    </li>
+    <li><a href="#七团队协作注意事项">七、团队协作注意事项</a></li>
+    <li><a href="#八最佳实践总结">八、最佳实践总结</a></li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+</nav>
+    
+  </div>
+</div>
+
+
+            
+<div class="friend-links py-12 bg-gradient-to-r from-base-100 to-base-200 rounded-xl shadow-sm my-6 w-full">
+  <div class="mx-auto px-6">
+    <h3 class="text-2xl font-bold mb-5 text-center text-primary">Friendship links</h3>
+    <div class="h-5 my-5"></div>
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://gohugo.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/hugo-logo-wide.svg" alt="Hugo official " class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Hugo official 
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/github-logo.png" alt="GitHub" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              GitHub
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://juejin.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/juejin-logo.svg" alt="Juejin" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Juejin
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://www.zhihu.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/zhihu-logo.png" alt="Zhihu" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Zhihu
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://sspai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/shaoshupai-logo.png" alt="Sspai" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Sspai
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://tools.catbank.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/catbank-logo.png" alt="Catbank" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Catbank
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://www.bmsg.top/sm4/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/sm4-logo.png" alt="SM4Tool" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              SM4Tool
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://www.bmsg.top/tools/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/tools-logo.png" alt="Universal Toolbox" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Universal Toolbox
+            </span>
+          </a>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2016 - 2025 Inkchron
+  </p>
+  
+
+  
+  <p>Powered by Inkchron.</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+
+<div
+  x-data="{
+    isVisible: false,
+    toggleVisibility() {
+      this.isVisible = window.scrollY > 300;
+    }
+  }"
+  x-init="
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility);
+  "
+  x-show="isVisible"
+  x-transition:enter="transition duration-300 ease-out"
+  x-transition:enter-start="opacity-0 scale-50"
+  x-transition:enter-end="opacity-100 scale-100"
+  x-transition:leave="transition duration-300 ease-in"
+  x-transition:leave-start="opacity-100 scale-100"
+  x-transition:leave-end="opacity-0 scale-50"
+  class="fixed bottom-8 right-8 z-50"
+>
+  <button
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    aria-label="回到顶部"
+    class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-content shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+  ></button>
+</div>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30 mb-4"
+    >
+      <div class="card-body">
+        <div class="card-title">关于我</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Hi，这里是笔墨拾光的博客。“笔墨拾光” 是我用来收纳日常经验的小角落标识～</p>
+          <p>我是职场搬砖人 + 生活折腾爱好者，在这里会记录工作里的避坑技巧、生活中的实用小招。欢迎你通过评论与我交流经验～。</p>
+        </div>
+      </div>
+    </article>
+
+    
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">Social Links</div>
+
+        
+        <ul class="menu menu-horizontal flex-wrap w-full px-0 [&_ion-icon]:text-lg">
+  
+  <li>
+    <a href="mailto:35924784@qq.com" title="Email">
+      <ion-icon name="mail"></ion-icon>
+    </a>
+  </li>
+  
+
+  
+  <li>
+    <a href="https://github.com/g1eny0ung" target="_blank" title="GitHub">
+      <ion-icon name="logo-github"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://twitter.com/g1eny0ung" target="_blank" title="Twitter">
+      <ion-icon name="logo-twitter"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://linkedin.com/in/g1eny0ung" target="_blank" title="LinkedIn">
+      <ion-icon name="logo-linkedin"></ion-icon>
+    </a>
+  </li>
+  
+</ul>
+
+        
+      </div>
+    </article>
+  </div>
+
+  
+
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">知识共享</div>
+
+        <div class="prose dark:prose-invert">
+          <p>此网站的所有内容都遵循 CC BY-NC-SA 4.0。</p>
+<p>All contents of this website are licensed under CC BY-NC-SA 4.0.</p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+
+  
+</div>
+
+            
+
+            
+<div class="friend-links py-12 bg-gradient-to-r from-base-100 to-base-200 rounded-xl shadow-sm my-6 w-full">
+  <div class="mx-auto px-6">
+    <h3 class="text-2xl font-bold mb-5 text-center text-primary">Friendship links</h3>
+    <div class="h-5 my-5"></div>
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://gohugo.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/hugo-logo-wide.svg" alt="Hugo official " class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Hugo official 
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/github-logo.png" alt="GitHub" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              GitHub
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://juejin.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/juejin-logo.svg" alt="Juejin" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Juejin
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://www.zhihu.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/zhihu-logo.png" alt="Zhihu" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Zhihu
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://sspai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/shaoshupai-logo.png" alt="Sspai" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Sspai
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://tools.catbank.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/catbank-logo.png" alt="Catbank" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Catbank
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://www.bmsg.top/sm4/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/sm4-logo.png" alt="SM4Tool" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              SM4Tool
+            </span>
+          </a>
+        </div>
+      
+        <div class="flex flex-col items-center justify-center p-4 bg-white dark:bg-base-800 rounded-lg shadow-md hover:bg-base-content/10 dark:hover:bg-base-content/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border dark:border-base-content/30">
+          <a
+            href="https://www.bmsg.top/tools/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col items-center justify-center"
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-3 hover:bg-primary hover:text-white transition-all duration-300">
+              
+                <img src="/images/friend-links/tools-logo.png" alt="Universal Toolbox" class="w-10 h-10 rounded-full object-cover">
+              
+            </div>
+            <span class="text-center font-medium text-xs sm:text-sm hover:text-primary transition-colors duration-300">
+              Universal Toolbox
+            </span>
+          </a>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2016 - 2025 Inkchron
+  </p>
+  
+
+  
+  <p>Powered by Inkchron.</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+
+<div
+  x-data="{
+    isVisible: false,
+    toggleVisibility() {
+      this.isVisible = window.scrollY > 300;
+    }
+  }"
+  x-init="
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility);
+  "
+  x-show="isVisible"
+  x-transition:enter="transition duration-300 ease-out"
+  x-transition:enter-start="opacity-0 scale-50"
+  x-transition:enter-end="opacity-100 scale-100"
+  x-transition:leave="transition duration-300 ease-in"
+  x-transition:leave-start="opacity-100 scale-100"
+  x-transition:leave-end="opacity-0 scale-50"
+  class="fixed bottom-8 right-8 z-50"
+>
+  <button
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    aria-label="回到顶部"
+    class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-content shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+  ></button>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+    
+  
+  <script src="/js/grid.min.js"></script>
+
+
+
+
+  
+
+<script src="/js/main.min.js"></script>
+
+    
+
+
+
+
+
+
+
+  
+
+<script src="/js/toc.min.js"></script>
+
+
+
+  
+
+<script src="/js/code-copy.min.js"></script>
+
+
+  
+    <script type="module">
+      import mediumZoom from 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm';
+      mediumZoom('#dream-single-post-content img', {
+        background: 'oklch(var(--b1))',
+        margin: 24,
+      })
+    </script>
+  
+
+
+
+
+
+
+    
+
+    
+
+    
+    <script src="/js/back-to-top.js"></script>
+    
+
+    
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JB1BENEW8"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0JB1BENEW8');
+        }
+      </script>
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
+  </body>
+</html>

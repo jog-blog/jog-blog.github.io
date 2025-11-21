@@ -1,0 +1,81 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f0f8ff"/>
+
+  <!-- Title -->
+  <text x="300" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">US-China Emissions Reduction Timeline</text>
+
+  <!-- Timeline -->
+  <line x1="80" y1="100" x2="520" y2="100" stroke="#4682b4" stroke-width="3"/>
+
+  <!-- 2025 Marker -->
+  <circle cx="120" cy="100" r="8" fill="#ff6b6b"/>
+  <text x="120" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">2025</text>
+  <text x="120" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">COP30</text>
+  <rect x="90" y="160" width="60" height="40" fill="#ff6b6b" rx="5"/>
+  <text x="120" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Agreement</text>
+  <text x="120" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Signed</text>
+
+  <!-- 2030 Marker -->
+  <circle cx="240" cy="100" r="8" fill="#4ecdc4"/>
+  <text x="240" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">2030</text>
+  <text x="240" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">Enhanced NDCs</text>
+  <rect x="210" y="160" width="60" height="40" fill="#4ecdc4" rx="5"/>
+  <text x="240" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Methane</text>
+  <text x="240" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">-30%</text>
+
+  <!-- 2035 Marker -->
+  <circle cx="360" cy="100" r="8" fill="#45b7d1"/>
+  <text x="360" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">2035</text>
+  <text x="360" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">US Clean Energy</text>
+  <rect x="330" y="160" width="60" height="40" fill="#45b7d1" rx="5"/>
+  <text x="360" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">US 80%</text>
+  <text x="360" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Clean Power</text>
+
+  <!-- 2050 Marker -->
+  <circle cx="480" cy="100" r="8" fill="#96ceb4"/>
+  <text x="480" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">2050</text>
+  <text x="480" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">Net Zero</text>
+  <rect x="450" y="160" width="60" height="40" fill="#96ceb4" rx="5"/>
+  <text x="480" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Net Zero</text>
+  <text x="480" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Emissions</text>
+
+  <!-- Current Date Marker -->
+  <rect x="280" y="220" width="40" height="25" fill="#4682b4" rx="3"/>
+  <text x="300" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Today</text>
+
+  <!-- Country Comparison -->
+  <text x="300" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">Renewable Energy Targets</text>
+
+  <!-- United States -->
+  <rect x="100" y="300" width="80" height="20" fill="#3c40c6" rx="3"/>
+  <text x="140" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">United States</text>
+  <rect x="190" y="300" width="60" height="20" fill="#4ecdc4" rx="3"/>
+  <text x="220" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">80% by 2035</text>
+
+  <!-- China -->
+  <rect x="100" y="330" width="80" height="20" fill="#ff3f34" rx="3"/>
+  <text x="140" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">China</text>
+  <rect x="190" y="330" width="60" height="20" fill="#4ecdc4" rx="3"/>
+  <text x="220" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">50% by 2030</text>
+
+  <!-- Investment Comparison -->
+  <text x="300" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">Joint Investment: $10 Billion</text>
+
+  <!-- Investment Breakdown -->
+  <rect x="200" y="395" width="200" height="15" fill="#ffa801" rx="2"/>
+  <text x="300" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Clean Energy Research Fund</text>
+
+  <!-- Legend -->
+  <rect x="450" y="300" width="10" height="10" fill="#ff6b6b"/>
+  <text x="465" y="308" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">Agreement</text>
+
+  <rect x="450" y="315" width="10" height="10" fill="#4ecdc4"/>
+  <text x="465" y="323" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">Methane Target</text>
+
+  <rect x="450" y="330" width="10" height="10" fill="#45b7d1"/>
+  <text x="465" y="338" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">Clean Energy</text>
+
+  <rect x="450" y="345" width="10" height="10" fill="#96ceb4"/>
+  <text x="465" y="353" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">Net Zero</text>
+</svg>

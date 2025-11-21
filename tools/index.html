@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小工具箱</title>
+    <style>
+        :root{
+            --bg:#0f1724; 
+            --card:#0b1220; 
+            --accent:#5eead4; 
+            --muted:#94a3b8; 
+            --glass:rgba(255,255,255,0.03);
+            --radius:12px;
+            color-scheme: dark;
+        }
+        *{box-sizing:border-box}
+        body{
+            margin:0;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif;
+            background: linear-gradient(180deg,#071226 0%, #071726 100%);
+            color:#e6eef6;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            padding:28px;
+            min-height:100vh;
+        }
+        header{
+            display:flex;align-items:center;gap:16px;margin-bottom:18px;
+        }
+        header .logo{
+            width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#022;box-shadow:0 6px 18px rgba(5,7,15,0.6);
+        }
+        h1{font-size:20px;margin:0}
+        p.lead{margin:0;color:var(--muted);font-size:13px}
+
+        .container{
+            display:grid;
+            grid-template-columns: 280px 1fr;
+            gap:20px;
+            align-items:start;
+            min-height:60vh;
+        }
+
+        /* sidebar */
+        nav{
+            position:sticky; top:28px;
+            background:var(--card);
+            border-radius:var(--radius);
+            padding:12px;
+            box-shadow:0 6px 18px rgba(3,6,15,0.6);
+        }
+        .tab{
+            display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;margin-bottom:8px;cursor:pointer;
+            transition: background 0.2s ease;
+        }
+        .tab:hover{background:var(--glass)}
+        .tab.active{background:linear-gradient(90deg, rgba(94,234,212,0.08), rgba(96,165,250,0.06));border:1px solid rgba(94,234,212,0.08);}
+
+        main{
+            background:var(--card);
+            border-radius:var(--radius);
+            padding:18px;
+            box-shadow:0 6px 24px rgba(2,6,16,0.6);
+        }
+
+        /* card small */
+        .panel{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:12px;border-radius:10px;margin-bottom:14px}
+        label{display:block;font-size:13px;color:var(--muted);margin-bottom:8px}
+        .row{display:flex;gap:8px;align-items:center}
+        input[type="number"], input[type="text"], select, textarea{
+            background:rgba(255,255,255,0.03);
+            border:1px solid rgba(255,255,255,0.03);
+            color:inherit;
+            padding:8px 10px;border-radius:8px;outline:none;width:100%;
+            transition: border-color 0.2s ease;
+        }
+        input:focus, select:focus, textarea:focus{
+            border-color: var(--accent);
+            outline: none;
+        }
+        button{
+            background:linear-gradient(90deg,var(--accent),#60a5fa);
+            color:#022;border:0;padding:9px 12px;border-radius:10px;font-weight:600;cursor:pointer;
+            box-shadow:0 6px 18px rgba(5,7,15,0.45);
+            transition: transform 0.1s ease;
+        }
+        button:hover{
+            transform: translateY(-1px);
+        }
+        button:active{
+            transform: translateY(1px);
+        }
+        button.ghost{
+            background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);
+        }
+        .flex{display:flex;gap:8px}
+        .copy-btn{padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);cursor:pointer}
+        .output{background:#031224;padding:10px;border-radius:8px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; font-size:13px; color:#bfeaf0}
+
+        .small{font-size:13px;color:var(--muted)}
+        footer{margin-top:12px;color:var(--muted);font-size:12px}
+
+        /* responsive */
+        @media (max-width:880px){
+            .container{grid-template-columns: 1fr; padding-bottom:40px}
+            nav{position:relative;top:auto;margin-bottom:12px}
+        }
+
+        /* progress circle for timer */
+        .timer-display{display:flex;align-items:center;gap:18px}
+        .progress-ring{width:84px;height:84px;position:relative;display:inline-block}
+        .progress-text{font-size:18px;font-weight:700}
+
+        /* 通知提示 */
+        .toast{
+            position:fixed;bottom:20px;right:20px;background:var(--card);border-left:3px solid var(--accent);padding:10px 16px;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,0.2);transform:translateY(100px);opacity:0;transition:all 0.3s ease;z-index:1000;
+        }
+        .toast.show{transform:translateY(0);opacity:1;}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">工具</div>
+        <div>
+            <h1>小工具箱</h1>
+            <p class="lead">密码/取色/倒计时/Lorem/单位转换 — 单文件、可复制、可扩展</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav aria-label="工具菜单">
+            <div id="tab-password" class="tab active" data-target="password" tabindex="0" role="button" aria-selected="true">
+                <strong>🔐 密码生成器</strong>
+                <div style="margin-left:auto" class="small">生成 & 复制</div>
+            </div>
+            <div id="tab-color" class="tab" data-target="color" tabindex="0" role="button" aria-selected="false">
+                <strong>🎨 颜色取值器</strong>
+                <div style="margin-left:auto" class="small">HEX / RGB</div>
+            </div>
+            <div id="tab-timer" class="tab" data-target="timer" tabindex="0" role="button" aria-selected="false">
+                <strong>⏱ 倒计时器</strong>
+                <div style="margin-left:auto" class="small">开始/暂停</div>
+            </div>
+            <div id="tab-lorem" class="tab" data-target="lorem" tabindex="0" role="button" aria-selected="false">
+                <strong>✍️ Lorem 生成器</strong>
+                <div style="margin-left:auto" class="small">文章占位</div>
+            </div>
+            <div id="tab-convert" class="tab" data-target="convert" tabindex="0" role="button" aria-selected="false">
+                <strong>🔁 单位转换</strong>
+                <div style="margin-left:auto" class="small">常用互转</div>
+            </div>
+
+            <div style="height:10px"></div>
+            <div class="small" style="opacity:0.9">提示：每个面板都带有复制功能。代码易于修改，想要添加新工具直接告诉我。</div>
+        </nav>
+
+        <main>
+            <!-- 密码生成 -->
+            <section id="password" class="panel" role="region" aria-labelledby="tab-password">
+                <h2 style="margin:0 0 8px 0">🔐 密码生成器</h2>
+                <div class="row" style="gap:12px">
+                    <div style="flex:1">
+                        <label for="pw-length">长度（4 - 64）</label>
+                        <input id="pw-length" type="number" min="4" max="64" value="16" aria-label="密码长度" />
+                    </div>
+                    <div style="width:140px">
+                        <label for="pw-strength">复杂度</label>
+                        <select id="pw-strength" aria-label="密码复杂度">
+                            <option value="1">简单（字母）</option>
+                            <option value="2" selected>中等（+数字）</option>
+                            <option value="3">复杂（+符号）</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display:flex;gap:8px;margin-top:10px">
+                    <button id="gen-pw" aria-label="生成密码">生成密码</button>
+                    <button id="copy-pw" class="ghost" aria-label="复制密码">复制</button>
+                    <button id="shuffle-pw" class="ghost" aria-label="重新生成密码">再来一条</button>
+                </div>
+
+                <div style="margin-top:12px">
+                    <label for="pw-output">结果</label>
+                    <div id="pw-output" class="output" aria-live="polite">点击“生成密码”开始</div>
+                </div>
+            </section>
+
+            <!-- 颜色取值 -->
+            <section id="color" class="panel" role="region" aria-labelledby="tab-color" hidden>
+                <h2 style="margin:0 0 8px 0">🎨 颜色取值器</h2>
+                <label>选择颜色</label>
+                <div class="row">
+                    <input id="color-picker" type="color" value="#60a5fa" style="height:44px;width:64px;padding:0;border-radius:8px;border:none;" aria-label="颜色选择器"/>
+                    <input id="color-hex" type="text" value="#60a5fa" aria-label="HEX颜色值" />
+                    <button id="copy-hex" class="copy-btn" aria-label="复制HEX颜色值">复制 HEX</button>
+                </div>
+
+                <div style="margin-top:10px" class="row">
+                    <div style="flex:1">
+                        <label for="color-rgb">RGB</label>
+                        <input id="color-rgb" type="text" readonly class="output" aria-label="RGB颜色值" />
+                    </div>
+                    <div style="width:120px">
+                        <label>透明背景预览</label>
+                        <div id="color-swatch" style="height:44px;border-radius:8px;border:1px solid rgba(255,255,255,0.03)" aria-label="颜色预览"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 倒计时 -->
+            <section id="timer" class="panel" role="region" aria-labelledby="tab-timer" hidden>
+                <h2 style="margin:0 0 8px 0">⏱ 倒计时器</h2>
+                <label for="timer-min">设置时间（分钟）</label>
+                <div class="row">
+                    <input id="timer-min" type="number" value="5" min="0" aria-label="倒计时分钟数" />
+                    <button id="timer-set" class="ghost" aria-label="设置倒计时时间">设置</button>
+                    <button id="timer-start" aria-label="开始倒计时">开始</button>
+                    <button id="timer-pause" class="ghost" aria-label="暂停倒计时">暂停</button>
+                    <button id="timer-reset" class="ghost" aria-label="重置倒计时">重置</button>
+                </div>
+
+                <div style="margin-top:12px" class="timer-display">
+                    <div class="progress-ring" aria-hidden="true">
+                        <svg viewBox="0 0 120 120" width="84" height="84">
+                            <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#5eead4"/><stop offset="1" stop-color="#60a5fa"/></linearGradient></defs>
+                            <circle cx="60" cy="60" r="48" stroke="rgba(255,255,255,0.06)" stroke-width="12" fill="none"></circle>
+                            <circle id="progress" cx="60" cy="60" r="48" stroke="url(#g1)" stroke-width="12" fill="none" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="301.59" stroke-dashoffset="0"></circle>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="progress-text" id="timer-text" aria-live="polite">05:00</div>
+                        <div class="small">倒计时状态：<span id="timer-status">已停止</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lorem -->
+            <section id="lorem" class="panel" role="region" aria-labelledby="tab-lorem" hidden>
+                <h2 style="margin:0 0 8px 0">✍️ Lorem 生成器</h2>
+                <label for="lorem-count">段落数（1 - 10）</label>
+                <div class="row">
+                    <input id="lorem-count" type="number" min="1" max="10" value="3" aria-label="段落数量" />
+                    <button id="gen-lorem" aria-label="生成Lorem文本">生成</button>
+                    <button id="copy-lorem" class="ghost" aria-label="复制Lorem文本">复制</button>
+                </div>
+
+                <div style="margin-top:12px">
+                    <textarea id="lorem-out" rows="8" style="width:100%;border-radius:8px;padding:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);color:inherit" aria-label="Lorem文本结果"></textarea>
+                </div>
+            </section>
+
+            <!-- 单位转换 -->
+            <section id="convert" class="panel" role="region" aria-labelledby="tab-convert" hidden>
+                <h2 style="margin:0 0 8px 0">🔁 单位转换</h2>
+
+                <div style="display:grid;gap:12px">
+                    <div class="row">
+                        <div style="flex:1">
+                            <label for="len-input">长度（厘米 ↔ 英寸）</label>
+                            <div class="row">
+                                <input id="len-input" type="number" value="100" aria-label="长度值" />
+                                <select id="len-dir" aria-label="长度转换方向">
+                                    <option value="cm-to-inch">cm → inch</option>
+                                    <option value="inch-to-cm">inch → cm</option>
+                                </select>
+                                <button id="len-conv" aria-label="转换长度单位">转换</button>
+                            </div>
+                            <div class="small" id="len-out" style="margin-top:8px" aria-live="polite">结果将显示在这里</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div style="flex:1">
+                            <label for="mass-input">质量（kg ↔ lb）</label>
+                            <div class="row">
+                                <input id="mass-input" type="number" value="70" aria-label="质量值" />
+                                <select id="mass-dir" aria-label="质量转换方向">
+                                    <option value="kg-to-lb">kg → lb</option>
+                                    <option value="lb-to-kg">lb → kg</option>
+                                </select>
+                                <button id="mass-conv" aria-label="转换质量单位">转换</button>
+                            </div>
+                            <div class="small" id="mass-out" style="margin-top:8px" aria-live="polite">结果将显示在这里</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div style="flex:1">
+                            <label for="temp-input">温度（℃ ↔ ℉）</label>
+                            <div class="row">
+                                <input id="temp-input" type="number" value="25" aria-label="温度值" />
+                                <select id="temp-dir" aria-label="温度转换方向">
+                                    <option value="c-to-f">℃ → ℉</option>
+                                    <option value="f-to-c">℉ → ℃</option>
+                                </select>
+                                <button id="temp-conv" aria-label="转换温度单位">转换</button>
+                            </div>
+                            <div class="small" id="temp-out" style="margin-top:8px" aria-live="polite">结果将显示在这里</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>版本 1.1 · 如果你需要 Export/Import、本地存储、深色/浅色主题或更多小工具，告诉我我可以直接帮你加上。</footer>
+        </main>
+    </div>
+
+    <!-- 通知提示组件 -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script>
+        // 通知提示功能
+        function showToast(message, duration = 2000) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, duration);
+        }
+
+        // ======= Tab 切换处理 =======
+        const tabs = document.querySelectorAll('nav .tab');
+        tabs.forEach(tab => {
+            // 支持键盘导航
+            tab.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    tab.click();
+                }
+            });
+
+            tab.addEventListener('click', () => {
+                // 更新标签状态
+                tabs.forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+                
+                // 显示对应内容
+                const target = tab.dataset.target;
+                document.querySelectorAll('main section').forEach(section => {
+                    section.hidden = section.id !== target;
+                });
+
+                // 聚焦到对应区域的第一个可交互元素
+                setTimeout(() => {
+                    const section = document.getElementById(target);
+                    const focusable = section.querySelector('input, button, textarea, select');
+                    if (focusable) focusable.focus();
+                }, 50);
+            });
+        });
+
+        // ======= 密码生成器 =======
+        const pwOut = document.getElementById('pw-output');
+        
+        function genPassword(length = 16, strength = 2) {
+            const lower = 'abcdefghijklmnopqrstuvwxyz';
+            const upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            const nums = '0123456789';
+            const syms = '!@#$%^&*()-_=+[]{};:,.<>/?';
+            
+            let chars = lower + upper;
+            if (strength >= 2) chars += nums;
+            if (strength >= 3) chars += syms;
+            
+            let pw = '';
+            const cryptoObj = window.crypto || window.msCrypto;
+            
+            // 使用加密级随机数生成更安全的密码
+            for (let i = 0; i < length; i++) {
+                const rnd = cryptoObj && cryptoObj.getRandomValues 
+                    ? cryptoObj.getRandomValues(new Uint32Array(1))[0] 
+                    : Math.floor(Math.random() * 0xffffffff);
+                pw += chars[rnd % chars.length];
+            }
+            return pw;
+        }
+        
+        document.getElementById('gen-pw').addEventListener('click', () => {
+            // 输入验证和边界处理
+            const lenInput = document.getElementById('pw-length');
+            const len = Math.max(4, Math.min(64, Number(lenInput.value) || 16));
+            // 修正输入框值（如果超出范围）
+            if (len !== Number(lenInput.value)) {
+                lenInput.value = len;
+            }
+            
+            const strength = Number(document.getElementById('pw-strength').value || 2);
+            const password = genPassword(len, strength);
+            pwOut.textContent = password;
+        });
+        
+        document.getElementById('shuffle-pw').addEventListener('click', () => {
+            document.getElementById('gen-pw').click();
+        });
+        
+        document.getElementById('copy-pw').addEventListener('click', async () => {
+            try {
+                const text = pwOut.textContent || '';
+                if (!text || text === '点击“生成密码”开始') {
+                    showToast('没有可复制的密码');
+                    return;
+                }
+                await navigator.clipboard.writeText(text);
+                showToast('密码已复制到剪贴板');
+            } catch (e) {
+                showToast('复制失败，请手动复制');
+            }
+        });
+
+        // ======= 颜色取值器 =======
+        const colorPicker = document.getElementById('color-picker');
+        const hexInput = document.getElementById('color-hex');
+        const rgbOutput = document.getElementById('color-rgb');
+        const colorSwatch = document.getElementById('color-swatch');
+        
+        function hexToRgb(hex) {
+            // 规范化HEX值
+            let hexValue = hex.replace('#', '');
+            if (hexValue.length === 3) {
+                hexValue = hexValue.split('').map(ch => ch + ch).join('');
+            }
+            return [
+                parseInt(hexValue.slice(0, 2), 16),
+                parseInt(hexValue.slice(2, 4), 16),
+                parseInt(hexValue.slice(4, 6), 16)
+            ];
+        }
+        
+        function updateColor(hex) {
+            hexInput.value = hex;
+            try {
+                const [r, g, b] = hexToRgb(hex);
+                rgbOutput.value = `rgb(${r}, ${g}, ${b})`;
+                colorSwatch.style.background = hex;
+            } catch (e) {
+                showToast('无效的颜色值');
+            }
+        }
+        
+        colorPicker.addEventListener('input', e => {
+            updateColor(e.target.value);
+        });
+        
+        hexInput.addEventListener('change', e => {
+            const val = e.target.value.trim();
+            // 严格验证HEX格式
+            if (/^#?[0-9a-fA-F]{3}([0-9a-fA-F]{3})?$/.test(val)) {
+                const hex = val.startsWith('#') ? val : `#${val}`;
+                colorPicker.value = hex;
+                updateColor(hex);
+            } else {
+                showToast('请输入有效的HEX值，例如 #60a5fa 或 #f00');
+                // 恢复到之前的有效值
+                e.target.value = colorPicker.value;
+            }
+        });
+        
+        document.getElementById('copy-hex').addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(hexInput.value);
+                showToast('HEX值已复制');
+            } catch (e) {
+                showToast('复制失败');
+            }
+        });
+        
+        // 初始化颜色
+        updateColor(colorPicker.value);
+
+        // ======= 倒计时器 =======
+        let timerTotal = 300; // 秒
+        let timerRemaining = timerTotal;
+        let timerInterval = null;
+        const progressEl = document.getElementById('progress');
+        const timerText = document.getElementById('timer-text');
+        const timerStatus = document.getElementById('timer-status');
+        
+        function formatTime(seconds) {
+            const mm = String(Math.floor(seconds / 60)).padStart(2, '0');
+            const ss = String(Math.floor(seconds % 60)).padStart(2, '0');
+            return `${mm}:${ss}`;
+        }
+        
+        function setTimer(minutes) {
+            const min = Math.max(0, Math.floor(Number(minutes) || 0));
+            // 修正输入框值
+            document.getElementById('timer-min').value = min;
+            
+            timerTotal = min * 60;
+            timerRemaining = timerTotal;
+            timerText.textContent = formatTime(timerRemaining);
+            updateProgress(1);
+            timerStatus.textContent = '已停止';
+        }
+        
+        function updateProgress(fraction) {
+            // 精确计算圆周长 (2 * π * r)
+            const circumference = 2 * Math.PI * 48;
+            const offset = circumference * (1 - fraction);
+            progressEl.style.strokeDasharray = `${circumference}`;
+            progressEl.style.strokeDashoffset = offset;
+        }
+        
+        function startTimer() {
+            if (timerInterval) return;
+            if (timerTotal <= 0) {
+                showToast('请先设置大于0的时间');
+                return;
+            }
+            
+            timerStatus.textContent = '运行中';
+            const endAt = Date.now() + timerRemaining * 1000;
+            
+            timerInterval = setInterval(() => {
+                const now = Date.now();
+                timerRemaining = Math.max(0, Math.round((endAt - now) / 1000));
+                timerText.textContent = formatTime(timerRemaining);
+                updateProgress(timerTotal ? (timerRemaining / timerTotal) : 0);
+                
+                if (timerRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    timerInterval = null;
+                    timerStatus.textContent = '已完成';
+                    // 播放提示音
+                    try {
+                        const audio = new Audio('data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQAAAAA=');
+                        audio.play();
+                    } catch (e) { /* 忽略播放失败 */ }
+                    showToast('⏰ 时间到！');
+                }
+            }, 250);
+        }
+        
+        function pauseTimer() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+                timerStatus.textContent = '已暂停';
+            }
+        }
+        
+        function resetTimer() {
+            pauseTimer();
+            timerRemaining = timerTotal;
+            timerText.textContent = formatTime(timerRemaining);
+            updateProgress(1);
+            timerStatus.textContent = '已停止';
+        }
+        
+        document.getElementById('timer-set').addEventListener('click', () => {
+            setTimer(document.getElementById('timer-min').value);
+        });
+        
+        document.getElementById('timer-start').addEventListener('click', startTimer);
+        document.getElementById('timer-pause').addEventListener('click', pauseTimer);
+        document.getElementById('timer-reset').addEventListener('click', resetTimer);
+        
+        // 初始化倒计时
+        setTimer(Number(document.getElementById('timer-min').value));
+
+        // ======= Lorem 生成器 =======
+        const loremBase = [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        ];
+        
+        function genLorem(paragraphs = 3) {
+            const output = [];
+            for (let i = 0; i < paragraphs; i++) {
+                // 随机生成3-6个句子
+                const sentenceCount = 3 + Math.floor(Math.random() * 4);
+                const sentences = Array.from({ length: sentenceCount }, (_, j) => 
+                    loremBase[(i + j) % loremBase.length]
+                );
+                output.push(sentences.join(' '));
+            }
+            return output.join('\n\n');
+        }
+        
+        document.getElementById('gen-lorem').addEventListener('click', () => {
+            const countInput = document.getElementById('lorem-count');
+            const count = Math.max(1, Math.min(10, Number(countInput.value) || 3));
+            // 修正输入框值
+            if (count !== Number(countInput.value)) {
+                countInput.value = count;
+            }
+            document.getElementById('lorem-out').value = genLorem(count);
+        });
+        
+        document.getElementById('copy-lorem').addEventListener('click', async () => {
+            try {
+                const text = document.getElementById('lorem-out').value || '';
+                if (!text) {
+                    showToast('没有可复制的内容，请先生成');
+                    return;
+                }
+                await navigator.clipboard.writeText(text);
+                showToast('内容已复制');
+            } catch (e) {
+                showToast('复制失败');
+            }
+        });
+
+        // ======= 单位转换 =======
+        // 长度转换
+        document.getElementById('len-conv').addEventListener('click', () => {
+            const value = Number(document.getElementById('len-input').value) || 0;
+            const direction = document.getElementById('len-dir').value;
+            let result;
+            
+            if (direction === 'cm-to-inch') {
+                result = `${value} cm = ${(value / 2.54).toFixed(4)} in`;
+            } else {
+                result = `${value} in = ${(value * 2.54).toFixed(4)} cm`;
+            }
+            document.getElementById('len-out').textContent = result;
+        });
+        
+        // 质量转换
+        document.getElementById('mass-conv').addEventListener('click', () => {
+            const value = Number(document.getElementById('mass-input').value) || 0;
+            const direction = document.getElementById('mass-dir').value;
+            let result;
+            
+            if (direction === 'kg-to-lb') {
+                result = `${value} kg = ${(value * 2.2046226218).toFixed(4)} lb`;
+            } else {
+                result = `${value} lb = ${(value / 2.2046226218).toFixed(4)} kg`;
+            }
+            document.getElementById('mass-out').textContent = result;
+        });
+        
+        // 温度转换
+        document.getElementById('temp-conv').addEventListener('click', () => {
+            const value = Number(document.getElementById('temp-input').value) || 0;
+            const direction = document.getElementById('temp-dir').value;
+            let result;
+            
+            if (direction === 'c-to-f') {
+                result = `${value}℃ = ${(value * 9/5 + 32).toFixed(2)}℉`;
+            } else {
+                result = `${value}℉ = ${((value - 32) * 5/9).toFixed(2)}℃`;
+            }
+            document.getElementById('temp-out').textContent = result;
+        });
+
+        // 页面加载完成后自动生成密码和Lorem文本
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('gen-pw').click();
+            document.getElementById('gen-lorem').click();
+        });
+    </script>
+</body>
+</html>

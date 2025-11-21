@@ -1,0 +1,44 @@
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="300" fill="#0b1220"/>
+
+  <!-- Title -->
+  <text x="300" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#5eead4">🔐 密码生成器</text>
+
+  <!-- Control Panel -->
+  <rect x="50" y="70" width="500" height="180" rx="12" fill="#0f1724" stroke="rgba(94,234,212,0.2)" stroke-width="1"/>
+
+  <!-- Length Control -->
+  <text x="80" y="100" font-family="Arial, sans-serif" font-size="13" fill="#94a3b8">长度（4 - 64）</text>
+  <rect x="80" y="110" width="120" height="32" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.03)"/>
+  <text x="140" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#e6eef6">16</text>
+
+  <!-- Strength Control -->
+  <text x="250" y="100" font-family="Arial, sans-serif" font-size="13" fill="#94a3b8">复杂度</text>
+  <rect x="250" y="110" width="140" height="32" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.03)"/>
+  <text x="320" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#e6eef6">中等（+数字）</text>
+
+  <!-- Buttons -->
+  <rect x="80" y="160" width="100" height="32" rx="8" fill="linear-gradient(90deg,#5eead4,#60a5fa)"/>
+  <text x="130" y="181" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#022" font-weight="bold">生成密码</text>
+
+  <rect x="200" y="160" width="80" height="32" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.03)"/>
+  <text x="240" y="181" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">复制</text>
+
+  <rect x="300" y="160" width="100" height="32" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.03)"/>
+  <text x="350" y="181" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">再来一条</text>
+
+  <!-- Password Output -->
+  <text x="80" y="220" font-family="Arial, sans-serif" font-size="13" fill="#94a3b8">结果</text>
+  <rect x="80" y="230" width="440" height="40" rx="8" fill="#031224"/>
+  <text x="300" y="255" text-anchor="middle" font-family="ui-monospace, monospace" font-size="14" fill="#bfeaf0">Xk8p#9qR!m2L$vN7@</text>
+
+  <!-- Security Indicator -->
+  <rect x="530" y="230" width="40" height="40" rx="8" fill="rgba(78,205,196,0.1)" stroke="#4ecdc4" stroke-width="1"/>
+  <text x="550" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#4ecdc4">✓</text>
+
+  <!-- Features List -->
+  <text x="300" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">
+    加密级随机数 · 可调节复杂度 · 一键复制
+  </text>
+</svg>

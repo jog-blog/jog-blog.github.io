@@ -2,361 +2,340 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Inkchron</title>
-    <link>https://www.bmsg.top/</link>
+    <link>https://bmsg.top/</link>
     <description>Recent content on Inkchron</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 21 Nov 2025 10:00:00 +0800</lastBuildDate>
-    <atom:link href="https://www.bmsg.top/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://bmsg.top/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git仓库清理与文件管理：彻底删除已提交文件的最佳实践</title>
-      <link>https://www.bmsg.top/posts/tech/git-cleanup-file-management-2025/</link>
+      <link>https://bmsg.top/posts/tech/git-cleanup-file-management-2025/</link>
       <pubDate>Fri, 21 Nov 2025 10:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/git-cleanup-file-management-2025/</guid>
-      <description>&lt;figure&gt;&lt;img src=&#34;https://www.bmsg.top/posts/tech/git-cleanup-file-management-2025/img1.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Git文件管理流程图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;在日常开发中，我们经常会遇到需要从Git仓库中删除某些已提交文件的情况，比如编译产物、IDE配置文件、日志文件等。这些文件不应该被纳入版本控制，但有时会不小心被提交。本文将详细介绍如何安全、彻底地管理Git仓库中的文件。&lt;/p&gt;&#xA;&lt;h2 id=&#34;一删除已提交文件的两种方式&#34;&gt;一、删除已提交文件的两种方式&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-保留本地文件仅从git仓库中移除&#34;&gt;1. 保留本地文件，仅从Git仓库中移除&lt;/h3&gt;&#xA;&lt;p&gt;如果只是想让Git不再追踪这些文件（本地仍需保留，比如&lt;code&gt;target&lt;/code&gt;是编译产物，本地需要用），使用&lt;code&gt;git rm --cached&lt;/code&gt;命令：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 单个文件&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rm --cached 文件名&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 整个目录（比如target）&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rm --cached -r target&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;参数说明：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;--cached&lt;/code&gt;：仅删除Git暂存区/仓库中的记录，不删除本地文件&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-r&lt;/code&gt;：递归删除目录（用于删除文件夹时必须加）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-彻底删除本地和git仓库都删除&#34;&gt;2. 彻底删除（本地和Git仓库都删除）&lt;/h3&gt;&#xA;&lt;p&gt;如果本地也不再需要这些文件，直接用&lt;code&gt;git rm&lt;/code&gt;（不加&lt;code&gt;--cached&lt;/code&gt;）：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 单个文件&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rm 文件名&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 整个目录&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rm -r target&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;二提交删除操作&#34;&gt;二、提交删除操作&lt;/h2&gt;&#xA;&lt;p&gt;删除后，需要提交这个&amp;quot;删除变更&amp;quot;到Git仓库：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;feat: 删除已提交的target目录和冗余文件&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;三关键步骤配置gitignore避免未来重复提交&#34;&gt;三、关键步骤：配置.gitignore避免未来重复提交&lt;/h2&gt;&#xA;&lt;p&gt;删除后，必须配置&lt;code&gt;.gitignore&lt;/code&gt;文件，让Git永久忽略这些文件：&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-创建编辑gitignore文件&#34;&gt;1. 创建/编辑.gitignore文件&lt;/h3&gt;&#xA;&lt;p&gt;如果仓库根目录没有&lt;code&gt;.gitignore&lt;/code&gt;，先创建：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;touch .gitignore&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后编辑&lt;code&gt;.gitignore&lt;/code&gt;，添加需要忽略的文件/目录：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略target目录（所有层级的target都忽略）&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;target/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略编译产物&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;*.class&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;*.jar&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;*.war&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略日志文件&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;*.log&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;logs/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略IDE配置文件&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.idea/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;*.iml&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.vscode/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略操作系统生成的文件&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.DS_Store&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Thumbs.db&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略依赖目录&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;node_modules/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;venv/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.env&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;注意事项：&lt;/strong&gt;&lt;/p&gt;</description>
+      <guid>https://bmsg.top/posts/tech/git-cleanup-file-management-2025/</guid>
+      <description>&lt;figure&gt;&lt;img src=&#34;https://bmsg.top/posts/tech/git-cleanup-file-management-2025/img1.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Git文件管理流程图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;在日常开发中，我们经常会遇到需要从Git仓库中删除某些已提交文件的情况，比如编译产物、IDE配置文件、日志文件等。这些文件不应该被纳入版本控制，但有时会不小心被提交。本文将详细介绍如何安全、彻底地管理Git仓库中的文件。&lt;/p&gt;&#xA;&lt;h2 id=&#34;一删除已提交文件的两种方式&#34;&gt;一、删除已提交文件的两种方式&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-保留本地文件仅从git仓库中移除&#34;&gt;1. 保留本地文件，仅从Git仓库中移除&lt;/h3&gt;&#xA;&lt;p&gt;如果只是想让Git不再追踪这些文件（本地仍需保留，比如&lt;code&gt;target&lt;/code&gt;是编译产物，本地需要用），使用&lt;code&gt;git rm --cached&lt;/code&gt;命令：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 单个文件&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rm --cached 文件名&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 整个目录（比如target）&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rm --cached -r target&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;参数说明：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;--cached&lt;/code&gt;：仅删除Git暂存区/仓库中的记录，不删除本地文件&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-r&lt;/code&gt;：递归删除目录（用于删除文件夹时必须加）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-彻底删除本地和git仓库都删除&#34;&gt;2. 彻底删除（本地和Git仓库都删除）&lt;/h3&gt;&#xA;&lt;p&gt;如果本地也不再需要这些文件，直接用&lt;code&gt;git rm&lt;/code&gt;（不加&lt;code&gt;--cached&lt;/code&gt;）：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 单个文件&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rm 文件名&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 整个目录&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rm -r target&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;二提交删除操作&#34;&gt;二、提交删除操作&lt;/h2&gt;&#xA;&lt;p&gt;删除后，需要提交这个&amp;quot;删除变更&amp;quot;到Git仓库：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;feat: 删除已提交的target目录和冗余文件&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;三关键步骤配置gitignore避免未来重复提交&#34;&gt;三、关键步骤：配置.gitignore避免未来重复提交&lt;/h2&gt;&#xA;&lt;p&gt;删除后，必须配置&lt;code&gt;.gitignore&lt;/code&gt;文件，让Git永久忽略这些文件：&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-创建编辑gitignore文件&#34;&gt;1. 创建/编辑.gitignore文件&lt;/h3&gt;&#xA;&lt;p&gt;如果仓库根目录没有&lt;code&gt;.gitignore&lt;/code&gt;，先创建：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;touch .gitignore&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后编辑&lt;code&gt;.gitignore&lt;/code&gt;，添加需要忽略的文件/目录：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略target目录（所有层级的target都忽略）&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;target/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略编译产物&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;*.class&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;*.jar&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;*.war&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略日志文件&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;*.log&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;logs/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略IDE配置文件&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.idea/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;*.iml&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.vscode/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略操作系统生成的文件&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.DS_Store&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Thumbs.db&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略依赖目录&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;node_modules/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;venv/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.env&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;注意事项：&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>UK General Election 2025: Labour Party Secures Historic Majority</title>
-      <link>https://www.bmsg.top/posts/news/uk-general-election-2025/</link>
+      <link>https://bmsg.top/posts/news/uk-general-election-2025/</link>
       <pubDate>Thu, 20 Nov 2025 18:15:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/news/uk-general-election-2025/</guid>
+      <guid>https://bmsg.top/posts/news/uk-general-election-2025/</guid>
       <description>&lt;p&gt;The Labour Party has secured a historic victory in the 2025 UK general election, winning a commanding parliamentary majority that marks the end of 15 years of Conservative government and ushers in a new era of British politics.&lt;/p&gt;</description>
     </item>
     <item>
       <title>多功能在线工具集：一站式解决日常开发需求</title>
-      <link>https://www.bmsg.top/posts/tech/tools-website-2025/</link>
+      <link>https://bmsg.top/posts/tech/tools-website-2025/</link>
       <pubDate>Thu, 20 Nov 2025 17:30:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/tools-website-2025/</guid>
+      <guid>https://bmsg.top/posts/tech/tools-website-2025/</guid>
       <description>&lt;p&gt;在现代Web开发中，拥有一个功能齐全的工具集对于提高工作效率至关重要。今天我要介绍一个精心设计的在线工具网站，它集成了多种实用功能，全部封装在单个HTML文件中，既方便使用又易于扩展。&lt;/p&gt;</description>
     </item>
     <item>
       <title>US and China Announce Major Climate Cooperation Agreement at COP30</title>
-      <link>https://www.bmsg.top/posts/news/us-china-climate-agreement-2025/</link>
+      <link>https://bmsg.top/posts/news/us-china-climate-agreement-2025/</link>
       <pubDate>Thu, 20 Nov 2025 16:45:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/news/us-china-climate-agreement-2025/</guid>
+      <guid>https://bmsg.top/posts/news/us-china-climate-agreement-2025/</guid>
       <description>&lt;p&gt;In a landmark announcement at the COP30 climate summit in Brazil, the United States and China have unveiled a comprehensive climate cooperation agreement that represents the most significant bilateral climate commitment between the world&amp;rsquo;s two largest economies.&lt;/p&gt;</description>
     </item>
     <item>
       <title>EU Artificial Intelligence Act Implementation: A New Era for AI Regulation</title>
-      <link>https://www.bmsg.top/posts/news/eu-ai-act-implementation-2025/</link>
+      <link>https://bmsg.top/posts/news/eu-ai-act-implementation-2025/</link>
       <pubDate>Thu, 20 Nov 2025 15:30:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/news/eu-ai-act-implementation-2025/</guid>
+      <guid>https://bmsg.top/posts/news/eu-ai-act-implementation-2025/</guid>
       <description>&lt;p&gt;The European Union&amp;rsquo;s Artificial Intelligence Act, one of the world&amp;rsquo;s first comprehensive AI regulations, officially came into full effect today, marking a significant milestone in the governance of artificial intelligence technologies across the 27-member bloc.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Gemini 3正式发布：谷歌AI技术的新里程碑</title>
-      <link>https://www.bmsg.top/posts/tech/gemini3-release-2025/</link>
+      <link>https://bmsg.top/posts/tech/gemini3-release-2025/</link>
       <pubDate>Thu, 20 Nov 2025 14:30:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/gemini3-release-2025/</guid>
+      <guid>https://bmsg.top/posts/tech/gemini3-release-2025/</guid>
       <description>&lt;p&gt;谷歌今日正式发布了备受期待的Gemini 3多模态AI模型，这是继Gemini 2之后的重要升级，在多个技术维度实现了显著提升。新模型不仅在推理能力和多模态理解方面取得突破，还在安全性和效率方面进行了全面优化。&lt;/p&gt;</description>
     </item>
     <item>
       <title>DBeaver完全使用指南：从安装到高级功能详解</title>
-      <link>https://www.bmsg.top/posts/tech-tutorials/dbeaver-complete-guide/</link>
+      <link>https://bmsg.top/posts/tech-tutorials/dbeaver-complete-guide/</link>
       <pubDate>Sat, 15 Nov 2025 00:15:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech-tutorials/dbeaver-complete-guide/</guid>
+      <guid>https://bmsg.top/posts/tech-tutorials/dbeaver-complete-guide/</guid>
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;DBeaver是一款功能强大的开源数据库管理工具，支持多种数据库系统，包括MySQL、PostgreSQL、Oracle、SQL Server等。作为数据库开发和管理人员的必备工具，DBeaver提供了直观的用户界面和丰富的功能特性。本文将为您提供从安装到高级使用的完整指南。&lt;/p&gt;&#xA;&lt;h2 id=&#34;dbeaver简介&#34;&gt;DBeaver简介&lt;/h2&gt;&#xA;&lt;h3 id=&#34;什么是dbeaver&#34;&gt;什么是DBeaver&lt;/h3&gt;&#xA;&lt;p&gt;DBeaver是一个基于Java开发的通用数据库管理工具和SQL客户端，具有以下特点：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;跨平台支持&lt;/strong&gt;：支持Windows、macOS、Linux&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;多数据库支持&lt;/strong&gt;：支持超过80种数据库系统&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;开源免费&lt;/strong&gt;：社区版完全免费，企业版提供额外功能&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;功能丰富&lt;/strong&gt;：包含SQL编辑器、数据浏览器、ER图生成等&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;适用场景&#34;&gt;适用场景&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;数据库开发和管理&lt;/li&gt;&#xA;&lt;li&gt;SQL查询和调试&lt;/li&gt;&#xA;&lt;li&gt;数据导入导出&lt;/li&gt;&#xA;&lt;li&gt;数据库结构设计&lt;/li&gt;&#xA;&lt;li&gt;团队协作开发&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;安装与配置&#34;&gt;安装与配置&lt;/h2&gt;&#xA;&lt;h3 id=&#34;系统要求&#34;&gt;系统要求&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;操作系统&lt;/strong&gt;：Windows 7+ / macOS 10.12+ / Linux&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Java环境&lt;/strong&gt;：Java 8或更高版本&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;内存&lt;/strong&gt;：至少2GB RAM，推荐4GB以上&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;磁盘空间&lt;/strong&gt;：至少200MB可用空间&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;下载安装&#34;&gt;下载安装&lt;/h3&gt;&#xA;&lt;h4 id=&#34;windows系统安装&#34;&gt;Windows系统安装&lt;/h4&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;访问&lt;a href=&#34;https://dbeaver.io/download/&#34; target=&#34;_blank&#34;&gt;DBeaver官网&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;选择Windows版本下载安装包&lt;/li&gt;&#xA;&lt;li&gt;运行安装程序，按照向导完成安装&lt;/li&gt;&#xA;&lt;li&gt;启动DBeaver&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h4 id=&#34;macos系统安装&#34;&gt;macOS系统安装&lt;/h4&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;下载macOS版本的DMG文件&lt;/li&gt;&#xA;&lt;li&gt;双击DMG文件，将DBeaver拖拽到Applications文件夹&lt;/li&gt;&#xA;&lt;li&gt;在Launchpad或Applications中找到并启动DBeaver&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h4 id=&#34;linux系统安装&#34;&gt;Linux系统安装&lt;/h4&gt;&#xA;&lt;p&gt;&lt;strong&gt;Ubuntu/Debian:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | sudo apt-key add -&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;deb https://dbeaver.io/debs/dbeaver-ce /&amp;#34;&lt;/span&gt; | sudo tee /etc/apt/sources.list.d/dbeaver.list&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install dbeaver-ce&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;CentOS/RHEL:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo yum install dbeaver&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;中文界面设置&#34;&gt;中文界面设置&lt;/h3&gt;&#xA;&lt;p&gt;DBeaver默认使用英文界面，但可以通过多种方式切换到中文：&lt;/p&gt;</description>
     </item>
     <item>
       <title>个人理财入门指南：从零开始建立财务自由之路</title>
-      <link>https://www.bmsg.top/posts/finance/personal-finance-guide-2025/</link>
+      <link>https://bmsg.top/posts/finance/personal-finance-guide-2025/</link>
       <pubDate>Fri, 14 Nov 2025 19:21:46 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/finance/personal-finance-guide-2025/</guid>
-      <description>&lt;h1 id=&#34;个人理财入门指南从零开始建立财务自由之路&#34;&gt;个人理财入门指南：从零开始建立财务自由之路&lt;/h1&gt;&#xA;&lt;p&gt;在当今快节奏的社会中，掌握个人理财技能已成为每个人必备的生活能力。无论您是刚步入职场的年轻人，还是希望改善财务状况的职场人士，建立正确的理财观念和习惯都至关重要。&lt;/p&gt;&#xA;&lt;h2 id=&#34;为什么个人理财如此重要&#34;&gt;为什么个人理财如此重要&lt;/h2&gt;&#xA;&lt;p&gt;个人理财不仅仅是关于金钱的管理，更是关于生活质量的提升和未来安全的保障。通过科学的理财规划，您可以：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;实现财务目标（购房、购车、教育、退休等）&lt;/li&gt;&#xA;&lt;li&gt;应对突发经济危机&lt;/li&gt;&#xA;&lt;li&gt;减少财务压力，提高生活质量&lt;/li&gt;&#xA;&lt;li&gt;为家庭提供更好的保障&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;建立个人理财的基础框架&#34;&gt;建立个人理财的基础框架&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-了解您的财务状况&#34;&gt;1. 了解您的财务状况&lt;/h3&gt;&#xA;&lt;p&gt;理财的第一步是全面了解自己的财务状况。这包括：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;收入分析&lt;/strong&gt;：统计所有收入来源和金额&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;支出追踪&lt;/strong&gt;：记录每月的固定支出和可变支出&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;资产盘点&lt;/strong&gt;：列出所有资产（存款、投资、房产等）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;负债评估&lt;/strong&gt;：统计所有债务（贷款、信用卡等）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-制定预算计划&#34;&gt;2. 制定预算计划&lt;/h3&gt;&#xA;&lt;p&gt;预算是理财的核心工具。推荐使用50/30/20法则：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;50%用于必要支出&lt;/strong&gt;：住房、食物、交通、医疗等基本生活开支&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;30%用于个人支出&lt;/strong&gt;：娱乐、旅行、购物、兴趣爱好等&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;20%用于储蓄和投资&lt;/strong&gt;：紧急基金、退休账户、投资理财等&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;具体操作步骤：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;记录过去3个月的支出明细&lt;/li&gt;&#xA;&lt;li&gt;分类统计各项支出金额&lt;/li&gt;&#xA;&lt;li&gt;根据50/30/20原则调整预算比例&lt;/li&gt;&#xA;&lt;li&gt;使用预算管理工具追踪执行情况&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://www.bmsg.top/posts/finance/personal-finance-guide-2025/images/img1.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;50/30/20预算分配法则示意图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;3-建立紧急基金&#34;&gt;3. 建立紧急基金&lt;/h3&gt;&#xA;&lt;p&gt;紧急基金是财务安全网，建议储备3-6个月的生活费用。这笔资金应该：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;存放位置&lt;/strong&gt;：高流动性储蓄账户或货币基金&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;金额计算&lt;/strong&gt;：月支出 × 3-6个月&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;使用范围&lt;/strong&gt;：失业、医疗、家庭紧急情况等&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;建立步骤：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;设定目标金额（例如：3万元）&lt;/li&gt;&#xA;&lt;li&gt;每月固定存入收入的10-15%&lt;/li&gt;&#xA;&lt;li&gt;达到目标后停止存入，仅用于紧急情况&lt;/li&gt;&#xA;&lt;li&gt;使用后及时补充&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;储蓄与投资策略&#34;&gt;储蓄与投资策略&lt;/h2&gt;&#xA;&lt;h3 id=&#34;储蓄的基本原则&#34;&gt;储蓄的基本原则&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;先储蓄后消费&lt;/strong&gt;：每月工资到账后立即转入储蓄账户&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;自动化储蓄&lt;/strong&gt;：设置自动转账，减少意志力消耗&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;目标导向储蓄&lt;/strong&gt;：为不同目标设立专门的储蓄账户&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;投资入门指南&#34;&gt;投资入门指南&lt;/h3&gt;&#xA;&lt;p&gt;对于初学者，建议从低风险投资开始，逐步建立投资组合：&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;1. 货币市场基金&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：年化收益2-3%，T+0赎回&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;适合人群&lt;/strong&gt;：短期资金管理，风险承受能力低&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;推荐产品&lt;/strong&gt;：余额宝、微信零钱通等&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;2. 指数基金&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：跟踪市场指数，分散风险&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;投资策略&lt;/strong&gt;：定期定额投资，长期持有&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;推荐指数&lt;/strong&gt;：沪深300、中证500、创业板指&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;3. 国债&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：国家信用背书，安全性最高&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;购买方式&lt;/strong&gt;：银行柜台、手机银行、证券交易所&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;期限选择&lt;/strong&gt;：1年、3年、5年、10年不等&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://www.bmsg.top/posts/finance/personal-finance-guide-2025/images/img2.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;不同投资产品风险收益对比图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h2 id=&#34;债务管理技巧&#34;&gt;债务管理技巧&lt;/h2&gt;&#xA;&lt;h3 id=&#34;识别不良债务&#34;&gt;识别不良债务&lt;/h3&gt;&#xA;&lt;p&gt;并非所有债务都是坏的，但高利率的消费债务需要优先处理：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;信用卡债务&lt;/strong&gt;：利率通常最高&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;个人贷款&lt;/strong&gt;：无抵押，利率较高&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;消费分期&lt;/strong&gt;：隐性成本较高&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;债务偿还策略&#34;&gt;债务偿还策略&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;雪球法&lt;/strong&gt;：先偿还金额最小的债务&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;雪崩法&lt;/strong&gt;：先偿还利率最高的债务&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;债务整合&lt;/strong&gt;：将多个高利率债务合并为单一低利率贷款&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;长期财务规划&#34;&gt;长期财务规划&lt;/h2&gt;&#xA;&lt;h3 id=&#34;退休规划&#34;&gt;退休规划&lt;/h3&gt;&#xA;&lt;p&gt;越早开始退休规划，复利效应越明显：&lt;/p&gt;</description>
+      <guid>https://bmsg.top/posts/finance/personal-finance-guide-2025/</guid>
+      <description>&lt;h1 id=&#34;个人理财入门指南从零开始建立财务自由之路&#34;&gt;个人理财入门指南：从零开始建立财务自由之路&lt;/h1&gt;&#xA;&lt;p&gt;在当今快节奏的社会中，掌握个人理财技能已成为每个人必备的生活能力。无论您是刚步入职场的年轻人，还是希望改善财务状况的职场人士，建立正确的理财观念和习惯都至关重要。&lt;/p&gt;&#xA;&lt;h2 id=&#34;为什么个人理财如此重要&#34;&gt;为什么个人理财如此重要&lt;/h2&gt;&#xA;&lt;p&gt;个人理财不仅仅是关于金钱的管理，更是关于生活质量的提升和未来安全的保障。通过科学的理财规划，您可以：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;实现财务目标（购房、购车、教育、退休等）&lt;/li&gt;&#xA;&lt;li&gt;应对突发经济危机&lt;/li&gt;&#xA;&lt;li&gt;减少财务压力，提高生活质量&lt;/li&gt;&#xA;&lt;li&gt;为家庭提供更好的保障&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;建立个人理财的基础框架&#34;&gt;建立个人理财的基础框架&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-了解您的财务状况&#34;&gt;1. 了解您的财务状况&lt;/h3&gt;&#xA;&lt;p&gt;理财的第一步是全面了解自己的财务状况。这包括：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;收入分析&lt;/strong&gt;：统计所有收入来源和金额&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;支出追踪&lt;/strong&gt;：记录每月的固定支出和可变支出&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;资产盘点&lt;/strong&gt;：列出所有资产（存款、投资、房产等）&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;负债评估&lt;/strong&gt;：统计所有债务（贷款、信用卡等）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-制定预算计划&#34;&gt;2. 制定预算计划&lt;/h3&gt;&#xA;&lt;p&gt;预算是理财的核心工具。推荐使用50/30/20法则：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;50%用于必要支出&lt;/strong&gt;：住房、食物、交通、医疗等基本生活开支&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;30%用于个人支出&lt;/strong&gt;：娱乐、旅行、购物、兴趣爱好等&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;20%用于储蓄和投资&lt;/strong&gt;：紧急基金、退休账户、投资理财等&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;具体操作步骤：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;记录过去3个月的支出明细&lt;/li&gt;&#xA;&lt;li&gt;分类统计各项支出金额&lt;/li&gt;&#xA;&lt;li&gt;根据50/30/20原则调整预算比例&lt;/li&gt;&#xA;&lt;li&gt;使用预算管理工具追踪执行情况&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://bmsg.top/posts/finance/personal-finance-guide-2025/images/img1.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;50/30/20预算分配法则示意图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;3-建立紧急基金&#34;&gt;3. 建立紧急基金&lt;/h3&gt;&#xA;&lt;p&gt;紧急基金是财务安全网，建议储备3-6个月的生活费用。这笔资金应该：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;存放位置&lt;/strong&gt;：高流动性储蓄账户或货币基金&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;金额计算&lt;/strong&gt;：月支出 × 3-6个月&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;使用范围&lt;/strong&gt;：失业、医疗、家庭紧急情况等&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;建立步骤：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;设定目标金额（例如：3万元）&lt;/li&gt;&#xA;&lt;li&gt;每月固定存入收入的10-15%&lt;/li&gt;&#xA;&lt;li&gt;达到目标后停止存入，仅用于紧急情况&lt;/li&gt;&#xA;&lt;li&gt;使用后及时补充&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;储蓄与投资策略&#34;&gt;储蓄与投资策略&lt;/h2&gt;&#xA;&lt;h3 id=&#34;储蓄的基本原则&#34;&gt;储蓄的基本原则&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;先储蓄后消费&lt;/strong&gt;：每月工资到账后立即转入储蓄账户&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;自动化储蓄&lt;/strong&gt;：设置自动转账，减少意志力消耗&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;目标导向储蓄&lt;/strong&gt;：为不同目标设立专门的储蓄账户&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;投资入门指南&#34;&gt;投资入门指南&lt;/h3&gt;&#xA;&lt;p&gt;对于初学者，建议从低风险投资开始，逐步建立投资组合：&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;1. 货币市场基金&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：年化收益2-3%，T+0赎回&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;适合人群&lt;/strong&gt;：短期资金管理，风险承受能力低&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;推荐产品&lt;/strong&gt;：余额宝、微信零钱通等&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;2. 指数基金&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：跟踪市场指数，分散风险&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;投资策略&lt;/strong&gt;：定期定额投资，长期持有&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;推荐指数&lt;/strong&gt;：沪深300、中证500、创业板指&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;3. 国债&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：国家信用背书，安全性最高&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;购买方式&lt;/strong&gt;：银行柜台、手机银行、证券交易所&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;期限选择&lt;/strong&gt;：1年、3年、5年、10年不等&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://bmsg.top/posts/finance/personal-finance-guide-2025/images/img2.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;不同投资产品风险收益对比图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h2 id=&#34;债务管理技巧&#34;&gt;债务管理技巧&lt;/h2&gt;&#xA;&lt;h3 id=&#34;识别不良债务&#34;&gt;识别不良债务&lt;/h3&gt;&#xA;&lt;p&gt;并非所有债务都是坏的，但高利率的消费债务需要优先处理：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;信用卡债务&lt;/strong&gt;：利率通常最高&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;个人贷款&lt;/strong&gt;：无抵押，利率较高&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;消费分期&lt;/strong&gt;：隐性成本较高&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;债务偿还策略&#34;&gt;债务偿还策略&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;雪球法&lt;/strong&gt;：先偿还金额最小的债务&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;雪崩法&lt;/strong&gt;：先偿还利率最高的债务&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;债务整合&lt;/strong&gt;：将多个高利率债务合并为单一低利率贷款&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;长期财务规划&#34;&gt;长期财务规划&lt;/h2&gt;&#xA;&lt;h3 id=&#34;退休规划&#34;&gt;退休规划&lt;/h3&gt;&#xA;&lt;p&gt;越早开始退休规划，复利效应越明显：&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025年健康饮食指南：科学营养与美味兼顾的饮食方案</title>
-      <link>https://www.bmsg.top/posts/health/healthy-eating-guide-2025/</link>
+      <link>https://bmsg.top/posts/health/healthy-eating-guide-2025/</link>
       <pubDate>Fri, 14 Nov 2025 19:15:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/health/healthy-eating-guide-2025/</guid>
+      <guid>https://bmsg.top/posts/health/healthy-eating-guide-2025/</guid>
       <description>&lt;p&gt;在快节奏的现代生活中，健康饮食已成为维持身心健康的关键。本文基于2025年最新的营养科学研究，为您提供实用、科学的饮食指南。&lt;/p&gt;&#xA;&lt;h2 id=&#34;为什么健康饮食如此重要&#34;&gt;为什么健康饮食如此重要？&lt;/h2&gt;&#xA;&lt;p&gt;科学研究表明，合理的饮食习惯可以：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;降低慢性病风险30-50%&lt;/li&gt;&#xA;&lt;li&gt;提高免疫力&lt;/li&gt;&#xA;&lt;li&gt;改善精神状态&lt;/li&gt;&#xA;&lt;li&gt;延长健康寿命&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2025年营养科学新发现&#34;&gt;2025年营养科学新发现&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-个性化营养&#34;&gt;1. 个性化营养&lt;/h3&gt;&#xA;&lt;p&gt;基因检测技术的发展使得个性化饮食方案成为可能。&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-肠道微生物研究&#34;&gt;2. 肠道微生物研究&lt;/h3&gt;&#xA;&lt;p&gt;肠道菌群对健康的影响被进一步证实。&lt;/p&gt;&#xA;&lt;h3 id=&#34;3-时间营养学&#34;&gt;3. 时间营养学&lt;/h3&gt;&#xA;&lt;p&gt;进食时间对代谢的影响受到重视。&lt;/p&gt;&#xA;&lt;h2 id=&#34;健康饮食的基本原则&#34;&gt;健康饮食的基本原则&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-均衡营养&#34;&gt;1. 均衡营养&lt;/h3&gt;&#xA;&lt;p&gt;确保摄入足够的：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;蛋白质（15-20%）&lt;/li&gt;&#xA;&lt;li&gt;碳水化合物（45-55%）&lt;/li&gt;&#xA;&lt;li&gt;脂肪（25-30%）&lt;/li&gt;&#xA;&lt;li&gt;维生素和矿物质&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-多样化饮食&#34;&gt;2. 多样化饮食&lt;/h3&gt;&#xA;&lt;p&gt;每天摄入不同颜色的蔬菜水果：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;红色：番茄、草莓&lt;/li&gt;&#xA;&lt;li&gt;绿色：菠菜、西兰花&lt;/li&gt;&#xA;&lt;li&gt;紫色：蓝莓、紫甘蓝&lt;/li&gt;&#xA;&lt;li&gt;橙色：胡萝卜、南瓜&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-适量控制&#34;&gt;3. 适量控制&lt;/h3&gt;&#xA;&lt;p&gt;遵循&amp;quot;八分饱&amp;quot;原则，避免过量进食。&lt;/p&gt;&#xA;&lt;h2 id=&#34;2025年推荐饮食模式&#34;&gt;2025年推荐饮食模式&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-地中海饮食&#34;&gt;1. 地中海饮食&lt;/h3&gt;&#xA;&lt;p&gt;特点：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;富含橄榄油&lt;/li&gt;&#xA;&lt;li&gt;大量蔬菜水果&lt;/li&gt;&#xA;&lt;li&gt;适量鱼类&lt;/li&gt;&#xA;&lt;li&gt;少量红肉&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-dash饮食&#34;&gt;2. DASH饮食&lt;/h3&gt;&#xA;&lt;p&gt;专门针对高血压人群：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;低钠&lt;/li&gt;&#xA;&lt;li&gt;高钾&lt;/li&gt;&#xA;&lt;li&gt;富含膳食纤维&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-弹性素食&#34;&gt;3. 弹性素食&lt;/h3&gt;&#xA;&lt;p&gt;以植物性食物为主，偶尔摄入动物性食物。&lt;/p&gt;&#xA;&lt;h2 id=&#34;一日三餐科学搭配&#34;&gt;一日三餐科学搭配&lt;/h2&gt;&#xA;&lt;h3 id=&#34;早餐700-800&#34;&gt;早餐（7:00-8:00）&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;原则&lt;/strong&gt;：营养全面，能量充足&#xA;&lt;strong&gt;推荐&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;全麦面包+鸡蛋+牛奶&lt;/li&gt;&#xA;&lt;li&gt;燕麦粥+坚果+水果&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;午餐1200-1300&#34;&gt;午餐（12:00-13:00）&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;原则&lt;/strong&gt;：均衡营养，适量碳水&#xA;&lt;strong&gt;推荐&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;糙米饭+蔬菜+瘦肉&lt;/li&gt;&#xA;&lt;li&gt;沙拉+鸡胸肉+全麦面包&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;晚餐1800-1900&#34;&gt;晚餐（18:00-19:00）&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;原则&lt;/strong&gt;：清淡易消化，控制热量&#xA;&lt;strong&gt;推荐&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;蔬菜汤+鱼肉+少量主食&lt;/li&gt;&#xA;&lt;li&gt;蒸蔬菜+豆腐+小米粥&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;特殊人群饮食建议&#34;&gt;特殊人群饮食建议&lt;/h2&gt;&#xA;&lt;h3 id=&#34;办公室人群&#34;&gt;办公室人群&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;增加膳食纤维摄入&lt;/li&gt;&#xA;&lt;li&gt;控制零食摄入&lt;/li&gt;&#xA;&lt;li&gt;多喝水&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;健身人群&#34;&gt;健身人群&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;增加蛋白质摄入&lt;/li&gt;&#xA;&lt;li&gt;合理安排碳水&lt;/li&gt;&#xA;&lt;li&gt;补充电解质&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;中老年人&#34;&gt;中老年人&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;增加钙质摄入&lt;/li&gt;&#xA;&lt;li&gt;控制盐分&lt;/li&gt;&#xA;&lt;li&gt;易消化食物&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;常见饮食误区&#34;&gt;常见饮食误区&lt;/h2&gt;&#xA;&lt;h3 id=&#34;-误区完全不吃碳水&#34;&gt;❌ 误区：完全不吃碳水&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;科学观点&lt;/strong&gt;：碳水是必要能量来源&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025年高效时间管理技巧：从拖延到高效执行的完整指南</title>
-      <link>https://www.bmsg.top/posts/tech/effective-time-management-2025/</link>
+      <link>https://bmsg.top/posts/tech/effective-time-management-2025/</link>
       <pubDate>Fri, 14 Nov 2025 19:15:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/effective-time-management-2025/</guid>
+      <guid>https://bmsg.top/posts/tech/effective-time-management-2025/</guid>
       <description>&lt;p&gt;在信息爆炸的时代，有效的时间管理已成为个人和职业成功的关键因素。本文将分享2025年最前沿的时间管理技巧，帮助您建立高效的工作系统。&lt;/p&gt;&#xA;&lt;h2 id=&#34;为什么时间管理如此重要&#34;&gt;为什么时间管理如此重要？&lt;/h2&gt;&#xA;&lt;p&gt;时间是我们最宝贵的资源，但很多人却在不经意间浪费了大量时间。研究表明，高效的时间管理可以：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;提高工作效率30-50%&lt;/li&gt;&#xA;&lt;li&gt;减少工作压力&lt;/li&gt;&#xA;&lt;li&gt;改善工作生活平衡&lt;/li&gt;&#xA;&lt;li&gt;增强职业竞争力&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;现代时间管理面临的挑战&#34;&gt;现代时间管理面临的挑战&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-数字干扰&#34;&gt;1. 数字干扰&lt;/h3&gt;&#xA;&lt;p&gt;智能手机、社交媒体、即时通讯工具等不断分散我们的注意力。&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-信息过载&#34;&gt;2. 信息过载&lt;/h3&gt;&#xA;&lt;p&gt;每天接收的信息量远超我们的处理能力。&lt;/p&gt;&#xA;&lt;h3 id=&#34;3-多任务处理的误区&#34;&gt;3. 多任务处理的误区&lt;/h3&gt;&#xA;&lt;p&gt;同时处理多个任务反而降低效率。&lt;/p&gt;&#xA;&lt;h2 id=&#34;2025年最有效的时间管理方法&#34;&gt;2025年最有效的时间管理方法&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-番茄工作法升级版&#34;&gt;1. 番茄工作法升级版&lt;/h3&gt;&#xA;&lt;p&gt;传统番茄工作法结合现代技术：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;25分钟专注工作&lt;/li&gt;&#xA;&lt;li&gt;5分钟休息&lt;/li&gt;&#xA;&lt;li&gt;使用专注应用追踪进度&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-时间块规划&#34;&gt;2. 时间块规划&lt;/h3&gt;&#xA;&lt;p&gt;将一天划分为不同的时间块：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;深度工作块（2-3小时）&lt;/li&gt;&#xA;&lt;li&gt;会议块（集中安排）&lt;/li&gt;&#xA;&lt;li&gt;学习块（固定时间）&lt;/li&gt;&#xA;&lt;li&gt;休息块（强制休息）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-优先级矩阵&#34;&gt;3. 优先级矩阵&lt;/h3&gt;&#xA;&lt;p&gt;使用艾森豪威尔矩阵：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;重要且紧急：立即处理&lt;/li&gt;&#xA;&lt;li&gt;重要不紧急：规划处理&lt;/li&gt;&#xA;&lt;li&gt;紧急不重要：委托他人&lt;/li&gt;&#xA;&lt;li&gt;不重要不紧急：避免或删除&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;实用工具推荐&#34;&gt;实用工具推荐&lt;/h2&gt;&#xA;&lt;h3 id=&#34;数字工具&#34;&gt;数字工具&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Notion&lt;/strong&gt;：全能工作台&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Todoist&lt;/strong&gt;：任务管理&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Forest&lt;/strong&gt;：专注计时&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;RescueTime&lt;/strong&gt;：时间追踪&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;传统方法&#34;&gt;传统方法&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;纸质笔记本&lt;/li&gt;&#xA;&lt;li&gt;白板规划&lt;/li&gt;&#xA;&lt;li&gt;时间日志&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;建立可持续的时间管理系统&#34;&gt;建立可持续的时间管理系统&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-晨间仪式&#34;&gt;1. 晨间仪式&lt;/h3&gt;&#xA;&lt;p&gt;建立固定的晨间习惯：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;规划当天任务&lt;/li&gt;&#xA;&lt;li&gt;设定3个主要目标&lt;/li&gt;&#xA;&lt;li&gt;15分钟冥想或运动&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-晚间回顾&#34;&gt;2. 晚间回顾&lt;/h3&gt;&#xA;&lt;p&gt;每天结束时：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;回顾完成情况&lt;/li&gt;&#xA;&lt;li&gt;记录收获&lt;/li&gt;&#xA;&lt;li&gt;规划次日&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-周度复盘&#34;&gt;3. 周度复盘&lt;/h3&gt;&#xA;&lt;p&gt;每周进行：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;目标达成情况&lt;/li&gt;&#xA;&lt;li&gt;时间使用分析&lt;/li&gt;&#xA;&lt;li&gt;下周规划&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;常见误区与解决方案&#34;&gt;常见误区与解决方案&lt;/h2&gt;&#xA;&lt;h3 id=&#34;-误区追求完美&#34;&gt;❌ 误区：追求完美&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：接受&amp;quot;足够好&amp;quot;原则&lt;/p&gt;</description>
     </item>
     <item>
       <title>如何养好鹦鹉，以及如何让鹦鹉学会说话：新手到高手的完整指南</title>
-      <link>https://www.bmsg.top/posts/life-tips/parrot-care-training-guide-2025/</link>
+      <link>https://bmsg.top/posts/life-tips/parrot-care-training-guide-2025/</link>
       <pubDate>Fri, 14 Nov 2025 19:07:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/life-tips/parrot-care-training-guide-2025/</guid>
+      <guid>https://bmsg.top/posts/life-tips/parrot-care-training-guide-2025/</guid>
       <description>&lt;p&gt;鹦鹉以聪明、亲人、色彩鲜艳而闻名，是深受欢迎的宠物鸟类。但真正把鹦鹉养好、养健康、养得愿意与你互动甚至开口&amp;quot;说话&amp;quot;，需要系统的方法和科学的训练。本篇文章将从饲养、情绪管理、训练方法等多方面，帮助你快速入门，并养出一只快乐又爱说话的鹦鹉。&lt;/p&gt;&#xA;&lt;h2 id=&#34;一选择适合你的鹦鹉品种&#34;&gt;一、选择适合你的鹦鹉品种&lt;/h2&gt;&#xA;&lt;p&gt;并不是所有鹦鹉都适合新手，也不是所有鹦鹉都会说话。常见适合家庭饲养的品种有：&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-虎皮鹦鹉&#34;&gt;1. 虎皮鹦鹉&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;价格低、易上手、活泼可爱&lt;/li&gt;&#xA;&lt;li&gt;会学说话，但发音偏模糊&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-鸚哥--虎皮变种&#34;&gt;2. 鸚哥 / 虎皮变种&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;脾气温和，适合亲人互动&lt;/li&gt;&#xA;&lt;li&gt;模仿能力中等&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-玄凤鹦鹉鸡尾鹦鹉&#34;&gt;3. 玄凤鹦鹉（鸡尾鹦鹉）&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;性格粘人，非常温顺&lt;/li&gt;&#xA;&lt;li&gt;说话能力普通，但会吹口哨&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;4-非洲灰鹦鹉亚马逊鹦鹉&#34;&gt;4. 非洲灰鹦鹉、亚马逊鹦鹉&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;最擅长说话&lt;/li&gt;&#xA;&lt;li&gt;需要大量时间陪伴与训练&lt;/li&gt;&#xA;&lt;li&gt;不太适合完全没有经验的新手&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;小提示：&lt;/strong&gt; 如果你的主要目标是&amp;quot;会说话&amp;quot;，可优先选择模仿能力强的品种，如非洲灰鹦鹉。&lt;/p&gt;&#xA;&lt;h2 id=&#34;二如何给鹦鹉打造一个舒适的生活环境&#34;&gt;二、如何给鹦鹉打造一个舒适的生活环境&lt;/h2&gt;&#xA;&lt;p&gt;鹦鹉健康的关键是环境管理。以下几个因素至关重要：&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-合适的笼子尺寸&#34;&gt;1. 合适的笼子尺寸&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;小型鹦鹉：最少 40cm × 30cm × 45cm&lt;/li&gt;&#xA;&lt;li&gt;中型鹦鹉：最少 60cm × 50cm × 70cm&lt;/li&gt;&#xA;&lt;li&gt;原则：笼子越大越好。鹦鹉需要活动空间防止压迫心理。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-保持通风但避免直吹风&#34;&gt;2. 保持通风但避免直吹风&lt;/h3&gt;&#xA;&lt;p&gt;鹦鹉对冷风特别敏感，容易感冒。笼子应放在：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;有光线但不直晒&lt;/li&gt;&#xA;&lt;li&gt;无油烟&lt;/li&gt;&#xA;&lt;li&gt;不要放在电视旁（噪音压力大）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-准备玩具与栖木&#34;&gt;3. 准备玩具与栖木&lt;/h3&gt;&#xA;&lt;p&gt;鹦鹉是高智商动物，需要玩具刺激脑力：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;咀嚼玩具（木块、玉米叶）&lt;/li&gt;&#xA;&lt;li&gt;秋千&lt;/li&gt;&#xA;&lt;li&gt;站架&lt;/li&gt;&#xA;&lt;li&gt;益智玩具&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;玩具要&lt;strong&gt;定期更换&lt;/strong&gt;，避免无聊造成情绪问题。&lt;/p&gt;&#xA;&lt;h3 id=&#34;4-饮食要多样&#34;&gt;4. 饮食要多样&lt;/h3&gt;&#xA;&lt;p&gt;健康的饮食结构建议：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;颗粒饲料 50%（主食）&lt;/li&gt;&#xA;&lt;li&gt;新鲜蔬菜 30%（胡萝卜、小白菜、西兰花）&lt;/li&gt;&#xA;&lt;li&gt;水果 10%（少量，因为含糖高）&lt;/li&gt;&#xA;&lt;li&gt;谷物/种子 10%（零食性质）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;**不要给鹦鹉吃：**巧克力、牛奶、牛油果、盐分高的食物。&lt;/p&gt;&#xA;&lt;h2 id=&#34;三如何让鹦鹉更加亲人&#34;&gt;三、如何让鹦鹉更加亲人？&lt;/h2&gt;&#xA;&lt;p&gt;亲鹦关系是让鹦鹉开口说话的基础。&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-温柔互动&#34;&gt;1. 温柔互动&lt;/h3&gt;&#xA;&lt;p&gt;用轻柔的声音与鹦鹉说话，让它熟悉你的声音与气味。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025年Google AdSense申请全攻略：从零到审核通过的完整指南</title>
-      <link>https://www.bmsg.top/posts/tech/google-adsense-application-guide-2025/</link>
+      <link>https://bmsg.top/posts/tech/google-adsense-application-guide-2025/</link>
       <pubDate>Fri, 14 Nov 2025 08:07:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/google-adsense-application-guide-2025/</guid>
+      <guid>https://bmsg.top/posts/tech/google-adsense-application-guide-2025/</guid>
       <description>&lt;h2 id=&#34;引言为什么申请adsense需要谨慎&#34;&gt;引言：为什么申请AdSense需要谨慎？&lt;/h2&gt;&#xA;&lt;p&gt;申请Google AdSense并不是一件可以草率行事的事情。很多新手网站主在准备不充分的情况下匆忙申请，结果被拒绝后想要再次通过审核就变得异常困难。根据统计数据显示，大约只有10%的申请者能够一次性通过审核，这意味着每10个申请者中只有1个能够成功。&lt;/p&gt;&#xA;&lt;h2 id=&#34;视频讲解&#34;&gt;视频讲解&lt;/h2&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/tSU4INpFc7c?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;申请前的准备工作&#34;&gt;申请前的准备工作&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-基本账户要求&#34;&gt;1. 基本账户要求&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Gmail账户&lt;/strong&gt;：必须拥有一个有效的Gmail邮箱账户&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;真实身份信息&lt;/strong&gt;：申请时必须使用真实的国家信息，切勿使用VPN伪装地理位置&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;年龄限制&lt;/strong&gt;：申请人必须年满18周岁&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-网站所有权验证&#34;&gt;2. 网站所有权验证&lt;/h3&gt;&#xA;&lt;p&gt;申请AdSense前，你必须能够证明自己是网站的合法拥有者。Google会通过添加验证代码的方式来确认网站所有权。&lt;/p&gt;&#xA;&lt;h2 id=&#34;申请流程详解&#34;&gt;申请流程详解&lt;/h2&gt;&#xA;&lt;h3 id=&#34;第一步访问adsense官网&#34;&gt;第一步：访问AdSense官网&lt;/h3&gt;&#xA;&lt;p&gt;访问Google AdSense官方网站（adsense.google.com），选择中文界面以便操作。&lt;/p&gt;&#xA;&lt;h3 id=&#34;第二步填写基本信息&#34;&gt;第二步：填写基本信息&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;输入你的网站地址&lt;/li&gt;&#xA;&lt;li&gt;提供Gmail邮箱地址&lt;/li&gt;&#xA;&lt;li&gt;选择真实的国家/地区&lt;/li&gt;&#xA;&lt;li&gt;接受服务条款和隐私政策&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;第三步网站所有权验证&#34;&gt;第三步：网站所有权验证&lt;/h3&gt;&#xA;&lt;p&gt;Google会提供一个验证代码，你需要将这个代码添加到网站的HTML代码中，以证明你对网站的控制权。&lt;/p&gt;&#xA;&lt;h2 id=&#34;审核通过的关键要素&#34;&gt;审核通过的关键要素&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-内容质量要求&#34;&gt;1. 内容质量要求&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;原创性&lt;/strong&gt;：内容必须是原创的，不能抄袭其他网站&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;专业性&lt;/strong&gt;：文章质量要高，有深度和价值&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;更新频率&lt;/strong&gt;：保持定期更新，展示网站的活跃度&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-网站技术要求&#34;&gt;2. 网站技术要求&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;清晰的导航结构&lt;/strong&gt;：网站必须有清晰的分类和目录结构&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;移动端适配&lt;/strong&gt;：网站需要在移动设备上正常显示&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;加载速度&lt;/strong&gt;：页面加载速度要快，用户体验良好&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-合规性要求&#34;&gt;3. 合规性要求&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;禁止内容&lt;/strong&gt;：不得包含色情、暴力、虚假信息、武器、烟酒等违规内容&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;版权合规&lt;/strong&gt;：所有图片和内容必须遵守版权法规&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;隐私政策&lt;/strong&gt;：网站必须包含隐私政策页面&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;常见的审核失败原因&#34;&gt;常见的审核失败原因&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-网站过于年轻&#34;&gt;1. 网站过于年轻&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新建网站（少于3个月）通过率极低&lt;/li&gt;&#xA;&lt;li&gt;建议至少运营3-6个月后再申请&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-流量不足&#34;&gt;2. 流量不足&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;零流量的网站几乎不可能通过审核&lt;/li&gt;&#xA;&lt;li&gt;建议先通过SEO优化获取自然流量&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-内容质量差&#34;&gt;3. 内容质量差&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;内容过少或质量不高&lt;/li&gt;&#xA;&lt;li&gt;建议积累50-80篇高质量文章后再申请&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;审核通过后的注意事项&#34;&gt;审核通过后的注意事项&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-地址验证&#34;&gt;1. 地址验证&lt;/h3&gt;&#xA;&lt;p&gt;审核通过后，Google会邮寄验证码到你的注册地址。这个验证过程至关重要：&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025年Google AdSense收款攻略：中国大陆用户资金到账全解析</title>
-      <link>https://www.bmsg.top/posts/tech/google-adsense-payment-2025/</link>
+      <link>https://bmsg.top/posts/tech/google-adsense-payment-2025/</link>
       <pubDate>Fri, 14 Nov 2025 07:16:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/google-adsense-payment-2025/</guid>
+      <guid>https://bmsg.top/posts/tech/google-adsense-payment-2025/</guid>
       <description>&lt;p&gt;随着外汇管制政策的日益严格，Google AdSense在中国大陆的收款问题成为众多网站主和内容创作者关注的焦点。本文将基于2025年的最新政策环境，为您详细解析各种收款方案的优劣，帮助您选择最适合的收款方式。&lt;/p&gt;</description>
     </item>
     <item>
       <title>30W&#43; QPS商品系统缓存一致性解决方案深度解析</title>
-      <link>https://www.bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/</link>
+      <link>https://bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/</link>
       <pubDate>Fri, 14 Nov 2025 07:10:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/</guid>
-      <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;在电商业务中，商品服务作为核心业务模块，承担着极高的性能要求。面对30W+ QPS的并发压力，如何保证缓存与数据库的一致性成为系统设计的核心挑战。本文将深入探讨一套完整的缓存一致性解决方案。&lt;/p&gt;&#xA;&lt;h2 id=&#34;背景与挑战&#34;&gt;背景与挑战&lt;/h2&gt;&#xA;&lt;p&gt;商品系统在电商平台中定位为高性能、高并发、高可用的核心服务。在实际业务中，平均QPS达到3W+，大促期间更是飙升至30W+，而服务响应时间仍需控制在1.5ms左右。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://www.bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/images/qps-performance.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;商品服务QPS与性能监控图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;如此高的并发压力下，单纯依赖数据库显然无法满足性能要求。因此，引入Redis集群成为必然选择，但这也带来了缓存与数据库一致性的新挑战。&lt;/p&gt;&#xA;&lt;h2 id=&#34;缓存架构设计&#34;&gt;缓存架构设计&lt;/h2&gt;&#xA;&lt;h3 id=&#34;读操作流程&#34;&gt;读操作流程&lt;/h3&gt;&#xA;&lt;p&gt;商品读操作采用经典的缓存优先策略：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;首先查询Redis缓存&lt;/li&gt;&#xA;&lt;li&gt;缓存命中则直接返回数据&lt;/li&gt;&#xA;&lt;li&gt;缓存未命中则查询数据库&lt;/li&gt;&#xA;&lt;li&gt;将查询结果写入缓存&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://www.bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/images/read-flow.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;商品读操作流程图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;写操作流程&#34;&gt;写操作流程&lt;/h3&gt;&#xA;&lt;p&gt;写操作采用先更新数据库再删除缓存的策略：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;更新数据库中的商品信息&lt;/li&gt;&#xA;&lt;li&gt;删除Redis中的对应缓存&lt;/li&gt;&#xA;&lt;li&gt;确保后续读请求能够获取最新数据&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://www.bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/images/write-flow.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;商品写操作流程图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h2 id=&#34;缓存不一致问题分析&#34;&gt;缓存不一致问题分析&lt;/h2&gt;&#xA;&lt;h3 id=&#34;问题根源&#34;&gt;问题根源&lt;/h3&gt;&#xA;&lt;p&gt;缓存不一致主要源于两个核心问题：&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;1. 网络抖动导致的删除失败&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;商品服务与缓存服务通过网络交互&lt;/li&gt;&#xA;&lt;li&gt;网络抖动可能导致操作超时&lt;/li&gt;&#xA;&lt;li&gt;缓存删除失败造成数据不一致&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;2. 多线程并发操作导致的数据覆盖&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;查询请求与更新请求并发执行&lt;/li&gt;&#xA;&lt;li&gt;时序问题导致旧数据覆盖新数据&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://www.bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/images/cache-inconsistency.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;缓存不一致问题示意图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;典型场景分析&#34;&gt;典型场景分析&lt;/h3&gt;&#xA;&lt;p&gt;假设Redis中没有A商品的缓存：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;查询请求发现缓存未命中，开始查询数据库&lt;/li&gt;&#xA;&lt;li&gt;更新请求同时到达，更新数据库后删除缓存&lt;/li&gt;&#xA;&lt;li&gt;查询请求将旧数据写入缓存&lt;/li&gt;&#xA;&lt;li&gt;结果：缓存中保存的是更新前的旧数据&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;延时双删解决方案&#34;&gt;延时双删解决方案&lt;/h2&gt;&#xA;&lt;h3 id=&#34;核心思想&#34;&gt;核心思想&lt;/h3&gt;&#xA;&lt;p&gt;延时双删的核心思想是&amp;quot;过一会再删一次缓存&amp;quot;，通过两次删除操作确保缓存一致性。&lt;/p&gt;&#xA;&lt;h3 id=&#34;方案优势&#34;&gt;方案优势&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;解决网络抖动问题&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;第一次删除失败，第二次删除大概率成功&lt;/li&gt;&#xA;&lt;li&gt;配合重试策略，确保最终一致性&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;解决并发覆盖问题&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;在不一致数据写入缓存后再次删除&lt;/li&gt;&#xA;&lt;li&gt;关键：延时时间的选择&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://www.bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/images/delay-double-delete.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;延时双删触发机制图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;架构设计&#34;&gt;架构设计&lt;/h3&gt;&#xA;&lt;h4 id=&#34;服务解耦&#34;&gt;服务解耦&lt;/h4&gt;&#xA;&lt;p&gt;延时双删逻辑不应与商品核心服务强耦合，而是：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;独立部署为单独服务&lt;/li&gt;&#xA;&lt;li&gt;通过监听商品Binlog的MQ实现解耦&lt;/li&gt;&#xA;&lt;li&gt;保证核心业务的纯粹性&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;触发机制&#34;&gt;触发机制&lt;/h4&gt;&#xA;&lt;p&gt;采用监听Binlog的MQ方案：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;商品更新时产生Binlog&lt;/li&gt;&#xA;&lt;li&gt;MQ监听Binlog变化&lt;/li&gt;&#xA;&lt;li&gt;触发延时双删服务&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://www.bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/images/binlog-mq-trigger.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Binlog监听触发机制图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;延时时间选择&#34;&gt;延时时间选择&lt;/h3&gt;&#xA;&lt;h4 id=&#34;网络抖动场景&#34;&gt;网络抖动场景&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;延时时间越短越好&lt;/li&gt;&#xA;&lt;li&gt;减少数据不一致的时间窗口&lt;/li&gt;&#xA;&lt;li&gt;通常设置为毫秒级别&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;并发覆盖场景&#34;&gt;并发覆盖场景&lt;/h4&gt;&#xA;&lt;p&gt;延时时间需要大于&amp;quot;读周期&amp;quot;：&lt;/p&gt;</description>
+      <guid>https://bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/</guid>
+      <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;在电商业务中，商品服务作为核心业务模块，承担着极高的性能要求。面对30W+ QPS的并发压力，如何保证缓存与数据库的一致性成为系统设计的核心挑战。本文将深入探讨一套完整的缓存一致性解决方案。&lt;/p&gt;&#xA;&lt;h2 id=&#34;背景与挑战&#34;&gt;背景与挑战&lt;/h2&gt;&#xA;&lt;p&gt;商品系统在电商平台中定位为高性能、高并发、高可用的核心服务。在实际业务中，平均QPS达到3W+，大促期间更是飙升至30W+，而服务响应时间仍需控制在1.5ms左右。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/images/qps-performance.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;商品服务QPS与性能监控图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;如此高的并发压力下，单纯依赖数据库显然无法满足性能要求。因此，引入Redis集群成为必然选择，但这也带来了缓存与数据库一致性的新挑战。&lt;/p&gt;&#xA;&lt;h2 id=&#34;缓存架构设计&#34;&gt;缓存架构设计&lt;/h2&gt;&#xA;&lt;h3 id=&#34;读操作流程&#34;&gt;读操作流程&lt;/h3&gt;&#xA;&lt;p&gt;商品读操作采用经典的缓存优先策略：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;首先查询Redis缓存&lt;/li&gt;&#xA;&lt;li&gt;缓存命中则直接返回数据&lt;/li&gt;&#xA;&lt;li&gt;缓存未命中则查询数据库&lt;/li&gt;&#xA;&lt;li&gt;将查询结果写入缓存&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/images/read-flow.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;商品读操作流程图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;写操作流程&#34;&gt;写操作流程&lt;/h3&gt;&#xA;&lt;p&gt;写操作采用先更新数据库再删除缓存的策略：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;更新数据库中的商品信息&lt;/li&gt;&#xA;&lt;li&gt;删除Redis中的对应缓存&lt;/li&gt;&#xA;&lt;li&gt;确保后续读请求能够获取最新数据&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/images/write-flow.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;商品写操作流程图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h2 id=&#34;缓存不一致问题分析&#34;&gt;缓存不一致问题分析&lt;/h2&gt;&#xA;&lt;h3 id=&#34;问题根源&#34;&gt;问题根源&lt;/h3&gt;&#xA;&lt;p&gt;缓存不一致主要源于两个核心问题：&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;1. 网络抖动导致的删除失败&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;商品服务与缓存服务通过网络交互&lt;/li&gt;&#xA;&lt;li&gt;网络抖动可能导致操作超时&lt;/li&gt;&#xA;&lt;li&gt;缓存删除失败造成数据不一致&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;2. 多线程并发操作导致的数据覆盖&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;查询请求与更新请求并发执行&lt;/li&gt;&#xA;&lt;li&gt;时序问题导致旧数据覆盖新数据&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/images/cache-inconsistency.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;缓存不一致问题示意图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;典型场景分析&#34;&gt;典型场景分析&lt;/h3&gt;&#xA;&lt;p&gt;假设Redis中没有A商品的缓存：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;查询请求发现缓存未命中，开始查询数据库&lt;/li&gt;&#xA;&lt;li&gt;更新请求同时到达，更新数据库后删除缓存&lt;/li&gt;&#xA;&lt;li&gt;查询请求将旧数据写入缓存&lt;/li&gt;&#xA;&lt;li&gt;结果：缓存中保存的是更新前的旧数据&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;延时双删解决方案&#34;&gt;延时双删解决方案&lt;/h2&gt;&#xA;&lt;h3 id=&#34;核心思想&#34;&gt;核心思想&lt;/h3&gt;&#xA;&lt;p&gt;延时双删的核心思想是&amp;quot;过一会再删一次缓存&amp;quot;，通过两次删除操作确保缓存一致性。&lt;/p&gt;&#xA;&lt;h3 id=&#34;方案优势&#34;&gt;方案优势&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;解决网络抖动问题&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;第一次删除失败，第二次删除大概率成功&lt;/li&gt;&#xA;&lt;li&gt;配合重试策略，确保最终一致性&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;解决并发覆盖问题&lt;/strong&gt;：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;在不一致数据写入缓存后再次删除&lt;/li&gt;&#xA;&lt;li&gt;关键：延时时间的选择&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/images/delay-double-delete.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;延时双删触发机制图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;架构设计&#34;&gt;架构设计&lt;/h3&gt;&#xA;&lt;h4 id=&#34;服务解耦&#34;&gt;服务解耦&lt;/h4&gt;&#xA;&lt;p&gt;延时双删逻辑不应与商品核心服务强耦合，而是：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;独立部署为单独服务&lt;/li&gt;&#xA;&lt;li&gt;通过监听商品Binlog的MQ实现解耦&lt;/li&gt;&#xA;&lt;li&gt;保证核心业务的纯粹性&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;触发机制&#34;&gt;触发机制&lt;/h4&gt;&#xA;&lt;p&gt;采用监听Binlog的MQ方案：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;商品更新时产生Binlog&lt;/li&gt;&#xA;&lt;li&gt;MQ监听Binlog变化&lt;/li&gt;&#xA;&lt;li&gt;触发延时双删服务&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://bmsg.top/posts/tech/30w-qps-product-system-cache-consistency/images/binlog-mq-trigger.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Binlog监听触发机制图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;延时时间选择&#34;&gt;延时时间选择&lt;/h3&gt;&#xA;&lt;h4 id=&#34;网络抖动场景&#34;&gt;网络抖动场景&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;延时时间越短越好&lt;/li&gt;&#xA;&lt;li&gt;减少数据不一致的时间窗口&lt;/li&gt;&#xA;&lt;li&gt;通常设置为毫秒级别&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;并发覆盖场景&#34;&gt;并发覆盖场景&lt;/h4&gt;&#xA;&lt;p&gt;延时时间需要大于&amp;quot;读周期&amp;quot;：&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI Ethics in 2025: Navigating the Complex Landscape of Artificial Intelligence</title>
-      <link>https://www.bmsg.top/posts/tech/ai-ethics-2025/</link>
+      <link>https://bmsg.top/posts/tech/ai-ethics-2025/</link>
       <pubDate>Fri, 14 Nov 2025 07:10:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/ai-ethics-2025/</guid>
+      <guid>https://bmsg.top/posts/tech/ai-ethics-2025/</guid>
       <description>&lt;p&gt;Artificial Intelligence has transformed from a futuristic concept to an integral part of our daily lives. As we approach 2025, the ethical considerations surrounding AI development and deployment have become more critical than ever. This comprehensive guide explores the current state of AI ethics, emerging challenges, and practical frameworks for responsible implementation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sustainable Technology in 2025: Innovations Driving Environmental Solutions</title>
-      <link>https://www.bmsg.top/posts/tech/sustainable-tech-2025/</link>
+      <link>https://bmsg.top/posts/tech/sustainable-tech-2025/</link>
       <pubDate>Fri, 14 Nov 2025 07:10:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/sustainable-tech-2025/</guid>
+      <guid>https://bmsg.top/posts/tech/sustainable-tech-2025/</guid>
       <description>&lt;p&gt;As we approach 2025, sustainable technology has become more than just an environmental concern—it&amp;rsquo;s a critical component of global economic and social development. This comprehensive guide examines the most promising sustainable technologies shaping our future, their environmental impact, and the business opportunities they present.&lt;/p&gt;</description>
     </item>
     <item>
       <title>通背拳傳人趙鴻剛耳光大賽被KO，傳統武術再迎至暗時刻？</title>
-      <link>https://www.bmsg.top/posts/martial-arts/traditional-wushu-controversy-zhao-honggang/</link>
+      <link>https://bmsg.top/posts/martial-arts/traditional-wushu-controversy-zhao-honggang/</link>
       <pubDate>Thu, 13 Nov 2025 15:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/martial-arts/traditional-wushu-controversy-zhao-honggang/</guid>
+      <guid>https://bmsg.top/posts/martial-arts/traditional-wushu-controversy-zhao-honggang/</guid>
       <description>&lt;p&gt;传统武术作为中国文化的重要组成部分，近年来不断面临着实战性的质疑。最近，通背拳传人赵鸿刚在一场所谓的&amp;quot;耳光大赛&amp;quot;中被KO的事件，再次将传统武术推向了舆论的风口浪尖。这一事件究竟反映了什么问题？传统武术是否真的迎来了&amp;quot;至暗时刻&amp;quot;？本文将深入探讨这一话题。&lt;/p&gt;</description>
     </item>
     <item>
       <title>元宇宙与数字孪生：构建虚实融合的下一代数字世界</title>
-      <link>https://www.bmsg.top/posts/tech/metaverse-digital-twin-technology/</link>
+      <link>https://bmsg.top/posts/tech/metaverse-digital-twin-technology/</link>
       <pubDate>Thu, 13 Nov 2025 14:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/metaverse-digital-twin-technology/</guid>
+      <guid>https://bmsg.top/posts/tech/metaverse-digital-twin-technology/</guid>
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;元宇宙和数字孪生作为当前最热门的前沿技术概念，正在重塑我们与数字世界的交互方式。元宇宙代表了一个持久的、去中心化的虚拟环境，而数字孪生则是物理世界的数字化映射。这两种技术的融合发展，正在创造一个前所未有的虚实融合的数字生态系统。本文将深入探讨元宇宙和数字孪生的技术基础、核心应用场景、发展现状以及未来趋势，带您了解这一正在改变人类生活和工作方式的技术革命。&lt;/p&gt;</description>
     </item>
     <item>
       <title>深入解析YouTube热门视频：现代编程技术趋势分析</title>
-      <link>https://www.bmsg.top/posts/tech/youtube-video-analysis-qmoweljqvw0/</link>
+      <link>https://bmsg.top/posts/tech/youtube-video-analysis-qmoweljqvw0/</link>
       <pubDate>Thu, 13 Nov 2025 14:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/youtube-video-analysis-qmoweljqvw0/</guid>
+      <guid>https://bmsg.top/posts/tech/youtube-video-analysis-qmoweljqvw0/</guid>
       <description>&lt;p&gt;在当今快速发展的技术领域，YouTube已经成为开发者获取最新技术信息和学习资源的重要平台。本文将深入分析一个备受关注的技术视频，揭示其中蕴含的编程趋势和最佳实践，帮助开发者更好地把握行业动态。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025年企业数字化转型全景指南：从战略到落地的成功路径</title>
-      <link>https://www.bmsg.top/posts/tech/digital-transformation-2025/</link>
+      <link>https://bmsg.top/posts/tech/digital-transformation-2025/</link>
       <pubDate>Thu, 13 Nov 2025 13:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/digital-transformation-2025/</guid>
+      <guid>https://bmsg.top/posts/tech/digital-transformation-2025/</guid>
       <description>&lt;p&gt;数字化转型已不再是企业的选择题，而是生存发展的必由之路。2025年，全球数字化转型投资预计将超过3.4万亿美元，数字化领先企业的市场份额和盈利能力持续领先于传统企业。然而，数字化转型的成功率仍然不高，根据最新研究，超过70%的数字化转型项目未能完全实现预期目标。&lt;/p&gt;&#xA;&lt;p&gt;本指南基于对全球500家成功实现数字化转型企业的深入研究，系统阐述2025年企业数字化转型的核心要素、战略规划、技术架构、组织变革与实施路径，为企业提供从战略到落地的全面指导，帮助企业在数字时代赢得竞争优势。&lt;/p&gt;</description>
     </item>
     <item>
       <title>区块链技术2.0：从加密货币到分布式信任网络</title>
-      <link>https://www.bmsg.top/posts/tech/blockchain-technology-evolution/</link>
+      <link>https://bmsg.top/posts/tech/blockchain-technology-evolution/</link>
       <pubDate>Thu, 13 Nov 2025 13:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/blockchain-technology-evolution/</guid>
+      <guid>https://bmsg.top/posts/tech/blockchain-technology-evolution/</guid>
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;区块链技术自比特币诞生以来经历了从概念验证到广泛应用的革命性转变。从最初的加密货币应用，到如今的智能合约、去中心化金融、供应链管理等多元化场景，区块链正在重构数字世界的信任机制。本文将深入探讨区块链技术的演进历程、核心技术创新、实际应用案例以及未来发展趋势，带您了解这场正在改变数字经济格局的技术革命。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025年网络安全趋势报告：应对数字时代的新威胁与挑战</title>
-      <link>https://www.bmsg.top/posts/tech/cybersecurity-trends-2025/</link>
+      <link>https://bmsg.top/posts/tech/cybersecurity-trends-2025/</link>
       <pubDate>Thu, 13 Nov 2025 12:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/cybersecurity-trends-2025/</guid>
+      <guid>https://bmsg.top/posts/tech/cybersecurity-trends-2025/</guid>
       <description>&lt;p&gt;随着数字化转型的深入推进，网络安全已成为全球组织面临的首要挑战。2025年，网络攻击的复杂性、频率和影响力都达到了前所未有的水平。根据最新数据，全球网络安全事件同比增长了68%，平均每次数据泄露造成的损失超过500万美元。&lt;/p&gt;&#xA;&lt;p&gt;在人工智能、量子计算等新技术快速发展的同时，网络犯罪分子也在利用这些技术提升攻击能力。本报告基于对全球超过2000家企业的安全状况调研和行业专家访谈，全面分析2025年网络安全领域的关键趋势、主要威胁和应对策略，为组织提供实用的网络安全指南。&lt;/p&gt;</description>
     </item>
     <item>
       <title>量子计算：突破经典计算极限的前沿技术</title>
-      <link>https://www.bmsg.top/posts/tech/quantum-computing-advancements/</link>
+      <link>https://bmsg.top/posts/tech/quantum-computing-advancements/</link>
       <pubDate>Thu, 13 Nov 2025 12:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/quantum-computing-advancements/</guid>
+      <guid>https://bmsg.top/posts/tech/quantum-computing-advancements/</guid>
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;量子计算作为一种基于量子力学原理的计算方式，正在逐渐从理论走向实践，有望在解决某些特定问题上彻底改变计算科学的面貌。随着谷歌、IBM、微软等科技巨头以及众多初创公司在量子计算领域的持续投入，量子技术正以前所未有的速度发展。本文将带您深入了解量子计算的基本原理、最新技术突破、实际应用场景以及未来发展前景。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025年AI职业发展完全指南：从入门到高薪专家的进阶之路</title>
-      <link>https://www.bmsg.top/posts/tech/ai-career-guide-2025/</link>
+      <link>https://bmsg.top/posts/tech/ai-career-guide-2025/</link>
       <pubDate>Thu, 13 Nov 2025 11:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/ai-career-guide-2025/</guid>
+      <guid>https://bmsg.top/posts/tech/ai-career-guide-2025/</guid>
       <description>&lt;p&gt;人工智能正以前所未有的速度改变着我们的世界。2025年，AI不仅是一个技术领域，更已成为推动全球经济发展的核心驱动力。随着大语言模型、多模态AI和自主智能系统的突破性进展，AI人才需求呈现爆发式增长。&lt;/p&gt;&#xA;&lt;p&gt;本指南基于最新的行业数据和专家洞察，为不同背景的专业人士提供全面的AI职业发展路线图，从入门级职位到资深专家，从技能培养到薪资谈判，帮助你在竞争激烈的AI领域找到自己的定位并实现职业突破。&lt;/p&gt;</description>
     </item>
     <item>
       <title>云计算与边缘计算融合：下一代计算架构革命</title>
-      <link>https://www.bmsg.top/posts/tech/cloud-edge-computing-integration/</link>
+      <link>https://bmsg.top/posts/tech/cloud-edge-computing-integration/</link>
       <pubDate>Thu, 13 Nov 2025 11:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/cloud-edge-computing-integration/</guid>
+      <guid>https://bmsg.top/posts/tech/cloud-edge-computing-integration/</guid>
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;随着物联网设备的爆发式增长、5G技术的普及以及对低延迟应用的需求激增，传统的云计算架构正面临着新的挑战。云计算与边缘计算的融合已成为解决这些挑战的关键路径。本文将深入探讨这两种计算范式的融合趋势、技术架构、应用场景以及未来发展方向，带您了解下一代计算架构的革命性变革。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025年远程工作趋势报告：重塑全球工作模式的新变革</title>
-      <link>https://www.bmsg.top/posts/tech/remote-work-trends-2025/</link>
+      <link>https://bmsg.top/posts/tech/remote-work-trends-2025/</link>
       <pubDate>Thu, 13 Nov 2025 10:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/remote-work-trends-2025/</guid>
+      <guid>https://bmsg.top/posts/tech/remote-work-trends-2025/</guid>
       <description>&lt;p&gt;在过去的几年里，远程工作从一种选择性的工作安排迅速演变为全球工作格局中不可逆转的主流趋势。截至2025年，全球已有超过68%的企业采用了某种形式的远程或混合工作模式，这一数字相比2020年增长了近3倍。&lt;/p&gt;&#xA;&lt;p&gt;远程工作不仅改变了我们的工作地点，更深刻地重塑了组织结构、企业文化和工作流程。本报告基于对全球5000家企业和10万名员工的调研数据，深入分析2025年远程工作的最新趋势、关键挑战以及未来发展方向，为企业和个人提供实用的远程工作策略指导。&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI大模型训练与优化技术深度剖析</title>
-      <link>https://www.bmsg.top/posts/tech/ai-model-training-optimization/</link>
+      <link>https://bmsg.top/posts/tech/ai-model-training-optimization/</link>
       <pubDate>Thu, 13 Nov 2025 10:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/ai-model-training-optimization/</guid>
+      <guid>https://bmsg.top/posts/tech/ai-model-training-optimization/</guid>
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;人工智能大模型的崛起正在重塑整个科技行业，从GPT系列到Claude，再到国内的文心一言、讯飞星火等，大模型在各个领域展现出惊人的能力。然而，这些强大模型的背后是极其复杂的训练和优化过程。本文将深入剖析AI大模型的训练技术、优化策略以及最新研究进展，带您了解这些智能系统背后的技术奥秘。&lt;/p&gt;</description>
     </item>
     <item>
       <title>如何利用AI助手显著提升编程效率</title>
-      <link>https://www.bmsg.top/posts/tech/improve-coding-efficiency-with-ai-assistants/</link>
+      <link>https://bmsg.top/posts/tech/improve-coding-efficiency-with-ai-assistants/</link>
       <pubDate>Thu, 13 Nov 2025 09:40:44 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/improve-coding-efficiency-with-ai-assistants/</guid>
+      <guid>https://bmsg.top/posts/tech/improve-coding-efficiency-with-ai-assistants/</guid>
       <description>&lt;p&gt;本文介绍如何有效利用AI编程助手提升开发效率，包括实用技巧和最佳实践。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025年最赚钱的编程语言排名：开发者薪资与就业前景分析</title>
-      <link>https://www.bmsg.top/posts/tech/most-profitable-programming-languages-2025/</link>
+      <link>https://bmsg.top/posts/tech/most-profitable-programming-languages-2025/</link>
       <pubDate>Thu, 13 Nov 2025 09:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/most-profitable-programming-languages-2025/</guid>
+      <guid>https://bmsg.top/posts/tech/most-profitable-programming-languages-2025/</guid>
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;在快速发展的科技行业中，选择合适的编程语言学习和掌握对于开发者的职业发展和薪资水平有着决定性的影响。随着人工智能、云计算、区块链等新兴技术的不断演进，编程语言的需求和价值也在持续变化。本文将深入分析2025年最赚钱的编程语言排名，探讨各语言的薪资水平、就业市场需求以及未来发展趋势，为开发者提供实用的职业规划参考。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025程序员时薪排行榜：大厂薪资对比与技术面试解析</title>
-      <link>https://www.bmsg.top/posts/tech-tutorials/programmer-salary-ranking-2025/</link>
+      <link>https://bmsg.top/posts/tech-tutorials/programmer-salary-ranking-2025/</link>
       <pubDate>Sat, 08 Nov 2025 14:49:26 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech-tutorials/programmer-salary-ranking-2025/</guid>
+      <guid>https://bmsg.top/posts/tech-tutorials/programmer-salary-ranking-2025/</guid>
       <description>&lt;p&gt;通常，在选择公司的过程中，我们往往会关注总收入（package）。总收入不仅包括基本的月薪，还包括奖金、股票或股份的分红等所有收入。然而，仅仅关注总收入可能会导致我们忽视一个关键因素：&lt;strong&gt;时薪&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;p&gt;时薪是指你在单位时间内所获得的报酬，它是衡量工作性价比的重要标准。总收入高并不一定意味着时薪高。比如，一家公司提供的总收入非常诱人，但如果工作时长超长，实际时薪可能并不理想。相反，一些时薪高的公司不仅可以提供不错的收入，还能保证员工的生活质量。&lt;/p&gt;&#xA;&lt;p&gt;职级对标这个网站对各大公司的不同级别工程师的薪资进行了详细统计，这些数据不仅包含了年薪，还考虑了工作时长，从而计算出更为准确的时薪。我觉得这是一个非常不错的参考，值得分享一下！&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025年11月8日美国时政新闻综述</title>
-      <link>https://www.bmsg.top/posts/news/us-politics-2025-11-08/</link>
+      <link>https://bmsg.top/posts/news/us-politics-2025-11-08/</link>
       <pubDate>Sat, 08 Nov 2025 02:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/news/us-politics-2025-11-08/</guid>
+      <guid>https://bmsg.top/posts/news/us-politics-2025-11-08/</guid>
       <description>&lt;p&gt;今日美国政坛发生了一系列重要事件，涵盖总统大选动态、外交政策调整、国会立法进展以及经济政策变化。以下是今日美国时政新闻的详细综述。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025年11月8日国内新闻综述</title>
-      <link>https://www.bmsg.top/posts/news/daily-news-20251108/</link>
+      <link>https://bmsg.top/posts/news/daily-news-20251108/</link>
       <pubDate>Sat, 08 Nov 2025 01:45:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/news/daily-news-20251108/</guid>
+      <guid>https://bmsg.top/posts/news/daily-news-20251108/</guid>
       <description>&lt;p&gt;今日国内发生了一系列重要事件，涵盖科技创新、政策发布、经济发展以及社会民生等多个领域。以下是今日新闻的详细综述。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugo（Stack主题）博客搭建过程中踩过的坑</title>
-      <link>https://www.bmsg.top/posts/studay-log/daily-tech-6/</link>
+      <link>https://bmsg.top/posts/studay-log/daily-tech-6/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/studay-log/daily-tech-6/</guid>
+      <guid>https://bmsg.top/posts/studay-log/daily-tech-6/</guid>
       <description>&lt;p&gt;记录了在搭建整个博客以及自定义时遇到的问题和解决方法&lt;/p&gt;</description>
     </item>
     <item>
       <title>如何利用手机便签提高工作效率</title>
-      <link>https://www.bmsg.top/posts/daily-tech/daily-tech-1/</link>
+      <link>https://bmsg.top/posts/daily-tech/daily-tech-1/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/daily-tech/daily-tech-1/</guid>
+      <guid>https://bmsg.top/posts/daily-tech/daily-tech-1/</guid>
       <description>&lt;p&gt;你是否经常忘记重要的待办事项？本文将分享如何利用手机自带的便签应用来提高日常工作和生活的效率。&lt;/p&gt;</description>
     </item>
     <item>
       <title>实用密码管理技巧：保护你的数字资产安全</title>
-      <link>https://www.bmsg.top/posts/daily-tech/daily-tech-5/</link>
+      <link>https://bmsg.top/posts/daily-tech/daily-tech-5/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/daily-tech/daily-tech-5/</guid>
+      <guid>https://bmsg.top/posts/daily-tech/daily-tech-5/</guid>
       <description>&lt;p&gt;密码太多记不住？本文分享几个实用的密码管理技巧，帮助你在保证安全的同时，也能方便地管理各种账号密码。&lt;/p&gt;</description>
     </item>
     <item>
       <title>家庭网络优化指南：让你的WiFi更快更稳定</title>
-      <link>https://www.bmsg.top/posts/daily-tech/daily-tech-2/</link>
+      <link>https://bmsg.top/posts/daily-tech/daily-tech-2/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/daily-tech/daily-tech-2/</guid>
+      <guid>https://bmsg.top/posts/daily-tech/daily-tech-2/</guid>
       <description>&lt;p&gt;有没有遇到过看视频卡顿、游戏延迟高的情况？本文分享几个简单易行的家庭网络优化技巧，让你的WiFi更快更稳定。&lt;/p&gt;</description>
     </item>
     <item>
       <title>手机电池保养指南：延长你的电池使用寿命</title>
-      <link>https://www.bmsg.top/posts/daily-tech/daily-tech-4/</link>
+      <link>https://bmsg.top/posts/daily-tech/daily-tech-4/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/daily-tech/daily-tech-4/</guid>
+      <guid>https://bmsg.top/posts/daily-tech/daily-tech-4/</guid>
       <description>&lt;p&gt;手机电池不耐用？本文分享几个科学的电池保养技巧，帮助你延长手机电池的使用寿命。&lt;/p&gt;</description>
     </item>
     <item>
       <title>电脑文件整理技巧：让你的工作空间更整洁</title>
-      <link>https://www.bmsg.top/posts/daily-tech/daily-tech-3/</link>
+      <link>https://bmsg.top/posts/daily-tech/daily-tech-3/</link>
       <pubDate>Fri, 07 Nov 2025 08:10:34 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/daily-tech/daily-tech-3/</guid>
+      <guid>https://bmsg.top/posts/daily-tech/daily-tech-3/</guid>
       <description>&lt;p&gt;电脑文件杂乱无章？本文分享几个实用的文件整理技巧，帮助你创建一个更高效的数字工作环境。&lt;/p&gt;</description>
     </item>
     <item>
       <title>JetBrains 官宣全系列免费！开发者圈的史诗级福利来了</title>
-      <link>https://www.bmsg.top/posts/jetbrains/</link>
+      <link>https://bmsg.top/posts/jetbrains/</link>
       <pubDate>Thu, 06 Nov 2025 14:54:34 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/jetbrains/</guid>
+      <guid>https://bmsg.top/posts/jetbrains/</guid>
       <description>&lt;p&gt;JetBrains 突然官宣全系列 IDE 产品免费开放，这波操作直接引爆开发者圈！从 IntelliJ IDEA 到 PyCharm、WebStorm，曾经需要付费订阅的编程利器如今无需付费即可使用，这场“降维打击”将如何改变开发者的工具选择？&lt;/p&gt;</description>
     </item>
     <item>
       <title>构建你的第一个ChatGPT应用 | 使用Apps SDK的逐步教程</title>
-      <link>https://www.bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</link>
+      <link>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</link>
       <pubDate>Wed, 05 Nov 2025 10:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</guid>
-      <description>&lt;p&gt;当AI成为日常工作流程的核心，ChatGPT已成为数十亿用户的自然工具。然而直到现在，ChatGPT的重点主要是&amp;quot;对话&amp;quot;，而不是&amp;quot;交互&amp;quot;。&lt;/p&gt;&#xA;&lt;p&gt;如果你能在ChatGPT内直接与应用互动——比如预订酒店、设计演示文稿——全部在同一个界面中完成，会怎样？&lt;/p&gt;&#xA;&lt;p&gt;这正是ChatGPT Apps带来的能力。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.bmsg.top/images/tech/chatgpt-apps-sdk.png&#34; alt=&#34;ChatGPT Apps SDK示意图&#34;&gt;&lt;/p&gt;</description>
+      <guid>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</guid>
+      <description>&lt;p&gt;当AI成为日常工作流程的核心，ChatGPT已成为数十亿用户的自然工具。然而直到现在，ChatGPT的重点主要是&amp;quot;对话&amp;quot;，而不是&amp;quot;交互&amp;quot;。&lt;/p&gt;&#xA;&lt;p&gt;如果你能在ChatGPT内直接与应用互动——比如预订酒店、设计演示文稿——全部在同一个界面中完成，会怎样？&lt;/p&gt;&#xA;&lt;p&gt;这正是ChatGPT Apps带来的能力。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://bmsg.top/images/tech/chatgpt-apps-sdk.png&#34; alt=&#34;ChatGPT Apps SDK示意图&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>掌握现代JavaScript新特性与最佳实践</title>
-      <link>https://www.bmsg.top/posts/tech-tutorials/mastering-modern-javascript/</link>
+      <link>https://bmsg.top/posts/tech-tutorials/mastering-modern-javascript/</link>
       <pubDate>Sat, 16 Nov 2024 10:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech-tutorials/mastering-modern-javascript/</guid>
+      <guid>https://bmsg.top/posts/tech-tutorials/mastering-modern-javascript/</guid>
       <description>&lt;p&gt;JavaScript作为Web开发的核心语言，一直在不断演进。从ES6开始，JavaScript引入了大量改变开发体验的新特性，使代码更简洁、更易维护。本文将深入探讨现代JavaScript的关键新特性和最佳实践，帮助你提升开发效率。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2024款MacBook Air M3深度评测</title>
-      <link>https://www.bmsg.top/posts/product-reviews/2024-macbook-air-m3-review/</link>
+      <link>https://bmsg.top/posts/product-reviews/2024-macbook-air-m3-review/</link>
       <pubDate>Fri, 15 Nov 2024 11:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/product-reviews/2024-macbook-air-m3-review/</guid>
+      <guid>https://bmsg.top/posts/product-reviews/2024-macbook-air-m3-review/</guid>
       <description>&lt;p&gt;苹果在2024年更新了MacBook Air系列，搭载全新的M3芯片。这款笔记本电脑以其轻薄的设计和强大的性能受到了广泛关注。本文将对2024款MacBook Air M3进行全面评测，包括外观设计、性能表现、电池续航等方面。&lt;/p&gt;</description>
     </item>
     <item>
       <title>如何在macOS上安装和配置Node.js环境</title>
-      <link>https://www.bmsg.top/posts/tech-tutorials/how-to-install-nodejs-on-macos/</link>
+      <link>https://bmsg.top/posts/tech-tutorials/how-to-install-nodejs-on-macos/</link>
       <pubDate>Fri, 15 Nov 2024 10:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech-tutorials/how-to-install-nodejs-on-macos/</guid>
+      <guid>https://bmsg.top/posts/tech-tutorials/how-to-install-nodejs-on-macos/</guid>
       <description>&lt;p&gt;Node.js是一个基于Chrome V8引擎的JavaScript运行时，让JavaScript可以在服务器端运行。本文将详细介绍如何在macOS系统上安装和配置Node.js环境，适合前端开发者和想要学习Node.js的初学者。&lt;/p&gt;</description>
     </item>
     <item>
       <title>10个实用的生活小技巧，让你的日常更高效</title>
-      <link>https://www.bmsg.top/posts/life-tips/10-effective-life-hacks/</link>
+      <link>https://bmsg.top/posts/life-tips/10-effective-life-hacks/</link>
       <pubDate>Fri, 15 Nov 2024 09:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/life-tips/10-effective-life-hacks/</guid>
+      <guid>https://bmsg.top/posts/life-tips/10-effective-life-hacks/</guid>
       <description>&lt;p&gt;在快节奏的现代生活中，掌握一些实用的生活小技巧可以帮助我们节省时间、提高效率，让日常生活更加轻松愉快。本文将分享10个经过实践验证的生活小技巧，涵盖家居、厨房、个人护理等多个方面。&lt;/p&gt;</description>
     </item>
     <item>
       <title>谷歌AI技术进展：从Gemini到DeepMind的前沿突破</title>
-      <link>https://www.bmsg.top/posts/tech/google-ai-advancements/</link>
+      <link>https://bmsg.top/posts/tech/google-ai-advancements/</link>
       <pubDate>Wed, 13 Nov 2024 10:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/google-ai-advancements/</guid>
+      <guid>https://bmsg.top/posts/tech/google-ai-advancements/</guid>
       <description>&lt;p&gt;本文深入探讨谷歌AI技术的最新进展，包括Gemini模型家族的迭代、DeepMind的突破性研究以及这些技术在实际应用中的影响。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2024年11月8日国内外新闻综述</title>
-      <link>https://www.bmsg.top/posts/news/daily-news-20241108/</link>
+      <link>https://bmsg.top/posts/news/daily-news-20241108/</link>
       <pubDate>Fri, 08 Nov 2024 10:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/news/daily-news-20241108/</guid>
+      <guid>https://bmsg.top/posts/news/daily-news-20241108/</guid>
       <description>&lt;p&gt;今日国内外发生了一系列重要事件，涵盖政策发布、国际安全、经贸合作以及社会民生等多个领域。以下是今日新闻的详细综述。&lt;/p&gt;</description>
     </item>
     <item>
       <title>提升 Hugo 网站 SEO 排名的 10 个实用技巧</title>
-      <link>https://www.bmsg.top/posts/hugo/hugo-seo-optimization/</link>
+      <link>https://bmsg.top/posts/hugo/hugo-seo-optimization/</link>
       <pubDate>Wed, 10 Jul 2024 10:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/hugo/hugo-seo-optimization/</guid>
+      <guid>https://bmsg.top/posts/hugo/hugo-seo-optimization/</guid>
       <description>&lt;p&gt;想要让你的 Hugo 网站在搜索引擎中获得更好的排名吗？本文将分享 10 个实用的 SEO 优化技巧，帮助你的网站获得更多自然流量。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>我的开源项目</title>
-      <link>https://www.bmsg.top/about/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.bmsg.top/about/projects/</guid>
-      <description>&lt;h2 id=&#34;my-open-source-projects&#34;&gt;My Open Source Projects&lt;/h2&gt;&#xA;&lt;h3 id=&#34;petal-&#34;&gt;Petal 🌺&lt;/h3&gt;&#xA;&lt;p&gt;豆瓣 FM 桌面版&lt;/p&gt;&#xA;&lt;h3 id=&#34;hugo-theme-dream-&#34;&gt;hugo-theme-dream 🌱&lt;/h3&gt;&#xA;&lt;p&gt;一个 Hugo 主题，也是当前我的博客所使用的主题&lt;/p&gt;&#xA;&lt;h3 id=&#34;alfred-colors-workflow&#34;&gt;Alfred-Colors-workflow&lt;/h3&gt;&#xA;&lt;p&gt;Convert CSS colors between hex, rgb, hsl in Alfred.&lt;/p&gt;&#xA;&lt;h3 id=&#34;github-colorful-contributions-graph&#34;&gt;github-colorful-contributions-graph&lt;/h3&gt;&#xA;&lt;p&gt;改变 GitHub 贡献面板颜色的 Chrome 插件&lt;/p&gt;&#xA;&lt;p&gt;等等&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>知识共享</title>
-      <link>https://www.bmsg.top/about/creative-commons/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.bmsg.top/about/creative-commons/</guid>
-      <description>&lt;p&gt;此网站的所有内容都遵循 CC BY-NC-SA 4.0。&lt;/p&gt;&#xA;&lt;p&gt;All contents of this website are licensed under CC BY-NC-SA 4.0.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>赞助我</title>
-      <link>https://www.bmsg.top/about/sponsor/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.bmsg.top/about/sponsor/</guid>
-      <description>&lt;p&gt;如果你喜欢我的作品或者发现它们对你有所帮助，可以考虑给我买一杯咖啡 ☕️。这将激励我在未来创作和维护更多的项目。🦾&lt;/p&gt;&#xA;&lt;p&gt;👉 请我喝一杯咖啡&lt;/p&gt;&#xA;&lt;p&gt;If you like my works or find them helpful, please consider buying me a cup of coffee ☕️. It inspires me to create and maintain more projects in the future. 🦾&lt;/p&gt;&#xA;&lt;p&gt;👉 Buy me a coffee&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

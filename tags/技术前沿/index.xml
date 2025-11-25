@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>技术前沿 on Inkchron</title>
-    <link>https://www.bmsg.top/tags/%E6%8A%80%E6%9C%AF%E5%89%8D%E6%B2%BF/</link>
+    <link>https://bmsg.top/tags/%E6%8A%80%E6%9C%AF%E5%89%8D%E6%B2%BF/</link>
     <description>Recent content in 技术前沿 on Inkchron</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 20 Nov 2025 14:30:00 +0800</lastBuildDate>
-    <atom:link href="https://www.bmsg.top/tags/%E6%8A%80%E6%9C%AF%E5%89%8D%E6%B2%BF/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://bmsg.top/tags/%E6%8A%80%E6%9C%AF%E5%89%8D%E6%B2%BF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gemini 3正式发布：谷歌AI技术的新里程碑</title>
-      <link>https://www.bmsg.top/posts/tech/gemini3-release-2025/</link>
+      <link>https://bmsg.top/posts/tech/gemini3-release-2025/</link>
       <pubDate>Thu, 20 Nov 2025 14:30:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/gemini3-release-2025/</guid>
+      <guid>https://bmsg.top/posts/tech/gemini3-release-2025/</guid>
       <description>&lt;p&gt;谷歌今日正式发布了备受期待的Gemini 3多模态AI模型，这是继Gemini 2之后的重要升级，在多个技术维度实现了显著提升。新模型不仅在推理能力和多模态理解方面取得突破，还在安全性和效率方面进行了全面优化。&lt;/p&gt;</description>
     </item>
     <item>
       <title>谷歌AI技术进展：从Gemini到DeepMind的前沿突破</title>
-      <link>https://www.bmsg.top/posts/tech/google-ai-advancements/</link>
+      <link>https://bmsg.top/posts/tech/google-ai-advancements/</link>
       <pubDate>Wed, 13 Nov 2024 10:00:00 +0800</pubDate>
-      <guid>https://www.bmsg.top/posts/tech/google-ai-advancements/</guid>
+      <guid>https://bmsg.top/posts/tech/google-ai-advancements/</guid>
       <description>&lt;p&gt;本文深入探讨谷歌AI技术的最新进展，包括Gemini模型家族的迭代、DeepMind的突破性研究以及这些技术在实际应用中的影响。&lt;/p&gt;</description>
     </item>
   </channel>

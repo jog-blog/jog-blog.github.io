@@ -1,0 +1,55 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="wasmGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#654ff0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="400" fill="url(#bgGradient)"/>
+
+  <!-- 背景网格 -->
+  <g opacity="0.1">
+    <path d="M0 100 L800 100" stroke="#cbd5e1" stroke-width="1"/>
+    <path d="M0 200 L800 200" stroke="#cbd5e1" stroke-width="1"/>
+    <path d="M0 300 L800 300" stroke="#cbd5e1" stroke-width="1"/>
+    <path d="M100 0 L100 400" stroke="#cbd5e1" stroke-width="1"/>
+    <path d="M200 0 L200 400" stroke="#cbd5e1" stroke-width="1"/>
+    <path d="M300 0 L300 400" stroke="#cbd5e1" stroke-width="1"/>
+    <path d="M400 0 L400 400" stroke="#cbd5e1" stroke-width="1"/>
+    <path d="M500 0 L500 400" stroke="#cbd5e1" stroke-width="1"/>
+    <path d="M600 0 L600 400" stroke="#cbd5e1" stroke-width="1"/>
+    <path d="M700 0 L700 400" stroke="#cbd5e1" stroke-width="1"/>
+  </g>
+
+  <!-- WebAssembly Logo 样式 -->
+  <circle cx="200" cy="200" r="80" fill="url(#wasmGradient)" opacity="0.9"/>
+  <text x="200" y="200" text-anchor="middle" dominant-baseline="central" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">WASM</text>
+
+  <!-- 二进制代码流 -->
+  <g opacity="0.8">
+    <text x="450" y="120" fill="#5eead4" font-family="monospace" font-size="14">01101000 01100101 01101100 01101100 01101111</text>
+    <text x="450" y="150" fill="#60a5fa" font-family="monospace" font-size="14">01010111 01101111 01110010 01101100 01100100</text>
+    <text x="450" y="180" fill="#f87171" font-family="monospace" font-size="14">01010111 01100101 01100010 01000001 01110011</text>
+  </g>
+
+  <!-- 浏览器窗口 -->
+  <rect x="400" y="220" width="300" height="120" fill="#1e293b" stroke="#475569" stroke-width="2" rx="8"/>
+  <rect x="410" y="235" width="280" height="20" fill="#334155" rx="4"/>
+  <circle cx="425" cy="245" r="4" fill="#ef4444"/>
+  <circle cx="445" cy="245" r="4" fill="#f59e0b"/>
+  <circle cx="465" cy="245" r="4" fill="#10b981"/>
+  <text x="500" y="250" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="10">localhost:1313</text>
+
+  <!-- 标题 -->
+  <text x="400" y="280" fill="#f1f5f9" font-family="Arial, sans-serif" font-size="18" font-weight="bold">WebAssembly</text>
+  <text x="400" y="310" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">现代Web开发的高性能解决方案</text>
+
+  <!-- 性能箭头 -->
+  <path d="M520 320 L560 320 L560 300 L580 320 L560 340 L560 320 Z" fill="#10b981"/>
+  <text x="590" y="325" fill="#10b981" font-family="Arial, sans-serif" font-size="12" font-weight="bold">+300% 性能</text>
+</svg>

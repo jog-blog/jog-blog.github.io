@@ -1,0 +1,95 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="clientGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gatewayGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="authGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="600" height="400" fill="url(#bgGradient)"/>
+
+  <!-- 标题 -->
+  <text x="300" y="30" text-anchor="middle" fill="#f1f5f9" font-family="Arial, sans-serif" font-size="18" font-weight="bold">JWT认证流程示意图</text>
+
+  <!-- 客户端 -->
+  <rect x="50" y="80" width="100" height="60" fill="url(#clientGradient)" rx="8"/>
+  <text x="100" y="115" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">客户端</text>
+
+  <!-- API网关 -->
+  <rect x="250" y="70" width="100" height="80" fill="url(#gatewayGradient)" rx="8"/>
+  <text x="300" y="115" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">API网关</text>
+
+  <!-- 认证服务 -->
+  <rect x="450" y="80" width="100" height="60" fill="url(#authGradient)" rx="8"/>
+  <text x="500" y="115" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">认证服务</text>
+
+  <!-- 流程步骤1：登录请求 -->
+  <line x1="150" y1="110" x2="250" y2="110" stroke="#5eead4" stroke-width="2"/>
+  <path d="M250 110 L240 105 L240 115 Z" fill="#5eead4"/>
+  <text x="200" y="100" text-anchor="middle" fill="#5eead4" font-family="Arial, sans-serif" font-size="10">1. 登录请求</text>
+
+  <!-- 流程步骤2：验证凭证 -->
+  <line x1="350" y1="110" x2="450" y2="110" stroke="#5eead4" stroke-width="2"/>
+  <path d="M450 110 L440 105 L440 115 Z" fill="#5eead4"/>
+  <text x="400" y="100" text-anchor="middle" fill="#5eead4" font-family="Arial, sans-serif" font-size="10">2. 验证凭证</text>
+
+  <!-- 流程步骤3：生成JWT -->
+  <line x1="500" y1="140" x2="500" y2="200" stroke="#f87171" stroke-width="2"/>
+  <path d="M500 200 L495 190 L505 190 Z" fill="#f87171"/>
+  <text x="520" y="170" text-anchor="start" fill="#f87171" font-family="Arial, sans-serif" font-size="10">3. 生成JWT</text>
+
+  <!-- 流程步骤4：返回JWT -->
+  <line x1="500" y1="200" x2="350" y2="200" stroke="#f87171" stroke-width="2"/>
+  <path d="M350 200 L360 195 L360 205 Z" fill="#f87171"/>
+  <text x="425" y="190" text-anchor="middle" fill="#f87171" font-family="Arial, sans-serif" font-size="10">4. 返回JWT</text>
+
+  <!-- 流程步骤5：转发JWT -->
+  <line x1="250" y1="200" x2="150" y2="200" stroke="#f87171" stroke-width="2"/>
+  <path d="M150 200 L160 195 L160 205 Z" fill="#f87171"/>
+  <text x="200" y="190" text-anchor="middle" fill="#f87171" font-family="Arial, sans-serif" font-size="10">5. 转发JWT</text>
+
+  <!-- JWT令牌示例 -->
+  <rect x="200" y="230" width="200" height="80" fill="#334155" rx="8" stroke="#475569" stroke-width="2"/>
+  <text x="300" y="250" text-anchor="middle" fill="#f1f5f9" font-family="Arial, sans-serif" font-size="12" font-weight="bold">JWT令牌结构</text>
+
+  <rect x="210" y="265" width="180" height="15" fill="#1e40af" rx="4"/>
+  <text x="215" y="275" fill="white" font-family="monospace" font-size="8">Header: 算法和类型</text>
+
+  <rect x="210" y="285" width="180" height="15" fill="#059669" rx="4"/>
+  <text x="215" y="295" fill="white" font-family="monospace" font-size="8">Payload: 用户数据</text>
+
+  <rect x="210" y="305" width="180" height="15" fill="#dc2626" rx="4"/>
+  <text x="215" y="315" fill="white" font-family="monospace" font-size="8">Signature: 签名验证</text>
+
+  <!-- 后续请求流程 -->
+  <line x1="150" y1="320" x2="250" y2="320" stroke="#a78bfa" stroke-width="2"/>
+  <path d="M250 320 L240 315 L240 325 Z" fill="#a78bfa"/>
+  <text x="200" y="340" text-anchor="middle" fill="#a78bfa" font-family="Arial, sans-serif" font-size="10">携带JWT的后续请求</text>
+
+  <!-- 验证流程 -->
+  <line x1="350" y1="320" x2="450" y2="320" stroke="#a78bfa" stroke-width="2"/>
+  <path d="M450 320 L440 315 L440 325 Z" fill="#a78bfa"/>
+  <text x="400" y="340" text-anchor="middle" fill="#a78bfa" font-family="Arial, sans-serif" font-size="10">验证JWT签名</text>
+
+  <!-- 装饰元素 -->
+  <circle cx="550" y="50" r="3" fill="#5eead4" opacity="0.6"/>
+  <circle cx="40" y="350" r="2" fill="#5eead4" opacity="0.4"/>
+  <circle cx="580" y="380" r="2" fill="#5eead4" opacity="0.3"/>
+
+  <!-- 安全标签 -->
+  <rect x="50" y="360" width="500" height="30" fill="#1e293b" rx="4"/>
+  <text x="300" y="380" text-anchor="middle" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="10">安全特性：无状态认证 · 跨域支持 · 防篡改 · 可扩展</text>
+</svg>

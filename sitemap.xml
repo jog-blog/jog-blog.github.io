@@ -2,25 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bmsg.top/tags/api%E7%BD%91%E5%85%B3/</loc>
-    <lastmod>2025-11-28T15:45:00+08:00</lastmod>
+    <loc>https://bmsg.top/tags/ai-governance/</loc>
+    <lastmod>2026-01-06T14:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/tags/artificial-intelligence/</loc>
+    <lastmod>2026-01-06T14:30:00+08:00</lastmod>
   </url><url>
     <loc>https://bmsg.top/categories/</loc>
-    <lastmod>2025-11-28T15:45:00+08:00</lastmod>
+    <lastmod>2026-01-06T14:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/tags/global-summit/</loc>
+    <lastmod>2026-01-06T14:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/posts/news/global-tech-summit-2025/</loc>
+    <lastmod>2026-01-06T14:30:00+08:00</lastmod>
   </url><url>
     <loc>https://bmsg.top/</loc>
+    <lastmod>2026-01-06T14:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/tags/international-cooperation/</loc>
+    <lastmod>2026-01-06T14:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/categories/politics/</loc>
+    <lastmod>2026-01-06T14:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/posts/</loc>
+    <lastmod>2026-01-06T14:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/tags/</loc>
+    <lastmod>2026-01-06T14:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/categories/technology/</loc>
+    <lastmod>2026-01-06T14:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/tags/technology-policy/</loc>
+    <lastmod>2026-01-06T14:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/tags/api%E7%BD%91%E5%85%B3/</loc>
     <lastmod>2025-11-28T15:45:00+08:00</lastmod>
   </url><url>
     <loc>https://bmsg.top/tags/kong/</loc>
     <lastmod>2025-11-28T15:45:00+08:00</lastmod>
   </url><url>
-    <loc>https://bmsg.top/posts/</loc>
-    <lastmod>2025-11-28T15:45:00+08:00</lastmod>
-  </url><url>
     <loc>https://bmsg.top/tags/spring-cloud-gateway/</loc>
-    <lastmod>2025-11-28T15:45:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bmsg.top/tags/</loc>
     <lastmod>2025-11-28T15:45:00+08:00</lastmod>
   </url><url>
     <loc>https://bmsg.top/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
@@ -101,9 +125,6 @@
     <loc>https://bmsg.top/tags/labour-party/</loc>
     <lastmod>2025-11-20T18:15:00+08:00</lastmod>
   </url><url>
-    <loc>https://bmsg.top/categories/politics/</loc>
-    <lastmod>2025-11-20T18:15:00+08:00</lastmod>
-  </url><url>
     <loc>https://bmsg.top/tags/uk-election/</loc>
     <lastmod>2025-11-20T18:15:00+08:00</lastmod>
   </url><url>
@@ -117,9 +138,6 @@
     <lastmod>2025-11-20T17:30:00+08:00</lastmod>
   </url><url>
     <loc>https://bmsg.top/tags/productivity/</loc>
-    <lastmod>2025-11-20T17:30:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bmsg.top/categories/technology/</loc>
     <lastmod>2025-11-20T17:30:00+08:00</lastmod>
   </url><url>
     <loc>https://bmsg.top/categories/tools/</loc>
@@ -143,9 +161,6 @@
     <loc>https://bmsg.top/categories/environment/</loc>
     <lastmod>2025-11-20T16:45:00+08:00</lastmod>
   </url><url>
-    <loc>https://bmsg.top/tags/international-cooperation/</loc>
-    <lastmod>2025-11-20T16:45:00+08:00</lastmod>
-  </url><url>
     <loc>https://bmsg.top/tags/renewable-energy/</loc>
     <lastmod>2025-11-20T16:45:00+08:00</lastmod>
   </url><url>
@@ -154,9 +169,6 @@
   </url><url>
     <loc>https://bmsg.top/tags/us-china-relations/</loc>
     <lastmod>2025-11-20T16:45:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bmsg.top/tags/artificial-intelligence/</loc>
-    <lastmod>2025-11-20T15:30:00+08:00</lastmod>
   </url><url>
     <loc>https://bmsg.top/tags/eu-ai-act/</loc>
     <lastmod>2025-11-20T15:30:00+08:00</lastmod>
@@ -168,9 +180,6 @@
     <lastmod>2025-11-20T15:30:00+08:00</lastmod>
   </url><url>
     <loc>https://bmsg.top/tags/regulation/</loc>
-    <lastmod>2025-11-20T15:30:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bmsg.top/tags/technology-policy/</loc>
     <lastmod>2025-11-20T15:30:00+08:00</lastmod>
   </url><url>
     <loc>https://bmsg.top/tags/gemini-3/</loc>

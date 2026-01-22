@@ -6,20 +6,118 @@
     <description>Recent content in Categories on Inkchron</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Jan 2026 14:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 22 Jan 2026 11:51:08 +0000</lastBuildDate>
     <atom:link href="https://bmsg.top/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Politics</title>
-      <link>https://bmsg.top/categories/politics/</link>
-      <pubDate>Tue, 06 Jan 2026 14:30:00 +0800</pubDate>
-      <guid>https://bmsg.top/categories/politics/</guid>
+      <title>Education</title>
+      <link>https://bmsg.top/categories/education/</link>
+      <pubDate>Thu, 22 Jan 2026 11:51:08 +0000</pubDate>
+      <guid>https://bmsg.top/categories/education/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Entertainment</title>
+      <link>https://bmsg.top/categories/entertainment/</link>
+      <pubDate>Thu, 22 Jan 2026 11:51:08 +0000</pubDate>
+      <guid>https://bmsg.top/categories/entertainment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Healthcare</title>
+      <link>https://bmsg.top/categories/healthcare/</link>
+      <pubDate>Thu, 22 Jan 2026 11:51:08 +0000</pubDate>
+      <guid>https://bmsg.top/categories/healthcare/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Smart Cities</title>
+      <link>https://bmsg.top/categories/smart-cities/</link>
+      <pubDate>Thu, 22 Jan 2026 11:51:08 +0000</pubDate>
+      <guid>https://bmsg.top/categories/smart-cities/</guid>
       <description></description>
     </item>
     <item>
       <title>Technology</title>
       <link>https://bmsg.top/categories/technology/</link>
-      <pubDate>Tue, 06 Jan 2026 14:30:00 +0800</pubDate>
+      <pubDate>Thu, 22 Jan 2026 11:51:08 +0000</pubDate>
       <guid>https://bmsg.top/categories/technology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Telecommunications</title>
+      <link>https://bmsg.top/categories/telecommunications/</link>
+      <pubDate>Thu, 22 Jan 2026 11:51:08 +0000</pubDate>
+      <guid>https://bmsg.top/categories/telecommunications/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>心理学</title>
+      <link>https://bmsg.top/categories/%E5%BF%83%E7%90%86%E5%AD%A6/</link>
+      <pubDate>Thu, 22 Jan 2026 11:46:40 +0000</pubDate>
+      <guid>https://bmsg.top/categories/%E5%BF%83%E7%90%86%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>悬案</title>
+      <link>https://bmsg.top/categories/%E6%82%AC%E6%A1%88/</link>
+      <pubDate>Thu, 22 Jan 2026 11:46:40 +0000</pubDate>
+      <guid>https://bmsg.top/categories/%E6%82%AC%E6%A1%88/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>法律</title>
+      <link>https://bmsg.top/categories/%E6%B3%95%E5%BE%8B/</link>
+      <pubDate>Thu, 22 Jan 2026 11:46:40 +0000</pubDate>
+      <guid>https://bmsg.top/categories/%E6%B3%95%E5%BE%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>犯罪</title>
+      <link>https://bmsg.top/categories/%E7%8A%AF%E7%BD%AA/</link>
+      <pubDate>Thu, 22 Jan 2026 11:46:40 +0000</pubDate>
+      <guid>https://bmsg.top/categories/%E7%8A%AF%E7%BD%AA/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>社会</title>
+      <link>https://bmsg.top/categories/%E7%A4%BE%E4%BC%9A/</link>
+      <pubDate>Thu, 22 Jan 2026 11:46:40 +0000</pubDate>
+      <guid>https://bmsg.top/categories/%E7%A4%BE%E4%BC%9A/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>就业</title>
+      <link>https://bmsg.top/categories/%E5%B0%B1%E4%B8%9A/</link>
+      <pubDate>Thu, 22 Jan 2026 11:42:10 +0000</pubDate>
+      <guid>https://bmsg.top/categories/%E5%B0%B1%E4%B8%9A/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>技能学习</title>
+      <link>https://bmsg.top/categories/%E6%8A%80%E8%83%BD%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Thu, 22 Jan 2026 11:42:10 +0000</pubDate>
+      <guid>https://bmsg.top/categories/%E6%8A%80%E8%83%BD%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>政策</title>
+      <link>https://bmsg.top/categories/%E6%94%BF%E7%AD%96/</link>
+      <pubDate>Thu, 22 Jan 2026 11:42:10 +0000</pubDate>
+      <guid>https://bmsg.top/categories/%E6%94%BF%E7%AD%96/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>教育</title>
+      <link>https://bmsg.top/categories/%E6%95%99%E8%82%B2/</link>
+      <pubDate>Thu, 22 Jan 2026 11:42:10 +0000</pubDate>
+      <guid>https://bmsg.top/categories/%E6%95%99%E8%82%B2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Politics</title>
+      <link>https://bmsg.top/categories/politics/</link>
+      <pubDate>Tue, 06 Jan 2026 14:30:00 +0800</pubDate>
+      <guid>https://bmsg.top/categories/politics/</guid>
       <description></description>
     </item>
     <item>

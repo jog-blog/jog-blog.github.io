@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MQTT on Inkchron</title>
+    <link>https://bmsg.top/tags/mqtt/</link>
+    <description>Recent content in MQTT on Inkchron</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 23 Jan 2026 20:25:29 +0800</lastBuildDate>
+    <atom:link href="https://bmsg.top/tags/mqtt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>物联网通信协议的演进与边缘计算的整合应用</title>
+      <link>https://bmsg.top/posts/%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E7%9A%84%E6%BC%94%E8%BF%9B%E4%B8%8E%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97%E7%9A%84%E6%95%B4%E5%90%88%E5%BA%94%E7%94%A8_20260123_202130/</link>
+      <pubDate>Fri, 23 Jan 2026 20:25:29 +0800</pubDate>
+      <guid>https://bmsg.top/posts/%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E7%9A%84%E6%BC%94%E8%BF%9B%E4%B8%8E%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97%E7%9A%84%E6%95%B4%E5%90%88%E5%BA%94%E7%94%A8_20260123_202130/</guid>
+      <description>&lt;p&gt;本文探讨了物联网通信协议的发展历程以及如何与边缘计算相结合，提升物联网系统的性能和效率。通过分析不同协议的特点及其在边缘计算中的应用，提供了对未来物联网发展的深刻见解。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

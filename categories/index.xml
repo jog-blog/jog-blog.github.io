@@ -6,8 +6,57 @@
     <description>Recent content in Categories on Inkchron</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Jan 2026 02:05:29 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Jan 2026 08:13:36 +0000</lastBuildDate>
     <atom:link href="https://bmsg.top/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Edge Computing</title>
+      <link>https://bmsg.top/categories/edge-computing/</link>
+      <pubDate>Fri, 23 Jan 2026 08:13:36 +0000</pubDate>
+      <guid>https://bmsg.top/categories/edge-computing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IoT</title>
+      <link>https://bmsg.top/categories/iot/</link>
+      <pubDate>Fri, 23 Jan 2026 08:13:36 +0000</pubDate>
+      <guid>https://bmsg.top/categories/iot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technology</title>
+      <link>https://bmsg.top/categories/technology/</link>
+      <pubDate>Fri, 23 Jan 2026 08:13:36 +0000</pubDate>
+      <guid>https://bmsg.top/categories/technology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>数据合规</title>
+      <link>https://bmsg.top/categories/%E6%95%B0%E6%8D%AE%E5%90%88%E8%A7%84/</link>
+      <pubDate>Fri, 23 Jan 2026 08:10:58 +0000</pubDate>
+      <guid>https://bmsg.top/categories/%E6%95%B0%E6%8D%AE%E5%90%88%E8%A7%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>科技</title>
+      <link>https://bmsg.top/categories/%E7%A7%91%E6%8A%80/</link>
+      <pubDate>Fri, 23 Jan 2026 08:10:58 +0000</pubDate>
+      <guid>https://bmsg.top/categories/%E7%A7%91%E6%8A%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>技术发展</title>
+      <link>https://bmsg.top/categories/%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95/</link>
+      <pubDate>Fri, 23 Jan 2026 08:07:37 +0000</pubDate>
+      <guid>https://bmsg.top/categories/%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>网络安全</title>
+      <link>https://bmsg.top/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
+      <pubDate>Fri, 23 Jan 2026 08:07:37 +0000</pubDate>
+      <guid>https://bmsg.top/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Artificial Intelligence</title>
       <link>https://bmsg.top/categories/artificial-intelligence/</link>
@@ -20,13 +69,6 @@
       <link>https://bmsg.top/categories/data-processing/</link>
       <pubDate>Fri, 23 Jan 2026 02:05:29 +0000</pubDate>
       <guid>https://bmsg.top/categories/data-processing/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Technology</title>
-      <link>https://bmsg.top/categories/technology/</link>
-      <pubDate>Fri, 23 Jan 2026 02:05:29 +0000</pubDate>
-      <guid>https://bmsg.top/categories/technology/</guid>
       <description></description>
     </item>
     <item>
@@ -58,24 +100,10 @@
       <description></description>
     </item>
     <item>
-      <title>技术发展</title>
-      <link>https://bmsg.top/categories/%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95/</link>
-      <pubDate>Fri, 23 Jan 2026 01:59:30 +0000</pubDate>
-      <guid>https://bmsg.top/categories/%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>数据隐私</title>
       <link>https://bmsg.top/categories/%E6%95%B0%E6%8D%AE%E9%9A%90%E7%A7%81/</link>
       <pubDate>Fri, 23 Jan 2026 01:59:30 +0000</pubDate>
       <guid>https://bmsg.top/categories/%E6%95%B0%E6%8D%AE%E9%9A%90%E7%A7%81/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>网络安全</title>
-      <link>https://bmsg.top/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
-      <pubDate>Fri, 23 Jan 2026 01:59:30 +0000</pubDate>
-      <guid>https://bmsg.top/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
       <description></description>
     </item>
     <item>
@@ -97,13 +125,6 @@
       <link>https://bmsg.top/categories/%E6%95%B0%E6%8D%AE%E6%B5%81%E5%8A%A8/</link>
       <pubDate>Thu, 22 Jan 2026 12:12:22 +0000</pubDate>
       <guid>https://bmsg.top/categories/%E6%95%B0%E6%8D%AE%E6%B5%81%E5%8A%A8/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>科技</title>
-      <link>https://bmsg.top/categories/%E7%A7%91%E6%8A%80/</link>
-      <pubDate>Thu, 22 Jan 2026 12:12:22 +0000</pubDate>
-      <guid>https://bmsg.top/categories/%E7%A7%91%E6%8A%80/</guid>
       <description></description>
     </item>
     <item>

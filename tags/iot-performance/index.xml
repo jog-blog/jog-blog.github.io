@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IoT Performance on Inkchron</title>
+    <link>https://bmsg.top/tags/iot-performance/</link>
+    <description>Recent content in IoT Performance on Inkchron</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 23 Jan 2026 08:13:36 +0000</lastBuildDate>
+    <atom:link href="https://bmsg.top/tags/iot-performance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploring the Impact of Edge Computing on IoT Device Performance</title>
+      <link>https://bmsg.top/posts/exploring-the-impact-of-edge-c_20260123_081128/</link>
+      <pubDate>Fri, 23 Jan 2026 08:13:36 +0000</pubDate>
+      <guid>https://bmsg.top/posts/exploring-the-impact-of-edge-c_20260123_081128/</guid>
+      <description>&lt;p&gt;This article delves into edge computing&amp;rsquo;s transformative effects on IoT device performance, exploring benefits such as reduced latency, enhanced data processing, and improved security. It also examines challenges and future trends, highlighting the synergy between edge computing and the Internet of Things.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

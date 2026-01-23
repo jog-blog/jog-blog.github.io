@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Management on Inkchron</title>
+    <link>https://bmsg.top/tags/data-management/</link>
+    <description>Recent content in Data Management on Inkchron</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 23 Jan 2026 21:58:48 +0800</lastBuildDate>
+    <atom:link href="https://bmsg.top/tags/data-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Navigating Big Data: Real-Time Data Warehousing Practices and Governance Solutions</title>
+      <link>https://bmsg.top/posts/navigating-big-data-real-time_20260123_215622/</link>
+      <pubDate>Fri, 23 Jan 2026 21:58:48 +0800</pubDate>
+      <guid>https://bmsg.top/posts/navigating-big-data-real-time_20260123_215622/</guid>
+      <description>&lt;p&gt;This article explores the challenges and solutions associated with real-time data warehousing in the context of big data. It discusses best practices for managing data warehousing processes, the importance of governance in ensuring data quality and compliance, and highlights innovative technologies that facilitate real-time data analytics.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -6,8 +6,99 @@
     <description>Recent content in Tags on Inkchron</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Jan 2026 20:33:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 23 Jan 2026 21:58:48 +0800</lastBuildDate>
     <atom:link href="https://bmsg.top/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analytics</title>
+      <link>https://bmsg.top/tags/analytics/</link>
+      <pubDate>Fri, 23 Jan 2026 21:58:48 +0800</pubDate>
+      <guid>https://bmsg.top/tags/analytics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud Computing</title>
+      <link>https://bmsg.top/tags/cloud-computing/</link>
+      <pubDate>Fri, 23 Jan 2026 21:58:48 +0800</pubDate>
+      <guid>https://bmsg.top/tags/cloud-computing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Management</title>
+      <link>https://bmsg.top/tags/data-management/</link>
+      <pubDate>Fri, 23 Jan 2026 21:58:48 +0800</pubDate>
+      <guid>https://bmsg.top/tags/data-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Real-Time Data</title>
+      <link>https://bmsg.top/tags/real-time-data/</link>
+      <pubDate>Fri, 23 Jan 2026 21:58:48 +0800</pubDate>
+      <guid>https://bmsg.top/tags/real-time-data/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>工具迭代</title>
+      <link>https://bmsg.top/tags/%E5%B7%A5%E5%85%B7%E8%BF%AD%E4%BB%A3/</link>
+      <pubDate>Fri, 23 Jan 2026 21:55:52 +0800</pubDate>
+      <guid>https://bmsg.top/tags/%E5%B7%A5%E5%85%B7%E8%BF%AD%E4%BB%A3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>技术趋势</title>
+      <link>https://bmsg.top/tags/%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF/</link>
+      <pubDate>Fri, 23 Jan 2026 21:55:52 +0800</pubDate>
+      <guid>https://bmsg.top/tags/%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>框架</title>
+      <link>https://bmsg.top/tags/%E6%A1%86%E6%9E%B6/</link>
+      <pubDate>Fri, 23 Jan 2026 21:55:52 +0800</pubDate>
+      <guid>https://bmsg.top/tags/%E6%A1%86%E6%9E%B6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>编程语言</title>
+      <link>https://bmsg.top/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+      <pubDate>Fri, 23 Jan 2026 21:55:52 +0800</pubDate>
+      <guid>https://bmsg.top/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CCPA</title>
+      <link>https://bmsg.top/tags/ccpa/</link>
+      <pubDate>Fri, 23 Jan 2026 21:51:00 +0800</pubDate>
+      <guid>https://bmsg.top/tags/ccpa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GDPR</title>
+      <link>https://bmsg.top/tags/gdpr/</link>
+      <pubDate>Fri, 23 Jan 2026 21:51:00 +0800</pubDate>
+      <guid>https://bmsg.top/tags/gdpr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PIPL</title>
+      <link>https://bmsg.top/tags/pipl/</link>
+      <pubDate>Fri, 23 Jan 2026 21:51:00 +0800</pubDate>
+      <guid>https://bmsg.top/tags/pipl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>数据保护</title>
+      <link>https://bmsg.top/tags/%E6%95%B0%E6%8D%AE%E4%BF%9D%E6%8A%A4/</link>
+      <pubDate>Fri, 23 Jan 2026 21:51:00 +0800</pubDate>
+      <guid>https://bmsg.top/tags/%E6%95%B0%E6%8D%AE%E4%BF%9D%E6%8A%A4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>网络安全</title>
+      <link>https://bmsg.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
+      <pubDate>Fri, 23 Jan 2026 21:51:00 +0800</pubDate>
+      <guid>https://bmsg.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Frameworks</title>
       <link>https://bmsg.top/tags/frameworks/</link>
@@ -310,13 +401,6 @@
       <description></description>
     </item>
     <item>
-      <title>Real-Time Data</title>
-      <link>https://bmsg.top/tags/real-time-data/</link>
-      <pubDate>Fri, 23 Jan 2026 02:05:29 +0800</pubDate>
-      <guid>https://bmsg.top/tags/real-time-data/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>以太坊2.0</title>
       <link>https://bmsg.top/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A2.0/</link>
       <pubDate>Fri, 23 Jan 2026 02:02:41 +0800</pubDate>
@@ -370,13 +454,6 @@
       <link>https://bmsg.top/tags/%E6%B3%95%E8%A7%84%E9%81%B5%E4%BB%8E/</link>
       <pubDate>Fri, 23 Jan 2026 01:59:30 +0800</pubDate>
       <guid>https://bmsg.top/tags/%E6%B3%95%E8%A7%84%E9%81%B5%E4%BB%8E/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>网络安全</title>
-      <link>https://bmsg.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
-      <pubDate>Fri, 23 Jan 2026 01:59:30 +0800</pubDate>
-      <guid>https://bmsg.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
       <description></description>
     </item>
     <item>
@@ -1325,13 +1402,6 @@
       <description></description>
     </item>
     <item>
-      <title>数据保护</title>
-      <link>https://bmsg.top/tags/%E6%95%B0%E6%8D%AE%E4%BF%9D%E6%8A%A4/</link>
-      <pubDate>Thu, 13 Nov 2025 12:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/tags/%E6%95%B0%E6%8D%AE%E4%BF%9D%E6%8A%A4/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>网络威胁</title>
       <link>https://bmsg.top/tags/%E7%BD%91%E7%BB%9C%E5%A8%81%E8%83%81/</link>
       <pubDate>Thu, 13 Nov 2025 12:00:00 +0800</pubDate>
@@ -1525,20 +1595,6 @@
       <link>https://bmsg.top/tags/%E5%BC%80%E5%8F%91%E8%80%85%E8%96%AA%E8%B5%84/</link>
       <pubDate>Thu, 13 Nov 2025 09:00:00 +0800</pubDate>
       <guid>https://bmsg.top/tags/%E5%BC%80%E5%8F%91%E8%80%85%E8%96%AA%E8%B5%84/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>技术趋势</title>
-      <link>https://bmsg.top/tags/%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF/</link>
-      <pubDate>Thu, 13 Nov 2025 09:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/tags/%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>编程语言</title>
-      <link>https://bmsg.top/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
-      <pubDate>Thu, 13 Nov 2025 09:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
       <description></description>
     </item>
     <item>

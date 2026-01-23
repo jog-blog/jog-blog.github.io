@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on Inkchron</title>
+    <link>https://bmsg.top/categories/tech/</link>
+    <description>Recent content in Tech on Inkchron</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 23 Jan 2026 22:14:48 +0800</lastBuildDate>
+    <atom:link href="https://bmsg.top/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advancements in Frontend Frameworks: Techniques for Cross-Platform Development and Performance Optimization</title>
+      <link>https://bmsg.top/posts/advancements-in-frontend-frame_20260123_221410/</link>
+      <pubDate>Fri, 23 Jan 2026 22:14:48 +0800</pubDate>
+      <guid>https://bmsg.top/posts/advancements-in-frontend-frame_20260123_221410/</guid>
+      <description>&lt;p&gt;This article explores the latest advancements in frontend frameworks, focusing on techniques for cross-platform development and performance optimization. It discusses popular frameworks, their features, and best practices for creating high-performance applications.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

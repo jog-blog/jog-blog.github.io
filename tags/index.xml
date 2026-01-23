@@ -6,62 +6,69 @@
     <description>Recent content in Tags on Inkchron</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Jan 2026 21:58:48 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 23 Jan 2026 22:13:40 +0800</lastBuildDate>
     <atom:link href="https://bmsg.top/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Analytics</title>
-      <link>https://bmsg.top/tags/analytics/</link>
-      <pubDate>Fri, 23 Jan 2026 21:58:48 +0800</pubDate>
-      <guid>https://bmsg.top/tags/analytics/</guid>
+      <title>CI/CD</title>
+      <link>https://bmsg.top/tags/ci/cd/</link>
+      <pubDate>Fri, 23 Jan 2026 22:13:40 +0800</pubDate>
+      <guid>https://bmsg.top/tags/ci/cd/</guid>
       <description></description>
     </item>
     <item>
-      <title>Cloud Computing</title>
-      <link>https://bmsg.top/tags/cloud-computing/</link>
-      <pubDate>Fri, 23 Jan 2026 21:58:48 +0800</pubDate>
-      <guid>https://bmsg.top/tags/cloud-computing/</guid>
+      <title>DevOps</title>
+      <link>https://bmsg.top/tags/devops/</link>
+      <pubDate>Fri, 23 Jan 2026 22:13:40 +0800</pubDate>
+      <guid>https://bmsg.top/tags/devops/</guid>
       <description></description>
     </item>
     <item>
-      <title>Data Management</title>
-      <link>https://bmsg.top/tags/data-management/</link>
-      <pubDate>Fri, 23 Jan 2026 21:58:48 +0800</pubDate>
-      <guid>https://bmsg.top/tags/data-management/</guid>
+      <title>最佳实践</title>
+      <link>https://bmsg.top/tags/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Fri, 23 Jan 2026 22:13:40 +0800</pubDate>
+      <guid>https://bmsg.top/tags/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
       <description></description>
     </item>
     <item>
-      <title>Real-Time Data</title>
-      <link>https://bmsg.top/tags/real-time-data/</link>
-      <pubDate>Fri, 23 Jan 2026 21:58:48 +0800</pubDate>
-      <guid>https://bmsg.top/tags/real-time-data/</guid>
+      <title>自动化测试</title>
+      <link>https://bmsg.top/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Fri, 23 Jan 2026 22:13:40 +0800</pubDate>
+      <guid>https://bmsg.top/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
       <description></description>
     </item>
     <item>
-      <title>工具迭代</title>
-      <link>https://bmsg.top/tags/%E5%B7%A5%E5%85%B7%E8%BF%AD%E4%BB%A3/</link>
-      <pubDate>Fri, 23 Jan 2026 21:55:52 +0800</pubDate>
-      <guid>https://bmsg.top/tags/%E5%B7%A5%E5%85%B7%E8%BF%AD%E4%BB%A3/</guid>
+      <title>Kubernetes</title>
+      <link>https://bmsg.top/tags/kubernetes/</link>
+      <pubDate>Fri, 23 Jan 2026 22:06:01 +0800</pubDate>
+      <guid>https://bmsg.top/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
-      <title>技术趋势</title>
-      <link>https://bmsg.top/tags/%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF/</link>
-      <pubDate>Fri, 23 Jan 2026 21:55:52 +0800</pubDate>
-      <guid>https://bmsg.top/tags/%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF/</guid>
+      <title>Serverless</title>
+      <link>https://bmsg.top/tags/serverless/</link>
+      <pubDate>Fri, 23 Jan 2026 22:06:01 +0800</pubDate>
+      <guid>https://bmsg.top/tags/serverless/</guid>
       <description></description>
     </item>
     <item>
-      <title>框架</title>
-      <link>https://bmsg.top/tags/%E6%A1%86%E6%9E%B6/</link>
-      <pubDate>Fri, 23 Jan 2026 21:55:52 +0800</pubDate>
-      <guid>https://bmsg.top/tags/%E6%A1%86%E6%9E%B6/</guid>
+      <title>云原生</title>
+      <link>https://bmsg.top/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</link>
+      <pubDate>Fri, 23 Jan 2026 22:06:01 +0800</pubDate>
+      <guid>https://bmsg.top/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</guid>
       <description></description>
     </item>
     <item>
-      <title>编程语言</title>
-      <link>https://bmsg.top/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
-      <pubDate>Fri, 23 Jan 2026 21:55:52 +0800</pubDate>
-      <guid>https://bmsg.top/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
+      <title>云计算</title>
+      <link>https://bmsg.top/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Fri, 23 Jan 2026 22:06:01 +0800</pubDate>
+      <guid>https://bmsg.top/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>数字化转型</title>
+      <link>https://bmsg.top/tags/%E6%95%B0%E5%AD%97%E5%8C%96%E8%BD%AC%E5%9E%8B/</link>
+      <pubDate>Fri, 23 Jan 2026 22:06:01 +0800</pubDate>
+      <guid>https://bmsg.top/tags/%E6%95%B0%E5%AD%97%E5%8C%96%E8%BD%AC%E5%9E%8B/</guid>
       <description></description>
     </item>
     <item>
@@ -163,20 +170,6 @@
       <description></description>
     </item>
     <item>
-      <title>CI/CD</title>
-      <link>https://bmsg.top/tags/ci/cd/</link>
-      <pubDate>Fri, 23 Jan 2026 20:21:00 +0800</pubDate>
-      <guid>https://bmsg.top/tags/ci/cd/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>最佳实践</title>
-      <link>https://bmsg.top/tags/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
-      <pubDate>Fri, 23 Jan 2026 20:21:00 +0800</pubDate>
-      <guid>https://bmsg.top/tags/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>最新趋势</title>
       <link>https://bmsg.top/tags/%E6%9C%80%E6%96%B0%E8%B6%8B%E5%8A%BF/</link>
       <pubDate>Fri, 23 Jan 2026 20:21:00 +0800</pubDate>
@@ -188,13 +181,6 @@
       <link>https://bmsg.top/tags/%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/</link>
       <pubDate>Fri, 23 Jan 2026 20:21:00 +0800</pubDate>
       <guid>https://bmsg.top/tags/%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>自动化测试</title>
-      <link>https://bmsg.top/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
-      <pubDate>Fri, 23 Jan 2026 20:21:00 +0800</pubDate>
-      <guid>https://bmsg.top/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
       <description></description>
     </item>
     <item>
@@ -237,13 +223,6 @@
       <link>https://bmsg.top/tags/%E8%B7%A8%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
       <pubDate>Fri, 23 Jan 2026 20:04:47 +0800</pubDate>
       <guid>https://bmsg.top/tags/%E8%B7%A8%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>云计算</title>
-      <link>https://bmsg.top/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/</link>
-      <pubDate>Fri, 23 Jan 2026 20:01:42 +0800</pubDate>
-      <guid>https://bmsg.top/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/</guid>
       <description></description>
     </item>
     <item>
@@ -401,6 +380,13 @@
       <description></description>
     </item>
     <item>
+      <title>Real-Time Data</title>
+      <link>https://bmsg.top/tags/real-time-data/</link>
+      <pubDate>Fri, 23 Jan 2026 02:05:29 +0800</pubDate>
+      <guid>https://bmsg.top/tags/real-time-data/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>以太坊2.0</title>
       <link>https://bmsg.top/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A2.0/</link>
       <pubDate>Fri, 23 Jan 2026 02:02:41 +0800</pubDate>
@@ -468,13 +454,6 @@
       <link>https://bmsg.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/</link>
       <pubDate>Thu, 22 Jan 2026 12:08:08 +0000</pubDate>
       <guid>https://bmsg.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>数字化转型</title>
-      <link>https://bmsg.top/tags/%E6%95%B0%E5%AD%97%E5%8C%96%E8%BD%AC%E5%9E%8B/</link>
-      <pubDate>Thu, 22 Jan 2026 12:08:08 +0000</pubDate>
-      <guid>https://bmsg.top/tags/%E6%95%B0%E5%AD%97%E5%8C%96%E8%BD%AC%E5%9E%8B/</guid>
       <description></description>
     </item>
     <item>
@@ -1595,6 +1574,20 @@
       <link>https://bmsg.top/tags/%E5%BC%80%E5%8F%91%E8%80%85%E8%96%AA%E8%B5%84/</link>
       <pubDate>Thu, 13 Nov 2025 09:00:00 +0800</pubDate>
       <guid>https://bmsg.top/tags/%E5%BC%80%E5%8F%91%E8%80%85%E8%96%AA%E8%B5%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>技术趋势</title>
+      <link>https://bmsg.top/tags/%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF/</link>
+      <pubDate>Thu, 13 Nov 2025 09:00:00 +0800</pubDate>
+      <guid>https://bmsg.top/tags/%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>编程语言</title>
+      <link>https://bmsg.top/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+      <pubDate>Thu, 13 Nov 2025 09:00:00 +0800</pubDate>
+      <guid>https://bmsg.top/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
       <description></description>
     </item>
     <item>

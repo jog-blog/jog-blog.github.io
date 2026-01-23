@@ -6,8 +6,15 @@
     <description>Recent content in 云计算 on Inkchron</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 13 Nov 2025 11:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 23 Jan 2026 22:06:01 +0800</lastBuildDate>
     <atom:link href="https://bmsg.top/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>云计算新动向：K8s生态系统与Serverless架构的最新发展</title>
+      <link>https://bmsg.top/posts/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%96%B0%E5%8A%A8%E5%90%91k8s%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8Eserverless%E6%9E%B6%E6%9E%84%E7%9A%84%E6%9C%80%E6%96%B0%E5%8F%91_20260123_220344/</link>
+      <pubDate>Fri, 23 Jan 2026 22:06:01 +0800</pubDate>
+      <guid>https://bmsg.top/posts/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%96%B0%E5%8A%A8%E5%90%91k8s%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E4%B8%8Eserverless%E6%9E%B6%E6%9E%84%E7%9A%84%E6%9C%80%E6%96%B0%E5%8F%91_20260123_220344/</guid>
+      <description>&lt;p&gt;本文探讨了云计算领域的新动向，特别是Kubernetes生态系统与Serverless架构的最新发展。通过分析这两者的结合如何推动云原生应用的发展，以及它们在企业数字化转型中的关键作用，旨在为读者提供深刻的见解和实用的技术参考。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>云计算与边缘计算融合：下一代计算架构革命</title>
       <link>https://bmsg.top/posts/tech/cloud-edge-computing-integration/</link>

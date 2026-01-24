@@ -6,8 +6,15 @@
     <description>Recent content in IoT on Inkchron</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 22 Jan 2026 11:51:08 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 23 Jan 2026 23:41:08 +0800</lastBuildDate>
     <atom:link href="https://bmsg.top/tags/iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>物联网通信协议排查指南：边缘计算应用中的设备连接与故障解决</title>
+      <link>https://bmsg.top/posts/%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E6%8E%92%E6%9F%A5%E6%8C%87%E5%8D%97%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97%E5%BA%94%E7%94%A8%E4%B8%AD%E7%9A%84%E8%AE%BE%E5%A4%87%E8%BF%9E%E6%8E%A5%E4%B8%8E%E6%95%85%E9%9A%9C%E8%A7%A3%E5%86%B3_20260123_233836/</link>
+      <pubDate>Fri, 23 Jan 2026 23:41:08 +0800</pubDate>
+      <guid>https://bmsg.top/posts/%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E6%8E%92%E6%9F%A5%E6%8C%87%E5%8D%97%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97%E5%BA%94%E7%94%A8%E4%B8%AD%E7%9A%84%E8%AE%BE%E5%A4%87%E8%BF%9E%E6%8E%A5%E4%B8%8E%E6%95%85%E9%9A%9C%E8%A7%A3%E5%86%B3_20260123_233836/</guid>
+      <description>&lt;p&gt;物联网和边缘计算的结合带来了设备连接的复杂性。本文提供了排查物联网通信协议问题的指南，涵盖了代码示例、常见问题及解决方案，以及最佳实践。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Revolutionizing Connectivity: The Latest Developments in 5G Technology and Its Impact on Daily Life</title>
       <link>https://bmsg.top/posts/revolutionizing-connectivity-t_20260122_114720/</link>

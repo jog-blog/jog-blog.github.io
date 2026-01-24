@@ -6,34 +6,90 @@
     <description>Recent content in Categories on Inkchron</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Jan 2026 22:14:48 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 23 Jan 2026 20:07:50 +0000</lastBuildDate>
     <atom:link href="https://bmsg.top/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Tech</title>
-      <link>https://bmsg.top/categories/tech/</link>
-      <pubDate>Fri, 23 Jan 2026 22:14:48 +0800</pubDate>
-      <guid>https://bmsg.top/categories/tech/</guid>
+      <title>CI/CD</title>
+      <link>https://bmsg.top/categories/ci/cd/</link>
+      <pubDate>Fri, 23 Jan 2026 20:07:50 +0000</pubDate>
+      <guid>https://bmsg.top/categories/ci/cd/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps</title>
       <link>https://bmsg.top/categories/devops/</link>
-      <pubDate>Fri, 23 Jan 2026 22:13:40 +0800</pubDate>
+      <pubDate>Fri, 23 Jan 2026 20:07:50 +0000</pubDate>
       <guid>https://bmsg.top/categories/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Development</title>
+      <link>https://bmsg.top/categories/software-development/</link>
+      <pubDate>Fri, 23 Jan 2026 20:07:50 +0000</pubDate>
+      <guid>https://bmsg.top/categories/software-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Database Management</title>
+      <link>https://bmsg.top/categories/database-management/</link>
+      <pubDate>Fri, 23 Jan 2026 23:45:22 +0800</pubDate>
+      <guid>https://bmsg.top/categories/database-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Performance Optimization</title>
+      <link>https://bmsg.top/categories/performance-optimization/</link>
+      <pubDate>Fri, 23 Jan 2026 23:45:22 +0800</pubDate>
+      <guid>https://bmsg.top/categories/performance-optimization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>故障排查</title>
+      <link>https://bmsg.top/categories/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</link>
+      <pubDate>Fri, 23 Jan 2026 23:41:08 +0800</pubDate>
+      <guid>https://bmsg.top/categories/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>物联网</title>
+      <link>https://bmsg.top/categories/%E7%89%A9%E8%81%94%E7%BD%91/</link>
+      <pubDate>Fri, 23 Jan 2026 23:41:08 +0800</pubDate>
+      <guid>https://bmsg.top/categories/%E7%89%A9%E8%81%94%E7%BD%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>边缘计算</title>
+      <link>https://bmsg.top/categories/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Fri, 23 Jan 2026 23:41:08 +0800</pubDate>
+      <guid>https://bmsg.top/categories/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>通信协议</title>
+      <link>https://bmsg.top/categories/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Fri, 23 Jan 2026 23:41:08 +0800</pubDate>
+      <guid>https://bmsg.top/categories/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/</guid>
       <description></description>
     </item>
     <item>
       <title>技术</title>
       <link>https://bmsg.top/categories/%E6%8A%80%E6%9C%AF/</link>
-      <pubDate>Fri, 23 Jan 2026 22:13:40 +0800</pubDate>
+      <pubDate>Fri, 23 Jan 2026 23:38:06 +0800</pubDate>
       <guid>https://bmsg.top/categories/%E6%8A%80%E6%9C%AF/</guid>
       <description></description>
     </item>
     <item>
       <title>自动化测试</title>
       <link>https://bmsg.top/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
-      <pubDate>Fri, 23 Jan 2026 22:13:40 +0800</pubDate>
+      <pubDate>Fri, 23 Jan 2026 23:38:06 +0800</pubDate>
       <guid>https://bmsg.top/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>https://bmsg.top/categories/tech/</link>
+      <pubDate>Fri, 23 Jan 2026 22:14:48 +0800</pubDate>
+      <guid>https://bmsg.top/categories/tech/</guid>
       <description></description>
     </item>
     <item>
@@ -100,38 +156,10 @@
       <description></description>
     </item>
     <item>
-      <title>Software Development</title>
-      <link>https://bmsg.top/categories/software-development/</link>
-      <pubDate>Fri, 23 Jan 2026 20:33:00 +0800</pubDate>
-      <guid>https://bmsg.top/categories/software-development/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Technology</title>
       <link>https://bmsg.top/categories/technology/</link>
       <pubDate>Fri, 23 Jan 2026 20:33:00 +0800</pubDate>
       <guid>https://bmsg.top/categories/technology/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>物联网</title>
-      <link>https://bmsg.top/categories/%E7%89%A9%E8%81%94%E7%BD%91/</link>
-      <pubDate>Fri, 23 Jan 2026 20:25:29 +0800</pubDate>
-      <guid>https://bmsg.top/categories/%E7%89%A9%E8%81%94%E7%BD%91/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>边缘计算</title>
-      <link>https://bmsg.top/categories/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/</link>
-      <pubDate>Fri, 23 Jan 2026 20:25:29 +0800</pubDate>
-      <guid>https://bmsg.top/categories/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>通信协议</title>
-      <link>https://bmsg.top/categories/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/</link>
-      <pubDate>Fri, 23 Jan 2026 20:25:29 +0800</pubDate>
-      <guid>https://bmsg.top/categories/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/</guid>
       <description></description>
     </item>
     <item>

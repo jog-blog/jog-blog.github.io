@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>灰度发布 on Inkchron</title>
+    <link>https://bmsg.top/tags/%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83/</link>
+    <description>Recent content in 灰度发布 on Inkchron</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 24 Jan 2026 08:50:30 +0800</lastBuildDate>
+    <atom:link href="https://bmsg.top/tags/%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>程序员，你使用过灰度发布吗？</title>
+      <link>https://bmsg.top/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BD%A0%E4%BD%BF%E7%94%A8%E8%BF%87%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83%E5%90%97_20260124_084710/</link>
+      <pubDate>Sat, 24 Jan 2026 08:50:30 +0800</pubDate>
+      <guid>https://bmsg.top/posts/%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BD%A0%E4%BD%BF%E7%94%A8%E8%BF%87%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83%E5%90%97_20260124_084710/</guid>
+      <description>&lt;p&gt;本文介绍了灰度发布的概念及其在现代软件开发中的重要性，提供了详细的实施步骤、代码示例、常见问题及最佳实践，帮助程序员有效地使用灰度发布技术。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

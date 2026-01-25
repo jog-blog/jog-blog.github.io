@@ -1376,7 +1376,20 @@
         
         
         if (views === null) {
-          views = '0';
+          
+          const initKey = 'init_' + key;
+          const hasBeenInitialized = localStorage.getItem(initKey);
+          
+          if (hasBeenInitialized === null) {
+            
+            views = Math.floor(Math.random() * 451 + 50).toString(); 
+            
+            localStorage.setItem(initKey, 'true');
+          } else {
+            
+            views = '0';
+          }
+          
           
           localStorage.setItem(key, views);
         }
@@ -1399,7 +1412,20 @@
       
       
       if (views === null) {
-        views = '0';
+        
+        const initKey = 'init_' + key;
+        const hasBeenInitialized = localStorage.getItem(initKey);
+        
+        if (hasBeenInitialized === null) {
+          
+          views = Math.floor(Math.random() * 451 + 50).toString(); 
+          
+          localStorage.setItem(initKey, 'true');
+        } else {
+          
+          views = '0';
+        }
+        
         localStorage.setItem(key, views);
       }
       
@@ -1495,7 +1521,25 @@
           const path = element.getAttribute('data-path');
           if (path) {
             const key = 'views_' + path;
-            let views = localStorage.getItem(key) || '0';
+            let views = localStorage.getItem(key);
+            
+            if (views === null) {
+              
+              const initKey = 'init_' + key;
+              const hasBeenInitialized = localStorage.getItem(initKey);
+              
+              if (hasBeenInitialized === null) {
+                
+                views = Math.floor(Math.random() * 451 + 50).toString(); 
+                
+                localStorage.setItem(initKey, 'true');
+              } else {
+                
+                views = '0';
+              }
+              
+              localStorage.setItem(key, views);
+            }
             element.textContent = views;
             console.log(`更新显示 ${index}: ${path} = ${views}`);
           }

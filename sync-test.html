@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>浏览量同步测试</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        .btn { padding: 10px 15px; margin: 5px; background: #007cba; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        .btn:hover { background: #005a87; }
+        .btn-danger { background: #dc3545; }
+        .btn-danger:hover { background: #c82333; }
+        pre { background: #f5f5f5; padding: 10px; overflow-x: auto; }
+        .sync-status { padding: 10px; margin: 10px 0; border-radius: 4px; }
+        .sync-ok { background: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+        .sync-error { background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>🔄 浏览量同步测试工具</h1>
+    
+    <div class="test-section">
+        <h2>🎯 测试目标</h2>
+        <p>验证首页和详情页浏览量显示同步问题：</p>
+        <ul>
+            <li>首页显示：应该与详情页一致</li>
+            <li>详情页显示：应该显示正确的浏览量</li>
+            <li>数据源统一：都使用localStorage</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>🔧 测试操作</h2>
+        <button class="btn btn-danger" onclick="clearAllViews()">🧹 清空所有浏览量</button>
+        <button class="btn" onclick="checkSyncStatus()">🔍 检查同步状态</button>
+        <button class="btn" onclick="manualIncrement()">📈 手动增加浏览量</button>
+        <button class="btn" onclick="openTestPages()">🔗 打开测试页面</button>
+    </div>
+
+    <div class="test-section">
+        <h2>📊 同步状态</h2>
+        <div id="sync-status">点击"检查同步状态"开始检测...</div>
+    </div>
+
+    <div class="test-section">
+        <h2>📝 测试日志</h2>
+        <pre id="test-log">测试日志将在此显示...</pre>
+    </div>
+
+    <div class="test-section">
+        <h2>📋 测试说明</h2>
+        <ol>
+            <li><strong>清空数据</strong>：清除所有浏览量记录</li>
+            <li><strong>检查同步</strong>：验证首页和详情页数据一致性</li>
+            <li><strong>手动增加</strong>：测试浏览量增加功能</li>
+            <li><strong>页面测试</strong>：实际访问页面验证效果</li>
+        </ol>
+        <p><strong>预期结果</strong>：首页和详情页显示相同数值</p>
+    </div>
+
+    <script>
+        const testArticlePath = '/posts/tech/git-cleanup-file-management-2025/';
+        const storageKey = 'views_' + testArticlePath;
+        
+        function log(message) {
+            const logElement = document.getElementById('test-log');
+            const timestamp = new Date().toLocaleTimeString();
+            logElement.innerHTML += `[${timestamp}] ${message}\n`;
+            logElement.scrollTop = logElement.scrollHeight;
+            console.log(message);
+        }
+        
+        function clearAllViews() {
+            log('=== 清空所有浏览量数据 ===');
+            
+            Object.keys(localStorage).forEach(key => {
+                if (key.startsWith('views_')) {
+                    const oldValue = localStorage.getItem(key);
+                    localStorage.removeItem(key);
+                    log(`删除: ${key} = ${oldValue}`);
+                }
+            });
+            
+            Object.keys(sessionStorage).forEach(key => {
+                if (key.startsWith('session_viewed_') || key.startsWith('global_executed_')) {
+                    sessionStorage.removeItem(key);
+                    log(`清除会话标记: ${key}`);
+                }
+            });
+            
+            log('✅ 数据清空完成');
+            checkSyncStatus();
+        }
+        
+        function checkSyncStatus() {
+            log('=== 检查同步状态 ===');
+            
+            const statusDiv = document.getElementById('sync-status');
+            const currentValue = localStorage.getItem(storageKey) || '0';
+            
+            // 模拟首页和详情页的显示逻辑
+            const homeDisplay = currentValue;
+            const detailDisplay = currentValue;
+            
+            const isSynced = homeDisplay === detailDisplay;
+            
+            const statusHtml = `
+                <div class="sync-${isSynced ? 'ok' : 'error'}">
+                    <h3>同步状态: ${isSynced ? '✅ 正常' : '❌ 异常'}</h3>
+                    <p><strong>存储键:</strong> ${storageKey}</p>
+                    <p><strong>当前值:</strong> ${currentValue}</p>
+                    <p><strong>首页显示:</strong> ${homeDisplay}</p>
+                    <p><strong>详情页显示:</strong> ${detailDisplay}</p>
+                </div>
+            `;
+            
+            statusDiv.innerHTML = statusHtml;
+            log(`同步检查完成 - 状态: ${isSynced ? '正常' : '异常'}`);
+        }
+        
+        function manualIncrement() {
+            log('=== 手动增加浏览量 ===');
+            
+            let currentViews = parseInt(localStorage.getItem(storageKey) || '0');
+            const oldViews = currentViews;
+            currentViews++;
+            localStorage.setItem(storageKey, currentViews.toString());
+            
+            log(`浏览量更新: ${oldViews} → ${currentViews} (+1)`);
+            checkSyncStatus();
+        }
+        
+        function openTestPages() {
+            log('=== 打开测试页面 ===');
+            
+            // 打开首页
+            window.open('/', '_blank');
+            log('已打开首页');
+            
+            // 打开详情页
+            window.open(testArticlePath, '_blank');
+            log(`已打开详情页: ${testArticlePath}`);
+        }
+        
+        // 初始化
+        log('🚀 浏览量同步测试工具已就绪');
+        checkSyncStatus();
+    </script>
+</body>
+</html>

@@ -79,6 +79,9 @@
 <link rel="stylesheet" href="/css/output.min.css" />
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 
 
     
@@ -424,6 +427,10 @@
           
 
           | <span>1 minute read</span>
+          | <span class="inline-flex items-center gap-1 whitespace-nowrap">
+            <i class="far fa-eye"></i>
+            <span class="single-page-views">0</span>
+          </span>
 
           
           | <span>Updated at
@@ -568,20 +575,20 @@
       <div class="divider"></div>
       <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
         
-        <a role="button" class="btn btn-outline h-12" href="/posts/tech-tutorials/programmer-salary-ranking-2025/" title="2025程序员时薪排行榜：大厂薪资对比与技术面试解析">
+        <a role="button" class="btn btn-outline h-12" href="/posts/tech/quantum-computing-advancements/" title="量子计算：突破经典计算极限的前沿技术">
           <ion-icon name="chevron-back"></ion-icon>
           <div class="inline-flex flex-col items-start">
             <span class="text-base-content/60 text-xs font-normal">Previous page</span>
-            <span class="max-w-48 truncate">2025程序员时薪排行榜：大厂薪资对比与技术面试解析</span>
+            <span class="max-w-48 truncate">量子计算：突破经典计算极限的前沿技术</span>
           </div>
         </a>
         
 
         
-        <a role="button" class="btn btn-outline h-12" href="/posts/news/daily-news-20251108/" title="2025年11月8日国内新闻综述">
+        <a role="button" class="btn btn-outline h-12" href="/posts/tech-tutorials/build-your-first-chatgpt-app/" title="构建你的第一个ChatGPT应用 | 使用Apps SDK的逐步教程">
           <div class="inline-flex flex-col items-end">
             <span class="text-base-content/60 text-xs font-normal">Next page</span>
-            <span class="max-w-48 truncate">2025年11月8日国内新闻综述</span>
+            <span class="max-w-48 truncate">构建你的第一个ChatGPT应用 | 使用Apps SDK的逐步教程</span>
           </div>
           <ion-icon name="chevron-forward"></ion-icon>
         </a>
@@ -852,6 +859,16 @@
     © 2016 - 2026 Inkchron
   </p>
   
+
+  
+  <p class="text-sm">
+    <span id="busuanzi_container_site_pv" style="display: none;">
+      本站总访问量 <span id="busuanzi_value_site_pv">0</span> 次
+    </span>
+    <span id="busuanzi_container_site_uv" style="display: none;">
+      | 本站总访客数 <span id="busuanzi_value_site_uv">0</span> 人
+    </span>
+  </p>
 
   
   <p>Powered by Inkchron.</p>
@@ -1158,6 +1175,16 @@
   
 
   
+  <p class="text-sm">
+    <span id="busuanzi_container_site_pv" style="display: none;">
+      本站总访问量 <span id="busuanzi_value_site_pv">0</span> 次
+    </span>
+    <span id="busuanzi_container_site_uv" style="display: none;">
+      | 本站总访客数 <span id="busuanzi_value_site_uv">0</span> 人
+    </span>
+  </p>
+
+  
   <p>Powered by Inkchron.</p>
   
 </div>
@@ -1246,7 +1273,165 @@
 
 <script src="/js/main.min.js"></script>
 
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<script>
+  
+  console.log('脚本开始执行 - 时间:', new Date().toISOString());
+  
+  function updatePageViews() {
+    console.log('updatePageViews 函数执行 - 时间:', new Date().toISOString());
     
+    
+    const pageViewElements = document.querySelectorAll('.page-views');
+    console.log('找到 page-views 元素数量:', pageViewElements.length);
+    
+    let updatedCount = 0;
+    
+    
+    pageViewElements.forEach((element, index) => {
+      const path = element.getAttribute('data-path');
+      if (path) {
+        
+        const key = 'views_' + path;
+        let views = localStorage.getItem(key);
+        
+        
+        if (views === null) {
+          views = '0';
+          
+          localStorage.setItem(key, views);
+        }
+        
+        console.log(`首页文章 ${index}: path=${path}, key=${key}, views=${views}`);
+        element.textContent = views;
+        updatedCount++;
+      }
+    });
+    
+    
+    const singlePageViewElements = document.querySelectorAll('.single-page-views');
+    console.log('找到 single-page-views 元素数量:', singlePageViewElements.length);
+    
+    singlePageViewElements.forEach((element, index) => {
+      
+      const currentPath = window.location.pathname;
+      const key = 'views_' + currentPath;
+      let views = localStorage.getItem(key);
+      
+      
+      if (views === null) {
+        views = '0';
+        localStorage.setItem(key, views);
+      }
+      
+      console.log(`详情页元素 ${index}: path=${currentPath}, key=${key}, views=${views}`);
+      element.textContent = views;
+      updatedCount++;
+    });
+    
+    console.log(`总共更新了 ${updatedCount} 个浏览量显示`);
+    
+    
+    if (document.querySelector('#dream-single-post-main')) {
+      const currentPath = window.location.pathname;
+      const key = 'views_' + currentPath;
+        
+      
+      const sessionKey = 'session_viewed_' + currentPath;
+      const globalExecutedKey = 'global_executed_' + currentPath;
+        
+      
+      const sessionMarked = sessionStorage.getItem(sessionKey);
+      
+      const globalExecuted = sessionStorage.getItem(globalExecutedKey);
+        
+      if (!sessionMarked && !globalExecuted) {
+        let views = parseInt(localStorage.getItem(key) || '0');
+        const oldViews = views;
+        views++;
+        localStorage.setItem(key, views.toString());
+        sessionStorage.setItem(sessionKey, 'true'); 
+        sessionStorage.setItem(globalExecutedKey, 'true'); 
+          
+        
+        const viewDisplay = document.querySelector('.single-page-views');
+        if (viewDisplay) {
+          viewDisplay.textContent = views;
+        }
+        console.log(`文章详情页浏览量已更新: ${oldViews} → ${views} (+1)`);
+      } else {
+        console.log(`跳过浏览量增加 - 会话标记: ${!!sessionMarked}, 全局标记: ${!!globalExecuted}`);
+      }
+    }
+  }
+  
+  
+  let hasExecuted = false;
+  
+  function safeUpdatePageViews(source) {
+    if (hasExecuted) {
+      console.log(`updatePageViews 已执行过，跳过 (${source})`);
+      return;
+    }
+    hasExecuted = true;
+    console.log(`执行 updatePageViews - 来源: ${source}`);
+    updatePageViews();
+  }
+  
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOMContentLoaded 事件触发 - 时间:', new Date().toISOString());
+    safeUpdatePageViews('DOMContentLoaded');
+  });
+  
+  
+  window.addEventListener('load', function() {
+    console.log('window load 事件触发 - 时间:', new Date().toISOString());
+    setTimeout(() => safeUpdatePageViews('window.load'), 100);
+  });
+  
+  
+  if (document.readyState === 'loading') {
+    console.log('文档仍在加载中');
+  } else {
+    console.log('文档已加载完成，立即执行');
+    setTimeout(() => safeUpdatePageViews('immediate'), 10);
+  }
+  
+  
+  setInterval(function() {
+    const viewElements = document.querySelectorAll('.page-views');
+    if (viewElements.length > 0) {
+      let needsUpdate = false;
+      viewElements.forEach(element => {
+        if (element.textContent === '0') {
+          needsUpdate = true;
+        }
+      });
+      
+      if (needsUpdate) {
+        console.log('检测到未更新的浏览量显示，仅更新显示不增加计数');
+        
+        viewElements.forEach((element, index) => {
+          const path = element.getAttribute('data-path');
+          if (path) {
+            const key = 'views_' + path;
+            let views = localStorage.getItem(key) || '0';
+            element.textContent = views;
+            console.log(`更新显示 ${index}: ${path} = ${views}`);
+          }
+        });
+      }
+    }
+  }, 2000);
+</script>
+
+    
+
+
 
 
 

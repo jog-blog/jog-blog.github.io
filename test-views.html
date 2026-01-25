@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>浏览量统计测试页面</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>浏览量统计测试</h1>
+    
+    <h2>测试步骤：</h2>
+    <ol>
+        <li>打开浏览器开发者工具(F12) -> Console标签页</li>
+        <li>复制粘贴下面的清理脚本并执行</li>
+        <li>刷新博客首页</li>
+        <li>点击进入某篇文章</li>
+        <li>观察控制台输出和浏览量变化</li>
+    </ol>
+    
+    <h2>清理脚本：</h2>
+    <pre><code>// 清理localStorage中的浏览量数据
+Object.keys(localStorage).forEach(key => {
+  if (key.startsWith('views_')) {
+    console.log('删除:', key, '=', localStorage.getItem(key));
+    localStorage.removeItem(key);
+  }
+});
+
+// 清理会话标记
+Object.keys(sessionStorage).forEach(key => {
+  if (key.startsWith('session_viewed_')) {
+    sessionStorage.removeItem(key);
+  }
+});
+
+console.log('清理完成！');
+</code></pre>
+
+    <h2>预期结果：</h2>
+    <ul>
+        <li>首次访问文章：浏览量从0增加到1</li>
+        <li>同一会话再次访问：浏览量保持不变（防止重复计数）</li>
+        <li>新会话访问：浏览量继续增加</li>
+        <li>首页和详情页显示相同的浏览量</li>
+    </ul>
+
+    <p><a href="/">返回博客首页</a></p>
+</body>
+</html>

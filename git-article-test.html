@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Git文件管理文章浏览量测试</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        .success { color: green; }
+        .error { color: red; }
+        button { padding: 10px 15px; margin: 5px; cursor: pointer; }
+        pre { background: #f5f5f5; padding: 10px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>Git文件管理文章浏览量专项测试</h1>
+    
+    <div class="test-section">
+        <h2>🎯 测试目标</h2>
+        <p>验证文章 <code>/posts/tech/git-cleanup-file-management-2025/</code> 的浏览量统计：</p>
+        <ul>
+            <li>首次访问：浏览量从0增加到1 ✅</li>
+            <li>重复访问：同一会话内不再增加 ✅</li>
+            <li>不同会话：正常累计增加 ✅</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>🔧 测试工具</h2>
+        <button onclick="clearData()">🧹 清理所有浏览量数据</button>
+        <button onclick="showCurrentData()">📊 显示当前数据</button>
+        <button onclick="simulateVisit()">👁️ 模拟访问文章</button>
+        <button onclick="openArticle()">🔗 打开实际文章</button>
+    </div>
+
+    <div class="test-section">
+        <h2>📋 测试步骤</h2>
+        <ol>
+            <li>点击"🧹 清理所有浏览量数据"</li>
+            <li>点击"📊 显示当前数据"确认清零</li>
+            <li>点击"👁️ 模拟访问文章"或"🔗 打开实际文章"</li>
+            <li>观察控制台输出和数据显示</li>
+            <li>重复访问验证防重复机制</li>
+        </ol>
+    </div>
+
+    <div class="test-section">
+        <h2>📈 实时数据监控</h2>
+        <div id="data-display">
+            <p>点击"显示当前数据"按钮查看实时统计...</p>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>📝 预期行为日志</h2>
+        <pre id="log-output">测试日志将在此显示...</pre>
+    </div>
+
+    <script>
+        const articlePath = '/posts/tech/git-cleanup-file-management-2025/';
+        const storageKey = 'views_' + articlePath;
+        const sessionKey = 'session_viewed_' + articlePath;
+        
+        function log(message) {
+            const logElement = document.getElementById('log-output');
+            const timestamp = new Date().toLocaleTimeString();
+            logElement.innerHTML += `[${timestamp}] ${message}\n`;
+            logElement.scrollTop = logElement.scrollHeight;
+            console.log(message);
+        }
+        
+        function clearData() {
+            // 清理localStorage
+            Object.keys(localStorage).forEach(key => {
+                if (key.startsWith('views_')) {
+                    localStorage.removeItem(key);
+                }
+            });
+            
+            // 清理会话存储
+            Object.keys(sessionStorage).forEach(key => {
+                if (key.startsWith('session_viewed_')) {
+                    sessionStorage.removeItem(key);
+                }
+            });
+            
+            log('✅ 已清理所有浏览量数据和会话标记');
+            showCurrentData();
+        }
+        
+        function showCurrentData() {
+            const display = document.getElementById('data-display');
+            const views = localStorage.getItem(storageKey) || '0';
+            const sessionMarked = sessionStorage.getItem(sessionKey) ? '是' : '否';
+            
+            display.innerHTML = `
+                <p><strong>文章路径:</strong> ${articlePath}</p>
+                <p><strong>存储键名:</strong> ${storageKey}</p>
+                <p><strong>当前浏览量:</strong> <span class="success">${views}</span></p>
+                <p><strong>本次会话已访问:</strong> ${sessionMarked}</p>
+            `;
+            
+            log(`📊 当前数据 - 浏览量: ${views}, 会话标记: ${sessionMarked}`);
+        }
+        
+        function simulateVisit() {
+            // 检查会话标记
+            if (sessionStorage.getItem(sessionKey)) {
+                log('⚠️  该文章在本次会话中已访问过，跳过计数');
+                showCurrentData();
+                return;
+            }
+            
+            // 增加浏览量
+            let views = parseInt(localStorage.getItem(storageKey) || '0');
+            const oldViews = views;
+            views++;
+            localStorage.setItem(storageKey, views.toString());
+            sessionStorage.setItem(sessionKey, 'true');
+            
+            log(`📈 浏览量更新: ${oldViews} → ${views} (+1)`);
+            showCurrentData();
+        }
+        
+        function openArticle() {
+            window.open(articlePath, '_blank');
+            log('🔗 已在新窗口打开文章页面');
+        }
+        
+        // 初始化
+        log('🚀 Git文件管理文章浏览量测试工具已就绪');
+        showCurrentData();
+    </script>
+</body>
+</html>

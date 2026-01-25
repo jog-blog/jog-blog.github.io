@@ -2,25 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bmsg.top/tags/api%E7%BD%91%E5%85%B3/</loc>
-    <lastmod>2025-11-28T15:45:00+08:00</lastmod>
+    <loc>https://bmsg.top/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
   </url><url>
     <loc>https://bmsg.top/categories/</loc>
-    <lastmod>2025-11-28T15:45:00+08:00</lastmod>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
   </url><url>
-    <loc>https://bmsg.top/</loc>
+    <loc>https://bmsg.top/tags/jellyfin/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/posts/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/tags/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/tags/%E4%B8%AD%E5%9B%BD%E5%B8%82%E5%9C%BA/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/categories/%E4%BA%A7%E4%B8%9A%E8%A7%82%E5%AF%9F/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/categories/%E5%9B%BD%E5%86%85%E8%A6%81%E9%97%BB/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/tags/%E5%AD%9D%E6%95%AC%E8%80%81%E4%BA%BA/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/tags/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/tags/%E5%AE%B6%E5%BA%AD%E5%BD%B1%E9%99%A2/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/tags/%E5%B8%82%E5%9C%BA%E8%B6%8B%E5%8A%BF/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/categories/%E6%88%98%E7%95%A5%E8%A7%A3%E6%9E%90/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/tags/%E6%8A%80%E6%9C%AF%E5%88%9B%E6%96%B0/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/categories/%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/posts/tech/china-tech-investigation-slug_20260125_214344/</loc>
+    <lastmod>2026-01-25T21:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://bmsg.top/tags/api%E7%BD%91%E5%85%B3/</loc>
     <lastmod>2025-11-28T15:45:00+08:00</lastmod>
   </url><url>
     <loc>https://bmsg.top/tags/kong/</loc>
     <lastmod>2025-11-28T15:45:00+08:00</lastmod>
   </url><url>
-    <loc>https://bmsg.top/posts/</loc>
-    <lastmod>2025-11-28T15:45:00+08:00</lastmod>
-  </url><url>
     <loc>https://bmsg.top/tags/spring-cloud-gateway/</loc>
-    <lastmod>2025-11-28T15:45:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bmsg.top/tags/</loc>
     <lastmod>2025-11-28T15:45:00+08:00</lastmod>
   </url><url>
     <loc>https://bmsg.top/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
@@ -166,8 +205,6 @@
   </url><url>
     <loc>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</loc>
     <lastmod>2025-11-05T10:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bmsg.top/posts/tech/china-tech-investigation-slug_20260125_214344/</loc>
   </url><url>
     <loc>https://bmsg.top/search/</loc>
   </url>

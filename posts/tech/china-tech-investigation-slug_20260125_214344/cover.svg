@@ -1,31 +1,32 @@
 <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#4A00E0;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#8E2DE2;stop-opacity:1" />
+            <stop offset="0%" style="stop-color:#1A1F4B; stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#4B1A4B; stop-opacity:1" />
         </linearGradient>
-        <filter id="textShadow">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
-            <feOffset dx="2" dy="2" result="offsetBlur"/>
+        <filter id="textShadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur" />
+            <feOffset dx="2" dy="2" />
             <feMerge>
-                <feMergeNode/>
-                <feMergeNode in="offsetBlur"/>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
             </feMerge>
         </filter>
     </defs>
     <rect width="1200" height="630" fill="url(#bgGradient)" />
     <g opacity="0.1">
-        <circle cx="300" cy="300" r="100" fill="#FFFFFF"/>
-        <circle cx="900" cy="500" r="150" fill="#FFFFFF"/>
-        <polygon points="600,50 650,150 550,150" fill="#FFFFFF"/>
-        <line x1="1000" y1="100" x2="1100" y2="200" stroke="#FFFFFF" stroke-width="5"/>
-        <line x1="200" y1="500" x2="400" y2="400" stroke="#FFFFFF" stroke-width="5"/>
+        <circle cx="300" cy="300" r="100" fill="#00A1E4" />
+        <circle cx="900" cy="400" r="150" fill="#8A2BE2" />
+        <polygon points="600,150 650,250 550,250" fill="#FF6347" />
+        <line x1="200" y1="500" x2="1000" y2="100" stroke="#FFA500" stroke-width="4" />
+        <rect x="100" y="100" width="200" height="100" fill="#32CD32" />
+        <ellipse cx="800" cy="200" rx="80" ry="40" fill="#FF4500" />
     </g>
     <text x="600" y="270" font-family="'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="40" 
           font-weight="800" fill="white" text-anchor="middle" filter="url(#textShadow)">
         <tspan x="600" dy="0">自建家庭影院系统-在家如Ne</tspan>
         <tspan x="600" dy="62">tflix般沉浸观看影片（可</tspan>
-        <tspan x="600" dy="62">多人多设备同时观看）</tspan>
+        <tspan x="600" dy="62">多人多设备同时观看</tspan>
     </text>
     <text x="600" y="598" font-family="Arial, sans-serif" font-size="14" fill="white" 
           fill-opacity="0.6" text-anchor="middle" letter-spacing="3">TECH BLOG | 2026.01</text>

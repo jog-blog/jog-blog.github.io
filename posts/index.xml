@@ -6,8 +6,22 @@
     <description>Recent content in Posts on BiMoShiGuang</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 26 Jan 2026 12:09:31 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Jan 2026 19:36:50 +0800</lastBuildDate>
     <atom:link href="https://bmsg.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>项目名：Practical Digital Product Design 实操教程</title>
+      <link>https://bmsg.top/posts/studay/practical-digital-product-design-2025-free-1769427405/</link>
+      <pubDate>Mon, 26 Jan 2026 19:36:50 +0800</pubDate>
+      <guid>https://bmsg.top/posts/studay/practical-digital-product-design-2025-free-1769427405/</guid>
+      <description>&lt;p&gt;本教程将带你深入理解 Shashoto Seeam 的《Practical Digital Product Design》课程的核心内容与实操步骤。通过具体的实战练习与理论结合，帮助你成为一名出色的数字产品设计师。无论你是初学者还是希望提升技能的设计师，本教程都将为你提供宝贵的资源与指导。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在 macOS 和 Windows 上使用 nvm 管理 Node.js 版本</title>
+      <link>https://bmsg.top/posts/studay/use-nvm-manager-node-version-1769424719/</link>
+      <pubDate>Mon, 26 Jan 2026 18:52:04 +0800</pubDate>
+      <guid>https://bmsg.top/posts/studay/use-nvm-manager-node-version-1769424719/</guid>
+      <description>&lt;p&gt;本文将介绍如何在 macOS 和 Windows 上使用 Node Version Manager (nvm) 来管理 Node.js 的版本。nvm 是一个强大的工具，可以帮助开发者轻松切换不同的 Node.js 版本，提升开发效率。我们将分享安装步骤、常见问题及解决方案，助您快速上手。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>项目名：深度实操教程 - Khazix-Skills</title>
       <link>https://bmsg.top/posts/studay/khazix-skills-1769400565/</link>
@@ -27,7 +41,7 @@
       <link>https://bmsg.top/posts/tech/polymarket-copy-trading-bot-1769398529/</link>
       <pubDate>Mon, 26 Jan 2026 11:35:34 +0800</pubDate>
       <guid>https://bmsg.top/posts/tech/polymarket-copy-trading-bot-1769398529/</guid>
-      <description>&lt;p&gt;本教程将深入解析 Polymarket 复制交易机器人项目，提供从架构到部署的详细指导，帮助用户有效实现市场复制交易，提高投资效率。&lt;/p&gt;&#xA;&lt;h1 id=&#34;polymarket-复制交易机器人教程&#34;&gt;Polymarket 复制交易机器人教程&lt;/h1&gt;&#xA;&lt;h2 id=&#34;项目解析&#34;&gt;项目解析&lt;/h2&gt;&#xA;&lt;p&gt;Polymarket 复制交易机器人旨在为用户提供一个便捷高效的市场交易工具，通过复制成功交易者的策略，帮助普通投资者轻松参与市场。该项目采用 Python 开发，具备高度的可定制性和自动化功能。&lt;/p&gt;&#xA;&lt;h2 id=&#34;架构图&#34;&gt;架构图&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;path_to_your_image&#34; alt=&#34;Architecture Diagram&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;部署步骤&#34;&gt;部署步骤&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;克隆项目&lt;/strong&gt;：在终端中运行以下命令：&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/terausss/polymarket-copy-trading-bot.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd polymarket-copy-trading-bot&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;安装依赖&lt;/strong&gt;：安装项目所需的 Python 依赖库：&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip install -r requirements.txt&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;配置设置&lt;/strong&gt;：修改&lt;code&gt;config.py&lt;/code&gt;文件，填入您的 Polymarket API 密钥及其他设置。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;启动机器人&lt;/strong&gt;：运行以下命令以启动交易机器人：&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python main.py&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;使用场景&#34;&gt;使用场景&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;提升交易效率&lt;/strong&gt;：对于新手投资者，通过复制成功交易者的策略，可以有效降低学习成本。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;市场分析&lt;/strong&gt;：通过数据分析，自动提供市场合买与卖出建议，提升投资决策的科学性。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;结合以上步骤和场景设置，用户能够快速上手 Polymarket 复制交易机器人，充分利用市场机会，获得可观收益。&lt;/p&gt;</description>
+      <description>&lt;p&gt;本教程将深入解析 Polymarket 复制交易机器人项目，提供从架构到部署的详细指导，帮助用户有效实现市场复制交易，提高投资效率。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2025年人工智能职业指南</title>

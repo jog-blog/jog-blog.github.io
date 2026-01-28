@@ -6,8 +6,15 @@
     <description>Recent content in 技术教程 on BiMoShiGuang</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 21 Nov 2025 10:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Jan 2026 18:52:04 +0800</lastBuildDate>
     <atom:link href="https://bmsg.top/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 macOS 和 Windows 上使用 nvm 管理 Node.js 版本</title>
+      <link>https://bmsg.top/posts/studay/use-nvm-manager-node-version-1769424719/</link>
+      <pubDate>Mon, 26 Jan 2026 18:52:04 +0800</pubDate>
+      <guid>https://bmsg.top/posts/studay/use-nvm-manager-node-version-1769424719/</guid>
+      <description>&lt;p&gt;本文将介绍如何在 macOS 和 Windows 上使用 Node Version Manager (nvm) 来管理 Node.js 的版本。nvm 是一个强大的工具，可以帮助开发者轻松切换不同的 Node.js 版本，提升开发效率。我们将分享安装步骤、常见问题及解决方案，助您快速上手。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Git仓库清理与文件管理：彻底删除已提交文件的最佳实践</title>
       <link>https://bmsg.top/posts/tech/git-cleanup-file-management-2025/</link>

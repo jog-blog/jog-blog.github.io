@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.154.5">
+<meta name="generator" content="Hugo 0.155.2">
 
 
 <meta property="og:url" content="https://bmsg.top/posts/tech/microservices-api-gateway-design-2025/">
@@ -554,7 +554,7 @@
 <h2 id="实际设计案例">实际设计案例</h2>
 <h3 id="路由配置示例">路由配置示例</h3>
 <p>以下是一个基于Spring Cloud Gateway的路由配置示例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">cloud</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">gateway</span>:
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">routes</span>:
@@ -580,7 +580,7 @@
 </span></span><span style="display:flex;"><span>                <span style="color:#f92672">secret</span>: <span style="color:#ae81ff">${JWT_SECRET}</span>
 </span></span></code></pre></div><h3 id="自定义过滤器实现">自定义过滤器实现</h3>
 <p>对于复杂的业务逻辑，可以编写自定义过滤器：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Component</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Component</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LoggingFilter</span> <span style="color:#66d9ef">implements</span> GlobalFilter, Ordered {
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> Logger logger <span style="color:#f92672">=</span> LoggerFactory.<span style="color:#a6e22e">getLogger</span>(LoggingFilter.<span style="color:#a6e22e">class</span>);
@@ -618,7 +618,7 @@
 </ul>
 <h3 id="连接池管理">连接池管理</h3>
 <p>合理的连接池配置对性能至关重要：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Spring Cloud Gateway连接池配置</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Spring Cloud Gateway连接池配置</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">cloud</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">gateway</span>:
@@ -636,7 +636,7 @@
 </figure>
 
 <p>实现安全的JWT认证流程：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Component</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Component</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JwtAuthenticationFilter</span> <span style="color:#66d9ef">implements</span> GatewayFilter {
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
@@ -673,7 +673,7 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h3 id="限流和熔断">限流和熔断</h3>
 <p>防止系统过载的关键措施：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># 基于Redis的限流配置</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># 基于Redis的限流配置</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">cloud</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">gateway</span>:
@@ -692,7 +692,7 @@
 </span></span></code></pre></div><h2 id="监控和可观测性">监控和可观测性</h2>
 <h3 id="指标收集">指标收集</h3>
 <p>集成Prometheus和Grafana实现监控：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">management</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">management</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">endpoints</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">web</span>:
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">exposure</span>:
@@ -703,7 +703,7 @@
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
 </span></span></code></pre></div><h3 id="日志聚合">日志聚合</h3>
 <p>使用ELK栈进行日志分析：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LoggingConfig</span> {
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Bean</span>
@@ -735,7 +735,7 @@
 </ul>
 <h3 id="配置管理">配置管理</h3>
 <p>动态配置更新的实现：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># 使用Config Server进行配置管理</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># 使用Config Server进行配置管理</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">cloud</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">config</span>:

@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.154.5">
+<meta name="generator" content="Hugo 0.155.2">
 
 
 <meta property="og:url" content="https://bmsg.top/posts/tech/git-cleanup-file-management-2025/">
@@ -516,7 +516,7 @@
 <h2 id="一删除已提交文件的两种方式">一、删除已提交文件的两种方式</h2>
 <h3 id="1-保留本地文件仅从git仓库中移除">1. 保留本地文件，仅从Git仓库中移除</h3>
 <p>如果只是想让Git不再追踪这些文件（本地仍需保留，比如<code>target</code>是编译产物，本地需要用），使用<code>git rm --cached</code>命令：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 单个文件</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 单个文件</span>
 </span></span><span style="display:flex;"><span>git rm --cached 文件名
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 整个目录（比如target）</span>
@@ -528,21 +528,21 @@
 </ul>
 <h3 id="2-彻底删除本地和git仓库都删除">2. 彻底删除（本地和Git仓库都删除）</h3>
 <p>如果本地也不再需要这些文件，直接用<code>git rm</code>（不加<code>--cached</code>）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 单个文件</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 单个文件</span>
 </span></span><span style="display:flex;"><span>git rm 文件名
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 整个目录</span>
 </span></span><span style="display:flex;"><span>git rm -r target
 </span></span></code></pre></div><h2 id="二提交删除操作">二、提交删除操作</h2>
 <p>删除后，需要提交这个&quot;删除变更&quot;到Git仓库：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;feat: 删除已提交的target目录和冗余文件&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;feat: 删除已提交的target目录和冗余文件&#34;</span>
 </span></span></code></pre></div><h2 id="三关键步骤配置gitignore避免未来重复提交">三、关键步骤：配置.gitignore避免未来重复提交</h2>
 <p>删除后，必须配置<code>.gitignore</code>文件，让Git永久忽略这些文件：</p>
 <h3 id="1-创建编辑gitignore文件">1. 创建/编辑.gitignore文件</h3>
 <p>如果仓库根目录没有<code>.gitignore</code>，先创建：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch .gitignore
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch .gitignore
 </span></span></code></pre></div><p>然后编辑<code>.gitignore</code>，添加需要忽略的文件/目录：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 忽略target目录（所有层级的target都忽略）</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 忽略target目录（所有层级的target都忽略）</span>
 </span></span><span style="display:flex;"><span>target/
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 忽略编译产物</span>
@@ -573,13 +573,13 @@
 <li>支持通配符（<code>*</code>表示任意字符，<code>?</code>表示单个字符）</li>
 </ul>
 <h3 id="2-提交gitignore文件">2. 提交.gitignore文件</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .gitignore
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .gitignore
 </span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;docs: 添加.gitignore忽略编译产物和IDE文件&#34;</span>
 </span></span></code></pre></div><h2 id="四如果已推送到远程仓库">四、如果已推送到远程仓库</h2>
 <p>如果之前已经把不需要的文件推送到了远程仓库，需要同步删除：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push origin 你的分支名  <span style="color:#75715e"># 比如main或master</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push origin 你的分支名  <span style="color:#75715e"># 比如main或master</span>
 </span></span></code></pre></div><h2 id="五快速操作指南">五、快速操作指南</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 1. 移除Git对target的追踪（保留本地）</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 1. 移除Git对target的追踪（保留本地）</span>
 </span></span><span style="display:flex;"><span>git rm --cached -r target
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 提交删除操作</span>
@@ -597,7 +597,7 @@
 </span></span></code></pre></div><h2 id="六高级场景处理">六、高级场景处理</h2>
 <h3 id="1-从git历史记录中彻底删除文件">1. 从Git历史记录中彻底删除文件</h3>
 <p>如果要从整个Git历史记录中删除文件（比如敏感信息），可以使用<code>git filter-repo</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 安装git-filter-repo</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 安装git-filter-repo</span>
 </span></span><span style="display:flex;"><span>pip install git-filter-repo
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 从历史记录中删除特定文件</span>
@@ -608,13 +608,13 @@
 </span></span></code></pre></div><p><strong>⚠️ 警告：</strong> 这会重写仓库历史，影响协作中的其他人，请谨慎使用！</p>
 <h3 id="2-恢复误删的文件">2. 恢复误删的文件</h3>
 <p>如果不小心删除了本地文件：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 恢复单个文件</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 恢复单个文件</span>
 </span></span><span style="display:flex;"><span>git checkout 文件名
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 恢复整个目录</span>
 </span></span><span style="display:flex;"><span>git checkout 目录名/
 </span></span></code></pre></div><p>如果已经提交了删除，可以回滚到上一次提交：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 回滚到上一次提交（仅本地未推送时使用）</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 回滚到上一次提交（仅本地未推送时使用）</span>
 </span></span><span style="display:flex;"><span>git reset --hard HEAD~1
 </span></span></code></pre></div><h2 id="七团队协作注意事项">七、团队协作注意事项</h2>
 <ol>

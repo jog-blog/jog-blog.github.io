@@ -1,124 +1,145 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on BiMoShiGuang</title>
-    <link>https://bmsg.top/posts/</link>
-    <description>Recent content in Posts on BiMoShiGuang</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 03 Feb 2026 15:00:00 +0800</lastBuildDate>
-    <atom:link href="https://bmsg.top/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>爱泼斯坦事件深度梳理：权贵迷局、权力游戏与未解谜团</title>
-      <link>https://bmsg.top/posts/news/epstein-case-2026/</link>
-      <pubDate>Tue, 03 Feb 2026 15:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/news/epstein-case-2026/</guid>
-      <description>&lt;p&gt;爱泼斯坦事件堪称21世纪最扑朔迷离的权贵丑闻之一，其牵扯的欧美权贵网络、错综复杂的利益关系，以及诸多惊悚传闻，让它成为一个难以用短篇幅说清的“世纪谜团”。从神秘献祭、吃人传闻，到一众顶流富豪的牵涉其中，再到官方与民间的各执一词，这场风波始终在阴谋论与真相之间反复拉扯。&lt;/p&gt;&#xA;&lt;p&gt;在梳理事件的过程中，我曾一度被“两只烤鸡中间夹人体”的惊悚图片冲击，也因“吃人”传闻感到毛骨悚然。但随着梳理深入，我发现：&lt;strong&gt;部分极端传言或许是人为炒作，却掩盖不了一个核心事实——欧美权贵圈层的权力不受约束，早已成为民众心中的一根刺&lt;/strong&gt;。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic放大招！Cloud CORE Work 重新定义消费级AI Agent</title>
-      <link>https://bmsg.top/posts/news/anthropic-cloud-core-work-2026/</link>
-      <pubDate>Tue, 03 Feb 2026 11:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/news/anthropic-cloud-core-work-2026/</guid>
-      <description>&lt;p&gt;Anthropic 今日凌晨突发重磅更新，在 Cloud 桌面版正式上线全新功能 &lt;strong&gt;CORE Work&lt;/strong&gt;。经过一早上的深度实测，最大的感受的是：CORE Work 重新定义了“纯粹意义上的 AI 智能体”，它堪称消费级 AI Agent 的“分水岭”，其影响力绝不亚于 Anthropic 此前推出的 MCP 工具连接标准和 Agent Skills 功能。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>赫拉利达沃斯警告：AI最可怕的不是取代工作，而是与人类建立亲密关系</title>
-      <link>https://bmsg.top/posts/news/yuval-harari-ai-davos-2026/</link>
-      <pubDate>Tue, 03 Feb 2026 10:30:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/news/yuval-harari-ai-davos-2026/</guid>
-      <description>&lt;p&gt;达沃斯论坛期间，《人类简史》《未来简史》作者尤瓦尔·赫拉利，向全球领导人发出振聋发聩的警告。他直言，当下每个领导者都必须回答一个核心问题——这无关AI是否会取代工作、是否会产生意识，而是&lt;strong&gt;AI到底能不能和人类建立亲密关系&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;p&gt;这场持续30多分钟的演讲，直击AI时代人类文明的底层困境。以下将拆解演讲核心要点，读懂赫拉利发出灵魂拷问的深层原因，也读懂AI浪潮下，我们每个人都无法回避的未来命题。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>黄仁勋达沃斯深度拆解：AI五层蛋糕理论、三大突破与就业真相</title>
-      <link>https://bmsg.top/posts/news/nvidia-ai-davos-2025/</link>
-      <pubDate>Mon, 02 Feb 2026 10:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/news/nvidia-ai-davos-2025/</guid>
-      <description>&lt;p&gt;达沃斯论坛上的一场“顶流辩论”引爆全球关注：马斯克刚警示“AI将取代大部分工作”，英伟达CEO黄仁勋便紧接着抛出相反观点——“AI会创造更多就业机会”。两位科技巨头的对立表态，让“AI与就业”的争议再度升温。而黄仁勋在30分钟访谈中不仅坚守立场，更给出了一套涵盖产业结构、技术突破与职业发展的完整思考框架，其核心观点值得每个职场人、创业者深度拆解。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>项目名：Practical Digital Product Design 实操教程</title>
-      <link>https://bmsg.top/posts/studay/practical-digital-product-design-2025-free-1769427405/</link>
-      <pubDate>Mon, 26 Jan 2026 19:36:50 +0800</pubDate>
-      <guid>https://bmsg.top/posts/studay/practical-digital-product-design-2025-free-1769427405/</guid>
-      <description>&lt;p&gt;本教程将带你深入理解 Shashoto Seeam 的《Practical Digital Product Design》课程的核心内容与实操步骤。通过具体的实战练习与理论结合，帮助你成为一名出色的数字产品设计师。无论你是初学者还是希望提升技能的设计师，本教程都将为你提供宝贵的资源与指导。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>在 macOS 和 Windows 上使用 nvm 管理 Node.js 版本</title>
-      <link>https://bmsg.top/posts/studay/use-nvm-manager-node-version-1769424719/</link>
-      <pubDate>Mon, 26 Jan 2026 18:52:04 +0800</pubDate>
-      <guid>https://bmsg.top/posts/studay/use-nvm-manager-node-version-1769424719/</guid>
-      <description>&lt;p&gt;本文将介绍如何在 macOS 和 Windows 上使用 Node Version Manager (nvm) 来管理 Node.js 的版本。nvm 是一个强大的工具，可以帮助开发者轻松切换不同的 Node.js 版本，提升开发效率。我们将分享安装步骤、常见问题及解决方案，助您快速上手。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>项目名：深度实操教程 - Khazix-Skills</title>
-      <link>https://bmsg.top/posts/studay/khazix-skills-1769400565/</link>
-      <pubDate>Mon, 26 Jan 2026 12:09:31 +0800</pubDate>
-      <guid>https://bmsg.top/posts/studay/khazix-skills-1769400565/</guid>
-      <description>&lt;p&gt;Khazix-Skills 项目提供了一整套工具来创建、管理和进化 AI 技能库。本文将深入讲解如何快速上手该项目，包括环境准备、核心配置及常见报错处理，旨在帮助开发者高效利用这一工具，提高智能技能的管理与演进能力。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>掌握 Posturr：构建高效的社区交流平台</title>
-      <link>https://bmsg.top/posts/studay/posturr-1769400125/</link>
-      <pubDate>Mon, 26 Jan 2026 12:02:10 +0800</pubDate>
-      <guid>https://bmsg.top/posts/studay/posturr-1769400125/</guid>
-      <description>&lt;p&gt;Posturr 是一个强大的开源项目，旨在为开发者提供一个高效的社区交流平台。本文将详细介绍项目背景、环境准备、快速上手步骤、核心配置详解、真实应用示例以及新手避坑指南，帮助您轻松上手并深入理解如何使用 Posturr 构建互动性强的在线社区。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Polymarket 复制交易机器人：轻松掌握市场机会的实战指南</title>
-      <link>https://bmsg.top/posts/tech/polymarket-copy-trading-bot-1769398529/</link>
-      <pubDate>Mon, 26 Jan 2026 11:35:34 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech/polymarket-copy-trading-bot-1769398529/</guid>
-      <description>&lt;p&gt;本教程将深入解析 Polymarket 复制交易机器人项目，提供从架构到部署的详细指导，帮助用户有效实现市场复制交易，提高投资效率。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>2025年人工智能职业指南</title>
-      <link>https://bmsg.top/posts/tech/ai-career-guide-2025/</link>
-      <pubDate>Mon, 26 Jan 2026 06:51:44 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech/ai-career-guide-2025/</guid>
-      <description>&lt;p&gt;2025年人工智能职业指南：解析AI职业的未来趋势与全球影响。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>自建家庭影院系统-在家如Netflix般沉浸观看影片（可多人多设备同时观看）</title>
-      <link>https://bmsg.top/posts/tech/china-tech-investigation-slug_20260125_214344/</link>
-      <pubDate>Sun, 25 Jan 2026 21:48:39 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech/china-tech-investigation-slug_20260125_214344/</guid>
-      <description>&lt;p&gt;近年来，自建家庭影院系统在中国市场迅速崛起，成为消费者追求沉浸式观影体验的新宠。随着技术的进步和市场需求的变化，多个厂商纷纷涌入这一领域，而Jellyfin作为私建家庭影院的代表性方案，以无广告干扰、多设备适配、操作简便等核心优势，不仅满足了大众对高品质视听的追求，更成为孝敬老人的实用选择。本文将结合Jellyfin系统的具体应用，深度剖析这一趋势背后的经济周期、政策导向，预测其对未来3-5年的产业链影响，并提供详细的系统搭建教程，助力用户轻松实现“在家如Netflix般”的沉浸观影体验。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>微服务架构下的API网关设计与实现</title>
-      <link>https://bmsg.top/posts/tech/microservices-api-gateway-design-2025/</link>
-      <pubDate>Fri, 28 Nov 2025 15:45:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech/microservices-api-gateway-design-2025/</guid>
-      <description>&lt;h1 id=&#34;微服务架构下的api网关设计与实现&#34;&gt;微服务架构下的API网关设计与实现&lt;/h1&gt;&#xA;&lt;p&gt;在微服务架构日益普及的今天，API网关作为系统的入口点，承担着路由、认证、限流等重要职责。本文将系统性地介绍API网关的设计原则、核心功能以及主流实现方案。&lt;/p&gt;&#xA;&lt;h2 id=&#34;api网关的核心价值&#34;&gt;API网关的核心价值&lt;/h2&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://bmsg.top/posts/tech/microservices-api-gateway-design-2025/gateway-architecture.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;API网关在微服务架构中的位置&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;API网关是微服务架构中的关键组件，它作为所有外部请求的统一入口，提供以下核心价值：&lt;/p&gt;&#xA;&lt;h3 id=&#34;统一入口点&#34;&gt;统一入口点&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;简化客户端调用逻辑&lt;/li&gt;&#xA;&lt;li&gt;隐藏内部服务拓扑结构&lt;/li&gt;&#xA;&lt;li&gt;提供统一的API管理界面&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;横切关注点处理&#34;&gt;横切关注点处理&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;身份认证和授权&lt;/li&gt;&#xA;&lt;li&gt;请求限流和熔断&lt;/li&gt;&#xA;&lt;li&gt;日志记录和监控&lt;/li&gt;&#xA;&lt;li&gt;数据转换和协议适配&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;主流api网关方案比较&#34;&gt;主流API网关方案比较&lt;/h2&gt;&#xA;&lt;h3 id=&#34;kong-gateway&#34;&gt;Kong Gateway&lt;/h3&gt;&#xA;&lt;p&gt;Kong是基于Nginx和OpenResty构建的开源API网关，具有以下特点：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;高性能&lt;/strong&gt;: 基于Nginx，支持高并发&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;插件生态&lt;/strong&gt;: 丰富的插件体系&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;云原生&lt;/strong&gt;: 支持Kubernetes部署&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;企业级功能&lt;/strong&gt;: 提供商业版支持&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;spring-cloud-gateway&#34;&gt;Spring Cloud Gateway&lt;/h3&gt;&#xA;&lt;p&gt;Spring生态中的API网关解决方案：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Java友好&lt;/strong&gt;: 与Spring Boot深度集成&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;响应式编程&lt;/strong&gt;: 基于WebFlux，支持异步非阻塞&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;声明式路由&lt;/strong&gt;: 使用YAML或Java配置&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;过滤器链&lt;/strong&gt;: 灵活的过滤器机制&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;envoy-proxy&#34;&gt;Envoy Proxy&lt;/h3&gt;&#xA;&lt;p&gt;Envoy是云原生时代的明星项目：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;高性能&lt;/strong&gt;: C++编写，性能卓越&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;动态配置&lt;/strong&gt;: 支持xDS协议动态更新&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;可观测性&lt;/strong&gt;: 内置丰富的监控指标&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;服务网格&lt;/strong&gt;: Istio的核心组件&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;实际设计案例&#34;&gt;实际设计案例&lt;/h2&gt;&#xA;&lt;h3 id=&#34;路由配置示例&#34;&gt;路由配置示例&lt;/h3&gt;&#xA;&lt;p&gt;以下是一个基于Spring Cloud Gateway的路由配置示例：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;spring&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;cloud&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;gateway&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;routes&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;id&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;user-service&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;uri&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;lb://user-service&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;predicates&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#ae81ff&#34;&gt;Path=/api/users/**&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;filters&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#ae81ff&#34;&gt;StripPrefix=1&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;RequestRateLimiter&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;args&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;redis-rate-limiter.replenishRate&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;redis-rate-limiter.burstCapacity&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#f92672&#34;&gt;id&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;product-service&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;uri&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;lb://product-service&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;predicates&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#ae81ff&#34;&gt;Path=/api/products/**&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;filters&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#ae81ff&#34;&gt;StripPrefix=1&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;JwtAuthentication&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;args&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;secret&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${JWT_SECRET}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;自定义过滤器实现&#34;&gt;自定义过滤器实现&lt;/h3&gt;&#xA;&lt;p&gt;对于复杂的业务逻辑，可以编写自定义过滤器：&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Git仓库清理与文件管理：彻底删除已提交文件的最佳实践</title>
-      <link>https://bmsg.top/posts/tech/git-cleanup-file-management-2025/</link>
-      <pubDate>Fri, 21 Nov 2025 10:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech/git-cleanup-file-management-2025/</guid>
-      <description>&lt;figure&gt;&lt;img src=&#34;https://bmsg.top/posts/tech/git-cleanup-file-management-2025/img1.svg&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Git文件管理流程图&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;在日常开发中，我们经常会遇到需要从Git仓库中删除某些已提交文件的情况，比如编译产物、IDE配置文件、日志文件等。这些文件不应该被纳入版本控制，但有时会不小心被提交。本文将详细介绍如何安全、彻底地管理Git仓库中的文件。&lt;/p&gt;&#xA;&lt;h2 id=&#34;一删除已提交文件的两种方式&#34;&gt;一、删除已提交文件的两种方式&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-保留本地文件仅从git仓库中移除&#34;&gt;1. 保留本地文件，仅从Git仓库中移除&lt;/h3&gt;&#xA;&lt;p&gt;如果只是想让Git不再追踪这些文件（本地仍需保留，比如&lt;code&gt;target&lt;/code&gt;是编译产物，本地需要用），使用&lt;code&gt;git rm --cached&lt;/code&gt;命令：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 单个文件&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rm --cached 文件名&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 整个目录（比如target）&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rm --cached -r target&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;参数说明：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;--cached&lt;/code&gt;：仅删除Git暂存区/仓库中的记录，不删除本地文件&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-r&lt;/code&gt;：递归删除目录（用于删除文件夹时必须加）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-彻底删除本地和git仓库都删除&#34;&gt;2. 彻底删除（本地和Git仓库都删除）&lt;/h3&gt;&#xA;&lt;p&gt;如果本地也不再需要这些文件，直接用&lt;code&gt;git rm&lt;/code&gt;（不加&lt;code&gt;--cached&lt;/code&gt;）：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 单个文件&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rm 文件名&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 整个目录&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rm -r target&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;二提交删除操作&#34;&gt;二、提交删除操作&lt;/h2&gt;&#xA;&lt;p&gt;删除后，需要提交这个&amp;quot;删除变更&amp;quot;到Git仓库：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;feat: 删除已提交的target目录和冗余文件&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;三关键步骤配置gitignore避免未来重复提交&#34;&gt;三、关键步骤：配置.gitignore避免未来重复提交&lt;/h2&gt;&#xA;&lt;p&gt;删除后，必须配置&lt;code&gt;.gitignore&lt;/code&gt;文件，让Git永久忽略这些文件：&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-创建编辑gitignore文件&#34;&gt;1. 创建/编辑.gitignore文件&lt;/h3&gt;&#xA;&lt;p&gt;如果仓库根目录没有&lt;code&gt;.gitignore&lt;/code&gt;，先创建：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;touch .gitignore&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后编辑&lt;code&gt;.gitignore&lt;/code&gt;，添加需要忽略的文件/目录：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略target目录（所有层级的target都忽略）&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;target/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略编译产物&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;*.class&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;*.jar&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;*.war&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略日志文件&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;*.log&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;logs/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略IDE配置文件&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.idea/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;*.iml&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.vscode/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略操作系统生成的文件&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.DS_Store&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Thumbs.db&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 忽略依赖目录&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;node_modules/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;venv/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.env&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;注意事项：&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>量子计算：突破经典计算极限的前沿技术</title>
-      <link>https://bmsg.top/posts/tech/quantum-computing-advancements/</link>
-      <pubDate>Thu, 13 Nov 2025 12:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech/quantum-computing-advancements/</guid>
-      <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;量子计算作为一种基于量子力学原理的计算方式，正在逐渐从理论走向实践，有望在解决某些特定问题上彻底改变计算科学的面貌。随着谷歌、IBM、微软等科技巨头以及众多初创公司在量子计算领域的持续投入，量子技术正以前所未有的速度发展。本文将带您深入了解量子计算的基本原理、最新技术突破、实际应用场景以及未来发展前景。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>2025年11月8日美国时政新闻综述</title>
-      <link>https://bmsg.top/posts/news/us-politics-2025-11-08/</link>
-      <pubDate>Sat, 08 Nov 2025 02:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/news/us-politics-2025-11-08/</guid>
-      <description>&lt;p&gt;今日美国政坛发生了一系列重要事件，涵盖总统大选动态、外交政策调整、国会立法进展以及经济政策变化。以下是今日美国时政新闻的详细综述。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>构建你的第一个ChatGPT应用 | 使用Apps SDK的逐步教程</title>
-      <link>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</link>
-      <pubDate>Wed, 05 Nov 2025 10:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</guid>
-      <description>&lt;p&gt;当AI成为日常工作流程的核心，ChatGPT已成为数十亿用户的自然工具。然而直到现在，ChatGPT的重点主要是&amp;quot;对话&amp;quot;，而不是&amp;quot;交互&amp;quot;。&lt;/p&gt;&#xA;&lt;p&gt;如果你能在ChatGPT内直接与应用互动——比如预订酒店、设计演示文稿——全部在同一个界面中完成，会怎样？&lt;/p&gt;&#xA;&lt;p&gt;这正是ChatGPT Apps带来的能力。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://bmsg.top/images/tech/chatgpt-apps-sdk.png&#34; alt=&#34;ChatGPT Apps SDK示意图&#34;&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on BiMoShiGuang</title><link>https://bmsg.top/posts/</link><description>Recent content in Posts on BiMoShiGuang</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 04 Feb 2026 08:00:00 +0800</lastBuildDate><atom:link href="https://bmsg.top/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>ClawdBot 全面攻略：12万星标开源AI助理，本地部署+国内适配全教程</title><link>https://bmsg.top/posts/news/cloud-bot-full-guide-2026/</link><pubDate>Wed, 04 Feb 2026 08:00:00 +0800</pubDate><guid>https://bmsg.top/posts/news/cloud-bot-full-guide-2026/</guid><description>&lt;p&gt;ClawdBot 一夜爆火！这款可运行在本地电脑的开源AI助理，凭借强大的自动化能力和灵活的适配性，短短几天内GitHub星标数量直线飙升，突破12万，成为近期最受关注的AI工具之一。&lt;/p&gt;
+&lt;p&gt;本期将为大家带来 ClawdBot 完整攻略，从核心优势、本地部署，到基础命令、多场景实测，再到国内网络适配（飞书接入+国产模型配置），10+实用玩法一次性解锁，帮你轻松玩转这款开源AI助理，让它成为你的高效办公好帮手。&lt;/p&gt;
+&lt;p&gt;先插一个小插曲：受Anthropic法务团队压力，ClawdBot 先后改名为 Mount BT、Open Cloud，改名速度甚至超过了内容更新节奏。为了方便大家理解，本文全程统一称呼其最初的名字——ClawdBot。&lt;/p&gt;</description></item><item><title>爱泼斯坦事件深度梳理：权贵迷局、权力游戏与未解谜团</title><link>https://bmsg.top/posts/news/epstein-case-2026/</link><pubDate>Tue, 03 Feb 2026 15:00:00 +0800</pubDate><guid>https://bmsg.top/posts/news/epstein-case-2026/</guid><description>&lt;p&gt;爱泼斯坦事件堪称21世纪最扑朔迷离的权贵丑闻之一，其牵扯的欧美权贵网络、错综复杂的利益关系，以及诸多惊悚传闻，让它成为一个难以用短篇幅说清的“世纪谜团”。从神秘献祭、吃人传闻，到一众顶流富豪的牵涉其中，再到官方与民间的各执一词，这场风波始终在阴谋论与真相之间反复拉扯。&lt;/p&gt;
+&lt;p&gt;在梳理事件的过程中，我曾一度被“两只烤鸡中间夹人体”的惊悚图片冲击，也因“吃人”传闻感到毛骨悚然。但随着梳理深入，我发现：&lt;strong&gt;部分极端传言或许是人为炒作，却掩盖不了一个核心事实——欧美权贵圈层的权力不受约束，早已成为民众心中的一根刺&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>Anthropic放大招！Cloud CORE Work 重新定义消费级AI Agent</title><link>https://bmsg.top/posts/news/anthropic-cloud-core-work-2026/</link><pubDate>Tue, 03 Feb 2026 11:00:00 +0800</pubDate><guid>https://bmsg.top/posts/news/anthropic-cloud-core-work-2026/</guid><description>&lt;p&gt;Anthropic 今日凌晨突发重磅更新，在 Cloud 桌面版正式上线全新功能 &lt;strong&gt;CORE Work&lt;/strong&gt;。经过一早上的深度实测，最大的感受的是：CORE Work 重新定义了“纯粹意义上的 AI 智能体”，它堪称消费级 AI Agent 的“分水岭”，其影响力绝不亚于 Anthropic 此前推出的 MCP 工具连接标准和 Agent Skills 功能。&lt;/p&gt;</description></item><item><title>赫拉利达沃斯警告：AI最可怕的不是取代工作，而是与人类建立亲密关系</title><link>https://bmsg.top/posts/news/yuval-harari-ai-davos-2026/</link><pubDate>Tue, 03 Feb 2026 10:30:00 +0800</pubDate><guid>https://bmsg.top/posts/news/yuval-harari-ai-davos-2026/</guid><description>&lt;p&gt;达沃斯论坛期间，《人类简史》《未来简史》作者尤瓦尔·赫拉利，向全球领导人发出振聋发聩的警告。他直言，当下每个领导者都必须回答一个核心问题——这无关AI是否会取代工作、是否会产生意识，而是&lt;strong&gt;AI到底能不能和人类建立亲密关系&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;这场持续30多分钟的演讲，直击AI时代人类文明的底层困境。以下将拆解演讲核心要点，读懂赫拉利发出灵魂拷问的深层原因，也读懂AI浪潮下，我们每个人都无法回避的未来命题。&lt;/p&gt;</description></item><item><title>黄仁勋达沃斯深度拆解：AI五层蛋糕理论、三大突破与就业真相</title><link>https://bmsg.top/posts/news/nvidia-ai-davos-2025/</link><pubDate>Mon, 02 Feb 2026 10:00:00 +0800</pubDate><guid>https://bmsg.top/posts/news/nvidia-ai-davos-2025/</guid><description>&lt;p&gt;达沃斯论坛上的一场“顶流辩论”引爆全球关注：马斯克刚警示“AI将取代大部分工作”，英伟达CEO黄仁勋便紧接着抛出相反观点——“AI会创造更多就业机会”。两位科技巨头的对立表态，让“AI与就业”的争议再度升温。而黄仁勋在30分钟访谈中不仅坚守立场，更给出了一套涵盖产业结构、技术突破与职业发展的完整思考框架，其核心观点值得每个职场人、创业者深度拆解。&lt;/p&gt;</description></item><item><title>项目名：Practical Digital Product Design 实操教程</title><link>https://bmsg.top/posts/studay/practical-digital-product-design-2025-free-1769427405/</link><pubDate>Mon, 26 Jan 2026 19:36:50 +0800</pubDate><guid>https://bmsg.top/posts/studay/practical-digital-product-design-2025-free-1769427405/</guid><description>&lt;p&gt;本教程将带你深入理解 Shashoto Seeam 的《Practical Digital Product Design》课程的核心内容与实操步骤。通过具体的实战练习与理论结合，帮助你成为一名出色的数字产品设计师。无论你是初学者还是希望提升技能的设计师，本教程都将为你提供宝贵的资源与指导。&lt;/p&gt;</description></item><item><title>在 macOS 和 Windows 上使用 nvm 管理 Node.js 版本</title><link>https://bmsg.top/posts/studay/use-nvm-manager-node-version-1769424719/</link><pubDate>Mon, 26 Jan 2026 18:52:04 +0800</pubDate><guid>https://bmsg.top/posts/studay/use-nvm-manager-node-version-1769424719/</guid><description>&lt;p&gt;本文将介绍如何在 macOS 和 Windows 上使用 Node Version Manager (nvm) 来管理 Node.js 的版本。nvm 是一个强大的工具，可以帮助开发者轻松切换不同的 Node.js 版本，提升开发效率。我们将分享安装步骤、常见问题及解决方案，助您快速上手。&lt;/p&gt;</description></item><item><title>项目名：深度实操教程 - Khazix-Skills</title><link>https://bmsg.top/posts/studay/khazix-skills-1769400565/</link><pubDate>Mon, 26 Jan 2026 12:09:31 +0800</pubDate><guid>https://bmsg.top/posts/studay/khazix-skills-1769400565/</guid><description>&lt;p&gt;Khazix-Skills 项目提供了一整套工具来创建、管理和进化 AI 技能库。本文将深入讲解如何快速上手该项目，包括环境准备、核心配置及常见报错处理，旨在帮助开发者高效利用这一工具，提高智能技能的管理与演进能力。&lt;/p&gt;</description></item><item><title>掌握 Posturr：构建高效的社区交流平台</title><link>https://bmsg.top/posts/studay/posturr-1769400125/</link><pubDate>Mon, 26 Jan 2026 12:02:10 +0800</pubDate><guid>https://bmsg.top/posts/studay/posturr-1769400125/</guid><description>&lt;p&gt;Posturr 是一个强大的开源项目，旨在为开发者提供一个高效的社区交流平台。本文将详细介绍项目背景、环境准备、快速上手步骤、核心配置详解、真实应用示例以及新手避坑指南，帮助您轻松上手并深入理解如何使用 Posturr 构建互动性强的在线社区。&lt;/p&gt;</description></item><item><title>Polymarket 复制交易机器人：轻松掌握市场机会的实战指南</title><link>https://bmsg.top/posts/tech/polymarket-copy-trading-bot-1769398529/</link><pubDate>Mon, 26 Jan 2026 11:35:34 +0800</pubDate><guid>https://bmsg.top/posts/tech/polymarket-copy-trading-bot-1769398529/</guid><description>&lt;p&gt;本教程将深入解析 Polymarket 复制交易机器人项目，提供从架构到部署的详细指导，帮助用户有效实现市场复制交易，提高投资效率。&lt;/p&gt;</description></item><item><title>2025年人工智能职业指南</title><link>https://bmsg.top/posts/tech/ai-career-guide-2025/</link><pubDate>Mon, 26 Jan 2026 06:51:44 +0800</pubDate><guid>https://bmsg.top/posts/tech/ai-career-guide-2025/</guid><description>&lt;p&gt;2025年人工智能职业指南：解析AI职业的未来趋势与全球影响。&lt;/p&gt;</description></item><item><title>自建家庭影院系统-在家如Netflix般沉浸观看影片（可多人多设备同时观看）</title><link>https://bmsg.top/posts/tech/china-tech-investigation-slug_20260125_214344/</link><pubDate>Sun, 25 Jan 2026 21:48:39 +0800</pubDate><guid>https://bmsg.top/posts/tech/china-tech-investigation-slug_20260125_214344/</guid><description>&lt;p&gt;近年来，自建家庭影院系统在中国市场迅速崛起，成为消费者追求沉浸式观影体验的新宠。随着技术的进步和市场需求的变化，多个厂商纷纷涌入这一领域，而Jellyfin作为私建家庭影院的代表性方案，以无广告干扰、多设备适配、操作简便等核心优势，不仅满足了大众对高品质视听的追求，更成为孝敬老人的实用选择。本文将结合Jellyfin系统的具体应用，深度剖析这一趋势背后的经济周期、政策导向，预测其对未来3-5年的产业链影响，并提供详细的系统搭建教程，助力用户轻松实现“在家如Netflix般”的沉浸观影体验。&lt;/p&gt;</description></item><item><title>微服务架构下的API网关设计与实现</title><link>https://bmsg.top/posts/tech/microservices-api-gateway-design-2025/</link><pubDate>Fri, 28 Nov 2025 15:45:00 +0800</pubDate><guid>https://bmsg.top/posts/tech/microservices-api-gateway-design-2025/</guid><description>&lt;h1 id="微服务架构下的api网关设计与实现"&gt;微服务架构下的API网关设计与实现&lt;/h1&gt;
+&lt;p&gt;在微服务架构日益普及的今天，API网关作为系统的入口点，承担着路由、认证、限流等重要职责。本文将系统性地介绍API网关的设计原则、核心功能以及主流实现方案。&lt;/p&gt;
+&lt;h2 id="api网关的核心价值"&gt;API网关的核心价值&lt;/h2&gt;
+&lt;figure&gt;&lt;img src="https://bmsg.top/posts/tech/microservices-api-gateway-design-2025/gateway-architecture.svg"&gt;&lt;figcaption&gt;
+ &lt;h4&gt;API网关在微服务架构中的位置&lt;/h4&gt;
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;API网关是微服务架构中的关键组件，它作为所有外部请求的统一入口，提供以下核心价值：&lt;/p&gt;
+&lt;h3 id="统一入口点"&gt;统一入口点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;简化客户端调用逻辑&lt;/li&gt;
+&lt;li&gt;隐藏内部服务拓扑结构&lt;/li&gt;
+&lt;li&gt;提供统一的API管理界面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="横切关注点处理"&gt;横切关注点处理&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;身份认证和授权&lt;/li&gt;
+&lt;li&gt;请求限流和熔断&lt;/li&gt;
+&lt;li&gt;日志记录和监控&lt;/li&gt;
+&lt;li&gt;数据转换和协议适配&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="主流api网关方案比较"&gt;主流API网关方案比较&lt;/h2&gt;
+&lt;h3 id="kong-gateway"&gt;Kong Gateway&lt;/h3&gt;
+&lt;p&gt;Kong是基于Nginx和OpenResty构建的开源API网关，具有以下特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;高性能&lt;/strong&gt;: 基于Nginx，支持高并发&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;插件生态&lt;/strong&gt;: 丰富的插件体系&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;云原生&lt;/strong&gt;: 支持Kubernetes部署&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;企业级功能&lt;/strong&gt;: 提供商业版支持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="spring-cloud-gateway"&gt;Spring Cloud Gateway&lt;/h3&gt;
+&lt;p&gt;Spring生态中的API网关解决方案：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Java友好&lt;/strong&gt;: 与Spring Boot深度集成&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;响应式编程&lt;/strong&gt;: 基于WebFlux，支持异步非阻塞&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;声明式路由&lt;/strong&gt;: 使用YAML或Java配置&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;过滤器链&lt;/strong&gt;: 灵活的过滤器机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="envoy-proxy"&gt;Envoy Proxy&lt;/h3&gt;
+&lt;p&gt;Envoy是云原生时代的明星项目：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;高性能&lt;/strong&gt;: C++编写，性能卓越&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;动态配置&lt;/strong&gt;: 支持xDS协议动态更新&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可观测性&lt;/strong&gt;: 内置丰富的监控指标&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;服务网格&lt;/strong&gt;: Istio的核心组件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="实际设计案例"&gt;实际设计案例&lt;/h2&gt;
+&lt;h3 id="路由配置示例"&gt;路由配置示例&lt;/h3&gt;
+&lt;p&gt;以下是一个基于Spring Cloud Gateway的路由配置示例：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;spring&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;cloud&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;gateway&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;routes&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#f92672"&gt;id&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;user-service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;uri&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;lb://user-service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;predicates&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;Path=/api/users/**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;filters&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;StripPrefix=1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#f92672"&gt;name&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;RequestRateLimiter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;args&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;redis-rate-limiter.replenishRate&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;redis-rate-limiter.burstCapacity&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;20&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#f92672"&gt;id&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;product-service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;uri&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;lb://product-service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;predicates&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;Path=/api/products/**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;filters&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#ae81ff"&gt;StripPrefix=1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#f92672"&gt;name&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;JwtAuthentication&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;args&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;secret&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;${JWT_SECRET}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="自定义过滤器实现"&gt;自定义过滤器实现&lt;/h3&gt;
+&lt;p&gt;对于复杂的业务逻辑，可以编写自定义过滤器：&lt;/p&gt;</description></item><item><title>Git仓库清理与文件管理：彻底删除已提交文件的最佳实践</title><link>https://bmsg.top/posts/tech/git-cleanup-file-management-2025/</link><pubDate>Fri, 21 Nov 2025 10:00:00 +0800</pubDate><guid>https://bmsg.top/posts/tech/git-cleanup-file-management-2025/</guid><description>&lt;figure&gt;&lt;img src="https://bmsg.top/posts/tech/git-cleanup-file-management-2025/img1.svg"&gt;&lt;figcaption&gt;
+ &lt;h4&gt;Git文件管理流程图&lt;/h4&gt;
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id="引言"&gt;引言&lt;/h2&gt;
+&lt;p&gt;在日常开发中，我们经常会遇到需要从Git仓库中删除某些已提交文件的情况，比如编译产物、IDE配置文件、日志文件等。这些文件不应该被纳入版本控制，但有时会不小心被提交。本文将详细介绍如何安全、彻底地管理Git仓库中的文件。&lt;/p&gt;
+&lt;h2 id="一删除已提交文件的两种方式"&gt;一、删除已提交文件的两种方式&lt;/h2&gt;
+&lt;h3 id="1-保留本地文件仅从git仓库中移除"&gt;1. 保留本地文件，仅从Git仓库中移除&lt;/h3&gt;
+&lt;p&gt;如果只是想让Git不再追踪这些文件（本地仍需保留，比如&lt;code&gt;target&lt;/code&gt;是编译产物，本地需要用），使用&lt;code&gt;git rm --cached&lt;/code&gt;命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 单个文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git rm --cached 文件名
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 整个目录（比如target）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git rm --cached -r target
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;参数说明：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--cached&lt;/code&gt;：仅删除Git暂存区/仓库中的记录，不删除本地文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-r&lt;/code&gt;：递归删除目录（用于删除文件夹时必须加）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2-彻底删除本地和git仓库都删除"&gt;2. 彻底删除（本地和Git仓库都删除）&lt;/h3&gt;
+&lt;p&gt;如果本地也不再需要这些文件，直接用&lt;code&gt;git rm&lt;/code&gt;（不加&lt;code&gt;--cached&lt;/code&gt;）：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 单个文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git rm 文件名
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 整个目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git rm -r target
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="二提交删除操作"&gt;二、提交删除操作&lt;/h2&gt;
+&lt;p&gt;删除后，需要提交这个&amp;quot;删除变更&amp;quot;到Git仓库：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git commit -m &lt;span style="color:#e6db74"&gt;&amp;#34;feat: 删除已提交的target目录和冗余文件&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="三关键步骤配置gitignore避免未来重复提交"&gt;三、关键步骤：配置.gitignore避免未来重复提交&lt;/h2&gt;
+&lt;p&gt;删除后，必须配置&lt;code&gt;.gitignore&lt;/code&gt;文件，让Git永久忽略这些文件：&lt;/p&gt;
+&lt;h3 id="1-创建编辑gitignore文件"&gt;1. 创建/编辑.gitignore文件&lt;/h3&gt;
+&lt;p&gt;如果仓库根目录没有&lt;code&gt;.gitignore&lt;/code&gt;，先创建：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;touch .gitignore
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后编辑&lt;code&gt;.gitignore&lt;/code&gt;，添加需要忽略的文件/目录：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 忽略target目录（所有层级的target都忽略）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;target/
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 忽略编译产物&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;*.class
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;*.jar
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;*.war
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 忽略日志文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;*.log
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;logs/
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 忽略IDE配置文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.idea/
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;*.iml
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.vscode/
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 忽略操作系统生成的文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.DS_Store
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Thumbs.db
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 忽略依赖目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;node_modules/
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;venv/
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.env
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;注意事项：&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>量子计算：突破经典计算极限的前沿技术</title><link>https://bmsg.top/posts/tech/quantum-computing-advancements/</link><pubDate>Thu, 13 Nov 2025 12:00:00 +0800</pubDate><guid>https://bmsg.top/posts/tech/quantum-computing-advancements/</guid><description>&lt;h2 id="引言"&gt;引言&lt;/h2&gt;
+&lt;p&gt;量子计算作为一种基于量子力学原理的计算方式，正在逐渐从理论走向实践，有望在解决某些特定问题上彻底改变计算科学的面貌。随着谷歌、IBM、微软等科技巨头以及众多初创公司在量子计算领域的持续投入，量子技术正以前所未有的速度发展。本文将带您深入了解量子计算的基本原理、最新技术突破、实际应用场景以及未来发展前景。&lt;/p&gt;</description></item><item><title>2025年11月8日美国时政新闻综述</title><link>https://bmsg.top/posts/news/us-politics-2025-11-08/</link><pubDate>Sat, 08 Nov 2025 02:00:00 +0800</pubDate><guid>https://bmsg.top/posts/news/us-politics-2025-11-08/</guid><description>&lt;p&gt;今日美国政坛发生了一系列重要事件，涵盖总统大选动态、外交政策调整、国会立法进展以及经济政策变化。以下是今日美国时政新闻的详细综述。&lt;/p&gt;</description></item><item><title>构建你的第一个ChatGPT应用 | 使用Apps SDK的逐步教程</title><link>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</link><pubDate>Wed, 05 Nov 2025 10:00:00 +0800</pubDate><guid>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</guid><description>&lt;p&gt;当AI成为日常工作流程的核心，ChatGPT已成为数十亿用户的自然工具。然而直到现在，ChatGPT的重点主要是&amp;quot;对话&amp;quot;，而不是&amp;quot;交互&amp;quot;。&lt;/p&gt;
+&lt;p&gt;如果你能在ChatGPT内直接与应用互动——比如预订酒店、设计演示文稿——全部在同一个界面中完成，会怎样？&lt;/p&gt;
+&lt;p&gt;这正是ChatGPT Apps带来的能力。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://bmsg.top/images/tech/chatgpt-apps-sdk.png" alt="ChatGPT Apps SDK示意图"&gt;&lt;/p&gt;</description></item></channel></rss>

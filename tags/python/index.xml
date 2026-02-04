@@ -1,33 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Python on BiMoShiGuang</title>
-    <link>https://bmsg.top/tags/python/</link>
-    <description>Recent content in Python on BiMoShiGuang</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 26 Jan 2026 12:09:31 +0800</lastBuildDate>
-    <atom:link href="https://bmsg.top/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>项目名：深度实操教程 - Khazix-Skills</title>
-      <link>https://bmsg.top/posts/studay/khazix-skills-1769400565/</link>
-      <pubDate>Mon, 26 Jan 2026 12:09:31 +0800</pubDate>
-      <guid>https://bmsg.top/posts/studay/khazix-skills-1769400565/</guid>
-      <description>&lt;p&gt;Khazix-Skills 项目提供了一整套工具来创建、管理和进化 AI 技能库。本文将深入讲解如何快速上手该项目，包括环境准备、核心配置及常见报错处理，旨在帮助开发者高效利用这一工具，提高智能技能的管理与演进能力。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Polymarket 复制交易机器人：轻松掌握市场机会的实战指南</title>
-      <link>https://bmsg.top/posts/tech/polymarket-copy-trading-bot-1769398529/</link>
-      <pubDate>Mon, 26 Jan 2026 11:35:34 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech/polymarket-copy-trading-bot-1769398529/</guid>
-      <description>&lt;p&gt;本教程将深入解析 Polymarket 复制交易机器人项目，提供从架构到部署的详细指导，帮助用户有效实现市场复制交易，提高投资效率。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>构建你的第一个ChatGPT应用 | 使用Apps SDK的逐步教程</title>
-      <link>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</link>
-      <pubDate>Wed, 05 Nov 2025 10:00:00 +0800</pubDate>
-      <guid>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</guid>
-      <description>&lt;p&gt;当AI成为日常工作流程的核心，ChatGPT已成为数十亿用户的自然工具。然而直到现在，ChatGPT的重点主要是&amp;quot;对话&amp;quot;，而不是&amp;quot;交互&amp;quot;。&lt;/p&gt;&#xA;&lt;p&gt;如果你能在ChatGPT内直接与应用互动——比如预订酒店、设计演示文稿——全部在同一个界面中完成，会怎样？&lt;/p&gt;&#xA;&lt;p&gt;这正是ChatGPT Apps带来的能力。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://bmsg.top/images/tech/chatgpt-apps-sdk.png&#34; alt=&#34;ChatGPT Apps SDK示意图&#34;&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on BiMoShiGuang</title><link>https://bmsg.top/tags/python/</link><description>Recent content in Python on BiMoShiGuang</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 26 Jan 2026 12:09:31 +0800</lastBuildDate><atom:link href="https://bmsg.top/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>项目名：深度实操教程 - Khazix-Skills</title><link>https://bmsg.top/posts/studay/khazix-skills-1769400565/</link><pubDate>Mon, 26 Jan 2026 12:09:31 +0800</pubDate><guid>https://bmsg.top/posts/studay/khazix-skills-1769400565/</guid><description>&lt;p&gt;Khazix-Skills 项目提供了一整套工具来创建、管理和进化 AI 技能库。本文将深入讲解如何快速上手该项目，包括环境准备、核心配置及常见报错处理，旨在帮助开发者高效利用这一工具，提高智能技能的管理与演进能力。&lt;/p&gt;</description></item><item><title>Polymarket 复制交易机器人：轻松掌握市场机会的实战指南</title><link>https://bmsg.top/posts/tech/polymarket-copy-trading-bot-1769398529/</link><pubDate>Mon, 26 Jan 2026 11:35:34 +0800</pubDate><guid>https://bmsg.top/posts/tech/polymarket-copy-trading-bot-1769398529/</guid><description>&lt;p&gt;本教程将深入解析 Polymarket 复制交易机器人项目，提供从架构到部署的详细指导，帮助用户有效实现市场复制交易，提高投资效率。&lt;/p&gt;</description></item><item><title>构建你的第一个ChatGPT应用 | 使用Apps SDK的逐步教程</title><link>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</link><pubDate>Wed, 05 Nov 2025 10:00:00 +0800</pubDate><guid>https://bmsg.top/posts/tech-tutorials/build-your-first-chatgpt-app/</guid><description>&lt;p&gt;当AI成为日常工作流程的核心，ChatGPT已成为数十亿用户的自然工具。然而直到现在，ChatGPT的重点主要是&amp;quot;对话&amp;quot;，而不是&amp;quot;交互&amp;quot;。&lt;/p&gt;
+&lt;p&gt;如果你能在ChatGPT内直接与应用互动——比如预订酒店、设计演示文稿——全部在同一个界面中完成，会怎样？&lt;/p&gt;
+&lt;p&gt;这正是ChatGPT Apps带来的能力。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://bmsg.top/images/tech/chatgpt-apps-sdk.png" alt="ChatGPT Apps SDK示意图"&gt;&lt;/p&gt;</description></item></channel></rss>
